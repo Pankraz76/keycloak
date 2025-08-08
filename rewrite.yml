@@ -1,0 +1,53 @@
+type: specs.openrewrite.org/v1beta/recipe
+name: org.keycloak.openrewrite.DefinitionOfDone
+displayName: Definition of Done
+description: Automatically code cleanup to comply common convention.
+recipeList:
+  - org.openrewrite.staticanalysis.ModifierOrder
+#  - org.openrewrite.java.RemoveUnusedImports
+#  - org.openrewrite.staticanalysis.LowercasePackage
+#  - org.openrewrite.staticanalysis.MissingOverrideAnnotation
+#  - org.openrewrite.staticanalysis.RemoveUnusedLocalVariables
+#  - org.openrewrite.staticanalysis.RemoveUnusedPrivateFields
+#  - org.openrewrite.staticanalysis.RemoveUnusedPrivateMethods
+#  - tech.picnic.errorprone.refasterrules.BugCheckerRulesRecipes
+#  - tech.picnic.errorprone.refasterrules.FileRulesRecipes # security fixes
+#<!-- TBD
+#<recipe>org.openrewrite.java.RemoveUnusedImports</recipe>
+#<recipe>org.openrewrite.java.migrate.UpgradeToJava17</recipe>
+#<recipe>org.openrewrite.java.migrate.UpgradeToJava25</recipe>
+#<recipe>org.openrewrite.java.recipes.JavaRecipeBestPractices</recipe>
+#<recipe>org.openrewrite.java.recipes.RecipeNullabilityBestPractices</recipe>
+#<recipe>org.openrewrite.java.recipes.RecipeTestingBestPractices</recipe>
+#<recipe>org.openrewrite.maven.OrderPomElements</recipe>
+#<recipe>org.openrewrite.maven.cleanup.PrefixlessExpressions</recipe>
+#<recipe>org.openrewrite.staticanalysis.CodeCleanup</recipe>
+#<recipe>org.openrewrite.staticanalysis.CommonStaticAnalysis</recipe>
+#<recipe>org.openrewrite.staticanalysis.EqualsAvoidsNull</recipe>
+#<recipe>org.openrewrite.staticanalysis.JavaApiBestPractices</recipe>
+#<recipe>org.openrewrite.staticanalysis.LowercasePackage</recipe>
+#<recipe>org.openrewrite.staticanalysis.MissingOverrideAnnotation</recipe>
+#<recipe>org.openrewrite.staticanalysis.ModifierOrder</recipe>
+#<recipe>org.openrewrite.staticanalysis.RemoveUnusedLocalVariables</recipe>
+#<recipe>org.openrewrite.staticanalysis.RemoveUnusedPrivateFields</recipe>
+#<recipe>org.openrewrite.staticanalysis.RemoveUnusedPrivateMethods</recipe>
+#<recipe>org.openrewrite.staticanalysis.UnnecessaryThrows</recipe>
+#<recipe>tech.picnic.errorprone.refasterrules.BigDecimalRulesRecipes</recipe>
+#<recipe>tech.picnic.errorprone.refasterrules.BugCheckerRulesRecipes</recipe>
+#<recipe>tech.picnic.errorprone.refasterrules.CharSequenceRulesRecipes</recipe>
+#<recipe>tech.picnic.errorprone.refasterrules.ClassRulesRecipes</recipe>
+#<recipe>tech.picnic.errorprone.refasterrules.CollectionRulesRecipes</recipe>
+#<recipe>tech.picnic.errorprone.refasterrules.ComparatorRulesRecipes</recipe>
+#<recipe>tech.picnic.errorprone.refasterrules.EqualityRulesRecipes</recipe>
+#<recipe>tech.picnic.errorprone.refasterrules.FileRulesRecipes</recipe>
+#<recipe>tech.picnic.errorprone.refasterrules.MicrometerRulesRecipes</recipe>
+#<recipe>tech.picnic.errorprone.refasterrules.NullRulesRecipes</recipe>
+#<recipe>tech.picnic.errorprone.refasterrules.OptionalRulesRecipes</recipe>
+#<recipe>tech.picnic.errorprone.refasterrules.PatternRulesRecipes</recipe>
+#<recipe>tech.picnic.errorprone.refasterrules.PreconditionsRulesRecipes</recipe>
+#<recipe>tech.picnic.errorprone.refasterrules.PrimitiveRulesRecipes</recipe>
+#<recipe>tech.picnic.errorprone.refasterrules.StreamRulesRecipes</recipe>
+#<recipe>tech.picnic.errorprone.refasterrules.StringRulesRecipes</recipe>
+#<recipe>tech.picnic.errorprone.refasterrules.SuggestedFixRulesRecipes</recipe>
+#<recipe>tech.picnic.errorprone.refasterrules.TimeRulesRecipes</recipe>
+#-->
