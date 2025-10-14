@@ -1527,8 +1527,9 @@
                         <java>
                             <!--<forbidWildcardImports /> need rewrite to fix codebase.-->
                             <removeUnusedImports />
+                            <formatAnnotations />
                             <importOrder>
-                                <file>config/maven-eclipse-importorder.txt</file>
+                                <order>java|javax,org,com,com.diffplug,,\#com.diffplug,\#</order>
                             </importOrder>
                             <licenseHeader>
                                 <content>
