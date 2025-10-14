@@ -1529,7 +1529,7 @@
                             <removeUnusedImports />
                             <formatAnnotations />
                             <importOrder>
-                                <order>java|javax,org,com,com.diffplug,,\#com.diffplug,\#</order>
+                                <order>java|javax,org,com,#</order>
                             </importOrder>
                             <licenseHeader>
                                 <content>
