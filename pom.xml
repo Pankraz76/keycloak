@@ -1528,6 +1528,9 @@
                             <removeUnusedImports />
                             <forbidWildcardImports />
                         </java>
+                        <!--<pom>-->
+                        <!--    <sortPom/>-->
+                        <!--</pom>-->
                     </configuration>
                 </plugin>
             </plugins>
