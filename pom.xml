@@ -1525,8 +1525,8 @@
                     <version>${spotless-plugin.version}</version>
                     <configuration>
                         <java>
-                            <removeUnusedImports />
                             <forbidWildcardImports />
+                            <removeUnusedImports />
                             <importOrder>
                                 <file>config/maven-eclipse-importorder.txt</file>
                             </importOrder>
