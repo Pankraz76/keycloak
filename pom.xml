@@ -1531,7 +1531,7 @@
                                 <file>config/maven-eclipse-importorder.txt</file>
                             </importOrder>
                             <licenseHeader>
-                                <text>
+                                <content>
                                     /*
                                     * Copyright 2016 Red Hat, Inc. and/or its affiliates
                                     * and other contributors as indicated by the @author tags.
@@ -1548,8 +1548,7 @@
                                     * See the License for the specific language governing permissions and
                                     * limitations under the License.
                                     */
-                                </text>
-                                <file>config/maven-header-plain.txt</file>
+                                </content>
                             </licenseHeader>
                         </java>
                         <!--<pom>-->
