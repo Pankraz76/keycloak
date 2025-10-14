@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.keycloak.federation.sssd;
 
 import org.freedesktop.dbus.connections.impl.DBusConnection;

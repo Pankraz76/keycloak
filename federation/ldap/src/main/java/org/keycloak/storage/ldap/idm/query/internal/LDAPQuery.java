@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.keycloak.storage.ldap.idm.query.internal;
 
 import org.jboss.logging.Logger;

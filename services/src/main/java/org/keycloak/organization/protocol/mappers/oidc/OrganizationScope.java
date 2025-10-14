@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.keycloak.organization.protocol.mappers.oidc;
 
 import static org.keycloak.models.ClientScopeModel.VALUE_SEPARATOR;

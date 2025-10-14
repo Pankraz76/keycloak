@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.keycloak.protocol.oidc;
 
 import static org.keycloak.protocol.oidc.OIDCConfigAttributes.USE_RFC9068_ACCESS_TOKEN_HEADER_TYPE;

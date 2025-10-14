@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.keycloak.protocol.oid4vc.model;
 
 import org.keycloak.models.oid4vci.CredentialScopeModel;

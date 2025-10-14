@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.keycloak.services.resources.admin.info;
 
 import org.eclipse.microprofile.openapi.annotations.Operation;

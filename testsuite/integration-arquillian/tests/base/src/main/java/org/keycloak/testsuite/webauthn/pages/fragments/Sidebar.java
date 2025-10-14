@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.keycloak.testsuite.webauthn.pages.fragments;
 
 import org.jboss.arquillian.graphene.fragment.Root;

@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.keycloak.util.ldap;
 
 import org.apache.directory.server.kerberos.shared.crypto.encryption.KerberosKeyFactory;

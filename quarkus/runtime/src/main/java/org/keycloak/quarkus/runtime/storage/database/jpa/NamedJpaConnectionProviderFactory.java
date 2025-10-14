@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.keycloak.quarkus.runtime.storage.database.jpa;
 
 import java.util.function.Supplier;

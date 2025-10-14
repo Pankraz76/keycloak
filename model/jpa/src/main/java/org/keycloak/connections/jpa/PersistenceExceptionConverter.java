@@ -14,7 +14,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package org.keycloak.connections.jpa;
 
 import org.keycloak.connections.jpa.support.EntityManagerProxy;
