@@ -17,6 +17,11 @@
 
 package org.keycloak.jose;
 
+import static java.nio.charset.StandardCharsets.UTF_8;
+
+import java.util.UUID;
+import javax.crypto.SecretKey;
+import javax.crypto.spec.SecretKeySpec;
 import org.jboss.logging.Logger;
 import org.junit.Assert;
 import org.junit.ClassRule;
@@ -25,11 +30,6 @@ import org.keycloak.jose.jws.JWSBuilder;
 import org.keycloak.jose.jws.JWSInput;
 import org.keycloak.jose.jws.crypto.HMACProvider;
 import org.keycloak.rule.CryptoInitRule;
-
-import javax.crypto.SecretKey;
-import javax.crypto.spec.SecretKeySpec;
-
-import java.util.UUID;
 
 /**
  * @author <a href="mailto:bill@burkecentral.com">Bill Burke</a>
@@ -44,18 +44,18 @@ public abstract class HmacTest {
 
     @Test
     public void testHmacSignaturesWithRandomSecretKey() throws Exception {
-        SecretKey secretKey = new SecretKeySpec(UUID.randomUUID().toString().getBytes(), "HmacSHA256");
+        SecretKey secretKey = new SecretKeySpec(UUID.randomUUID().toString().getBytes(UTF_8), "HmacSHA256");
         testHMACSignAndVerify(secretKey, "testHmacSignaturesWithRandomSecretKey");
     }
 
     @Test
     public void testHmacSignaturesWithShortSecretKey() throws Exception {
-        SecretKey secretKey = new SecretKeySpec("secret".getBytes(), "HmacSHA256");
+        SecretKey secretKey = new SecretKeySpec("secret".getBytes(UTF_8), "HmacSHA256");
         testHMACSignAndVerify(secretKey, "testHmacSignaturesWithShortSecretKey");
     }
 
     protected void testHMACSignAndVerify(SecretKey secretKey, String test) throws Exception {
-        String encoded = new JWSBuilder().content("12345678901234567890".getBytes())
+        String encoded = new JWSBuilder().content("12345678901234567890".getBytes(UTF_8))
                 .hmac256(secretKey);
         logger.infof("%s: Length of encoded content: %d, Length of secret key: %d", test, encoded.length(), secretKey.getEncoded().length);
         JWSInput input = new JWSInput(encoded);

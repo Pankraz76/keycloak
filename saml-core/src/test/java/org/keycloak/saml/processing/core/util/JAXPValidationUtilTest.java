@@ -16,13 +16,15 @@
  */
 package org.keycloak.saml.processing.core.util;
 
+import static java.nio.charset.StandardCharsets.UTF_8;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import org.hamcrest.Matcher;
 import org.hamcrest.Matchers;
 import org.junit.Test;
 import org.xml.sax.SAXException;
-import static org.hamcrest.MatcherAssert.assertThat;
 
 /**
  *
@@ -65,7 +67,7 @@ public class JAXPValidationUtilTest {
     private void assertInputValidation(String s, Matcher<Object> matcher) {
         String validationResult = null;
         try {
-            JAXPValidationUtil.validate(new ByteArrayInputStream(s.getBytes()));
+            JAXPValidationUtil.validate(new ByteArrayInputStream(s.getBytes(UTF_8)));
         } catch (SAXException | IOException ex) {
             validationResult = ex.getMessage();
         }

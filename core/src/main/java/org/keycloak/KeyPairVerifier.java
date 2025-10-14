@@ -17,14 +17,15 @@
 
 package org.keycloak;
 
+import static java.nio.charset.StandardCharsets.UTF_8;
+
+import java.security.PrivateKey;
+import java.security.PublicKey;
 import org.keycloak.common.VerificationException;
 import org.keycloak.common.util.PemUtils;
 import org.keycloak.jose.jws.JWSBuilder;
 import org.keycloak.jose.jws.JWSInput;
 import org.keycloak.jose.jws.crypto.RSAProvider;
-
-import java.security.PrivateKey;
-import java.security.PublicKey;
 
 /**
  * @author <a href="mailto:sthorger@redhat.com">Stian Thorgersen</a>
@@ -47,7 +48,7 @@ public class KeyPairVerifier {
         }
 
         try {
-            String jws = new JWSBuilder().content("content".getBytes()).rsa256(privateKey);
+            String jws = new JWSBuilder().content("content".getBytes(UTF_8)).rsa256(privateKey);
             if (!RSAProvider.verify(new JWSInput(jws), publicKey)) {
                 throw new VerificationException("Keys don't match");
             }

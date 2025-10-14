@@ -241,6 +241,16 @@
         <!-- Set to true on release to update proto.lock files -->
         <commitProtoLockChanges>false</commitProtoLockChanges>
         <skipProtoLock>false</skipProtoLock>
+        <error-prone.configuration-args>
+            -Xep:ConstantNaming:OFF <!-- consider activation. -->
+            -Xep:DeadException:ERROR
+            -Xep:DefaultCharset:ERROR
+            -Xep:DirectReturn:OFF <!-- consider activation. -->
+            -XepDisableAllChecks <!-- remove after achieving error prone. -->
+            <!-- Add new with: -->
+            <!-- -XepPatchChecks:DefaultCharset,DeadException-->
+            <!-- -XepPatchLocation:IN_PLACE-->
+        </error-prone.configuration-args>
     </properties>
 
     <url>http://keycloak.org</url>
@@ -1529,9 +1539,40 @@
                         </java>
                     </configuration>
                 </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <annotationProcessorPaths>
+                            <path>
+                                <groupId>com.google.errorprone</groupId>
+                                <artifactId>error_prone_core</artifactId>
+                                <version>2.42.0</version>
+                            </path>
+                            <path>
+                                <groupId>tech.picnic.error-prone-support</groupId>
+                                <artifactId>error-prone-contrib</artifactId>
+                                <version>0.25.0</version>
+                            </path>
+                        </annotationProcessorPaths>
+                        <compilerArgs>
+                            <arg>-XDcompilePolicy=simple</arg>
+                            <arg>--should-stop=ifError=FLOW</arg>
+                            <arg>
+                                -Xplugin:ErrorProne ${error-prone.configuration-args}
+                            </arg>
+                        </compilerArgs>
+                    </configuration>
+                </plugin>
             </plugins>
         </pluginManagement>
 
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+        </plugins>
     </build>
 
     <profiles>

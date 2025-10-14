@@ -16,6 +16,11 @@
  */
 package org.keycloak.sdjwt.vp;
 
+import static java.nio.charset.StandardCharsets.UTF_8;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,7 +33,6 @@ import java.util.Map.Entry;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
-
 import org.keycloak.common.VerificationException;
 import org.keycloak.common.util.Base64Url;
 import org.keycloak.crypto.JavaAlgorithm;
@@ -39,10 +43,6 @@ import org.keycloak.sdjwt.IssuerSignedJwtVerificationOpts;
 import org.keycloak.sdjwt.SdJwt;
 import org.keycloak.sdjwt.SdJwtUtils;
 import org.keycloak.sdjwt.SdJwtVerificationContext;
-
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 
 /**
  * @author <a href="mailto:francis.pouatcha@adorsys.com">Francis Pouatcha</a>
@@ -143,7 +143,7 @@ public class SdJwtVP {
                 .collect(Collectors.toList());
 
         for (String disclosure : split) {
-            String disclosureDigest = SdJwtUtils.hashAndBase64EncodeNoPad(disclosure.getBytes(), hashAlgorithm);
+            String disclosureDigest = SdJwtUtils.hashAndBase64EncodeNoPad(disclosure.getBytes(UTF_8), hashAlgorithm);
             if (disclosures.containsKey(disclosureDigest)) {
                 throw new IllegalArgumentException("Duplicate disclosure digest");
             }
@@ -225,7 +225,7 @@ public class SdJwtVP {
         if (keyBindingClaims == null || holdSignatureSignerContext == null) {
             return unboundPresentation;
         }
-        String sd_hash = SdJwtUtils.hashAndBase64EncodeNoPad(unboundPresentation.getBytes(), getHashAlgorithm());
+        String sd_hash = SdJwtUtils.hashAndBase64EncodeNoPad(unboundPresentation.getBytes(UTF_8), getHashAlgorithm());
         keyBindingClaims = ((ObjectNode) keyBindingClaims).put("sd_hash", sd_hash);
         KeyBindingJWT keyBindingJWT = KeyBindingJWT.from(keyBindingClaims, holdSignatureSignerContext, jwsType);
         sb.append(keyBindingJWT.toJws());

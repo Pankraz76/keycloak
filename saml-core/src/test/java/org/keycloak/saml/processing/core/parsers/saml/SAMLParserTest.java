@@ -16,6 +16,37 @@
  */
 package org.keycloak.saml.processing.core.parsers.saml;
 
+import static java.nio.charset.StandardCharsets.UTF_8;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.contains;
+import static org.hamcrest.Matchers.containsInAnyOrder;
+import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.emptyCollectionOf;
+import static org.hamcrest.Matchers.endsWith;
+import static org.hamcrest.Matchers.everyItem;
+import static org.hamcrest.Matchers.hasItem;
+import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.Matchers.instanceOf;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.not;
+import static org.hamcrest.Matchers.notNullValue;
+import static org.hamcrest.Matchers.nullValue;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
+
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.math.BigInteger;
+import java.net.URI;
+import java.nio.charset.StandardCharsets;
+import java.security.PrivateKey;
+import java.util.Collections;
+import java.util.List;
+import javax.xml.namespace.QName;
 import org.hamcrest.Matcher;
 import org.hamcrest.Matchers;
 import org.junit.Before;
@@ -76,37 +107,6 @@ import org.keycloak.saml.processing.core.saml.v2.common.SAMLDocumentHolder;
 import org.keycloak.saml.processing.core.saml.v2.util.AssertionUtil;
 import org.keycloak.saml.processing.core.saml.v2.util.XMLTimeUtil;
 import org.w3c.dom.Element;
-
-import javax.xml.namespace.QName;
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.math.BigInteger;
-import java.net.URI;
-import java.nio.charset.StandardCharsets;
-import java.security.PrivateKey;
-import java.util.Collections;
-import java.util.List;
-
-import static org.hamcrest.Matchers.contains;
-import static org.hamcrest.Matchers.containsInAnyOrder;
-import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.Matchers.emptyCollectionOf;
-import static org.hamcrest.Matchers.endsWith;
-import static org.hamcrest.Matchers.everyItem;
-import static org.hamcrest.Matchers.hasItem;
-import static org.hamcrest.Matchers.hasSize;
-import static org.hamcrest.Matchers.instanceOf;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.not;
-import static org.hamcrest.Matchers.notNullValue;
-import static org.hamcrest.Matchers.nullValue;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.junit.Assert.assertTrue;
 /**
  * Test class for SAML parser.
  *
@@ -609,7 +609,7 @@ public class SAMLParserTest {
 
         EncryptionMethodType.EncryptionMethod encryptionMethod = encryptionMethodType.getEncryptionMethod();
         assertThat(encryptionMethod.getKeySize(), is(BigInteger.ONE));
-        assertThat(encryptionMethod.getOAEPparams(), is("GpM7".getBytes()));
+        assertThat(encryptionMethod.getOAEPparams(), is("GpM7".getBytes(UTF_8)));
 
         // EndpointType parser already tested so we are not checking further
         assertThat(pdpDescriptor.getAuthzService(), Matchers.<EndpointType>hasSize(1));
@@ -1163,7 +1163,7 @@ public class SAMLParserTest {
         try (InputStream st = SAMLParserTest.class.getResourceAsStream(resourceName)) {
             String str = StreamUtil.readString(st, StandardCharsets.UTF_8);
             String processed = str.replaceAll(attribute + "=\"[^\"]+\"", "");
-            return new ByteArrayInputStream(processed.getBytes());
+            return new ByteArrayInputStream(processed.getBytes(UTF_8));
         }
     }
 
@@ -1171,7 +1171,7 @@ public class SAMLParserTest {
         try (InputStream st = SAMLParserTest.class.getResourceAsStream(resourceName)) {
             String str = StreamUtil.readString(st, StandardCharsets.UTF_8);
             String processed = str.replaceAll("(" + attribute + "=)\"[^\"]+\"", "$1\"" + newValue + "\"");
-            return new ByteArrayInputStream(processed.getBytes());
+            return new ByteArrayInputStream(processed.getBytes(UTF_8));
         }
     }
 

@@ -17,9 +17,7 @@
 
 package org.keycloak.dom.xmlsec.w3.xmldsig;
 
-import org.keycloak.common.util.Base64;
-import org.keycloak.saml.common.constants.WSTrustConstants;
-import org.keycloak.saml.common.exceptions.ProcessingException;
+import static java.nio.charset.StandardCharsets.UTF_8;
 
 import java.math.BigInteger;
 import java.security.KeyFactory;
@@ -27,6 +25,9 @@ import java.security.interfaces.DSAPrivateKey;
 import java.security.interfaces.DSAPublicKey;
 import java.security.spec.DSAPrivateKeySpec;
 import java.security.spec.DSAPublicKeySpec;
+import org.keycloak.common.util.Base64;
+import org.keycloak.saml.common.constants.WSTrustConstants;
+import org.keycloak.saml.common.exceptions.ProcessingException;
 
 /**
  * <p>
@@ -203,10 +204,10 @@ public class DSAKeyValueType implements KeyValueType {
     public DSAPublicKey convertToPublicKey() throws ProcessingException {
 
         try {
-            BigInteger BigY = new BigInteger(1, massage(Base64.decode(new String(y))));
-            BigInteger BigP = new BigInteger(1, massage(Base64.decode(new String(p))));
-            BigInteger BigQ = new BigInteger(1, massage(Base64.decode(new String(q))));
-            BigInteger BigG = new BigInteger(1, massage(Base64.decode(new String(g))));
+            BigInteger BigY = new BigInteger(1, massage(Base64.decode(new String(y, UTF_8))));
+            BigInteger BigP = new BigInteger(1, massage(Base64.decode(new String(p, UTF_8))));
+            BigInteger BigQ = new BigInteger(1, massage(Base64.decode(new String(q, UTF_8))));
+            BigInteger BigG = new BigInteger(1, massage(Base64.decode(new String(g, UTF_8))));
 
             KeyFactory dsaKeyFactory = KeyFactory.getInstance("dsa");
             DSAPublicKeySpec kspec = new DSAPublicKeySpec(BigY, BigP, BigQ, BigG);
@@ -226,10 +227,10 @@ public class DSAKeyValueType implements KeyValueType {
     public DSAPrivateKey convertToPrivateKey() throws ProcessingException {
 
         try {
-            BigInteger BigY = new BigInteger(1, massage(Base64.decode(new String(y))));
-            BigInteger BigP = new BigInteger(1, massage(Base64.decode(new String(p))));
-            BigInteger BigQ = new BigInteger(1, massage(Base64.decode(new String(q))));
-            BigInteger BigG = new BigInteger(1, massage(Base64.decode(new String(g))));
+            BigInteger BigY = new BigInteger(1, massage(Base64.decode(new String(y, UTF_8))));
+            BigInteger BigP = new BigInteger(1, massage(Base64.decode(new String(p, UTF_8))));
+            BigInteger BigQ = new BigInteger(1, massage(Base64.decode(new String(q, UTF_8))));
+            BigInteger BigG = new BigInteger(1, massage(Base64.decode(new String(g, UTF_8))));
 
             KeyFactory dsaKeyFactory = KeyFactory.getInstance("dsa");
             DSAPrivateKeySpec kspec = new DSAPrivateKeySpec(BigY, BigP, BigQ, BigG);
@@ -252,37 +253,37 @@ public class DSAKeyValueType implements KeyValueType {
 
         if (p != null) {
             sb.append(left).append(prefix).append(colon).append(WSTrustConstants.XMLDSig.P).append(right);
-            sb.append(new String(getP()));
+            sb.append(new String(getP(), UTF_8));
             sb.append(left).append(slash).append(prefix).append(colon).append(WSTrustConstants.XMLDSig.P).append(right);
         }
 
         if (q != null) {
             sb.append(left).append(prefix).append(colon).append(WSTrustConstants.XMLDSig.Q).append(right);
-            sb.append(new String(getQ()));
+            sb.append(new String(getQ(), UTF_8));
             sb.append(left).append(slash).append(prefix).append(colon).append(WSTrustConstants.XMLDSig.Q).append(right);
         }
 
         if (g != null) {
             sb.append(left).append(prefix).append(colon).append(WSTrustConstants.XMLDSig.G).append(right);
-            sb.append(new String(getG()));
+            sb.append(new String(getG(), UTF_8));
             sb.append(left).append(slash).append(prefix).append(colon).append(WSTrustConstants.XMLDSig.G).append(right);
         }
 
         if (y != null) {
             sb.append(left).append(prefix).append(colon).append(WSTrustConstants.XMLDSig.Y).append(right);
-            sb.append(new String(getY()));
+            sb.append(new String(getY(), UTF_8));
             sb.append(left).append(slash).append(prefix).append(colon).append(WSTrustConstants.XMLDSig.Y).append(right);
         }
 
         if (seed != null) {
             sb.append(left).append(prefix).append(colon).append(WSTrustConstants.XMLDSig.SEED).append(right);
-            sb.append(new String(getSeed()));
+            sb.append(new String(getSeed(), UTF_8));
             sb.append(left).append(slash).append(prefix).append(colon).append(WSTrustConstants.XMLDSig.SEED).append(right);
         }
 
         if (pgenCounter != null) {
             sb.append(left).append(prefix).append(colon).append(WSTrustConstants.XMLDSig.PGEN_COUNTER).append(right);
-            sb.append(new String(getPgenCounter()));
+            sb.append(new String(getPgenCounter(), UTF_8));
             sb.append(left).append(slash).append(prefix).append(colon).append(WSTrustConstants.XMLDSig.PGEN_COUNTER).append(right);
         }
 

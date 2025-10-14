@@ -1,13 +1,13 @@
 package org.keycloak.common.util;
 
-import org.hamcrest.MatcherAssert;
-import org.junit.Test;
-
-import java.io.IOException;
-
+import static java.nio.charset.StandardCharsets.UTF_8;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.instanceOf;
+
+import java.io.IOException;
+import org.hamcrest.MatcherAssert;
+import org.junit.Test;
 
 /**
  * Test for BASE64 decode implementation.
@@ -21,12 +21,12 @@ public class Base64DecodeTest {
         // high level string variant
         final String testData = "test data";
         final String encoded = "dGVzdCBkYXRh";
-        final String decoded = new String(Base64.decode(encoded));
+        final String decoded = new String(Base64.decode(encoded), UTF_8);
         assertThat(decoded, equalTo(testData));
 
         // low level byte array variant
-        final byte[] encoded2 = encoded.getBytes();
-        final String decoded2 = new String(Base64.decode(encoded2));
+        final byte[] encoded2 = encoded.getBytes(UTF_8);
+        final String decoded2 = new String(Base64.decode(encoded2), UTF_8);
         assertThat(decoded2, equalTo(testData));
     }
 
@@ -42,7 +42,7 @@ public class Base64DecodeTest {
         assertThat(decoded, equalTo(testData));
 
         // low level byte array variant
-        final byte[] encoded2 = encoded.getBytes();
+        final byte[] encoded2 = encoded.getBytes(UTF_8);
         final byte[] decoded2 = Base64.decode(encoded2);
         assertThat(decoded2, equalTo(testData));
     }
@@ -52,7 +52,7 @@ public class Base64DecodeTest {
         // high level string variant
         final String testData = "test data";
         final String encoded = "H4sIAAAAAAAAACtJLS5RSEksSQQAsq4I0wkAAAA=";
-        final String decoded = new String(Base64.decode(encoded, Base64.GUNZIP));
+        final String decoded = new String(Base64.decode(encoded, Base64.GUNZIP), UTF_8);
         assertThat(decoded, equalTo(testData));
 
         // low level byte array variant
@@ -61,7 +61,7 @@ public class Base64DecodeTest {
                 31, -117, 8, 0, 0, 0, 0, 0, 0, 0, 43, 73,
                 45, 46, 81, 72, 73, 44, 73, 4, 0, -78, -82,
                 8, -45, 9, 0, 0, 0};
-        final byte[] encoded2 = encoded.getBytes();
+        final byte[] encoded2 = encoded.getBytes(UTF_8);
         final byte[] decoded2 = Base64.decode(encoded2, 0, encoded2.length, Base64.GUNZIP);
         assertThat(decoded2, equalTo(expected2));
     }
@@ -81,7 +81,7 @@ public class Base64DecodeTest {
         }
 
         try {
-            Base64.decode(" ".getBytes());
+            Base64.decode(" ".getBytes(UTF_8));
             MatcherAssert.assertThat("Exception excepted", false);
         } catch (final Exception e) {
             assertThat(e, instanceOf(IllegalArgumentException.class));

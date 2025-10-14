@@ -17,16 +17,11 @@
 
 package org.keycloak.sdjwt;
 
+import static java.nio.charset.StandardCharsets.UTF_8;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import org.jboss.logging.Logger;
-import org.keycloak.common.VerificationException;
-import org.keycloak.crypto.SignatureVerifierContext;
-import org.keycloak.sdjwt.consumer.PresentationRequirements;
-import org.keycloak.sdjwt.vp.KeyBindingJWT;
-import org.keycloak.sdjwt.vp.KeyBindingJwtVerificationOpts;
-
 import java.time.Instant;
 import java.util.AbstractMap;
 import java.util.ArrayList;
@@ -38,6 +33,12 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
+import org.jboss.logging.Logger;
+import org.keycloak.common.VerificationException;
+import org.keycloak.crypto.SignatureVerifierContext;
+import org.keycloak.sdjwt.consumer.PresentationRequirements;
+import org.keycloak.sdjwt.vp.KeyBindingJWT;
+import org.keycloak.sdjwt.vp.KeyBindingJwtVerificationOpts;
 
 /**
  * Runs SD-JWT verification in isolation with only essential properties.
@@ -78,7 +79,7 @@ public class SdJwtVerificationContext {
         return disclosureStrings.stream()
                 .map(disclosureString -> {
                     String digest = SdJwtUtils.hashAndBase64EncodeNoPad(
-                            disclosureString.getBytes(), issuerSignedJwt.getSdHashAlg());
+                            disclosureString.getBytes(UTF_8), issuerSignedJwt.getSdHashAlg());
                     return new AbstractMap.SimpleEntry<>(digest, disclosureString);
                 })
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
@@ -684,7 +685,7 @@ public class SdJwtVerificationContext {
         String toHash = sdJwtVpString.substring(0, lastDelimiterIndex + 1);
 
         String digest = SdJwtUtils.hashAndBase64EncodeNoPad(
-                toHash.getBytes(), issuerSignedJwt.getSdHashAlg());
+                toHash.getBytes(UTF_8), issuerSignedJwt.getSdHashAlg());
 
         if (!digest.equals(sdHash.asText())) {
             throw new VerificationException("Key binding JWT: Invalid `sd_hash` digest");

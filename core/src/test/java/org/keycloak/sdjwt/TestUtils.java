@@ -16,12 +16,13 @@
  */
 package org.keycloak.sdjwt;
 
+import static java.nio.charset.StandardCharsets.UTF_8;
+
+import com.fasterxml.jackson.databind.JsonNode;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-
-import com.fasterxml.jackson.databind.JsonNode;
 
 /**
  * @author <a href="mailto:francis.pouatcha@adorsys.com">Francis Pouatcha</a>
@@ -39,7 +40,7 @@ public class TestUtils {
     public static String readFileAsString(Class<?> klass, String filePath) {
         StringBuilder stringBuilder = new StringBuilder();
         try (BufferedReader reader = new BufferedReader(
-                (new InputStreamReader(klass.getClassLoader().getResourceAsStream(filePath))))) {
+                (new InputStreamReader(klass.getClassLoader().getResourceAsStream(filePath), UTF_8)))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 stringBuilder.append(line); // Appends line without a newline character

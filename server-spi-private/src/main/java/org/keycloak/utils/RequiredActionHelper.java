@@ -16,6 +16,9 @@
  */
 package org.keycloak.utils;
 
+import static java.nio.charset.StandardCharsets.UTF_8;
+
+import java.util.List;
 import org.keycloak.authentication.RequiredActionFactory;
 import org.keycloak.authentication.RequiredActionProvider;
 import org.keycloak.models.KeycloakSession;
@@ -23,8 +26,6 @@ import org.keycloak.models.RealmModel;
 import org.keycloak.models.RequiredActionProviderModel;
 import org.keycloak.models.utils.Base32;
 import org.keycloak.provider.ProviderConfigProperty;
-
-import java.util.List;
 
 /**
  * Helpers for managing RequiredActions.
@@ -53,7 +54,7 @@ public class RequiredActionHelper {
         RequiredActionFactory factory = getConfigurableRequiredActionFactory(session, providerId);
 
         if (factory == null) {
-            providerId = new String(Base32.decode(providerId));
+            providerId = new String(Base32.decode(providerId), UTF_8);
             factory = getConfigurableRequiredActionFactory(session, providerId);
         }
 

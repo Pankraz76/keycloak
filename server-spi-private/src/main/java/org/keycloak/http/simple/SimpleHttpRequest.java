@@ -17,9 +17,20 @@
 
 package org.keycloak.http.simple;
 
+import static java.nio.charset.StandardCharsets.UTF_8;
+
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpHeaders;
 import org.apache.http.NameValuePair;
@@ -39,16 +50,6 @@ import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.message.BasicNameValuePair;
 import org.keycloak.common.util.Base64;
-
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * @author <a href="mailto:sthorger@redhat.com">Stian Thorgersen</a>
@@ -149,7 +150,7 @@ public class SimpleHttpRequest {
 
     public SimpleHttpRequest authBasic(final String username, final String password) {
         final String basicCredentials = String.format("%s:%s", username, password);
-        header("Authorization", "Basic " + Base64.encodeBytes(basicCredentials.getBytes()));
+        header("Authorization", "Basic " + Base64.encodeBytes(basicCredentials.getBytes(UTF_8)));
         return this;
     }
 

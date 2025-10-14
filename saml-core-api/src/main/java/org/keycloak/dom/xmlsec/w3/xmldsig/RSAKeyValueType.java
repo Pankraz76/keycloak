@@ -17,9 +17,7 @@
 
 package org.keycloak.dom.xmlsec.w3.xmldsig;
 
-import org.keycloak.common.util.Base64;
-import org.keycloak.saml.common.constants.WSTrustConstants;
-import org.keycloak.saml.common.exceptions.ProcessingException;
+import static java.nio.charset.StandardCharsets.UTF_8;
 
 import java.math.BigInteger;
 import java.security.KeyFactory;
@@ -27,6 +25,9 @@ import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 import java.security.spec.RSAPrivateKeySpec;
 import java.security.spec.RSAPublicKeySpec;
+import org.keycloak.common.util.Base64;
+import org.keycloak.saml.common.constants.WSTrustConstants;
+import org.keycloak.saml.common.exceptions.ProcessingException;
 
 /**
  * <p>
@@ -98,8 +99,8 @@ public class RSAKeyValueType implements KeyValueType {
      */
     public RSAPublicKey convertToPublicKey() throws ProcessingException {
         try {
-            BigInteger bigModulus = new BigInteger(1, massage(Base64.decode(new String(modulus))));
-            BigInteger bigEx = new BigInteger(1, massage(Base64.decode(new String(exponent))));
+            BigInteger bigModulus = new BigInteger(1, massage(Base64.decode(new String(modulus, UTF_8))));
+            BigInteger bigEx = new BigInteger(1, massage(Base64.decode(new String(exponent, UTF_8))));
             KeyFactory rsaKeyFactory = KeyFactory.getInstance("rsa");
             RSAPublicKeySpec kspec = new RSAPublicKeySpec(bigModulus, bigEx);
             return (RSAPublicKey) rsaKeyFactory.generatePublic(kspec);
@@ -117,8 +118,8 @@ public class RSAKeyValueType implements KeyValueType {
      */
     public RSAPrivateKey convertToPrivateKey() throws ProcessingException {
         try {
-            BigInteger bigModulus = new BigInteger(1, massage(Base64.decode(new String(modulus))));
-            BigInteger bigEx = new BigInteger(1, massage(Base64.decode(new String(exponent))));
+            BigInteger bigModulus = new BigInteger(1, massage(Base64.decode(new String(modulus, UTF_8))));
+            BigInteger bigEx = new BigInteger(1, massage(Base64.decode(new String(exponent, UTF_8))));
             KeyFactory rsaKeyFactory = KeyFactory.getInstance("rsa");
             RSAPrivateKeySpec kspec = new RSAPrivateKeySpec(bigModulus, bigEx);
             return (RSAPrivateKey) rsaKeyFactory.generatePrivate(kspec);
@@ -139,11 +140,11 @@ public class RSAKeyValueType implements KeyValueType {
         sb.append(left).append(prefix).append(colon).append(WSTrustConstants.XMLDSig.RSA_KEYVALUE).append(right);
 
         sb.append(left).append(prefix).append(colon).append(WSTrustConstants.XMLDSig.MODULUS).append(right);
-        sb.append(new String(getModulus()));
+        sb.append(new String(getModulus(), UTF_8));
         sb.append(left).append(slash).append(prefix).append(colon).append(WSTrustConstants.XMLDSig.MODULUS).append(right);
 
         sb.append(left).append(prefix).append(colon).append(WSTrustConstants.XMLDSig.EXPONENT).append(right);
-        sb.append(new String(getExponent()));
+        sb.append(new String(getExponent(), UTF_8));
         sb.append(left).append(slash).append(prefix).append(colon).append(WSTrustConstants.XMLDSig.EXPONENT).append(right);
 
         sb.append(left).append(slash).append(prefix).append(colon).append(WSTrustConstants.XMLDSig.RSA_KEYVALUE).append(right);

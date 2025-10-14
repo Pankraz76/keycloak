@@ -17,13 +17,14 @@
 
 package org.keycloak.util;
 
-import org.keycloak.common.util.Base64;
+import static java.nio.charset.StandardCharsets.UTF_8;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import org.keycloak.common.util.Base64;
 
 /**
  * The default implementation is compliant with <a href="https://datatracker.ietf.org/doc/html/rfc2617">RFC 2617</a>
@@ -45,7 +46,7 @@ public class BasicAuthHelper {
 
         String val;
         try {
-            val = new String(Base64.decode(header.substring(6)));
+            val = new String(Base64.decode(header.substring(6)), UTF_8);
         } catch (IOException e) {
             return null;
         }

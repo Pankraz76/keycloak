@@ -1,5 +1,6 @@
 package org.keycloak.saml.processing.core.saml.v2.util;
 
+import static java.nio.charset.StandardCharsets.UTF_8;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotEquals;
@@ -15,7 +16,6 @@ import java.security.cert.X509Certificate;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
-
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.keycloak.common.crypto.CryptoIntegration;
@@ -106,7 +106,7 @@ public class AssertionUtilTest {
     private PrivateKey extractPrivateKey() throws IOException {
 
         StringBuilder sb = new StringBuilder();
-        try (Scanner sc = new Scanner(getEncryptedIdTestFileInputStream())) {
+        try (Scanner sc = new Scanner(getEncryptedIdTestFileInputStream(), UTF_8)) {
             while (sc.hasNextLine()) {
                 if (sc.nextLine().contains("BEGIN RSA PRIVATE KEY")) {
                     sb.append("-----BEGIN RSA PRIVATE KEY-----").append("\n");

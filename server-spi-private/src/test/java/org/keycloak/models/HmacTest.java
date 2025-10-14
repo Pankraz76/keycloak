@@ -17,6 +17,8 @@
 
 package org.keycloak.models;
 
+import static java.nio.charset.StandardCharsets.UTF_8;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.keycloak.models.utils.Base32;
@@ -32,7 +34,7 @@ public class HmacTest {
     public void testHmac() {
         HmacOTP hmacOTP = new HmacOTP(6, HmacOTP.HMAC_SHA1, 10);
         String secret = "JNSVMMTEKZCUGSKJIVGHMNSQOZBDA5JT";
-        String decoded = new String(Base32.decode(secret));
+        String decoded = new String(Base32.decode(secret), UTF_8);
         System.out.println(hmacOTP.generateHOTP(decoded, 0));
         System.out.println(hmacOTP.validateHOTP("550233", decoded, 0));
         Assert.assertEquals(1, hmacOTP.validateHOTP("550233", decoded, 0));

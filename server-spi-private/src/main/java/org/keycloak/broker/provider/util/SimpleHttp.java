@@ -17,9 +17,27 @@
 
 package org.keycloak.broker.provider.util;
 
+import static java.nio.charset.StandardCharsets.UTF_8;
+
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.StringWriter;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+import java.util.zip.GZIPInputStream;
 import org.apache.http.Header;
 import org.apache.http.HeaderIterator;
 import org.apache.http.HttpEntity;
@@ -46,23 +64,6 @@ import org.keycloak.connections.httpclient.HttpClientProvider;
 import org.keycloak.connections.httpclient.SafeInputStream;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.util.JsonSerialization;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.StringWriter;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-import java.util.zip.GZIPInputStream;
 
 /**
  * @author <a href="mailto:sthorger@redhat.com">Stian Thorgersen</a>
@@ -247,7 +248,7 @@ public class SimpleHttp {
 
     public SimpleHttp authBasic(final String username, final String password) {
         final String basicCredentials = String.format("%s:%s", username, password);
-        header("Authorization", "Basic " + Base64.encodeBytes(basicCredentials.getBytes()));
+        header("Authorization", "Basic " + Base64.encodeBytes(basicCredentials.getBytes(UTF_8)));
         return this;
     }
 

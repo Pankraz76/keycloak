@@ -178,7 +178,7 @@ public class OTPPolicy implements Serializable {
          */
         String label = issuerName + ":" + accountName;
 
-        String parameters = "secret=" + Base32.encode(secret.getBytes()) //
+        String parameters = "secret=" + Base32.encode(secret.getBytes(UTF_8)) //
                             + "&digits=" + digits //
                             + "&algorithm=" + algToKeyUriAlg.get(algorithm) //
                             + "&issuer=" + issuerName;

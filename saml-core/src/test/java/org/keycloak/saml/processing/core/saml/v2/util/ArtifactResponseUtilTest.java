@@ -17,6 +17,10 @@
 
 package org.keycloak.saml.processing.core.saml.v2.util;
 
+import static java.nio.charset.StandardCharsets.UTF_8;
+
+import java.io.InputStream;
+import java.util.Optional;
 import junit.framework.TestCase;
 import org.junit.Assert;
 import org.keycloak.saml.common.util.DocumentUtil;
@@ -25,9 +29,6 @@ import org.keycloak.saml.processing.core.saml.v2.common.SAMLDocumentHolder;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
-
-import java.io.InputStream;
-import java.util.Optional;
 
 /**
  * @author Thibault Morin (https://tmorin.github.io)
@@ -44,7 +45,7 @@ public class ArtifactResponseUtilTest extends TestCase {
                 "saml20-response-assertion-signed.xml"
         );
         Assert.assertNotNull(expectedResponseAsInputStream);
-        String expectedResponseAsString = new String(expectedResponseAsInputStream.readAllBytes());
+        String expectedResponseAsString = new String(expectedResponseAsInputStream.readAllBytes(), UTF_8);
 
         // transform the InputStream to a SAMLDocumentHolder to get the Document as implemented in org.keycloak.broker.saml.SAMLEndpoint
         SAMLDocumentHolder saml2ObjectFromDocument = SAML2Request.getSAML2ObjectFromStream(artifactResponseAsInputStream);

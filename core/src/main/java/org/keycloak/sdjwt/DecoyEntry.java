@@ -16,8 +16,9 @@
  */
 package org.keycloak.sdjwt;
 
-import java.util.Objects;
+import static java.nio.charset.StandardCharsets.UTF_8;
 
+import java.util.Objects;
 import org.keycloak.jose.jws.crypto.HashUtils;
 
 /**
@@ -38,6 +39,6 @@ public abstract class DecoyEntry {
     }
 
     public String getDisclosureDigest(String hashAlg) {
-        return SdJwtUtils.encodeNoPad(HashUtils.hash(hashAlg, salt.toString().getBytes()));
+        return SdJwtUtils.encodeNoPad(HashUtils.hash(hashAlg, salt.toString().getBytes(UTF_8)));
     }
 }

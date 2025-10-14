@@ -17,10 +17,12 @@
 
 package org.keycloak.models.utils;
 
-import javax.crypto.Mac;
-import javax.crypto.spec.SecretKeySpec;
+import static java.nio.charset.StandardCharsets.UTF_8;
+
 import java.math.BigInteger;
 import java.security.SecureRandom;
+import javax.crypto.Mac;
+import javax.crypto.spec.SecretKeySpec;
 
 /**
  * @author <a href="mailto:bill@burkecentral.com">Bill Burke</a>
@@ -67,7 +69,7 @@ public class HmacOTP {
     }
 
     public String generateHOTP(String key, int counter) {
-        return generateHOTP(key.getBytes(), counter);
+        return generateHOTP(key.getBytes(UTF_8), counter);
     }
 
     /**
@@ -91,7 +93,7 @@ public class HmacOTP {
     }
 
     public int validateHOTP(String token, String key, int counter) {
-        return validateHOTP(token, key.getBytes(), counter);
+        return validateHOTP(token, key.getBytes(UTF_8), counter);
     }
 
     /**
