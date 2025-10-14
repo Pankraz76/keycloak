@@ -1536,9 +1536,9 @@
                             <!--<forbidWildcardImports /> need rewrite to fix codebase.-->
                             <removeUnusedImports />
                             <formatAnnotations />
-                            <importOrder>
-                                <order>java|javax,org,com,#</order>
-                            </importOrder>
+<!--                            <importOrder>-->
+<!--                                <order>java|javax,org,com,#</order>-->
+<!--                            </importOrder>-->
                             <!--<licenseHeader>-->
                             <!--    <content>-->
                             <!--        /*-->
@@ -1567,7 +1567,12 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-
+        <plugins>
+            <plugin>
+                <groupId>com.diffplug.spotless</groupId>
+                <artifactId>spotless-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
     </build>
 
     <profiles>
