@@ -1527,6 +1527,12 @@
                         <java>
                             <removeUnusedImports />
                             <forbidWildcardImports />
+                            <importOrder>
+                                <file>config/maven-eclipse-importorder.txt</file>
+                            </importOrder>
+                            <licenseHeader>
+                                <file>config/maven-header-plain.txt</file>
+                            </licenseHeader>
                         </java>
                         <!--<pom>-->
                         <!--    <sortPom/>-->
