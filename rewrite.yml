@@ -9,8 +9,8 @@ tags:
   - static-analysis
   - cleanup
 recipeList:
-  - org.openrewrite.staticanalysis.RemoveUnusedPrivateMethods
-  # - org.openrewrite.java.RemoveUnusedImports
+  - org.openrewrite.java.RemoveUnusedImports
+  # - org.openrewrite.staticanalysis.RemoveUnusedPrivateMethods
   # - org.openrewrite.maven.BestPractices
   # - org.openrewrite.java.format.NormalizeLineBreaks
   # - org.openrewrite.java.format.RemoveTrailingWhitespace
