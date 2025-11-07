@@ -16,22 +16,22 @@
   -->
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <parent>
-        <artifactId>keycloak-integration-parent</artifactId>
-        <groupId>org.keycloak</groupId>
-        <version>999.0.0-SNAPSHOT</version>
-    </parent>
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-    <name>Keycloak Client CLI</name>
-    <description>Keycloak Client CLI</description>
-    <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.keycloak</groupId>
+    <artifactId>keycloak-integration-parent</artifactId>
+    <version>999.0.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>keycloak-client-cli-parent</artifactId>
+  <packaging>pom</packaging>
 
-    <artifactId>keycloak-client-cli-parent</artifactId>
-    <packaging>pom</packaging>
+  <name>Keycloak Client CLI</name>
+  <description>Keycloak Client CLI</description>
 
-    <modules>
-        <module>admin-cli</module>
-        <module>client-cli-dist</module>
-    </modules>
+  <modules>
+    <module>admin-cli</module>
+    <module>client-cli-dist</module>
+  </modules>
 </project>

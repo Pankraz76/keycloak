@@ -16,25 +16,25 @@
   -->
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <parent>
-        <artifactId>keycloak-parent</artifactId>
-        <groupId>org.keycloak</groupId>
-        <version>999.0.0-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
-    </parent>
-    <name>Keycloak Model Parent</name>
-    <description>Keycloak Model Parent</description>
-    <modelVersion>4.0.0</modelVersion>
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.keycloak</groupId>
+    <artifactId>keycloak-parent</artifactId>
+    <version>999.0.0-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  <artifactId>keycloak-model-pom</artifactId>
+  <packaging>pom</packaging>
 
-    <artifactId>keycloak-model-pom</artifactId>
-    <packaging>pom</packaging>
+  <name>Keycloak Model Parent</name>
+  <description>Keycloak Model Parent</description>
 
-    <modules>
-        <module>storage</module>
-        <module>storage-private</module>
-        <module>storage-services</module>
-        <module>jpa</module>
-        <module>infinispan</module>
-    </modules>
+  <modules>
+    <module>storage</module>
+    <module>storage-private</module>
+    <module>storage-services</module>
+    <module>jpa</module>
+    <module>infinispan</module>
+  </modules>
 </project>

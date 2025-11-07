@@ -17,60 +17,60 @@
 -->
 
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <parent>
-        <groupId>org.keycloak.testsuite</groupId>
-        <artifactId>integration-arquillian</artifactId>
-        <version>999.0.0-SNAPSHOT</version>
-    </parent>
-    <modelVersion>4.0.0</modelVersion>
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.keycloak.testsuite</groupId>
+    <artifactId>integration-arquillian</artifactId>
+    <version>999.0.0-SNAPSHOT</version>
+  </parent>
 
-    <artifactId>integration-arquillian-servers</artifactId>
-    <packaging>pom</packaging>
-    <name>Servers</name>
+  <artifactId>integration-arquillian-servers</artifactId>
+  <packaging>pom</packaging>
+  <name>Servers</name>
 
-    <properties>
-        <script.suffix>sh</script.suffix>
+  <modules>
+    <module>auth-server</module>
+    <module>app-server</module>
+    <module>cache-server</module>
+  </modules>
 
-        <jboss.default.worker.io-threads>16</jboss.default.worker.io-threads>
-        <jboss.default.worker.task-max-threads>128</jboss.default.worker.task-max-threads>
-        <jboss.default.http.max-connections>500</jboss.default.http.max-connections>
+  <properties>
+    <script.suffix>sh</script.suffix>
 
-        <cache.default.worker.io-threads>2</cache.default.worker.io-threads>
-        <cache.default.worker.task-max-threads>4</cache.default.worker.task-max-threads>
-        <hotrod.sasl.mechanism>DIGEST-MD5</hotrod.sasl.mechanism>
+    <jboss.default.worker.io-threads>16</jboss.default.worker.io-threads>
+    <jboss.default.worker.task-max-threads>128</jboss.default.worker.task-max-threads>
+    <jboss.default.http.max-connections>500</jboss.default.http.max-connections>
 
-        <jboss.cli.executable>jboss-cli.sh</jboss.cli.executable>
-    </properties>
+    <cache.default.worker.io-threads>2</cache.default.worker.io-threads>
+    <cache.default.worker.task-max-threads>4</cache.default.worker.task-max-threads>
+    <hotrod.sasl.mechanism>DIGEST-MD5</hotrod.sasl.mechanism>
 
-    <modules>
-        <module>auth-server</module>
-        <module>app-server</module>
-        <module>cache-server</module>
-    </modules>
+    <jboss.cli.executable>jboss-cli.sh</jboss.cli.executable>
+  </properties>
 
-    <profiles>
+  <profiles>
 
-        <profile>
-            <id>auth-server-migration</id>
-            <modules>
-                <module>migration</module>
-            </modules>
-        </profile>
+    <profile>
+      <id>auth-server-migration</id>
+      <modules>
+        <module>migration</module>
+      </modules>
+    </profile>
 
-        <profile>
-            <id>win</id>
-            <activation>
-                <os>
-                    <family>Windows</family>
-                </os>
-            </activation>
-            <properties>        
-                <script.suffix>bat</script.suffix>
-                <jboss.cli.executable>jboss-cli.ps1</jboss.cli.executable>
-            </properties>
-        </profile>
+    <profile>
+      <id>win</id>
+      <activation>
+        <os>
+          <family>Windows</family>
+        </os>
+      </activation>
+      <properties>        
+        <script.suffix>bat</script.suffix>
+        <jboss.cli.executable>jboss-cli.ps1</jboss.cli.executable>
+      </properties>
+    </profile>
 
-    </profiles>
+  </profiles>
 
 </project>

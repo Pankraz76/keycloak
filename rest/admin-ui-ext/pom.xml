@@ -55,8 +55,8 @@
     <build>
         <plugins>
             <plugin>
-                <artifactId>smallrye-open-api-maven-plugin</artifactId>
                 <groupId>io.smallrye</groupId>
+                <artifactId>smallrye-open-api-maven-plugin</artifactId>
                 <configuration>
                     <scanPackages>org.keycloak.admin.ui.rest</scanPackages>
                 </configuration>
