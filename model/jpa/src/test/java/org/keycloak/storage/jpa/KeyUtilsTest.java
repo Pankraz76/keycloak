@@ -20,8 +20,7 @@ import java.util.UUID;
 import org.junit.Test;
 import org.keycloak.models.utils.KeycloakModelUtils;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 /**
  *

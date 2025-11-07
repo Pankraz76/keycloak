@@ -27,8 +27,7 @@ import java.util.Map;
 
 import static org.keycloak.broker.oidc.OAuth2IdentityProviderConfig.TOKEN_ENDPOINT_URL;
 import static org.keycloak.testsuite.broker.BrokerTestConstants.*;
-import static org.keycloak.testsuite.broker.BrokerTestTools.createIdentityProvider;
-import static org.keycloak.testsuite.broker.BrokerTestTools.getProviderRoot;
+import static org.keycloak.testsuite.broker.BrokerTestTools.*;
 
 public class KcOidcBrokerColonAliasClientSecretBasicAuthTest extends AbstractBrokerTest {
 
