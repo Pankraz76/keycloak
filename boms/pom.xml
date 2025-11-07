@@ -88,6 +88,9 @@
                     <artifactId>rewrite-maven-plugin</artifactId>
                     <version>6.23.0</version>
                     <configuration>
+                        <activeRecipes>
+                            <recipe>org.keycloak.openrewrite.SanityCheck</recipe>
+                        </activeRecipes>
                         <exportDatatables>true</exportDatatables>
                         <failOnDryRunResults>true</failOnDryRunResults>
                     </configuration>
