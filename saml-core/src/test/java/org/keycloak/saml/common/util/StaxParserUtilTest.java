@@ -39,8 +39,11 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.w3c.dom.Element;
 import org.w3c.dom.Text;
+
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.hamcrest.CoreMatchers.instanceOf;
+import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.CoreMatchers.*;
 
 /**
  *
