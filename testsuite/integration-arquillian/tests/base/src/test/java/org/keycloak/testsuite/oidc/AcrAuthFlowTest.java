@@ -18,11 +18,13 @@
 package org.keycloak.testsuite.oidc;
 
 
-import org.jboss.arquillian.graphene.page.Page;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.Assert;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.keycloak.admin.client.Keycloak;
 import org.keycloak.authentication.authenticators.browser.OTPFormAuthenticatorFactory;
 import org.keycloak.authentication.authenticators.browser.UsernamePasswordFormFactory;
@@ -53,12 +55,11 @@ import org.keycloak.testsuite.util.FlowUtil;
 import org.keycloak.testsuite.util.UserBuilder;
 import org.keycloak.util.JsonSerialization;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import org.jboss.arquillian.graphene.page.Page;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
 
 /**
  * @author <a href="mailto:ggrazian@redhat.com">Giuseppe Graziano</a>
@@ -425,15 +426,6 @@ public class AcrAuthFlowTest extends AbstractOIDCScopeTest{
         claims.setIdTokenClaims(Collections.singletonMap(IDToken.ACR, acrClaim));
 
         oauth.loginForm().claims(claims).open();
-    }
-
-    /**
-     * Helper function to fetch the authentication flow ID based on the alias
-     * @param alias The alias to search for
-     * @return The flow ID
-     */
-    private String findFlowByAlias(String alias){
-        return testRealm().flows().getFlows().stream().filter(f -> f.getAlias().equals(alias)).findFirst().orElseThrow().getId();
     }
 
 

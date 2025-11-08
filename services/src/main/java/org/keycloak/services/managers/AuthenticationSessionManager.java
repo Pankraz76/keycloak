@@ -21,7 +21,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.Objects;
 
-import org.jboss.logging.Logger;
 import org.keycloak.common.util.Base64Url;
 import org.keycloak.common.util.Time;
 import org.keycloak.cookie.CookieProvider;
@@ -42,6 +41,8 @@ import org.keycloak.protocol.RestartLoginCookie;
 import org.keycloak.sessions.AuthenticationSessionModel;
 import org.keycloak.sessions.RootAuthenticationSessionModel;
 import org.keycloak.sessions.StickySessionEncoderProvider;
+
+import org.jboss.logging.Logger;
 
 import static org.keycloak.services.managers.AuthenticationManager.authenticateIdentityCookie;
 

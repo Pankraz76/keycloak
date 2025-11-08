@@ -17,6 +17,8 @@
 
 package org.keycloak.models.jpa.session;
 
+import java.io.Serializable;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -25,9 +27,8 @@ import jakarta.persistence.NamedQueries;
 import jakarta.persistence.NamedQuery;
 import jakarta.persistence.Table;
 import jakarta.persistence.Version;
-import org.hibernate.annotations.DynamicUpdate;
 
-import java.io.Serializable;
+import org.hibernate.annotations.DynamicUpdate;
 
 /**
  * @author <a href="mailto:mposolda@redhat.com">Marek Posolda</a>

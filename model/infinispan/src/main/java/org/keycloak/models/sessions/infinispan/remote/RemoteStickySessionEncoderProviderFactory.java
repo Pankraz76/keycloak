@@ -20,7 +20,6 @@ package org.keycloak.models.sessions.infinispan.remote;
 import java.lang.invoke.MethodHandles;
 import java.util.List;
 
-import org.jboss.logging.Logger;
 import org.keycloak.Config;
 import org.keycloak.connections.infinispan.InfinispanUtil;
 import org.keycloak.infinispan.util.InfinispanUtils;
@@ -31,6 +30,8 @@ import org.keycloak.provider.ProviderConfigProperty;
 import org.keycloak.provider.ProviderConfigurationBuilder;
 import org.keycloak.sessions.StickySessionEncoderProvider;
 import org.keycloak.sessions.StickySessionEncoderProviderFactory;
+
+import org.jboss.logging.Logger;
 
 public class RemoteStickySessionEncoderProviderFactory implements StickySessionEncoderProviderFactory, EnvironmentDependentProviderFactory {
 

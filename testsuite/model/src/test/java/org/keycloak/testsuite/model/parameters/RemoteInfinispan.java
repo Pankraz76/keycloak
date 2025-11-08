@@ -20,9 +20,6 @@ import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Stream;
 
-import com.google.common.collect.ImmutableSet;
-import org.junit.runner.Description;
-import org.junit.runners.model.Statement;
 import org.keycloak.cluster.infinispan.remote.RemoteInfinispanClusterProviderFactory;
 import org.keycloak.connections.infinispan.remote.RemoteLoadBalancerCheckProviderFactory;
 import org.keycloak.models.sessions.infinispan.remote.RemoteInfinispanAuthenticationSessionProviderFactory;
@@ -38,6 +35,10 @@ import org.keycloak.spi.infinispan.impl.remote.DefaultCacheRemoteConfigProviderF
 import org.keycloak.testsuite.model.Config;
 import org.keycloak.testsuite.model.HotRodServerRule;
 import org.keycloak.testsuite.model.KeycloakModelParameters;
+
+import com.google.common.collect.ImmutableSet;
+import org.junit.runner.Description;
+import org.junit.runners.model.Statement;
 
 /**
  * Enables RemoteInfinispan and adds all classes needed to connect to remote Infinispan to allowed factories
@@ -96,10 +97,6 @@ public class RemoteInfinispan extends KeycloakModelParameters {
 
     private static String siteName(int node) {
         return "site-" + (node % 2 == 0 ? 2 : 1);
-    }
-
-    private static String mcastAddr(int node) {
-        return (node % 2 == 0) ? SITE_2_MCAST_ADDR : SITE_1_MCAST_ADDR;
     }
 
     @Override

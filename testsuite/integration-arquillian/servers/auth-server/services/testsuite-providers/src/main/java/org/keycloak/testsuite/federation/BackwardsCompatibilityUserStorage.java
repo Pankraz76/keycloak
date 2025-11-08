@@ -26,7 +26,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Stream;
 
-import org.jboss.logging.Logger;
 import org.keycloak.common.util.Time;
 import org.keycloak.component.ComponentModel;
 import org.keycloak.credential.CredentialInput;
@@ -54,6 +53,8 @@ import org.keycloak.storage.user.UserLookupProvider;
 import org.keycloak.storage.user.UserQueryProvider;
 import org.keycloak.storage.user.UserRegistrationProvider;
 import org.keycloak.util.JsonSerialization;
+
+import org.jboss.logging.Logger;
 
 /**
  * UserStorage implementation created in Keycloak 4.8.3. It is used for backwards compatibility testing. Future Keycloak versions
@@ -449,12 +450,6 @@ public class BackwardsCompatibilityUserStorage implements UserLookupProvider, Us
     private void assertNotNull(Object obj) {
         if (obj == null) {
             throw new AssertionError("Object was null");
-        }
-    }
-
-    private void assertEquals(Object obj1, Object obj2) {
-        if (!(obj1.equals(obj2))) {
-            throw new AssertionError("Objects not equals");
         }
     }
 
