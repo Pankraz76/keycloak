@@ -26,7 +26,6 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import org.jboss.logging.Logger;
 import org.keycloak.client.clienttype.ClientTypeManager;
 import org.keycloak.cluster.ClusterProvider;
 import org.keycloak.common.Profile;
@@ -60,8 +59,9 @@ import org.keycloak.models.cache.infinispan.entities.ClientScopeListQuery;
 import org.keycloak.models.cache.infinispan.entities.GroupListQuery;
 import org.keycloak.models.cache.infinispan.entities.GroupNameQuery;
 import org.keycloak.models.cache.infinispan.entities.RealmListQuery;
-import org.keycloak.models.cache.infinispan.entities.RoleListQuery;
 import org.keycloak.models.cache.infinispan.entities.RoleByNameQuery;
+import org.keycloak.models.cache.infinispan.entities.RoleListQuery;
+import org.keycloak.models.cache.infinispan.events.CacheKeyInvalidatedEvent;
 import org.keycloak.models.cache.infinispan.events.ClientAddedEvent;
 import org.keycloak.models.cache.infinispan.events.ClientRemovedEvent;
 import org.keycloak.models.cache.infinispan.events.ClientScopeAddedEvent;
@@ -72,7 +72,6 @@ import org.keycloak.models.cache.infinispan.events.GroupMovedEvent;
 import org.keycloak.models.cache.infinispan.events.GroupRemovedEvent;
 import org.keycloak.models.cache.infinispan.events.GroupUpdatedEvent;
 import org.keycloak.models.cache.infinispan.events.InvalidationEvent;
-import org.keycloak.models.cache.infinispan.events.CacheKeyInvalidatedEvent;
 import org.keycloak.models.cache.infinispan.events.RealmRemovedEvent;
 import org.keycloak.models.cache.infinispan.events.RealmUpdatedEvent;
 import org.keycloak.models.cache.infinispan.events.RoleAddedEvent;
@@ -83,6 +82,8 @@ import org.keycloak.storage.DatastoreProvider;
 import org.keycloak.storage.StorageId;
 import org.keycloak.storage.StoreManagers;
 import org.keycloak.storage.client.ClientStorageProviderModel;
+
+import org.jboss.logging.Logger;
 
 
 /**
@@ -1090,11 +1091,6 @@ public class RealmCacheSession implements CacheRealmProvider {
     @Override
     public Stream<GroupModel> getTopLevelGroupsStream(RealmModel realm, String search, Boolean exact, Integer first, Integer max) {
         return getGroupDelegate().getTopLevelGroupsStream(realm, search, exact, first, max);
-    }
-
-    private boolean hasInvalidation(RealmModel realm, String cacheKey) {
-        return invalidations.contains(cacheKey) || listInvalidations.contains(cacheKey)
-                || listInvalidations.contains(realm.getId());
     }
 
     @Override

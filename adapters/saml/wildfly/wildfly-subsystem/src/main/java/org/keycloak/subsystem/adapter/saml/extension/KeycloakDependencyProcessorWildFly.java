@@ -17,13 +17,12 @@
 
 package org.keycloak.subsystem.adapter.saml.extension;
 
-import static org.keycloak.subsystem.adapter.saml.extension.Elytron.isElytronEnabled;
-
 import org.jboss.as.server.deployment.DeploymentPhaseContext;
 import org.jboss.as.server.deployment.module.ModuleDependency;
 import org.jboss.as.server.deployment.module.ModuleSpecification;
-import org.jboss.modules.ModuleClassLoader;
 import org.jboss.modules.ModuleLoader;
+
+import static org.keycloak.subsystem.adapter.saml.extension.Elytron.isElytronEnabled;
 
 /**
  * Add platform-specific modules for WildFly.
@@ -46,11 +45,5 @@ public class KeycloakDependencyProcessorWildFly extends KeycloakDependencyProces
         } else {
             throw new RuntimeException("Legacy WildFly security layer is no longer supported by the Keycloak WildFly adapter");
         }
-    }
-
-    private boolean isJakarta() {
-        ClassLoader classLoader = getClass().getClassLoader();
-        String classLoaderName = (classLoader instanceof ModuleClassLoader ? ((ModuleClassLoader) classLoader).getName() : "");
-        return classLoaderName.contains("jakarta");
     }
 }

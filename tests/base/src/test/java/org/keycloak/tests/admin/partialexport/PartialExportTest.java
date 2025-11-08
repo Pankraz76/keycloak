@@ -1,9 +1,16 @@
 package org.keycloak.tests.admin.partialexport;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.Set;
+
 import org.keycloak.admin.client.Keycloak;
+import org.keycloak.common.constants.ServiceAccountConstants;
 import org.keycloak.common.util.MultivaluedHashMap;
 import org.keycloak.models.ClientSecretConstants;
 import org.keycloak.representations.idm.ClientRepresentation;
@@ -14,22 +21,16 @@ import org.keycloak.representations.idm.IdentityProviderRepresentation;
 import org.keycloak.representations.idm.RealmRepresentation;
 import org.keycloak.representations.idm.RoleRepresentation;
 import org.keycloak.representations.idm.ScopeMappingRepresentation;
+import org.keycloak.representations.idm.UserRepresentation;
 import org.keycloak.testframework.annotations.InjectAdminClient;
 import org.keycloak.testframework.annotations.KeycloakIntegrationTest;
 import org.keycloak.tests.utils.Assert;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.Set;
-import org.hamcrest.Matchers;
-import org.keycloak.common.constants.ServiceAccountConstants;
-import org.keycloak.representations.idm.UserRepresentation;
 import org.keycloak.util.JsonSerialization;
+
+import org.hamcrest.Matchers;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -320,12 +321,6 @@ public class PartialExportTest {
                 compileGroups(found, s);
             }
         }
-    }
-    private void checkDefaultRoles(List<String> defaultRoles) {
-        HashSet<String> roles = new HashSet<>(defaultRoles);
-        Assert.assertTrue(roles.contains("uma_authorization"), "Default role 'uma_authorization'");
-        Assert.assertTrue(roles.contains("offline_access"), "Default role 'offline_access'");
-        Assert.assertTrue(roles.contains("user"), "Default role 'user'");
     }
 
     private static <T> T loadJson(InputStream is, Class<T> type) {

@@ -21,7 +21,6 @@ import java.io.IOException;
 import java.net.ConnectException;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.nio.file.Files;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
@@ -34,6 +33,7 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSession;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
+
 import org.jboss.arquillian.container.spi.client.container.DeployableContainer;
 import org.jboss.arquillian.container.spi.client.container.DeploymentException;
 import org.jboss.arquillian.container.spi.client.container.LifecycleException;
@@ -196,13 +196,6 @@ public class InfinispanServerDeployableContainer implements DeployableContainer<
             infinispanServerProcess.destroyForcibly();
         }
         log.info("Infinispan server stopped");
-    }
-
-    private long getPID() throws IOException {
-        if (pidFile == null) {
-            throw new IllegalStateException(String.format("Unable to find PID file '%s'", pidFile));
-        }
-        return Long.parseLong(Files.readAllLines(pidFile.toPath()).get(0).trim());
     }
 
     /**

@@ -17,11 +17,12 @@
 
 package org.keycloak.models.sessions.infinispan;
 
-import org.infinispan.Cache;
 import org.keycloak.connections.infinispan.InfinispanConnectionProvider;
-import org.keycloak.models.KeycloakSession;
 import org.keycloak.connections.infinispan.InfinispanUtil;
+import org.keycloak.models.KeycloakSession;
 import org.keycloak.sessions.StickySessionEncoderProvider;
+
+import org.infinispan.Cache;
 
 /**
  * @author <a href="mailto:mposolda@redhat.com">Marek Posolda</a>

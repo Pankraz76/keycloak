@@ -16,11 +16,50 @@
  */
 package org.keycloak.testsuite.arquillian;
 
+import java.io.File;
+import java.io.FileFilter;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.security.Provider;
+import java.security.Security;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import jakarta.ws.rs.NotFoundException;
+
+import org.keycloak.admin.client.Keycloak;
+import org.keycloak.common.crypto.FipsMode;
+import org.keycloak.common.util.StringPropertyReplacer;
+import org.keycloak.common.util.SystemEnvProperties;
+import org.keycloak.representations.idm.RealmRepresentation;
+import org.keycloak.services.error.KeycloakErrorHandler;
+import org.keycloak.testsuite.ProfileAssume;
+import org.keycloak.testsuite.arquillian.annotation.EnableVault;
+import org.keycloak.testsuite.arquillian.annotation.SetDefaultProvider;
+import org.keycloak.testsuite.arquillian.annotation.UncaughtServerErrorExpected;
+import org.keycloak.testsuite.client.KeycloakTestingClient;
+import org.keycloak.testsuite.util.HttpClientUtils;
+import org.keycloak.testsuite.util.SpiProvidersSwitchingUtils;
+import org.keycloak.testsuite.util.SqlUtils;
+import org.keycloak.testsuite.util.SystemInfoHelper;
+import org.keycloak.testsuite.util.TextFileChecker;
+import org.keycloak.testsuite.util.VaultUtils;
+import org.keycloak.testsuite.util.oauth.OAuthClient;
+
 import org.apache.commons.io.filefilter.WildcardFileFilter;
 import org.apache.commons.lang.StringUtils;
 import org.jboss.arquillian.container.spi.ContainerRegistry;
-import org.jboss.arquillian.container.spi.client.container.LifecycleException;
 import org.jboss.arquillian.container.spi.client.container.DeploymentException;
+import org.jboss.arquillian.container.spi.client.container.LifecycleException;
 import org.jboss.arquillian.container.spi.event.StartContainer;
 import org.jboss.arquillian.container.spi.event.StartSuiteContainers;
 import org.jboss.arquillian.container.spi.event.StopContainer;
@@ -34,51 +73,13 @@ import org.jboss.arquillian.core.api.annotation.Inject;
 import org.jboss.arquillian.core.api.annotation.Observes;
 import org.jboss.arquillian.test.spi.annotation.ClassScoped;
 import org.jboss.arquillian.test.spi.annotation.SuiteScoped;
+import org.jboss.arquillian.test.spi.event.suite.After;
 import org.jboss.arquillian.test.spi.event.suite.AfterClass;
 import org.jboss.arquillian.test.spi.event.suite.AfterSuite;
+import org.jboss.arquillian.test.spi.event.suite.Before;
 import org.jboss.arquillian.test.spi.event.suite.BeforeClass;
 import org.jboss.arquillian.test.spi.event.suite.BeforeSuite;
 import org.jboss.logging.Logger;
-import org.keycloak.admin.client.Keycloak;
-import org.keycloak.common.crypto.FipsMode;
-import org.keycloak.common.util.StringPropertyReplacer;
-import org.keycloak.common.util.SystemEnvProperties;
-import org.keycloak.representations.idm.RealmRepresentation;
-import org.keycloak.services.error.KeycloakErrorHandler;
-import org.keycloak.testsuite.ProfileAssume;
-import org.keycloak.testsuite.arquillian.annotation.SetDefaultProvider;
-import org.keycloak.testsuite.arquillian.annotation.UncaughtServerErrorExpected;
-import org.keycloak.testsuite.arquillian.annotation.EnableVault;
-import org.keycloak.testsuite.client.KeycloakTestingClient;
-import org.keycloak.testsuite.util.HttpClientUtils;
-import org.keycloak.testsuite.util.oauth.OAuthClient;
-import org.keycloak.testsuite.util.SpiProvidersSwitchingUtils;
-import org.keycloak.testsuite.util.SqlUtils;
-import org.keycloak.testsuite.util.SystemInfoHelper;
-import org.keycloak.testsuite.util.VaultUtils;
-import org.keycloak.testsuite.util.TextFileChecker;
-
-import java.io.File;
-import java.io.FileFilter;
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.security.Provider;
-import java.security.Security;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-import jakarta.ws.rs.NotFoundException;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import org.jboss.arquillian.test.spi.event.suite.After;
-import org.jboss.arquillian.test.spi.event.suite.Before;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Assert;
 import org.w3c.dom.Document;
@@ -390,19 +391,6 @@ public class AuthServerTestEnricher {
 
     private static final Pattern RECOGNIZED_ERRORS = Pattern.compile("ERROR \\[|SEVERE \\[|Exception ");
     private static final Pattern IGNORED = Pattern.compile("Jetty ALPN support not found|org.keycloak.events");
-
-    private static final boolean isRecognizedErrorLog(String logText) {
-        //There is expected string "Exception" in server log: Adding provider
-        //singleton org.keycloak.services.resources.ModelExceptionMapper
-        return RECOGNIZED_ERRORS.matcher(logText).find() && ! IGNORED.matcher(logText).find();
-    }
-
-    private static final void failOnRecognizedErrorInLog(Stream<String> logStream) {
-        Optional<String> anyRecognizedError = logStream.filter(AuthServerTestEnricher::isRecognizedErrorLog).findAny();
-        if (anyRecognizedError.isPresent()) {
-            throw new RuntimeException(String.format("Server log file contains ERROR: '%s'", anyRecognizedError.get()));
-        }
-    }
 
     public void checkServerLogs(@Observes(precedence = -1) BeforeSuite event) {
         suiteContext.setServerLogChecker(new TextFileChecker());

@@ -17,12 +17,11 @@
 
 package org.keycloak.testsuite.cluster;
 
-import org.hamcrest.Matchers;
-import org.infinispan.Cache;
-import org.jboss.arquillian.graphene.page.Page;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import java.util.HashSet;
+import java.util.Set;
+
+import jakarta.ws.rs.core.UriBuilder;
+
 import org.keycloak.connections.infinispan.InfinispanConnectionProvider;
 import org.keycloak.connections.infinispan.InfinispanUtil;
 import org.keycloak.models.RealmModel;
@@ -36,16 +35,20 @@ import org.keycloak.testsuite.pages.LoginPasswordUpdatePage;
 import org.keycloak.testsuite.pages.LoginUpdateProfilePage;
 import org.keycloak.testsuite.util.oauth.OAuthClient;
 
-import jakarta.ws.rs.core.UriBuilder;
-import java.util.HashSet;
-import java.util.Set;
+import org.hamcrest.Matchers;
+import org.infinispan.Cache;
+import org.jboss.arquillian.graphene.page.Page;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.keycloak.connections.infinispan.InfinispanConnectionProvider.AUTHENTICATION_SESSIONS_CACHE_NAME;
+import static org.keycloak.testsuite.AbstractAdminTest.loadJson;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
-import static org.keycloak.connections.infinispan.InfinispanConnectionProvider.AUTHENTICATION_SESSIONS_CACHE_NAME;
-import static org.keycloak.testsuite.AbstractAdminTest.loadJson;
 
 /**
  * @author <a href="mailto:mposolda@redhat.com">Marek Posolda</a>

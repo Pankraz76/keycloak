@@ -17,9 +17,12 @@
 
 package org.keycloak.tests.admin.event;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneOffset;
+import java.util.List;
+import java.util.Map;
+
 import org.keycloak.events.Event;
 import org.keycloak.events.EventStoreProvider;
 import org.keycloak.events.EventType;
@@ -35,11 +38,9 @@ import org.keycloak.testframework.realm.RealmConfigBuilder;
 import org.keycloak.testframework.remote.runonserver.InjectRunOnServer;
 import org.keycloak.testframework.remote.runonserver.RunOnServerClient;
 
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.ZoneOffset;
-import java.util.List;
-import java.util.Map;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -71,14 +72,6 @@ public class LoginEventsTest {
 
     private void badLogin() {
         oAuthClient.doLogin("bad", "user");
-    }
-
-    private void pause(int seconds) {
-        try {
-            Thread.sleep(seconds * 1000L);
-        } catch (InterruptedException e) {
-            Assertions.fail(e.getMessage());
-        }
     }
 
     @Test

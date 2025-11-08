@@ -17,6 +17,16 @@
 
 package org.keycloak.protocol.saml;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.security.cert.X509Certificate;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.stream.Collectors;
+
 import org.keycloak.Config;
 import org.keycloak.dom.saml.v2.metadata.EndpointType;
 import org.keycloak.dom.saml.v2.metadata.EntitiesDescriptorType;
@@ -43,16 +53,6 @@ import org.keycloak.saml.common.exceptions.ParsingException;
 import org.keycloak.saml.common.exceptions.ProcessingException;
 import org.keycloak.saml.processing.core.parsers.saml.SAMLParser;
 import org.keycloak.saml.processing.core.saml.v2.util.SAMLMetadataUtil;
-
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
-import java.security.cert.X509Certificate;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
-import java.util.stream.Collectors;
 
 /**
  * @author <a href="mailto:bill@burkecentral.com">Bill Burke</a>
@@ -104,22 +104,6 @@ public class EntityDescriptorDescriptionConverter implements ClientDescriptionCo
                 return endpoint.getLocation().toString();
             }
 
-        }
-        return null;
-    }
-
-    /**
-     * Gets from a SPSSO descriptor the artifact resolution service for a given index
-     * @param sp an SPSSO descriptor
-     * @param index the index of the artifact resolution service to return
-     * @return the location of the artifact resolution service
-     */
-    private static String getArtifactResolutionService(SPSSODescriptorType sp, int index) {
-        List<IndexedEndpointType> endpoints = sp.getArtifactResolutionService();
-        for (IndexedEndpointType endpoint : endpoints) {
-            if (endpoint.getIndex() == index) {
-                return endpoint.getLocation().toString();
-            }
         }
         return null;
     }

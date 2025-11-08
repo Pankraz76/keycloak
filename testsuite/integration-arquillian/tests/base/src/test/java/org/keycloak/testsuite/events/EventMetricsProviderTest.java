@@ -17,11 +17,9 @@
 
 package org.keycloak.testsuite.events;
 
-import io.micrometer.core.instrument.Metrics;
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
-import org.junit.After;
-import org.junit.Test;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.keycloak.common.Profile;
 import org.keycloak.events.Details;
 import org.keycloak.events.Errors;
@@ -35,8 +33,11 @@ import org.keycloak.testsuite.arquillian.containers.AbstractQuarkusDeployableCon
 import org.keycloak.testsuite.util.ContainerAssume;
 import org.keycloak.testsuite.util.RealmBuilder;
 
-import java.util.ArrayList;
-import java.util.List;
+import io.micrometer.core.instrument.Metrics;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
+import org.junit.After;
+import org.junit.Test;
 
 import static org.keycloak.testsuite.auth.page.AuthRealm.TEST;
 
@@ -75,15 +76,6 @@ public class EventMetricsProviderTest extends AbstractKeycloakTest {
         }
         else {
             throw new RuntimeException("This test will only work on Quarkus as it uses Micrometer");
-        }
-    }
-
-    private static void setConfigProperty(String name, String value) {
-        if (value != null) {
-            System.setProperty(name, value);
-        }
-        else {
-            System.clearProperty(name);
         }
     }
 
