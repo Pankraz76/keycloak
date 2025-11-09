@@ -17,12 +17,11 @@
 
 package org.keycloak.connections.httpclient;
 
-import org.keycloak.provider.Provider;
-
 import java.io.IOException;
 import java.io.InputStream;
 
 import org.apache.http.impl.client.CloseableHttpClient;
+import org.keycloak.provider.Provider;
 
 /**
  * @author <a href="mailto:sthorger@redhat.com">Stian Thorgersen</a>

@@ -17,10 +17,11 @@
 
 package org.keycloak.services.clientpolicy.executor;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.URI;
 import java.util.Collection;
 import java.util.Map;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.keycloak.OAuthErrorException;
 import org.keycloak.dom.saml.v2.protocol.AuthnRequestType;
 import org.keycloak.models.ClientModel;

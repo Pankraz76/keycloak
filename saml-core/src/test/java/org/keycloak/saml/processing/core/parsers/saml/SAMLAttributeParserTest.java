@@ -1,16 +1,16 @@
 package org.keycloak.saml.processing.core.parsers.saml;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
+import javax.xml.namespace.QName;
+import javax.xml.stream.XMLEventReader;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.keycloak.dom.saml.v2.assertion.AttributeType;
 import org.keycloak.saml.common.parsers.AbstractParser;
 import org.keycloak.saml.processing.core.parsers.saml.assertion.SAMLAttributeParser;
-
-import javax.xml.namespace.QName;
-import javax.xml.stream.XMLEventReader;
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
 
 public class SAMLAttributeParserTest {
 

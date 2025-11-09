@@ -1,5 +1,7 @@
 package org.keycloak.testsuite.broker;
 
+import java.util.Collections;
+
 import com.google.common.collect.ImmutableMap;
 import org.junit.Test;
 import org.keycloak.admin.client.resource.RealmResource;
@@ -18,8 +20,6 @@ import org.keycloak.testsuite.saml.AbstractSamlTest;
 import org.keycloak.testsuite.util.SamlClient;
 import org.keycloak.testsuite.util.SamlClientBuilder;
 import org.w3c.dom.Document;
-
-import java.util.Collections;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;

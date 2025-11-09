@@ -16,6 +16,11 @@
  */
 package org.keycloak.storage;
 
+import java.util.Objects;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.stream.Stream;
+
 import org.jboss.logging.Logger;
 import org.keycloak.Config;
 import org.keycloak.common.util.reflections.Types;
@@ -26,11 +31,6 @@ import org.keycloak.models.RealmModel;
 import org.keycloak.provider.Provider;
 import org.keycloak.provider.ProviderFactory;
 import org.keycloak.utils.ServicesUtils;
-
-import java.util.Objects;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.stream.Stream;
 
 /**
  *

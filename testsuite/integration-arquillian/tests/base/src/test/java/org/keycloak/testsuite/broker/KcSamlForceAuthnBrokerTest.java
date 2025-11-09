@@ -18,6 +18,10 @@
  */
 package org.keycloak.testsuite.broker;
 
+import java.io.Closeable;
+
+import org.junit.Assert;
+import org.junit.Test;
 import org.keycloak.broker.saml.SAMLIdentityProviderConfig;
 import org.keycloak.dom.saml.v2.protocol.AuthnRequestType;
 import org.keycloak.saml.processing.api.saml.v2.request.SAML2Request;
@@ -26,11 +30,8 @@ import org.keycloak.testsuite.updaters.IdentityProviderAttributeUpdater;
 import org.keycloak.testsuite.util.SamlClient;
 import org.keycloak.testsuite.util.SamlClient.Binding;
 import org.keycloak.testsuite.util.SamlClientBuilder;
-import java.io.Closeable;
-
-import org.junit.Assert;
-import org.junit.Test;
 import org.w3c.dom.Document;
+
 import static org.keycloak.testsuite.broker.BrokerTestTools.getConsumerRoot;
 
 /**

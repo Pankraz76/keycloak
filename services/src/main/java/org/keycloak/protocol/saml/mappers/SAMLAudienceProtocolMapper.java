@@ -20,6 +20,7 @@ package org.keycloak.protocol.saml.mappers;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.jboss.logging.Logger;
 import org.keycloak.dom.saml.v2.assertion.AudienceRestrictionType;
 import org.keycloak.dom.saml.v2.protocol.ResponseType;

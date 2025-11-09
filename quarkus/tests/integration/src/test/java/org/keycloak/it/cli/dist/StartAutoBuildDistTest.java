@@ -17,6 +17,7 @@
 
 package org.keycloak.it.cli.dist;
 
+import com.acme.provider.legacy.jpa.user.CustomUserProvider;
 import io.quarkus.test.junit.main.Launch;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -28,8 +29,6 @@ import org.keycloak.it.junit5.extension.DryRun;
 import org.keycloak.it.junit5.extension.RawDistOnly;
 import org.keycloak.it.junit5.extension.TestProvider;
 import org.keycloak.it.utils.KeycloakDistribution;
-
-import com.acme.provider.legacy.jpa.user.CustomUserProvider;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.keycloak.quarkus.runtime.cli.command.AbstractAutoBuildCommand.OPTIMIZED_BUILD_OPTION_LONG;

@@ -17,6 +17,8 @@
 
 package org.keycloak.connections.jpa;
 
+import jakarta.persistence.EntityManagerFactory;
+
 import org.hibernate.SessionFactory;
 import org.hibernate.internal.SessionFactoryImpl;
 import org.hibernate.stat.CollectionStatistics;
@@ -26,8 +28,6 @@ import org.hibernate.stat.Statistics;
 import org.jboss.logging.Logger;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.timer.ScheduledTask;
-
-import jakarta.persistence.EntityManagerFactory;
 
 /**
  * @author <a href="mailto:mposolda@redhat.com">Marek Posolda</a>

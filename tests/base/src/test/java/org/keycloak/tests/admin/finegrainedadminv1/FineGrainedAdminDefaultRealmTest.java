@@ -1,5 +1,8 @@
 package org.keycloak.tests.admin.finegrainedadminv1;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.keycloak.admin.client.Keycloak;
@@ -19,9 +22,6 @@ import org.keycloak.representations.idm.RoleRepresentation;
 import org.keycloak.services.resources.admin.fgap.AdminPermissionManagement;
 import org.keycloak.services.resources.admin.fgap.AdminPermissions;
 import org.keycloak.testframework.annotations.KeycloakIntegrationTest;
-
-import java.util.LinkedList;
-import java.util.List;
 
 @KeycloakIntegrationTest(config = AbstractFineGrainedAdminTest.FineGrainedAdminServerConf.class)
 public class FineGrainedAdminDefaultRealmTest extends AbstractFineGrainedAdminTest {

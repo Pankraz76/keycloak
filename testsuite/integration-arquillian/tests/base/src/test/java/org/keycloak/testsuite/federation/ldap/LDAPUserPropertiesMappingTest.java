@@ -109,4 +109,3 @@ public class LDAPUserPropertiesMappingTest extends AbstractLDAPTest {
         });
     }
 }
-

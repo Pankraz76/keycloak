@@ -16,6 +16,11 @@
  */
 package org.keycloak.testsuite.model.parameters;
 
+import java.io.File;
+import java.net.URISyntaxException;
+import java.util.Set;
+import java.util.stream.Stream;
+
 import com.google.common.collect.ImmutableSet;
 import org.keycloak.common.util.MultivaluedHashMap;
 import org.keycloak.provider.ProviderFactory;
@@ -24,11 +29,6 @@ import org.keycloak.storage.UserStorageProvider;
 import org.keycloak.storage.UserStorageProviderModel;
 import org.keycloak.testsuite.federation.UserPropertyFileStorageFactory;
 import org.keycloak.testsuite.model.KeycloakModelParameters;
-
-import java.io.File;
-import java.net.URISyntaxException;
-import java.util.Set;
-import java.util.stream.Stream;
 
 /**
  *

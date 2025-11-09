@@ -17,6 +17,12 @@ package org.keycloak.tests.utils;
  * limitations under the License.
  */
 
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 import org.hamcrest.MatcherAssert;
 import org.junit.jupiter.api.Assertions;
 import org.keycloak.common.util.MultivaluedHashMap;
@@ -32,12 +38,6 @@ import org.keycloak.representations.idm.UserFederationProviderFactoryRepresentat
 import org.keycloak.representations.idm.UserProfileAttributeMetadata;
 import org.keycloak.representations.idm.UserRepresentation;
 import org.keycloak.representations.info.ThemeInfoRepresentation;
-
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.containsInAnyOrder;
@@ -175,4 +175,3 @@ public class Assert extends Assertions {
         }
     }
 }
-

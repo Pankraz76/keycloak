@@ -17,15 +17,23 @@
 
 package org.keycloak.connections.httpclient;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.security.KeyStore;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.entity.EntityBuilder;
+import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.ContentType;
 import org.apache.http.impl.client.AbstractResponseHandler;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.util.EntityUtils;
 import org.jboss.logging.Logger;
 import org.keycloak.Config;
 import org.keycloak.common.util.EnvUtil;
@@ -35,15 +43,6 @@ import org.keycloak.models.KeycloakSessionFactory;
 import org.keycloak.provider.ProviderConfigProperty;
 import org.keycloak.provider.ProviderConfigurationBuilder;
 import org.keycloak.truststore.TruststoreProvider;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.security.KeyStore;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.util.EntityUtils;
 
 import static org.keycloak.utils.StringUtil.isBlank;
 

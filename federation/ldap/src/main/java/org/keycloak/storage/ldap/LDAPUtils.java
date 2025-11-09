@@ -32,7 +32,6 @@ import java.util.Set;
 import java.util.TimeZone;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
-
 import javax.naming.directory.SearchControls;
 
 import org.jboss.logging.Logger;

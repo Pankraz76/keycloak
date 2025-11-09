@@ -17,10 +17,23 @@
 
 package org.keycloak.testsuite.util;
 
+import java.io.IOException;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.Key;
+import java.security.KeyPair;
+import java.security.KeyPairGenerator;
+import java.security.NoSuchAlgorithmException;
+import java.security.PrivateKey;
+import java.security.SecureRandom;
+import java.security.interfaces.ECPublicKey;
+import java.security.spec.ECGenParameterSpec;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Consumer;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import org.keycloak.common.util.Base64Url;
 import org.keycloak.common.util.MultivaluedMap;
 import org.keycloak.crypto.KeyType;
@@ -56,8 +69,8 @@ import org.keycloak.services.clientpolicy.executor.FullScopeDisabledExecutor;
 import org.keycloak.services.clientpolicy.executor.HolderOfKeyEnforcerExecutor;
 import org.keycloak.services.clientpolicy.executor.IntentClientBindCheckExecutor;
 import org.keycloak.services.clientpolicy.executor.PKCEEnforcerExecutor;
-import org.keycloak.services.clientpolicy.executor.RejectResourceOwnerPasswordCredentialsGrantExecutor;
 import org.keycloak.services.clientpolicy.executor.RejectImplicitGrantExecutor;
+import org.keycloak.services.clientpolicy.executor.RejectResourceOwnerPasswordCredentialsGrantExecutor;
 import org.keycloak.services.clientpolicy.executor.SecureClientAuthenticatorExecutor;
 import org.keycloak.services.clientpolicy.executor.SecureRedirectUrisEnforcerExecutor;
 import org.keycloak.services.clientpolicy.executor.SecureRequestObjectExecutor;
@@ -68,20 +81,6 @@ import org.keycloak.testsuite.services.clientpolicy.condition.TestRaiseException
 import org.keycloak.testsuite.services.clientpolicy.executor.TestRaiseExceptionExecutor;
 import org.keycloak.util.DPoPGenerator;
 import org.keycloak.util.JsonSerialization;
-
-import java.io.IOException;
-import java.security.InvalidAlgorithmParameterException;
-import java.security.Key;
-import java.security.KeyPair;
-import java.security.KeyPairGenerator;
-import java.security.NoSuchAlgorithmException;
-import java.security.PrivateKey;
-import java.security.SecureRandom;
-import java.security.interfaces.ECPublicKey;
-import java.security.spec.ECGenParameterSpec;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.function.Consumer;
 
 import static org.junit.Assert.fail;
 import static org.keycloak.jose.jwk.JWKUtil.toIntegerBytes;

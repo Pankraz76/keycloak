@@ -20,6 +20,7 @@
 package org.keycloak.testsuite.federation.kerberos;
 
 import jakarta.ws.rs.core.Response;
+
 import org.junit.ClassRule;
 import org.junit.FixMethodOrder;
 import org.junit.Test;

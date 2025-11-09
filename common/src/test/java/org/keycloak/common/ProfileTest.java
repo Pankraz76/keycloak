@@ -1,5 +1,16 @@
 package org.keycloak.common;
 
+import java.security.Provider;
+import java.security.Security;
+import java.util.AbstractMap;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Set;
+
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.After;
@@ -11,17 +22,6 @@ import org.junit.rules.TemporaryFolder;
 import org.keycloak.common.profile.CommaSeparatedListProfileConfigResolver;
 import org.keycloak.common.profile.ProfileException;
 import org.keycloak.common.profile.PropertiesProfileConfigResolver;
-
-import java.security.Provider;
-import java.security.Security;
-import java.util.AbstractMap;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Set;
 
 import static org.junit.Assert.assertThrows;
 

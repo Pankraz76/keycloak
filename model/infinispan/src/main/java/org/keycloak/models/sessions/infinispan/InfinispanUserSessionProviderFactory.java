@@ -414,4 +414,3 @@ public class InfinispanUserSessionProviderFactory implements UserSessionProvider
     private record PersistentTransaction(UserSessionPersistentChangelogBasedTransaction userTx, ClientSessionPersistentChangelogBasedTransaction clientTx) {}
 
 }
-

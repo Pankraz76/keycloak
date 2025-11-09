@@ -20,6 +20,7 @@ package org.keycloak.testsuite.broker;
 import java.util.Map;
 
 import jakarta.ws.rs.core.Response;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.ClassRule;

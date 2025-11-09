@@ -17,10 +17,6 @@
 
 package org.keycloak.truststore;
 
-import org.jboss.logging.Logger;
-import org.keycloak.common.util.KeystoreUtil;
-import org.keycloak.common.util.KeystoreUtil.KeystoreFormat;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -34,6 +30,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Stream;
+
+import org.jboss.logging.Logger;
+import org.keycloak.common.util.KeystoreUtil;
+import org.keycloak.common.util.KeystoreUtil.KeystoreFormat;
 
 /**
  * Builds a system-wide truststore from the given config options.

@@ -17,12 +17,12 @@
 
 package org.keycloak.adapters.cloned;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-
 import java.io.IOException;
 import java.io.InputStream;
 import javax.xml.crypto.dsig.keyinfo.KeyInfo;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;

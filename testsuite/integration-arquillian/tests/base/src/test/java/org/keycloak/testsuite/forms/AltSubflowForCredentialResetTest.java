@@ -18,6 +18,8 @@
 
 package org.keycloak.testsuite.forms;
 
+import java.util.List;
+
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.Assert;
 import org.junit.Before;
@@ -40,8 +42,6 @@ import org.keycloak.testsuite.pages.LoginUsernameOnlyPage;
 import org.keycloak.testsuite.util.FlowUtil;
 import org.keycloak.testsuite.util.GreenMailRule;
 import org.keycloak.testsuite.util.UserBuilder;
-
-import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.keycloak.testsuite.AbstractAdminTest.loadJson;

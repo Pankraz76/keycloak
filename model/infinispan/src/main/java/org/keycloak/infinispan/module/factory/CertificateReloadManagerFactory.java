@@ -3,8 +3,8 @@ package org.keycloak.infinispan.module.factory;
 import org.infinispan.factories.AbstractComponentFactory;
 import org.infinispan.factories.AutoInstantiableFactory;
 import org.infinispan.factories.annotations.DefaultFactoryFor;
-import org.keycloak.jgroups.certificates.CertificateReloadManager;
 import org.keycloak.infinispan.module.configuration.global.KeycloakConfiguration;
+import org.keycloak.jgroups.certificates.CertificateReloadManager;
 import org.keycloak.models.KeycloakSessionFactory;
 import org.keycloak.spi.infinispan.JGroupsCertificateProvider;
 

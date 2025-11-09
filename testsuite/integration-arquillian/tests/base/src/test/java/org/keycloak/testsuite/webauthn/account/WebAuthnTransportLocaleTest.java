@@ -17,14 +17,6 @@
 
 package org.keycloak.testsuite.webauthn.account;
 
-import org.hamcrest.Matchers;
-import org.junit.Test;
-import org.keycloak.testsuite.arquillian.annotation.IgnoreBrowserDriver;
-import org.keycloak.testsuite.webauthn.authenticators.DefaultVirtualAuthOptions;
-import org.keycloak.testsuite.webauthn.pages.WebAuthnAuthenticatorsList;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.virtualauthenticator.VirtualAuthenticatorOptions;
-
 import java.io.Closeable;
 import java.io.IOException;
 import java.util.List;
@@ -32,6 +24,14 @@ import java.util.Locale;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
+
+import org.hamcrest.Matchers;
+import org.junit.Test;
+import org.keycloak.testsuite.arquillian.annotation.IgnoreBrowserDriver;
+import org.keycloak.testsuite.webauthn.authenticators.DefaultVirtualAuthOptions;
+import org.keycloak.testsuite.webauthn.pages.WebAuthnAuthenticatorsList;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.virtualauthenticator.VirtualAuthenticatorOptions;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;

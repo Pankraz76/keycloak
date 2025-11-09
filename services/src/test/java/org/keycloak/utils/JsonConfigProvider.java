@@ -21,7 +21,6 @@ import java.util.Set;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.NullNode;
-
 import org.keycloak.Config;
 import org.keycloak.Config.Scope;
 import org.keycloak.common.util.StringPropertyReplacer;

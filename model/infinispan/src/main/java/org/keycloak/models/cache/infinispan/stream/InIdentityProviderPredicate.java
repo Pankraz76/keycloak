@@ -1,13 +1,13 @@
 package org.keycloak.models.cache.infinispan.stream;
 
-import org.infinispan.protostream.annotations.ProtoField;
-import org.infinispan.protostream.annotations.ProtoTypeId;
-import org.keycloak.models.cache.infinispan.entities.InIdentityProvider;
-import org.keycloak.models.cache.infinispan.entities.Revisioned;
-import org.keycloak.marshalling.Marshalling;
-
 import java.util.Map;
 import java.util.function.Predicate;
+
+import org.infinispan.protostream.annotations.ProtoField;
+import org.infinispan.protostream.annotations.ProtoTypeId;
+import org.keycloak.marshalling.Marshalling;
+import org.keycloak.models.cache.infinispan.entities.InIdentityProvider;
+import org.keycloak.models.cache.infinispan.entities.Revisioned;
 
 /**
  * @author <a href="mailto:psilva@redhat.com">Pedro Igor</a>

@@ -17,17 +17,15 @@
 
 package org.keycloak.services.clientpolicy.executor;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
-
 import java.net.URISyntaxException;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.stream.Stream;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.BooleanNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -37,18 +35,18 @@ import org.keycloak.services.clientpolicy.executor.SecureRedirectUrisEnforcerExe
 import org.keycloak.services.clientpolicy.executor.SecureRedirectUrisEnforcerExecutor.UriValidation;
 import org.keycloak.util.JsonSerialization;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.fasterxml.jackson.databind.node.BooleanNode;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 import static org.keycloak.services.clientpolicy.executor.SecureRedirectUrisEnforcerExecutorFactory.ALLOW_HTTP_SCHEME;
 import static org.keycloak.services.clientpolicy.executor.SecureRedirectUrisEnforcerExecutorFactory.ALLOW_IPV4_LOOPBACK_ADDRESS;
 import static org.keycloak.services.clientpolicy.executor.SecureRedirectUrisEnforcerExecutorFactory.ALLOW_IPV6_LOOPBACK_ADDRESS;
-import static org.keycloak.services.clientpolicy.executor.SecureRedirectUrisEnforcerExecutorFactory.ALLOW_PRIVATE_USE_URI_SCHEME;
-import static org.keycloak.services.clientpolicy.executor.SecureRedirectUrisEnforcerExecutorFactory.ALLOW_WILDCARD_CONTEXT_PATH;
 import static org.keycloak.services.clientpolicy.executor.SecureRedirectUrisEnforcerExecutorFactory.ALLOW_OPEN_REDIRECT;
 import static org.keycloak.services.clientpolicy.executor.SecureRedirectUrisEnforcerExecutorFactory.ALLOW_PERMITTED_DOMAINS;
+import static org.keycloak.services.clientpolicy.executor.SecureRedirectUrisEnforcerExecutorFactory.ALLOW_PRIVATE_USE_URI_SCHEME;
+import static org.keycloak.services.clientpolicy.executor.SecureRedirectUrisEnforcerExecutorFactory.ALLOW_WILDCARD_CONTEXT_PATH;
 import static org.keycloak.services.clientpolicy.executor.SecureRedirectUrisEnforcerExecutorFactory.OAUTH_2_1_COMPLIANT;
 
 public class SecureRedirectUrisEnforcerExecutorTest {

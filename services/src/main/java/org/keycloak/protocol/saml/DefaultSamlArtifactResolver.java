@@ -1,5 +1,11 @@
 package org.keycloak.protocol.saml;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.security.SecureRandom;
+import java.util.Base64;
+import java.util.Collections;
+
 import org.jboss.logging.Logger;
 import org.keycloak.models.AuthenticatedClientSessionModel;
 import org.keycloak.models.ClientModel;
@@ -7,12 +13,6 @@ import org.keycloak.models.KeycloakSession;
 import org.keycloak.protocol.saml.util.ArtifactBindingUtils;
 import org.keycloak.saml.common.constants.GeneralConstants;
 import org.keycloak.utils.StringUtil;
-
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.security.SecureRandom;
-import java.util.Base64;
-import java.util.Collections;
 
 import static org.keycloak.protocol.saml.DefaultSamlArtifactResolverFactory.TYPE_CODE;
 import static org.keycloak.protocol.saml.SamlConfigAttributes.SAML_ARTIFACT_BINDING_IDENTIFIER;

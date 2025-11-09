@@ -17,13 +17,13 @@
 
 package org.keycloak.truststore;
 
-import org.jboss.logging.Logger;
-import org.keycloak.common.crypto.CryptoIntegration;
-
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.util.Comparator;
+
+import org.jboss.logging.Logger;
+import org.keycloak.common.crypto.CryptoIntegration;
 
 
 /**

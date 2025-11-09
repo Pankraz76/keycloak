@@ -1,6 +1,7 @@
 package org.keycloak.tests.admin.realm;
 
 import jakarta.ws.rs.BadRequestException;
+
 import org.junit.jupiter.api.Test;
 import org.keycloak.admin.client.Keycloak;
 import org.keycloak.models.Constants;

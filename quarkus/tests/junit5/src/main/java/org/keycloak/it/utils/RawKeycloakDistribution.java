@@ -57,7 +57,6 @@ import javax.net.ssl.X509TrustManager;
 
 import io.quarkus.deployment.util.FileUtil;
 import io.quarkus.fs.util.ZipUtils;
-
 import io.restassured.RestAssured;
 import org.awaitility.Awaitility;
 import org.jboss.logging.Logger;

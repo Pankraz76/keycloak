@@ -16,8 +16,10 @@
  */
 package org.keycloak.testsuite.util;
 
-import jakarta.ws.rs.core.Response;
 import java.util.List;
+
+import jakarta.ws.rs.core.Response;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.keycloak.representations.idm.RealmRepresentation;

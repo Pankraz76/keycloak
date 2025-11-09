@@ -17,6 +17,11 @@
 
 package org.keycloak.connections.jpa.updater.liquibase.conn;
 
+import java.sql.Connection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicBoolean;
+
 import liquibase.Scope;
 import liquibase.ThreadLocalScopeManager;
 import liquibase.database.AbstractJdbcDatabase;
@@ -33,11 +38,6 @@ import org.keycloak.config.DatabaseOptions;
 import org.keycloak.connections.jpa.updater.liquibase.LiquibaseJpaUpdaterProvider;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.KeycloakSessionFactory;
-
-import java.sql.Connection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * @author <a href="mailto:mposolda@redhat.com">Marek Posolda</a>

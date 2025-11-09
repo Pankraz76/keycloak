@@ -1,5 +1,7 @@
 package org.keycloak.testframework.injection;
 
+import java.util.List;
+
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Assertions;
@@ -14,8 +16,6 @@ import org.keycloak.testframework.injection.mocks.MockParent2Supplier;
 import org.keycloak.testframework.injection.mocks.MockParentAnnotation;
 import org.keycloak.testframework.injection.mocks.MockParentSupplier;
 import org.keycloak.testframework.injection.mocks.MockParentValue;
-
-import java.util.List;
 
 public class RegistryTest {
 

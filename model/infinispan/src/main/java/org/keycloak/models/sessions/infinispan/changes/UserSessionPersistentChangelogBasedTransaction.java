@@ -17,6 +17,8 @@
 
 package org.keycloak.models.sessions.infinispan.changes;
 
+import java.util.concurrent.ArrayBlockingQueue;
+
 import org.infinispan.Cache;
 import org.jboss.logging.Logger;
 import org.keycloak.models.KeycloakSession;
@@ -27,8 +29,6 @@ import org.keycloak.models.session.UserSessionPersisterProvider;
 import org.keycloak.models.sessions.infinispan.PersistentUserSessionProvider;
 import org.keycloak.models.sessions.infinispan.entities.SessionEntity;
 import org.keycloak.models.sessions.infinispan.entities.UserSessionEntity;
-
-import java.util.concurrent.ArrayBlockingQueue;
 
 import static org.keycloak.connections.infinispan.InfinispanConnectionProvider.USER_SESSION_CACHE_NAME;
 

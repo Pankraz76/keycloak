@@ -1,5 +1,8 @@
 package org.keycloak.testsuite.broker;
 
+import jakarta.ws.rs.core.Response;
+
+import com.google.common.collect.ImmutableMap;
 import org.keycloak.admin.client.CreatedResponseUtil;
 import org.keycloak.admin.client.resource.IdentityProviderResource;
 import org.keycloak.broker.provider.ConfigConstants;
@@ -8,10 +11,6 @@ import org.keycloak.models.IdentityProviderMapperModel;
 import org.keycloak.models.IdentityProviderMapperSyncMode;
 import org.keycloak.representations.idm.IdentityProviderMapperRepresentation;
 import org.keycloak.representations.idm.IdentityProviderRepresentation;
-
-import com.google.common.collect.ImmutableMap;
-
-import jakarta.ws.rs.core.Response;
 
 /**
  * @author <a href="mailto:dmartino@redhat.com">DanieleMartinoli</a>

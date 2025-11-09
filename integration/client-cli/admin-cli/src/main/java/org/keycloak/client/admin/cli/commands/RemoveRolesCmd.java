@@ -16,13 +16,6 @@
  */
 package org.keycloak.client.admin.cli.commands;
 
-import org.keycloak.client.admin.cli.operations.ClientOperations;
-import org.keycloak.client.admin.cli.operations.GroupOperations;
-import org.keycloak.client.admin.cli.operations.LocalSearch;
-import org.keycloak.client.admin.cli.operations.RoleOperations;
-import org.keycloak.client.admin.cli.operations.UserOperations;
-import org.keycloak.client.cli.config.ConfigData;
-
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.ArrayList;
@@ -31,7 +24,12 @@ import java.util.List;
 import java.util.Set;
 
 import com.fasterxml.jackson.databind.node.ObjectNode;
-
+import org.keycloak.client.admin.cli.operations.ClientOperations;
+import org.keycloak.client.admin.cli.operations.GroupOperations;
+import org.keycloak.client.admin.cli.operations.LocalSearch;
+import org.keycloak.client.admin.cli.operations.RoleOperations;
+import org.keycloak.client.admin.cli.operations.UserOperations;
+import org.keycloak.client.cli.config.ConfigData;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 

@@ -17,6 +17,11 @@
 
 package org.keycloak.testsuite.arquillian.decider;
 
+import java.lang.reflect.AnnotatedElement;
+import java.lang.reflect.Method;
+import java.util.Arrays;
+import java.util.function.Predicate;
+
 import org.jboss.arquillian.core.api.Instance;
 import org.jboss.arquillian.core.api.annotation.Inject;
 import org.jboss.arquillian.test.spi.execution.ExecutionDecision;
@@ -25,11 +30,6 @@ import org.keycloak.testsuite.arquillian.TestContext;
 import org.keycloak.testsuite.arquillian.annotation.IgnoreBrowserDriver;
 import org.keycloak.testsuite.arquillian.annotation.IgnoreBrowserDrivers;
 import org.openqa.selenium.WebDriver;
-
-import java.lang.reflect.AnnotatedElement;
-import java.lang.reflect.Method;
-import java.util.Arrays;
-import java.util.function.Predicate;
 
 import static org.keycloak.testsuite.util.BrowserDriverUtil.isDriverInstanceOf;
 

@@ -1,12 +1,5 @@
 package org.keycloak.procotol.docker.installation;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.IsEqual.equalTo;
-import static org.hamcrest.core.IsNull.notNullValue;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
-import static org.keycloak.protocol.docker.installation.DockerComposeYamlInstallationProvider.ROOT_DIR;
-
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -39,6 +32,13 @@ import org.keycloak.common.util.PemUtils;
 import org.keycloak.crypto.KeyType;
 import org.keycloak.protocol.docker.installation.DockerComposeYamlInstallationProvider;
 import org.keycloak.rule.CryptoInitRule;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.IsEqual.equalTo;
+import static org.hamcrest.core.IsNull.notNullValue;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+import static org.keycloak.protocol.docker.installation.DockerComposeYamlInstallationProvider.ROOT_DIR;
 
 public class DockerComposeYamlInstallationProviderTest {
 

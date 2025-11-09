@@ -17,6 +17,9 @@
 
 package org.keycloak.jgroups.protocol;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import io.opentelemetry.api.GlobalOpenTelemetry;
 import io.opentelemetry.api.OpenTelemetry;
 import io.opentelemetry.api.trace.Span;
@@ -35,9 +38,6 @@ import org.jgroups.annotations.Property;
 import org.jgroups.stack.Protocol;
 import org.jgroups.util.MessageBatch;
 import org.keycloak.jgroups.header.TracerHeader;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Provides Open Telemetry (https://opentelemetry.io/) tracing for JGroups. It should be placed just above the

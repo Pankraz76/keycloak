@@ -17,6 +17,7 @@
 package org.keycloak.testsuite.metrics;
 
 import java.util.List;
+
 import jakarta.ws.rs.client.Client;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.Response.Status;

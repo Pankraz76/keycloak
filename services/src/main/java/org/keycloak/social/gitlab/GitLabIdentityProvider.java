@@ -17,6 +17,11 @@
 
 package org.keycloak.social.gitlab;
 
+import java.io.IOException;
+
+import jakarta.ws.rs.core.MultivaluedMap;
+import jakarta.ws.rs.core.Response;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import org.keycloak.OAuth2Constants;
 import org.keycloak.OAuthErrorException;
@@ -36,10 +41,6 @@ import org.keycloak.representations.AccessTokenResponse;
 import org.keycloak.representations.IDToken;
 import org.keycloak.representations.JsonWebToken;
 import org.keycloak.services.ErrorResponseException;
-
-import jakarta.ws.rs.core.MultivaluedMap;
-import jakarta.ws.rs.core.Response;
-import java.io.IOException;
 
 /**
  * @author <a href="mailto:sthorger@redhat.com">Stian Thorgersen</a>

@@ -18,6 +18,7 @@
 package org.keycloak.client.registration;
 
 import java.util.Base64;
+
 import org.apache.http.HttpHeaders;
 import org.apache.http.HttpRequest;
 import org.keycloak.representations.idm.ClientInitialAccessPresentation;

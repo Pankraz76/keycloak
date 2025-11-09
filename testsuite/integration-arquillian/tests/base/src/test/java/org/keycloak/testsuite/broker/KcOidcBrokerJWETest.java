@@ -16,10 +16,6 @@
  */
 package org.keycloak.testsuite.broker;
 
-import static java.util.Optional.ofNullable;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -53,6 +49,11 @@ import org.keycloak.representations.idm.IdentityProviderMapperRepresentation;
 import org.keycloak.representations.idm.ProtocolMapperRepresentation;
 import org.keycloak.representations.idm.RealmRepresentation;
 import org.keycloak.representations.idm.UserRepresentation;
+
+import static java.util.Optional.ofNullable;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 /**
  * <p>Tests the broker using a JWE encrypted token for id token and user info. The test

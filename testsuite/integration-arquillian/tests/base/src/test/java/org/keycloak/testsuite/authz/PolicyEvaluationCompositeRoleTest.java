@@ -16,6 +16,10 @@
  */
 package org.keycloak.testsuite.authz;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.keycloak.admin.client.resource.RealmResource;
@@ -39,10 +43,6 @@ import org.keycloak.representations.idm.authorization.PolicyEvaluationRequest;
 import org.keycloak.representations.idm.authorization.PolicyEvaluationResponse;
 import org.keycloak.representations.idm.authorization.PolicyRepresentation;
 import org.keycloak.representations.idm.authorization.ScopePermissionRepresentation;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 import static org.keycloak.testsuite.auth.page.AuthRealm.TEST;
 

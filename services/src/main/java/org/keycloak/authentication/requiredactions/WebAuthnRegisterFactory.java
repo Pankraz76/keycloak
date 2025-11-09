@@ -20,7 +20,6 @@ import com.webauthn4j.anchor.KeyStoreTrustAnchorRepository;
 import com.webauthn4j.verifier.attestation.trustworthiness.certpath.CertPathTrustworthinessVerifier;
 import com.webauthn4j.verifier.attestation.trustworthiness.certpath.DefaultCertPathTrustworthinessVerifier;
 import com.webauthn4j.verifier.attestation.trustworthiness.certpath.NullCertPathTrustworthinessVerifier;
-
 import org.keycloak.Config;
 import org.keycloak.Config.Scope;
 import org.keycloak.authentication.RequiredActionFactory;

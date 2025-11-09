@@ -1,5 +1,9 @@
 package org.keycloak.services;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -13,10 +17,6 @@ import org.keycloak.provider.Spi;
 import org.keycloak.vault.VaultProvider;
 
 import static org.junit.Assert.assertFalse;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
 
 public class DefaultKeycloakSessionFactoryTest {
 

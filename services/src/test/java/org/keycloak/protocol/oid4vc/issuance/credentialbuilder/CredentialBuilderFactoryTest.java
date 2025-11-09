@@ -1,12 +1,7 @@
 package org.keycloak.protocol.oid4vc.issuance.credentialbuilder;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.empty;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.not;
-import static org.hamcrest.Matchers.notNullValue;
-
 import java.util.List;
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.keycloak.common.Profile;
@@ -17,6 +12,12 @@ import org.keycloak.common.profile.CommaSeparatedListProfileConfigResolver;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.services.resteasy.ResteasyKeycloakSession;
 import org.keycloak.services.resteasy.ResteasyKeycloakSessionFactory;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.empty;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.not;
+import static org.hamcrest.Matchers.notNullValue;
 
 public class CredentialBuilderFactoryTest {
 

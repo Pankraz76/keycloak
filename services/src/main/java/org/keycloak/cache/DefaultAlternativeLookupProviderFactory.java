@@ -1,5 +1,7 @@
 package org.keycloak.cache;
 
+import java.util.concurrent.TimeUnit;
+
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
 import io.micrometer.core.instrument.Metrics;
@@ -7,8 +9,6 @@ import io.micrometer.core.instrument.binder.cache.CaffeineStatsCounter;
 import org.keycloak.Config;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.KeycloakSessionFactory;
-
-import java.util.concurrent.TimeUnit;
 
 public class DefaultAlternativeLookupProviderFactory implements AlternativeLookupProviderFactory {
 

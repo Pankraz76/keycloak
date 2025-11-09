@@ -17,6 +17,10 @@
 
 package org.keycloak.testsuite.webauthn.registration;
 
+import java.io.Closeable;
+import java.io.IOException;
+import java.util.function.Consumer;
+
 import com.webauthn4j.data.UserVerificationRequirement;
 import org.junit.Test;
 import org.keycloak.testsuite.arquillian.annotation.IgnoreBrowserDriver;
@@ -25,10 +29,6 @@ import org.keycloak.testsuite.webauthn.AbstractWebAuthnVirtualTest;
 import org.keycloak.testsuite.webauthn.utils.WebAuthnRealmData;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.virtualauthenticator.VirtualAuthenticatorOptions;
-
-import java.io.Closeable;
-import java.io.IOException;
-import java.util.function.Consumer;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;

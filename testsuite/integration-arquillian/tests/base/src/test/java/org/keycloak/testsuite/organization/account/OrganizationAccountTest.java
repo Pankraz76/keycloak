@@ -17,8 +17,13 @@
 
 package org.keycloak.testsuite.organization.account;
 
-import com.fasterxml.jackson.core.type.TypeReference;
+import java.io.IOException;
+import java.util.List;
+import java.util.SortedSet;
+
 import jakarta.ws.rs.core.Response.Status;
+
+import com.fasterxml.jackson.core.type.TypeReference;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.junit.After;
@@ -38,10 +43,6 @@ import org.keycloak.testsuite.broker.util.SimpleHttpDefault;
 import org.keycloak.testsuite.organization.admin.AbstractOrganizationTest;
 import org.keycloak.testsuite.util.TokenUtil;
 import org.keycloak.testsuite.util.UserBuilder;
-
-import java.io.IOException;
-import java.util.List;
-import java.util.SortedSet;
 
 public class OrganizationAccountTest extends AbstractOrganizationTest {
 

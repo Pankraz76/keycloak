@@ -1,5 +1,8 @@
 package org.keycloak.testframework.http;
 
+import java.io.IOException;
+import javax.net.ssl.SSLContext;
+
 import org.apache.http.client.HttpClient;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -11,9 +14,6 @@ import org.keycloak.testframework.injection.LifeCycle;
 import org.keycloak.testframework.injection.RequestedInstance;
 import org.keycloak.testframework.injection.Supplier;
 import org.keycloak.testframework.server.KeycloakServer;
-
-import javax.net.ssl.SSLContext;
-import java.io.IOException;
 
 public class HttpClientSupplier implements Supplier<HttpClient, InjectHttpClient> {
 

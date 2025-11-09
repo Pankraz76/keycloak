@@ -1,5 +1,8 @@
 package org.keycloak.test.examples;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.keycloak.admin.client.Keycloak;
@@ -16,9 +19,6 @@ import org.keycloak.testframework.events.AdminEvents;
 import org.keycloak.testframework.realm.ManagedRealm;
 import org.keycloak.testframework.realm.UserConfigBuilder;
 import org.keycloak.testframework.util.ApiUtil;
-
-import java.util.LinkedList;
-import java.util.List;
 
 @KeycloakIntegrationTest
 public class AdminEventsTest {

@@ -1,6 +1,10 @@
 package org.keycloak.testsuite.broker;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import jakarta.ws.rs.BadRequestException;
+
 import org.junit.Ignore;
 import org.junit.Test;
 import org.keycloak.admin.client.resource.IdentityProviderResource;
@@ -16,9 +20,6 @@ import org.keycloak.representations.idm.IdentityProviderRepresentation;
 import org.keycloak.representations.idm.ProtocolMapperRepresentation;
 import org.keycloak.representations.idm.UserRepresentation;
 import org.keycloak.testsuite.Assert;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Final class as it's not intended to be overriden. Feel free to remove "final" if you really know what you are doing.

@@ -21,10 +21,10 @@ import java.util.List;
 
 import org.jboss.logging.Logger;
 import org.keycloak.models.KeycloakSession;
+import org.keycloak.representations.idm.ClientPolicyExecutorConfigurationRepresentation;
 import org.keycloak.services.clientpolicy.ClientPolicyContext;
 import org.keycloak.services.clientpolicy.ClientPolicyEvent;
 import org.keycloak.services.clientpolicy.ClientPolicyException;
-import org.keycloak.representations.idm.ClientPolicyExecutorConfigurationRepresentation;
 import org.keycloak.services.clientpolicy.executor.ClientPolicyExecutorProvider;
 
 public class TestRaiseExceptionExecutor implements ClientPolicyExecutorProvider<TestRaiseExceptionExecutor.Configuration> {

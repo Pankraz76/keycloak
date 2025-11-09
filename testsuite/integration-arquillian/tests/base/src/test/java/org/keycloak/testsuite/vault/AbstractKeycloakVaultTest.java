@@ -17,6 +17,9 @@
 
 package org.keycloak.testsuite.vault;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.jetbrains.annotations.NotNull;
 import org.junit.Assert;
 import org.keycloak.models.KeycloakSession;
@@ -26,9 +29,6 @@ import org.keycloak.testsuite.runonserver.RunOnServer;
 import org.keycloak.testsuite.utils.io.IOUtil;
 import org.keycloak.vault.VaultStringSecret;
 import org.keycloak.vault.VaultTranscriber;
-
-import java.util.List;
-import java.util.Optional;
 
 /**
  * Tests the usage of the {@link VaultTranscriber} on the server side. The tests attempt to obtain the transcriber from

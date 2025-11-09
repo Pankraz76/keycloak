@@ -17,7 +17,11 @@
 
 package org.keycloak.testsuite.oauth;
 
+import java.io.IOException;
+import java.util.List;
+
 import jakarta.ws.rs.core.Response.Status;
+
 import org.junit.Test;
 import org.keycloak.representations.idm.RealmRepresentation;
 import org.keycloak.representations.oidc.TokenMetadataRepresentation;
@@ -25,9 +29,6 @@ import org.keycloak.testsuite.AbstractKeycloakTest;
 import org.keycloak.testsuite.util.ClientBuilder;
 import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
 import org.keycloak.testsuite.util.oauth.TokenRevocationResponse;
-
-import java.io.IOException;
-import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

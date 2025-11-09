@@ -17,6 +17,9 @@
 
 package org.keycloak.tests.admin;
 
+import java.util.List;
+import java.util.Map;
+
 import org.hamcrest.MatcherAssert;
 import org.jboss.logging.Logger;
 import org.junit.jupiter.api.Assertions;
@@ -60,20 +63,16 @@ import org.keycloak.testframework.ui.annotations.InjectPage;
 import org.keycloak.testframework.ui.annotations.InjectWebDriver;
 import org.keycloak.testframework.ui.page.ConsentPage;
 import org.keycloak.testframework.ui.page.LoginPage;
-
-import java.util.List;
-import java.util.Map;
-
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.keycloak.tests.utils.admin.ApiUtil.findClientByClientId;
-
 import org.keycloak.testsuite.util.AccountHelper;
 import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
 import org.keycloak.testsuite.util.oauth.AuthorizationEndpointResponse;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.keycloak.tests.utils.admin.ApiUtil.findClientByClientId;
 
 /**
  * @author <a href="mailto:mstrukel@redhat.com">Marko Strukelj</a>

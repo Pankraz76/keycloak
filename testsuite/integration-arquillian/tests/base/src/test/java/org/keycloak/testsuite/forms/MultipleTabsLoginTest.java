@@ -17,20 +17,15 @@
 
 package org.keycloak.testsuite.forms;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.keycloak.models.Constants.CLIENT_DATA;
-import static org.keycloak.testsuite.AssertEvents.DEFAULT_REDIRECT_URI;
-import static org.keycloak.testsuite.util.ServerURLs.getAuthServerContextRoot;
-import static org.keycloak.testsuite.util.URLAssert.assertCurrentUrlStartsWith;
-
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.UriBuilder;
-import java.nio.charset.StandardCharsets;
+
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -81,14 +76,20 @@ import org.keycloak.testsuite.util.BrowserTabUtil;
 import org.keycloak.testsuite.util.ClientBuilder;
 import org.keycloak.testsuite.util.GreenMailRule;
 import org.keycloak.testsuite.util.InfinispanTestTimeServiceRule;
-import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
-import org.keycloak.testsuite.util.oauth.AuthorizationEndpointResponse;
 import org.keycloak.testsuite.util.UserBuilder;
 import org.keycloak.testsuite.util.WaitUtils;
+import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
+import org.keycloak.testsuite.util.oauth.AuthorizationEndpointResponse;
 import org.keycloak.testsuite.util.oauth.OAuthClient;
 import org.keycloak.testsuite.util.oauth.PkceGenerator;
 import org.keycloak.util.TokenUtil;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.keycloak.models.Constants.CLIENT_DATA;
+import static org.keycloak.testsuite.AssertEvents.DEFAULT_REDIRECT_URI;
+import static org.keycloak.testsuite.util.ServerURLs.getAuthServerContextRoot;
+import static org.keycloak.testsuite.util.URLAssert.assertCurrentUrlStartsWith;
 
 /**
  * Tries to simulate testing with multiple browser tabs

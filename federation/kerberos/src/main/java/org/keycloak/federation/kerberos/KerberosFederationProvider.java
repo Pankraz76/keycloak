@@ -17,6 +17,13 @@
 
 package org.keycloak.federation.kerberos;
 
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Stream;
+import javax.security.auth.login.LoginException;
+
 import org.jboss.logging.Logger;
 import org.keycloak.common.Profile;
 import org.keycloak.common.constants.KerberosConstants;
@@ -34,8 +41,8 @@ import org.keycloak.models.RealmModel;
 import org.keycloak.models.RequiredActionProviderModel;
 import org.keycloak.models.RoleModel;
 import org.keycloak.models.UserCredentialModel;
-import org.keycloak.models.UserModel;
 import org.keycloak.models.UserManager;
+import org.keycloak.models.UserModel;
 import org.keycloak.models.UserModel.RequiredAction;
 import org.keycloak.models.credential.PasswordCredentialModel;
 import org.keycloak.storage.ReadOnlyException;
@@ -50,14 +57,6 @@ import org.keycloak.userprofile.AttributeMetadata;
 import org.keycloak.userprofile.UserProfileDecorator;
 import org.keycloak.userprofile.UserProfileMetadata;
 import org.keycloak.userprofile.UserProfileUtil;
-
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Stream;
-
-import javax.security.auth.login.LoginException;
 
 /**
  * @author <a href="mailto:mposolda@redhat.com">Marek Posolda</a>

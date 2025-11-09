@@ -28,6 +28,7 @@ import java.util.Map;
 import java.util.Properties;
 
 import jakarta.enterprise.context.ContextNotActiveException;
+
 import org.keycloak.broker.provider.BrokeredIdentityContext;
 import org.keycloak.common.util.ObjectUtil;
 import org.keycloak.email.EmailException;

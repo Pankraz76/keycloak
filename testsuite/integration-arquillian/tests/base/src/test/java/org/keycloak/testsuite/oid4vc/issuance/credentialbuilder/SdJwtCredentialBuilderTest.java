@@ -17,6 +17,10 @@
 
 package org.keycloak.testsuite.oid4vc.issuance.credentialbuilder;
 
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
+
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.junit.Test;
 import org.keycloak.common.VerificationException;
@@ -27,10 +31,6 @@ import org.keycloak.protocol.oid4vc.model.VerifiableCredential;
 import org.keycloak.sdjwt.IssuerSignedJWT;
 import org.keycloak.sdjwt.IssuerSignedJwtVerificationOpts;
 import org.keycloak.sdjwt.vp.SdJwtVP;
-
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;

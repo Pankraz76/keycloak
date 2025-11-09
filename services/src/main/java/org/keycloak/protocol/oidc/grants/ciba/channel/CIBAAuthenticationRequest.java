@@ -17,10 +17,11 @@
  */
 package org.keycloak.protocol.oidc.grants.ciba.channel;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import java.nio.charset.StandardCharsets;
 import javax.crypto.SecretKey;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.keycloak.OAuth2Constants;
 import org.keycloak.crypto.Algorithm;
 import org.keycloak.crypto.KeyUse;

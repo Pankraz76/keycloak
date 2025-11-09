@@ -1,5 +1,8 @@
 package org.keycloak.testframework.ui.webdriver;
 
+import java.time.Duration;
+import java.util.Map;
+
 import org.keycloak.testframework.injection.InstanceContext;
 import org.keycloak.testframework.injection.LifeCycle;
 import org.keycloak.testframework.injection.RequestedInstance;
@@ -9,9 +12,6 @@ import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
-
-import java.time.Duration;
-import java.util.Map;
 
 public abstract class AbstractWebDriverSupplier implements Supplier<WebDriver, InjectWebDriver> {
 

@@ -16,6 +16,8 @@
  */
 package org.keycloak.it.cli.dist;
 
+import java.io.IOException;
+
 import io.quarkus.test.junit.main.Launch;
 import io.quarkus.test.junit.main.LaunchResult;
 import org.junit.jupiter.api.MethodOrderer;
@@ -27,8 +29,6 @@ import org.keycloak.it.junit5.extension.CLIResult;
 import org.keycloak.it.junit5.extension.DistributionTest;
 import org.keycloak.it.junit5.extension.DistributionType;
 import org.keycloak.it.utils.KeycloakDistribution;
-
-import java.io.IOException;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;

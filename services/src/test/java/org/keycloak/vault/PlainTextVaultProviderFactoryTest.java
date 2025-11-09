@@ -1,5 +1,7 @@
 package org.keycloak.vault;
 
+import java.util.Set;
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -11,8 +13,6 @@ import org.keycloak.services.resteasy.ResteasyKeycloakSessionFactory;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
-
-import java.util.Set;
 
 /**
  * Tests for {@link FilesPlainTextVaultProviderFactory}.

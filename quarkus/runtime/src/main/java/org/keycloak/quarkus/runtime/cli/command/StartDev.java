@@ -18,7 +18,6 @@
 package org.keycloak.quarkus.runtime.cli.command;
 
 import org.keycloak.common.util.Environment;
-
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 

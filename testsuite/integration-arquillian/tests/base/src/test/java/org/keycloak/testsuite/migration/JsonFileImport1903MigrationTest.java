@@ -16,6 +16,11 @@
  */
 package org.keycloak.testsuite.migration;
 
+import java.io.IOException;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 import org.junit.Test;
 import org.keycloak.OAuth2Constants;
 import org.keycloak.exportimport.util.ImportUtils;
@@ -26,11 +31,6 @@ import org.keycloak.representations.userprofile.config.UPConfig;
 import org.keycloak.testsuite.utils.io.IOUtil;
 import org.keycloak.userprofile.config.UPConfigUtils;
 import org.keycloak.util.JsonSerialization;
-
-import java.io.IOException;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasSize;

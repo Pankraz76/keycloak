@@ -1,12 +1,12 @@
 package org.keycloak.testframework.ui.page;
 
-import org.keycloak.testframework.ui.annotations.InjectPage;
+import java.lang.reflect.Constructor;
+
 import org.keycloak.testframework.injection.InstanceContext;
 import org.keycloak.testframework.injection.RequestedInstance;
 import org.keycloak.testframework.injection.Supplier;
+import org.keycloak.testframework.ui.annotations.InjectPage;
 import org.openqa.selenium.WebDriver;
-
-import java.lang.reflect.Constructor;
 
 public class PageSupplier  implements Supplier<AbstractPage, InjectPage> {
 

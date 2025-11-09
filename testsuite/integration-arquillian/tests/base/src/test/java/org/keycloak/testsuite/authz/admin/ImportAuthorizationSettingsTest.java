@@ -17,9 +17,6 @@
 
 package org.keycloak.testsuite.authz.admin;
 
-import static org.junit.Assert.assertEquals;
-
-
 import org.junit.Before;
 import org.junit.Test;
 import org.keycloak.admin.client.resource.AuthorizationResource;
@@ -28,6 +25,8 @@ import org.keycloak.representations.idm.RoleRepresentation;
 import org.keycloak.representations.idm.authorization.ResourceServerRepresentation;
 import org.keycloak.testsuite.util.UserBuilder;
 import org.keycloak.util.JsonSerialization;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  *

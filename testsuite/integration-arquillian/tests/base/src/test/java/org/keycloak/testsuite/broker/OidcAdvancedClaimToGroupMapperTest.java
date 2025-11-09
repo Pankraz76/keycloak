@@ -1,12 +1,13 @@
 package org.keycloak.testsuite.broker;
 
-import static org.keycloak.models.IdentityProviderMapperSyncMode.FORCE;
-import static org.keycloak.models.IdentityProviderMapperSyncMode.IMPORT;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import jakarta.ws.rs.core.Response;
+
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
 import org.junit.Test;
 import org.keycloak.admin.client.CreatedResponseUtil;
 import org.keycloak.admin.client.resource.IdentityProviderResource;
@@ -19,10 +20,8 @@ import org.keycloak.representations.idm.IdentityProviderMapperRepresentation;
 import org.keycloak.representations.idm.IdentityProviderRepresentation;
 import org.keycloak.representations.idm.UserRepresentation;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-
-import jakarta.ws.rs.core.Response;
+import static org.keycloak.models.IdentityProviderMapperSyncMode.FORCE;
+import static org.keycloak.models.IdentityProviderMapperSyncMode.IMPORT;
 
 /**
  * @author <a href="mailto:artur.baltabayev@bosch.io">Artur Baltabayev</a>,

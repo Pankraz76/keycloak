@@ -17,6 +17,8 @@
 
 package org.keycloak.testsuite.federation.ldap;
 
+import java.util.concurrent.TimeUnit;
+
 import org.junit.Assert;
 import org.junit.ClassRule;
 import org.junit.FixMethodOrder;
@@ -37,8 +39,6 @@ import org.keycloak.testsuite.pages.AppPage;
 import org.keycloak.testsuite.util.LDAPRule;
 import org.keycloak.testsuite.util.LDAPTestConfiguration;
 import org.keycloak.testsuite.util.LDAPTestUtils;
-
-import java.util.concurrent.TimeUnit;
 
 /**
  * Test for the MSAD setup with usernameAttribute=sAMAccountName, rdnAttribute=cn and fullNameMapper mapped to cn

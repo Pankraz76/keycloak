@@ -16,11 +16,13 @@
  */
 package org.keycloak.testsuite.securityprofile;
 
-import jakarta.ws.rs.BadRequestException;
-import jakarta.ws.rs.core.Response;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import jakarta.ws.rs.BadRequestException;
+import jakarta.ws.rs.core.Response;
+
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Assert;

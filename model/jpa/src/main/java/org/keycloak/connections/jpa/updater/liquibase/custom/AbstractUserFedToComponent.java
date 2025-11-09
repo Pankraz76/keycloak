@@ -16,6 +16,9 @@
  */
 package org.keycloak.connections.jpa.updater.liquibase.custom;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
 import liquibase.exception.CustomChangeException;
 import liquibase.statement.core.DeleteStatement;
 import liquibase.statement.core.InsertStatement;
@@ -23,9 +26,6 @@ import liquibase.structure.core.Table;
 import org.jboss.logging.Logger;
 import org.keycloak.models.utils.KeycloakModelUtils;
 import org.keycloak.storage.UserStorageProvider;
-
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 
 /**
  * @author <a href="mailto:bill@burkecentral.com">Bill Burke</a>

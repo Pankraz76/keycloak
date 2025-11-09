@@ -16,10 +16,6 @@
  */
 package org.keycloak.testsuite.script;
 
-import static org.junit.Assert.assertFalse;
-import static org.keycloak.common.Profile.Feature.SCRIPTS;
-import static org.keycloak.testsuite.arquillian.DeploymentTargetModifier.AUTH_SERVER_CURRENT;
-
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -53,8 +49,8 @@ import org.keycloak.representations.idm.AuthenticatorConfigRepresentation;
 import org.keycloak.representations.idm.RealmRepresentation;
 import org.keycloak.representations.idm.UserRepresentation;
 import org.keycloak.representations.provider.ScriptProviderDescriptor;
-import org.keycloak.testsuite.AssertEvents;
 import org.keycloak.testsuite.AbstractAuthenticationTest;
+import org.keycloak.testsuite.AssertEvents;
 import org.keycloak.testsuite.arquillian.annotation.DisableFeature;
 import org.keycloak.testsuite.arquillian.annotation.EnableFeature;
 import org.keycloak.testsuite.forms.AbstractFlowTest;
@@ -65,6 +61,10 @@ import org.keycloak.testsuite.util.FlowBuilder;
 import org.keycloak.testsuite.util.RealmBuilder;
 import org.keycloak.testsuite.util.UserBuilder;
 import org.keycloak.util.JsonSerialization;
+
+import static org.junit.Assert.assertFalse;
+import static org.keycloak.common.Profile.Feature.SCRIPTS;
+import static org.keycloak.testsuite.arquillian.DeploymentTargetModifier.AUTH_SERVER_CURRENT;
 
 /**
  * @author <a href="mailto:psilva@redhat.com">Pedro Igor</a>

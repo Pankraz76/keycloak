@@ -17,6 +17,7 @@
 package org.keycloak.testsuite.federation.ldap;
 
 import java.util.stream.Collectors;
+
 import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.junit.ClassRule;

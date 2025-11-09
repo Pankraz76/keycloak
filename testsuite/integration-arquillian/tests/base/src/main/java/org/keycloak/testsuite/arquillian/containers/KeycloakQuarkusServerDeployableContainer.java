@@ -1,10 +1,5 @@
 package org.keycloak.testsuite.arquillian.containers;
 
-import org.jboss.arquillian.container.spi.client.container.LifecycleException;
-import org.jboss.logging.Logger;
-import org.keycloak.testsuite.model.StoreProvider;
-import org.keycloak.testsuite.util.WaitUtils;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -29,6 +24,11 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
+
+import org.jboss.arquillian.container.spi.client.container.LifecycleException;
+import org.jboss.logging.Logger;
+import org.keycloak.testsuite.model.StoreProvider;
+import org.keycloak.testsuite.util.WaitUtils;
 
 /**
  * @author mhajas

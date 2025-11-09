@@ -19,6 +19,7 @@ package org.keycloak.services.securityprofile;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+
 import org.jboss.logging.Logger;
 import org.keycloak.Config;
 import org.keycloak.models.KeycloakSession;

@@ -24,6 +24,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import jakarta.ws.rs.core.UriInfo;
+
 import org.jboss.logging.Logger;
 import org.keycloak.common.VerificationException;
 import org.keycloak.cookie.CookieProvider;

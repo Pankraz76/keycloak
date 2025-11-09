@@ -1,8 +1,10 @@
 package org.keycloak.testsuite.broker;
 
-import static org.keycloak.models.IdentityProviderMapperSyncMode.FORCE;
-import static org.keycloak.models.IdentityProviderMapperSyncMode.LEGACY;
+import java.util.List;
+import java.util.Map;
 
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
 import org.junit.Test;
 import org.keycloak.broker.oidc.mappers.ClaimToRoleMapper;
 import org.keycloak.broker.provider.ConfigConstants;
@@ -11,11 +13,8 @@ import org.keycloak.models.IdentityProviderMapperSyncMode;
 import org.keycloak.representations.idm.IdentityProviderMapperRepresentation;
 import org.keycloak.representations.idm.UserRepresentation;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-
-import java.util.List;
-import java.util.Map;
+import static org.keycloak.models.IdentityProviderMapperSyncMode.FORCE;
+import static org.keycloak.models.IdentityProviderMapperSyncMode.LEGACY;
 
 /**
  * @author <a href="mailto:external.martin.idel@bosch.io">Martin Idel</a>,

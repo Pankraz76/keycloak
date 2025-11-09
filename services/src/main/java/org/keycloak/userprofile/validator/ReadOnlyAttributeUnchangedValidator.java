@@ -16,8 +16,6 @@
  */
 package org.keycloak.userprofile.validator;
 
-import static org.keycloak.common.util.ObjectUtil.isBlank;
-
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Pattern;
@@ -31,6 +29,8 @@ import org.keycloak.validate.SimpleValidator;
 import org.keycloak.validate.ValidationContext;
 import org.keycloak.validate.ValidationError;
 import org.keycloak.validate.ValidatorConfig;
+
+import static org.keycloak.common.util.ObjectUtil.isBlank;
 
 /**
  * Validator to check that User Profile attribute value is not changed if attribute is read-only. Expects List of

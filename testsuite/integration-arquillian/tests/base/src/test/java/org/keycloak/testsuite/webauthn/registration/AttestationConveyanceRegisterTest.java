@@ -17,6 +17,8 @@
 
 package org.keycloak.testsuite.webauthn.registration;
 
+import java.io.IOException;
+
 import com.webauthn4j.data.AttestationConveyancePreference;
 import com.webauthn4j.data.attestation.statement.NoneAttestationStatement;
 import com.webauthn4j.data.attestation.statement.PackedAttestationStatement;
@@ -29,8 +31,6 @@ import org.keycloak.testsuite.webauthn.utils.WebAuthnDataWrapper;
 import org.keycloak.testsuite.webauthn.utils.WebAuthnRealmData;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.virtualauthenticator.Credential;
-
-import java.io.IOException;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;

@@ -17,6 +17,10 @@
 
 package org.keycloak.testsuite.model;
 
+import java.util.Set;
+import java.util.UUID;
+import java.util.stream.Collectors;
+
 import org.junit.Test;
 import org.keycloak.models.ClientModel;
 import org.keycloak.models.RealmModel;
@@ -25,17 +29,12 @@ import org.keycloak.models.UserModel;
 import org.keycloak.models.UserSessionModel;
 import org.keycloak.models.cache.infinispan.ClientAdapter;
 import org.keycloak.models.cache.infinispan.RealmAdapter;
-
-import java.util.Set;
-import java.util.UUID;
-import java.util.stream.Collectors;
+import org.keycloak.representations.idm.RealmRepresentation;
+import org.keycloak.testsuite.AbstractTestRealmKeycloakTest;
+import org.keycloak.testsuite.Assert;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
-
-import org.keycloak.testsuite.AbstractTestRealmKeycloakTest;
-import org.keycloak.testsuite.Assert;
-import org.keycloak.representations.idm.RealmRepresentation;
 
 /**
  * @author <a href="mailto:bill@burkecentral.com">Bill Burke</a>

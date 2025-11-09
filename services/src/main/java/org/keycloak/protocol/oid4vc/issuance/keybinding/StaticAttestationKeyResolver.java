@@ -17,10 +17,10 @@
 
 package org.keycloak.protocol.oid4vc.issuance.keybinding;
 
+import java.util.Map;
+
 import org.jboss.logging.Logger;
 import org.keycloak.jose.jwk.JWK;
-
-import java.util.Map;
 
 /**
  * Simple static implementation of AttestationKeyResolver using an in-memory trusted map.

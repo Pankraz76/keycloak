@@ -1,8 +1,5 @@
 package org.keycloak.testsuite.oauth;
 
-import static org.junit.Assert.assertEquals;
-import static org.keycloak.testsuite.AbstractAdminTest.loadJson;
-
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -20,8 +17,11 @@ import org.keycloak.representations.idm.RealmRepresentation;
 import org.keycloak.testsuite.AbstractKeycloakTest;
 import org.keycloak.testsuite.AssertEvents;
 import org.keycloak.testsuite.util.ClientManager;
-import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
 import org.keycloak.testsuite.util.UserBuilder;
+import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
+
+import static org.junit.Assert.assertEquals;
+import static org.keycloak.testsuite.AbstractAdminTest.loadJson;
 
 public class AccessTokenResponseTest extends AbstractKeycloakTest {
 

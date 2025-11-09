@@ -1,5 +1,13 @@
 package org.keycloak.testsuite.broker;
 
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.Test;
 import org.keycloak.admin.client.resource.AuthenticationManagementResource;
@@ -20,14 +28,6 @@ import org.keycloak.testsuite.Assert;
 import org.keycloak.testsuite.pages.ConsentPage;
 import org.keycloak.testsuite.util.AccountHelper;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-
-import java.util.Objects;
-import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.empty;

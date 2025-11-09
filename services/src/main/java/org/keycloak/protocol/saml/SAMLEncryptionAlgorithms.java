@@ -17,12 +17,12 @@
 
 package org.keycloak.protocol.saml;
 
-import org.apache.xml.security.encryption.XMLCipher;
-import org.keycloak.crypto.Algorithm;
-
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+
+import org.apache.xml.security.encryption.XMLCipher;
+import org.keycloak.crypto.Algorithm;
 
 /**
  * This enum provides mapping between Keycloak provided encryption algorithms and algorithms from xmlsec.

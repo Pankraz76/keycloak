@@ -19,12 +19,12 @@ package org.keycloak.testsuite.broker;
 
 import java.io.Closeable;
 import java.nio.charset.StandardCharsets;
+
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.UriBuilder;
 
 import org.junit.Before;
 import org.junit.Test;
-
 import org.keycloak.admin.client.resource.RealmResource;
 import org.keycloak.common.util.*;
 import org.keycloak.connections.infinispan.InfinispanConnectionProvider;

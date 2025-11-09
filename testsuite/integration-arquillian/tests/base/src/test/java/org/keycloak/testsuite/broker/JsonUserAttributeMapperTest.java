@@ -1,5 +1,7 @@
 package org.keycloak.testsuite.broker;
 
+import java.util.HashMap;
+
 import com.google.common.collect.ImmutableMap;
 import org.junit.Test;
 import org.keycloak.admin.client.resource.IdentityProviderResource;
@@ -16,12 +18,10 @@ import org.keycloak.representations.idm.UserRepresentation;
 import org.keycloak.social.github.GitHubUserAttributeMapper;
 import org.keycloak.testsuite.util.AccountHelper;
 
-import java.util.HashMap;
-
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.hamcrest.Matchers.nullValue;
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.keycloak.models.IdentityProviderMapperSyncMode.FORCE;
 import static org.keycloak.models.IdentityProviderMapperSyncMode.IMPORT;
 import static org.keycloak.models.IdentityProviderMapperSyncMode.LEGACY;

@@ -19,6 +19,7 @@ package org.keycloak.testsuite.pages;
 
 import java.net.URI;
 import java.net.URISyntaxException;
+
 import org.junit.Assert;
 import org.keycloak.testsuite.util.DroneUtils;
 import org.keycloak.testsuite.util.UIUtils;

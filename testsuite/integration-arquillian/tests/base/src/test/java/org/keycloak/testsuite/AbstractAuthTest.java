@@ -16,6 +16,9 @@
  */
 package org.keycloak.testsuite;
 
+import java.text.MessageFormat;
+import java.util.List;
+
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.Before;
 import org.keycloak.admin.client.resource.RealmResource;
@@ -28,9 +31,6 @@ import org.keycloak.testsuite.auth.page.login.OIDCLogin;
 import org.keycloak.testsuite.auth.page.login.SAMLPostLogin;
 import org.keycloak.testsuite.auth.page.login.SAMLRedirectLogin;
 import org.openqa.selenium.Cookie;
-
-import java.text.MessageFormat;
-import java.util.List;
 
 import static org.keycloak.representations.idm.CredentialRepresentation.PASSWORD;
 import static org.keycloak.testsuite.admin.ApiUtil.assignClientRoles;

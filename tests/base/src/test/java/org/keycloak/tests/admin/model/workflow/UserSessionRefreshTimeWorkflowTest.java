@@ -17,6 +17,27 @@
 
 package org.keycloak.tests.admin.model.workflow;
 
+import java.time.Duration;
+import java.util.List;
+
+import jakarta.mail.internet.MimeMessage;
+
+import org.junit.jupiter.api.Test;
+import org.keycloak.models.RealmModel;
+import org.keycloak.models.UserModel;
+import org.keycloak.models.workflow.DisableUserStepProviderFactory;
+import org.keycloak.models.workflow.NotifyUserStepProviderFactory;
+import org.keycloak.representations.workflows.WorkflowRepresentation;
+import org.keycloak.representations.workflows.WorkflowStepRepresentation;
+import org.keycloak.testframework.annotations.InjectUser;
+import org.keycloak.testframework.annotations.KeycloakIntegrationTest;
+import org.keycloak.testframework.injection.LifeCycle;
+import org.keycloak.testframework.mail.MailServer;
+import org.keycloak.testframework.mail.annotations.InjectMailServer;
+import org.keycloak.testframework.realm.ManagedUser;
+import org.keycloak.testframework.realm.UserConfig;
+import org.keycloak.testframework.realm.UserConfigBuilder;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -26,26 +47,6 @@ import static org.keycloak.models.workflow.ResourceOperationType.USER_LOGGED_IN;
 import static org.keycloak.tests.admin.model.workflow.WorkflowManagementTest.findEmailByRecipient;
 import static org.keycloak.tests.admin.model.workflow.WorkflowManagementTest.findEmailsByRecipient;
 import static org.keycloak.tests.admin.model.workflow.WorkflowManagementTest.verifyEmailContent;
-
-import java.time.Duration;
-import java.util.List;
-
-import jakarta.mail.internet.MimeMessage;
-import org.junit.jupiter.api.Test;
-import org.keycloak.models.RealmModel;
-import org.keycloak.models.UserModel;
-import org.keycloak.models.workflow.DisableUserStepProviderFactory;
-import org.keycloak.models.workflow.NotifyUserStepProviderFactory;
-import org.keycloak.representations.workflows.WorkflowStepRepresentation;
-import org.keycloak.representations.workflows.WorkflowRepresentation;
-import org.keycloak.testframework.annotations.InjectUser;
-import org.keycloak.testframework.annotations.KeycloakIntegrationTest;
-import org.keycloak.testframework.injection.LifeCycle;
-import org.keycloak.testframework.mail.MailServer;
-import org.keycloak.testframework.mail.annotations.InjectMailServer;
-import org.keycloak.testframework.realm.ManagedUser;
-import org.keycloak.testframework.realm.UserConfig;
-import org.keycloak.testframework.realm.UserConfigBuilder;
 
 @KeycloakIntegrationTest(config = WorkflowsBlockingServerConfig.class)
 public class UserSessionRefreshTimeWorkflowTest extends AbstractWorkflowTest {

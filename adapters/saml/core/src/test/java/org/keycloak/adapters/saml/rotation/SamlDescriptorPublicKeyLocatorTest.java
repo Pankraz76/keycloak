@@ -16,9 +16,6 @@
  */
 package org.keycloak.adapters.saml.rotation;
 
-import com.sun.net.httpserver.HttpExchange;
-import com.sun.net.httpserver.HttpHandler;
-import com.sun.net.httpserver.HttpServer;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.StringWriter;
@@ -34,6 +31,10 @@ import java.util.stream.StreamSupport;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamWriter;
+
+import com.sun.net.httpserver.HttpExchange;
+import com.sun.net.httpserver.HttpHandler;
+import com.sun.net.httpserver.HttpServer;
 import org.apache.http.impl.client.HttpClients;
 import org.junit.After;
 import org.junit.AfterClass;

@@ -42,7 +42,6 @@ import java.util.EnumSet;
 import java.util.LinkedList;
 import java.util.List;
 
-
 import org.jboss.logging.Logger;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.utils.OCSPProvider;

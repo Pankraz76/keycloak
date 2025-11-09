@@ -1,11 +1,11 @@
 package org.keycloak.testsuite.util.oauth;
 
+import java.io.IOException;
+
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.keycloak.OAuth2Constants;
 import org.keycloak.protocol.oidc.OIDCLoginProtocol;
 import org.keycloak.util.TokenUtil;
-
-import java.io.IOException;
 
 public class ParRequest extends AbstractHttpPostRequest<ParRequest, ParResponse> {
 

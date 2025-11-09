@@ -33,7 +33,6 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
-
 import javax.security.auth.x500.X500Principal;
 
 import org.jboss.logging.Logger;

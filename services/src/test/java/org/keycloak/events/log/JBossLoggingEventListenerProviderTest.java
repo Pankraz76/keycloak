@@ -24,6 +24,7 @@ import java.util.Map;
 import java.util.function.Consumer;
 import java.util.logging.Handler;
 import java.util.logging.Level;
+
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.jboss.logmanager.Logger;

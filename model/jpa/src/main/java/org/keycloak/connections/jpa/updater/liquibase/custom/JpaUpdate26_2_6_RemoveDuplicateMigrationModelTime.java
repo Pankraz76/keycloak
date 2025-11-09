@@ -1,16 +1,16 @@
 package org.keycloak.connections.jpa.updater.liquibase.custom;
 
-import liquibase.exception.CustomChangeException;
-import liquibase.statement.core.DeleteStatement;
-import liquibase.structure.core.Column;
-import org.keycloak.migration.ModelVersion;
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
+
+import liquibase.exception.CustomChangeException;
+import liquibase.statement.core.DeleteStatement;
+import liquibase.structure.core.Column;
+import org.keycloak.migration.ModelVersion;
 
 /**
  * Cleanup script for removing duplicated migration model update time in the MIGRATION_MODEL table

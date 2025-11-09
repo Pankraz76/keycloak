@@ -1,5 +1,9 @@
 package org.keycloak.testsuite.broker;
 
+import java.io.Closeable;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
+
 import org.hamcrest.Matchers;
 import org.junit.Test;
 import org.keycloak.broker.saml.SAMLIdentityProviderConfig;
@@ -24,10 +28,6 @@ import org.keycloak.testsuite.util.SamlClient;
 import org.keycloak.testsuite.util.SamlClientBuilder;
 import org.keycloak.testsuite.util.saml.SamlMessageReceiver;
 import org.w3c.dom.Document;
-
-import java.io.Closeable;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicReference;
 
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.CoreMatchers.is;

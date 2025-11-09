@@ -18,6 +18,7 @@
 package org.keycloak.authentication.authenticators.conditional;
 
 import java.util.stream.Stream;
+
 import org.jboss.logging.Logger;
 import org.keycloak.authentication.AuthenticationFlowContext;
 import org.keycloak.models.AuthenticationExecutionModel;

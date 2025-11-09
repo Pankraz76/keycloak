@@ -16,6 +16,10 @@
  */
 package org.keycloak.testsuite.model.parameters;
 
+import java.util.Set;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Stream;
+
 import com.google.common.collect.ImmutableSet;
 import org.keycloak.provider.ProviderFactory;
 import org.keycloak.provider.Spi;
@@ -24,10 +28,6 @@ import org.keycloak.storage.client.ClientStorageProviderSpi;
 import org.keycloak.testsuite.federation.HardcodedClientStorageProviderFactory;
 import org.keycloak.testsuite.model.Config;
 import org.keycloak.testsuite.model.KeycloakModelParameters;
-
-import java.util.Set;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.stream.Stream;
 
 public class HardcodedClientStorage extends KeycloakModelParameters {
     static final Set<Class<? extends Spi>> ALLOWED_SPIS = ImmutableSet.<Class<? extends Spi>>builder()

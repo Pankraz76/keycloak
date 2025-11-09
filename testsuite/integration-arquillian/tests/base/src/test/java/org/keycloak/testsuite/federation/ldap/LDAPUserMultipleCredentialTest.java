@@ -1,6 +1,8 @@
 package org.keycloak.testsuite.federation.ldap;
 
 
+import java.util.Arrays;
+
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.Assert;
 import org.junit.FixMethodOrder;
@@ -28,8 +30,6 @@ import org.keycloak.testsuite.util.FlowUtil;
 import org.keycloak.testsuite.util.LDAPRule;
 import org.keycloak.testsuite.util.LDAPTestConfiguration;
 import org.keycloak.testsuite.util.LDAPTestUtils;
-
-import java.util.Arrays;
 
 /**
  * Test user login with multiple credential providers, both local and federated through LDAP.

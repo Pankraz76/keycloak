@@ -17,8 +17,6 @@
 
 package org.keycloak.services.resteasy;
 
-import static jakarta.ws.rs.core.MediaType.MULTIPART_FORM_DATA_TYPE;
-
 import java.io.IOException;
 import java.security.cert.X509Certificate;
 import java.util.Collection;
@@ -38,6 +36,8 @@ import org.jboss.resteasy.reactive.server.multipart.MultipartFormDataInput;
 import org.keycloak.http.FormPartValue;
 import org.keycloak.http.HttpRequest;
 import org.keycloak.services.FormPartValueImpl;
+
+import static jakarta.ws.rs.core.MediaType.MULTIPART_FORM_DATA_TYPE;
 
 public class HttpRequestImpl implements HttpRequest {
 

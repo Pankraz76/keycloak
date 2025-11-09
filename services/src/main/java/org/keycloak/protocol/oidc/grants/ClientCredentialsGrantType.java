@@ -20,7 +20,6 @@ package org.keycloak.protocol.oidc.grants;
 import jakarta.ws.rs.core.Response;
 
 import org.jboss.logging.Logger;
-
 import org.keycloak.OAuthErrorException;
 import org.keycloak.authentication.AuthenticationProcessor;
 import org.keycloak.common.constants.ServiceAccountConstants;

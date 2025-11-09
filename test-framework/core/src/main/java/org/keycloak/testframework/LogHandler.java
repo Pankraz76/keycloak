@@ -1,5 +1,8 @@
 package org.keycloak.testframework;
 
+import java.util.logging.Filter;
+import java.util.logging.Handler;
+
 import io.quarkus.runtime.logging.LoggingSetupRecorder;
 import io.smallrye.config.SmallRyeConfigProviderResolver;
 import org.eclipse.microprofile.config.spi.ConfigProviderResolver;
@@ -7,9 +10,6 @@ import org.jboss.logging.Logger;
 import org.jboss.logmanager.LogManager;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.keycloak.testframework.config.Config;
-
-import java.util.logging.Filter;
-import java.util.logging.Handler;
 
 public class LogHandler {
 

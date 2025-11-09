@@ -26,6 +26,7 @@ import org.keycloak.authorization.client.util.Throwables;
 import org.keycloak.authorization.client.util.TokenCallable;
 import org.keycloak.representations.idm.authorization.UmaPermissionRepresentation;
 import org.keycloak.util.JsonSerialization;
+
 import static org.keycloak.common.util.Encode.encodePathAsIs;
 
 /**

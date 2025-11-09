@@ -16,13 +16,12 @@
  */
 package org.keycloak.client.admin.cli.commands;
 
-import org.keycloak.client.cli.util.FilterUtil;
-import org.keycloak.client.cli.util.ReturnFields;
-
 import java.io.IOException;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.keycloak.client.cli.util.FilterUtil;
+import org.keycloak.client.cli.util.ReturnFields;
 
 import static org.keycloak.client.cli.util.HttpUtil.normalize;
 

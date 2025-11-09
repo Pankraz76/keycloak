@@ -16,11 +16,6 @@
  */
 package org.keycloak.quarkus.runtime.configuration.mappers;
 
-import static java.util.Optional.ofNullable;
-import static org.keycloak.quarkus.runtime.configuration.Configuration.toCliFormat;
-import static org.keycloak.quarkus.runtime.configuration.Configuration.toEnvVarFormat;
-import static org.keycloak.quarkus.runtime.configuration.MicroProfileConfigProvider.NS_KEYCLOAK_PREFIX;
-
 import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
@@ -35,6 +30,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
+import io.smallrye.config.ConfigSourceInterceptorContext;
+import io.smallrye.config.ConfigValue;
+import io.smallrye.config.ConfigValue.ConfigValueBuilder;
+import io.smallrye.config.ExpressionConfigSourceInterceptor;
+import io.smallrye.config.Expressions;
 import org.keycloak.common.Profile;
 import org.keycloak.config.DeprecatedMetadata;
 import org.keycloak.config.Option;
@@ -51,11 +51,11 @@ import org.keycloak.quarkus.runtime.configuration.KeycloakConfigSourceProvider;
 import org.keycloak.quarkus.runtime.configuration.NestedPropertyMappingInterceptor;
 import org.keycloak.utils.StringUtil;
 
-import io.smallrye.config.ConfigSourceInterceptorContext;
-import io.smallrye.config.ConfigValue;
-import io.smallrye.config.ConfigValue.ConfigValueBuilder;
-import io.smallrye.config.ExpressionConfigSourceInterceptor;
-import io.smallrye.config.Expressions;
+import static java.util.Optional.ofNullable;
+
+import static org.keycloak.quarkus.runtime.configuration.Configuration.toCliFormat;
+import static org.keycloak.quarkus.runtime.configuration.Configuration.toEnvVarFormat;
+import static org.keycloak.quarkus.runtime.configuration.MicroProfileConfigProvider.NS_KEYCLOAK_PREFIX;
 
 public class PropertyMapper<T> {
 

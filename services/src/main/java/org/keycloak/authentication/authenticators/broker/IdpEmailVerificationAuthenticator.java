@@ -17,6 +17,14 @@
 
 package org.keycloak.authentication.authenticators.broker;
 
+import java.net.URI;
+import java.util.Objects;
+import java.util.concurrent.TimeUnit;
+
+import jakarta.ws.rs.core.*;
+import jakarta.ws.rs.core.Response;
+import jakarta.ws.rs.core.UriBuilder;
+
 import org.jboss.logging.Logger;
 import org.keycloak.authentication.AuthenticationFlowContext;
 import org.keycloak.authentication.AuthenticationFlowError;
@@ -42,13 +50,6 @@ import org.keycloak.services.Urls;
 import org.keycloak.services.messages.Messages;
 import org.keycloak.sessions.AuthenticationSessionCompoundId;
 import org.keycloak.sessions.AuthenticationSessionModel;
-
-import java.net.URI;
-import java.util.Objects;
-import jakarta.ws.rs.core.Response;
-import jakarta.ws.rs.core.UriBuilder;
-import java.util.concurrent.TimeUnit;
-import jakarta.ws.rs.core.*;
 
 /**
  * @author <a href="mailto:mposolda@redhat.com">Marek Posolda</a>

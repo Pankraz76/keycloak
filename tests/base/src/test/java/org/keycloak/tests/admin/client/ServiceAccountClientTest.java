@@ -17,6 +17,8 @@
 
 package org.keycloak.tests.admin.client;
 
+import java.util.stream.Collectors;
+
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Assertions;
@@ -37,8 +39,6 @@ import org.keycloak.testframework.realm.ManagedClient;
 import org.keycloak.testframework.realm.ManagedRealm;
 import org.keycloak.tests.utils.admin.ApiUtil;
 import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
-
-import java.util.stream.Collectors;
 
 /**
  * @author rmartinc

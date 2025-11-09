@@ -1,11 +1,12 @@
 package org.keycloak.testframework.mail;
 
+import jakarta.mail.internet.MimeMessage;
+
 import com.icegreen.greenmail.store.FolderException;
 import com.icegreen.greenmail.user.GreenMailUser;
 import com.icegreen.greenmail.user.TokenValidator;
 import com.icegreen.greenmail.util.GreenMail;
 import com.icegreen.greenmail.util.ServerSetup;
-import jakarta.mail.internet.MimeMessage;
 import org.keycloak.testframework.injection.ManagedTestResource;
 
 public class MailServer extends ManagedTestResource {

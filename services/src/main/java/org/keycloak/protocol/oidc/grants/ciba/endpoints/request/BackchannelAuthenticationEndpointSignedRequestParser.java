@@ -18,10 +18,10 @@
 
 package org.keycloak.protocol.oidc.grants.ciba.endpoints.request;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import org.keycloak.crypto.SignatureProvider;
 import org.keycloak.jose.JOSE;
 import org.keycloak.jose.JOSEParser;

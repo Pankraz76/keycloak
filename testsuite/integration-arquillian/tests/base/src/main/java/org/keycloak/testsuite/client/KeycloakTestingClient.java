@@ -17,7 +17,10 @@
 
 package org.keycloak.testsuite.client;
 
+import java.util.Set;
+
 import jakarta.ws.rs.core.Response;
+
 import org.jboss.resteasy.client.jaxrs.ResteasyClient;
 import org.jboss.resteasy.client.jaxrs.ResteasyClientBuilder;
 import org.jboss.resteasy.client.jaxrs.ResteasyWebTarget;
@@ -32,8 +35,6 @@ import org.keycloak.testsuite.client.resources.TestingResource;
 import org.keycloak.testsuite.runonserver.*;
 import org.keycloak.testsuite.util.AdminClientUtil;
 import org.keycloak.util.JsonSerialization;
-
-import java.util.Set;
 
 /**
  * @author <a href="mailto:mstrukel@redhat.com">Marko Strukelj</a>

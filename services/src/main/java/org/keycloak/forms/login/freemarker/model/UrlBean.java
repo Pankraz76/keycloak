@@ -16,15 +16,15 @@
  */
 package org.keycloak.forms.login.freemarker.model;
 
-import static org.keycloak.protocol.oidc.grants.device.DeviceGrantType.realmOAuth2DeviceVerificationAction;
+import java.io.IOException;
+import java.net.URI;
 
 import org.jboss.logging.Logger;
 import org.keycloak.models.RealmModel;
 import org.keycloak.services.Urls;
 import org.keycloak.theme.Theme;
 
-import java.io.IOException;
-import java.net.URI;
+import static org.keycloak.protocol.oidc.grants.device.DeviceGrantType.realmOAuth2DeviceVerificationAction;
 
 /**
  * @author <a href="mailto:sthorger@redhat.com">Stian Thorgersen</a>

@@ -18,13 +18,13 @@
  */
 package org.keycloak.it.cli.dist;
 
+import java.io.IOException;
+import java.net.ConnectException;
+
 import io.quarkus.test.junit.main.Launch;
 import org.junit.jupiter.api.Test;
 import org.keycloak.it.junit5.extension.DistributionTest;
 import org.keycloak.it.junit5.extension.RawDistOnly;
-
-import java.io.IOException;
-import java.net.ConnectException;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.is;

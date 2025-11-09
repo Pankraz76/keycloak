@@ -17,6 +17,14 @@
 
 package org.keycloak.testsuite.federation.ldap;
 
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.stream.Stream;
+
+import jakarta.ws.rs.core.Response;
+
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.ClassRule;
@@ -44,20 +52,12 @@ import org.keycloak.storage.ldap.mappers.UserAttributeLDAPStorageMapper;
 import org.keycloak.testsuite.client.KeycloakTestingClient;
 import org.keycloak.testsuite.util.LDAPRule;
 import org.keycloak.testsuite.util.LDAPTestUtils;
-
-import jakarta.ws.rs.core.Response;
 import org.keycloak.testsuite.util.userprofile.UserProfileUtil;
 import org.keycloak.validate.validators.LengthValidator;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.stream.Stream;
-
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 /**

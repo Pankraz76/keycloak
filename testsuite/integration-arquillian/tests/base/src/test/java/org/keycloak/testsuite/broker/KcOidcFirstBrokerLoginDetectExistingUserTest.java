@@ -17,9 +17,9 @@ import org.keycloak.representations.idm.UserRepresentation;
 import org.keycloak.testsuite.util.AccountHelper;
 import org.keycloak.testsuite.util.ExecutionBuilder;
 
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 public class KcOidcFirstBrokerLoginDetectExistingUserTest extends AbstractInitializedBaseBrokerTest {
 

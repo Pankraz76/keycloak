@@ -18,8 +18,14 @@
 
 package org.keycloak.testsuite.client;
 
+import java.security.KeyPair;
+import java.util.Collections;
+import java.util.List;
+import java.util.UUID;
+
 import jakarta.ws.rs.HttpMethod;
 import jakarta.ws.rs.core.Response;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -44,11 +50,6 @@ import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
 import org.keycloak.testsuite.util.oauth.AuthorizationEndpointResponse;
 import org.keycloak.testsuite.util.oauth.PkceGenerator;
 import org.keycloak.testsuite.util.oauth.UserInfoResponse;
-
-import java.security.KeyPair;
-import java.util.Collections;
-import java.util.List;
-import java.util.UUID;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;

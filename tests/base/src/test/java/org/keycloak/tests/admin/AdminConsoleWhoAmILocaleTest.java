@@ -1,8 +1,12 @@
 package org.keycloak.tests.admin;
 
+import java.io.IOException;
+import java.util.List;
+
+import jakarta.ws.rs.core.Response;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jakarta.ws.rs.core.Response;
 import org.apache.http.Header;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -32,9 +36,6 @@ import org.keycloak.testframework.realm.UserConfig;
 import org.keycloak.testframework.realm.UserConfigBuilder;
 import org.keycloak.testframework.server.KeycloakUrls;
 import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
-
-import java.io.IOException;
-import java.util.List;
 
 import static org.keycloak.models.Constants.ADMIN_CLI_CLIENT_ID;
 

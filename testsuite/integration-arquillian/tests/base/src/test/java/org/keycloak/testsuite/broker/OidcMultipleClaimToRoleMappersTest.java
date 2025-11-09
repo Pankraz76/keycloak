@@ -16,6 +16,7 @@
  */
 package org.keycloak.testsuite.broker;
 
+import com.google.common.collect.ImmutableMap;
 import org.keycloak.broker.oidc.mappers.AdvancedClaimToRoleMapper;
 import org.keycloak.broker.oidc.mappers.ClaimToRoleMapper;
 import org.keycloak.broker.oidc.mappers.ExternalKeycloakRoleToRoleMapper;
@@ -23,8 +24,6 @@ import org.keycloak.broker.provider.ConfigConstants;
 import org.keycloak.models.IdentityProviderMapperModel;
 import org.keycloak.models.IdentityProviderMapperSyncMode;
 import org.keycloak.representations.idm.IdentityProviderMapperRepresentation;
-
-import com.google.common.collect.ImmutableMap;
 
 /**
  * Runs the same tests as {@link OidcClaimToRoleMapperTest} but using multiple OIDC mappers that map different IDP claims

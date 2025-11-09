@@ -1,10 +1,18 @@
 package org.keycloak.testsuite.util.saml;
 
 
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
+import java.security.PrivateKey;
+import java.security.PublicKey;
+
+import jakarta.ws.rs.core.HttpHeaders;
+
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
-import jakarta.ws.rs.core.HttpHeaders;
 import org.jboss.logging.Logger;
 import org.keycloak.common.util.KeyUtils;
 import org.keycloak.dom.saml.v2.protocol.ArtifactResolveType;
@@ -21,13 +29,6 @@ import org.keycloak.saml.common.util.DocumentUtil;
 import org.keycloak.saml.processing.api.saml.v2.response.SAML2Response;
 import org.keycloak.saml.processing.core.saml.v2.common.SAMLDocumentHolder;
 import org.w3c.dom.Document;
-
-import java.io.IOException;
-import java.io.OutputStream;
-import java.net.InetAddress;
-import java.net.InetSocketAddress;
-import java.security.PrivateKey;
-import java.security.PublicKey;
 
 public class SamlBackchannelArtifactResolveReceiver implements AutoCloseable {
 
@@ -141,5 +142,3 @@ public class SamlBackchannelArtifactResolveReceiver implements AutoCloseable {
         return "true".equals(client.getAttributes().get(SamlConfigAttributes.SAML_CLIENT_SIGNATURE_ATTRIBUTE));
     }
 }
-
-

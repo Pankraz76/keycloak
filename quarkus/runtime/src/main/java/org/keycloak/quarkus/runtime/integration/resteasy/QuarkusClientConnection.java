@@ -17,9 +17,8 @@
 
 package org.keycloak.quarkus.runtime.integration.resteasy;
 
-import org.keycloak.common.ClientConnection;
-
 import io.vertx.core.http.HttpServerRequest;
+import org.keycloak.common.ClientConnection;
 
 public final class QuarkusClientConnection implements ClientConnection {
 

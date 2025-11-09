@@ -17,11 +17,11 @@
 
 package org.keycloak.testsuite.forms;
 
-import static org.junit.Assert.assertEquals;
-
 import java.io.IOException;
+
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
+
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.Before;
 import org.junit.Rule;
@@ -46,6 +46,8 @@ import org.keycloak.testsuite.util.GreenMailRule;
 import org.keycloak.testsuite.util.MailUtils;
 import org.keycloak.testsuite.util.UIUtils;
 import org.keycloak.testsuite.util.UserBuilder;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * Test for browser back/forward/refresh buttons

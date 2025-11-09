@@ -1,7 +1,10 @@
 package org.keycloak.testframework.remote.runonserver;
 
+import java.io.IOException;
+
 import jakarta.ws.rs.WebApplicationException;
 import jakarta.ws.rs.core.Response;
+
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
@@ -13,8 +16,6 @@ import org.keycloak.testframework.remote.providers.runonserver.RunOnServer;
 import org.keycloak.testframework.remote.providers.runonserver.RunOnServerException;
 import org.keycloak.testframework.remote.providers.runonserver.SerializationUtil;
 import org.keycloak.util.JsonSerialization;
-
-import java.io.IOException;
 
 public class RunOnServerClient {
 
@@ -90,4 +91,3 @@ public class RunOnServerClient {
         }
     }
 }
-

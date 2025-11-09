@@ -17,10 +17,18 @@
 
 package org.keycloak.protocol.saml.profile.ecp;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Objects;
+
+import jakarta.ws.rs.core.Response;
+import jakarta.xml.soap.SOAPException;
+import jakarta.xml.soap.SOAPHeaderElement;
+
 import org.keycloak.dom.saml.v2.protocol.AuthnRequestType;
 import org.keycloak.events.EventBuilder;
-import org.keycloak.models.AuthenticationFlowModel;
 import org.keycloak.models.AuthenticatedClientSessionModel;
+import org.keycloak.models.AuthenticationFlowModel;
 import org.keycloak.models.ClientModel;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.UserSessionModel;
@@ -40,13 +48,6 @@ import org.keycloak.saml.validators.DestinationValidator;
 import org.keycloak.services.managers.AuthenticationManager;
 import org.keycloak.sessions.AuthenticationSessionModel;
 import org.w3c.dom.Document;
-
-import jakarta.ws.rs.core.Response;
-import jakarta.xml.soap.SOAPException;
-import jakarta.xml.soap.SOAPHeaderElement;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Objects;
 
 /**
  * @author <a href="mailto:psilva@redhat.com">Pedro Igor</a>

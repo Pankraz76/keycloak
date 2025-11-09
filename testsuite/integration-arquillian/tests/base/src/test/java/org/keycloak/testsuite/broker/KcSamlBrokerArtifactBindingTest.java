@@ -2,6 +2,7 @@ package org.keycloak.testsuite.broker;
 
 import java.io.Closeable;
 import java.io.IOException;
+
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;

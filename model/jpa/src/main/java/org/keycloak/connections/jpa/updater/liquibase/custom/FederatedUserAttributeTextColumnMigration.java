@@ -16,13 +16,13 @@
  */
 package org.keycloak.connections.jpa.updater.liquibase.custom;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
 import liquibase.database.core.MySQLDatabase;
 import liquibase.exception.CustomChangeException;
 import liquibase.statement.core.RawParameterizedSqlStatement;
 import org.keycloak.storage.jpa.JpaHashUtils;
-
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 
 /**
  * The MySQL database is the only database where columns longer than 255 characters are changed to a TEXT column, allowing

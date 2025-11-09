@@ -17,6 +17,18 @@
 
 package org.keycloak.testsuite.webauthn.account;
 
+import java.io.Closeable;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
+import java.util.Objects;
+import java.util.function.Consumer;
+import java.util.stream.Collectors;
+
 import org.hamcrest.Matchers;
 import org.junit.Test;
 import org.keycloak.admin.client.resource.UserResource;
@@ -36,19 +48,8 @@ import org.keycloak.testsuite.webauthn.updaters.WebAuthnRealmAttributeUpdater;
 import org.keycloak.theme.DateTimeFormatterUtil;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import java.io.Closeable;
-import java.io.IOException;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Locale;
-import java.util.Objects;
-import java.util.function.Consumer;
-import java.util.stream.Collectors;
-
 import static java.util.Collections.emptyList;
+
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
@@ -56,10 +57,10 @@ import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.hasSize;
-import static org.keycloak.testsuite.webauthn.utils.SigningInPageUtils.assertUserCredential;
-import static org.keycloak.testsuite.webauthn.utils.SigningInPageUtils.testSetUpLink;
 import static org.keycloak.testsuite.util.UIUtils.refreshPageAndWaitForLoad;
 import static org.keycloak.testsuite.util.WaitUtils.waitForPageToLoad;
+import static org.keycloak.testsuite.webauthn.utils.SigningInPageUtils.assertUserCredential;
+import static org.keycloak.testsuite.webauthn.utils.SigningInPageUtils.testSetUpLink;
 
 public class WebAuthnSigningInTest extends AbstractWebAuthnAccountTest {
 

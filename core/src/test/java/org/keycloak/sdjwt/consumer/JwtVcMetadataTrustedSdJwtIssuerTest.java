@@ -17,6 +17,11 @@
 
 package org.keycloak.sdjwt.consumer;
 
+import java.rmi.UnknownHostException;
+import java.util.Arrays;
+import java.util.List;
+import java.util.regex.Pattern;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -30,11 +35,6 @@ import org.keycloak.sdjwt.SdJws;
 import org.keycloak.sdjwt.SdJwtUtils;
 import org.keycloak.sdjwt.TestUtils;
 import org.keycloak.sdjwt.vp.SdJwtVP;
-
-import java.rmi.UnknownHostException;
-import java.util.Arrays;
-import java.util.List;
-import java.util.regex.Pattern;
 
 import static org.hamcrest.CoreMatchers.endsWith;
 import static org.hamcrest.MatcherAssert.assertThat;

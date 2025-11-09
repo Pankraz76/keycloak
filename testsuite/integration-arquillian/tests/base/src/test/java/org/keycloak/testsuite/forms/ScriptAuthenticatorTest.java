@@ -16,6 +16,10 @@
  */
 package org.keycloak.testsuite.forms;
 
+import java.util.UUID;
+
+import jakarta.ws.rs.core.Response;
+
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.Assert;
 import org.junit.Before;
@@ -40,10 +44,6 @@ import org.keycloak.testsuite.util.ExecutionBuilder;
 import org.keycloak.testsuite.util.FlowBuilder;
 import org.keycloak.testsuite.util.RealmBuilder;
 import org.keycloak.testsuite.util.UserBuilder;
-
-import jakarta.ws.rs.core.Response;
-
-import java.util.UUID;
 
 import static org.keycloak.common.Profile.Feature.AUTHORIZATION;
 
@@ -202,4 +202,3 @@ public class ScriptAuthenticatorTest extends AbstractFlowTest {
         events.expectLogin().user(userId).detail(Details.USERNAME, "user").assertEvent();
     }
 }
-

@@ -17,15 +17,13 @@
 
 package org.keycloak.testsuite.federation.ldap.noimport;
 
-import static org.junit.Assert.fail;
-
 import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import jakarta.ws.rs.BadRequestException;
 import jakarta.ws.rs.core.Response;
-import java.util.Map;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -59,6 +57,8 @@ import org.keycloak.testsuite.federation.ldap.LDAPTestAsserts;
 import org.keycloak.testsuite.federation.ldap.LDAPTestContext;
 import org.keycloak.testsuite.util.LDAPTestUtils;
 import org.keycloak.testsuite.util.userprofile.UserProfileUtil;
+
+import static org.junit.Assert.fail;
 
 
 /**

@@ -17,19 +17,19 @@
 
 package org.keycloak.theme.beans;
 
-import static java.util.Optional.ofNullable;
-
-import freemarker.template.SimpleScalar;
-import freemarker.template.TemplateMethodModelEx;
-import freemarker.template.TemplateModelException;
-import org.keycloak.theme.TemplatingUtil;
-
 import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Properties;
+
+import freemarker.template.SimpleScalar;
+import freemarker.template.TemplateMethodModelEx;
+import freemarker.template.TemplateModelException;
+import org.keycloak.theme.TemplatingUtil;
+
+import static java.util.Optional.ofNullable;
 
 /**
  * @author <a href="mailto:gerbermichi@me.com">Michael Gerber</a>

@@ -19,12 +19,12 @@
 
 package org.keycloak.services.error;
 
-import com.fasterxml.jackson.databind.exc.MismatchedInputException;
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.ext.ExceptionMapper;
 import jakarta.ws.rs.ext.Provider;
 
+import com.fasterxml.jackson.databind.exc.MismatchedInputException;
 import org.keycloak.models.KeycloakSession;
 
 /**

@@ -1,5 +1,11 @@
 package org.keycloak.testsuite.broker;
 
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+
+import com.google.common.collect.ImmutableList;
+import com.google.common.collect.ImmutableMap;
 import org.junit.Test;
 import org.keycloak.broker.oidc.mappers.ClaimToRoleMapper;
 import org.keycloak.broker.provider.ConfigConstants;
@@ -15,13 +21,6 @@ import org.keycloak.representations.idm.ClientRepresentation;
 import org.keycloak.representations.idm.IdentityProviderMapperRepresentation;
 import org.keycloak.representations.idm.ProtocolMapperRepresentation;
 import org.keycloak.representations.idm.UserRepresentation;
-
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableMap;
-
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
 
 /**
  * @author <a href="mailto:dashaylan@gmail.com">Dashaylan Naidoo</a>,

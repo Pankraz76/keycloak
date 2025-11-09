@@ -1,5 +1,10 @@
 package org.keycloak.quarkus.runtime.configuration;
 
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
+
 import io.smallrye.config.Expressions;
 import io.smallrye.config.SmallRyeConfig;
 import org.h2.jdbcx.JdbcDataSource;
@@ -10,11 +15,6 @@ import org.junit.Test;
 import org.keycloak.quarkus.runtime.Environment;
 import org.mariadb.jdbc.MariaDbDataSource;
 import org.postgresql.xa.PGXADataSource;
-
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
 import static org.hamcrest.CoreMatchers.hasItem;
 import static org.hamcrest.CoreMatchers.hasItems;

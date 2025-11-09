@@ -17,8 +17,6 @@
 
 package org.keycloak.models.cache.infinispan.authorization;
 
-import static org.keycloak.models.cache.infinispan.InfinispanCacheRealmProviderFactory.REALM_CLEAR_CACHE_EVENTS;
-
 import org.infinispan.Cache;
 import org.jboss.logging.Logger;
 import org.keycloak.Config;
@@ -31,6 +29,8 @@ import org.keycloak.models.cache.authorization.CachedStoreFactoryProvider;
 import org.keycloak.models.cache.authorization.CachedStoreProviderFactory;
 import org.keycloak.models.cache.infinispan.entities.Revisioned;
 import org.keycloak.models.cache.infinispan.events.InvalidationEvent;
+
+import static org.keycloak.models.cache.infinispan.InfinispanCacheRealmProviderFactory.REALM_CLEAR_CACHE_EVENTS;
 
 /**
  * @author <a href="mailto:bill@burkecentral.com">Bill Burke</a>

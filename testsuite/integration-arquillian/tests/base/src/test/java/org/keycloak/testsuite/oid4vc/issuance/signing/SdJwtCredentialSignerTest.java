@@ -17,6 +17,14 @@
 
 package org.keycloak.testsuite.oid4vc.issuance.signing;
 
+import java.security.PublicKey;
+import java.util.Arrays;
+import java.util.Base64;
+import java.util.List;
+import java.util.Map;
+import java.util.StringJoiner;
+import java.util.UUID;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.junit.Test;
 import org.keycloak.TokenVerifier;
@@ -41,14 +49,6 @@ import org.keycloak.representations.idm.RealmRepresentation;
 import org.keycloak.sdjwt.SdJwtUtils;
 import org.keycloak.testsuite.runonserver.RunOnServerException;
 import org.keycloak.util.JsonSerialization;
-
-import java.security.PublicKey;
-import java.util.Arrays;
-import java.util.Base64;
-import java.util.List;
-import java.util.Map;
-import java.util.StringJoiner;
-import java.util.UUID;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;

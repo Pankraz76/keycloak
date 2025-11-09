@@ -107,4 +107,3 @@ final class DefaultWorkflowExecutionContext implements WorkflowExecutionContext 
         return session;
     }
 }
-

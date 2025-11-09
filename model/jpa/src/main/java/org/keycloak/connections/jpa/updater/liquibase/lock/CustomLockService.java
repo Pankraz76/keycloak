@@ -17,6 +17,13 @@
 
 package org.keycloak.connections.jpa.updater.liquibase.lock;
 
+import java.lang.reflect.Field;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
+
 import liquibase.Scope;
 import liquibase.database.core.DerbyDatabase;
 import liquibase.exception.DatabaseException;
@@ -28,6 +35,7 @@ import liquibase.snapshot.DatabaseSnapshot;
 import liquibase.snapshot.InvalidExampleException;
 import liquibase.snapshot.SnapshotControl;
 import liquibase.snapshot.SnapshotGeneratorFactory;
+import liquibase.statement.SqlStatement;
 import liquibase.statement.core.CreateDatabaseChangeLogLockTableStatement;
 import liquibase.statement.core.DropTableStatement;
 import liquibase.statement.core.InitializeDatabaseChangeLogLockTableStatement;
@@ -41,14 +49,6 @@ import org.keycloak.common.util.Time;
 import org.keycloak.common.util.reflections.Reflections;
 import org.keycloak.connections.jpa.updater.liquibase.LiquibaseConstants;
 import org.keycloak.models.dblock.DBLockProvider;
-
-import java.lang.reflect.Field;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.stream.Collectors;
-import liquibase.statement.SqlStatement;
 
 /**
  * Liquibase lock service, which has some bugfixes and assumes timeouts to be configured in milliseconds

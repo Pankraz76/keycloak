@@ -18,7 +18,6 @@ package org.keycloak.crypto.elytron.test;
 
 import java.security.SecureRandom;
 import java.util.UUID;
-
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 

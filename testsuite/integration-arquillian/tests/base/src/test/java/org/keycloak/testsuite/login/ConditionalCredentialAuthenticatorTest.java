@@ -19,6 +19,7 @@ package org.keycloak.testsuite.login;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.Assert;
 import org.junit.Rule;

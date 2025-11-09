@@ -17,8 +17,6 @@
 
 package org.keycloak.testsuite.oidc;
 
-import static org.junit.Assert.assertTrue;
-
 import java.io.IOException;
 
 import org.jboss.arquillian.graphene.page.Page;
@@ -43,6 +41,8 @@ import org.keycloak.testsuite.pages.LoginPage;
 import org.keycloak.testsuite.pages.OAuthGrantPage;
 import org.keycloak.testsuite.util.ClientManager;
 import org.keycloak.testsuite.util.oauth.AuthorizationEndpointResponse;
+
+import static org.junit.Assert.assertTrue;
 
 
 

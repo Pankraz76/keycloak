@@ -17,11 +17,18 @@
 
 package org.keycloak.testsuite.oid4vc.issuance.signing;
 
+import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
+import java.security.PrivateKey;
+import java.util.List;
+import java.util.Map;
+
 import jakarta.ws.rs.BadRequestException;
 import jakarta.ws.rs.client.Entity;
 import jakarta.ws.rs.client.WebTarget;
 import jakarta.ws.rs.core.HttpHeaders;
 import jakarta.ws.rs.core.Response;
+
 import org.apache.http.HttpStatus;
 import org.jboss.logging.Logger;
 import org.junit.Test;
@@ -45,12 +52,6 @@ import org.keycloak.services.managers.AppAuthManager;
 import org.keycloak.testsuite.Assert;
 import org.keycloak.util.JsonSerialization;
 import org.keycloak.utils.MediaType;
-
-import java.io.IOException;
-import java.security.NoSuchAlgorithmException;
-import java.security.PrivateKey;
-import java.util.List;
-import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -532,4 +533,3 @@ public class OID4VCIssuerEndpointEncryptionTest extends OID4VCIssuerEndpointTest
         });
     }
 }
-

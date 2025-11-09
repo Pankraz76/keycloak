@@ -17,8 +17,9 @@
 
 package org.keycloak.quarkus.runtime.tracing;
 
-import io.opentelemetry.api.OpenTelemetry;
 import jakarta.enterprise.inject.spi.CDI;
+
+import io.opentelemetry.api.OpenTelemetry;
 import org.keycloak.Config;
 import org.keycloak.common.Profile;
 import org.keycloak.config.TracingOptions;

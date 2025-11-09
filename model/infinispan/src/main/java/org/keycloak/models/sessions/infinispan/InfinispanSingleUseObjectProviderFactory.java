@@ -173,4 +173,3 @@ public class InfinispanSingleUseObjectProviderFactory implements SingleUseObject
     }
 
 }
-

@@ -59,5 +59,3 @@ public class LDAPMultipleAttributesNoImportTest extends LDAPMultipleAttributesTe
 
 
 }
-
-

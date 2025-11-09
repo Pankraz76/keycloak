@@ -17,11 +17,10 @@
 
 package org.keycloak.testsuite.cluster;
 
-import static org.junit.Assert.assertEquals;
-import static org.keycloak.testsuite.util.WaitUtils.pause;
-
 import java.io.IOException;
+
 import jakarta.mail.MessagingException;
+
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.Test;
 import org.keycloak.cookie.CookieType;
@@ -30,6 +29,9 @@ import org.keycloak.testsuite.pages.LoginPasswordUpdatePage;
 import org.keycloak.testsuite.pages.LoginUpdateProfilePage;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
+
+import static org.junit.Assert.assertEquals;
+import static org.keycloak.testsuite.util.WaitUtils.pause;
 
 /**
  * @author <a href="mailto:mposolda@redhat.com">Marek Posolda</a>

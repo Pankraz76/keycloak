@@ -1,15 +1,15 @@
 package org.keycloak.vault;
 
+import java.nio.file.Paths;
+import java.util.Arrays;
+
 import org.junit.Assume;
 import org.junit.Before;
 import org.junit.Test;
 import org.keycloak.common.util.Environment;
 
-import java.nio.file.Paths;
-import java.util.Arrays;
-
-import static org.junit.Assert.assertNotNull;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThrows;
 import static org.keycloak.vault.SecretContains.secretContains;
 

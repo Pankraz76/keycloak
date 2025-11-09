@@ -20,8 +20,8 @@ package org.keycloak.adapters.saml.elytron;
 import java.net.URI;
 import java.util.Map;
 import java.util.regex.Pattern;
-
 import javax.security.auth.callback.CallbackHandler;
+
 import jakarta.servlet.http.HttpServletResponse;
 
 import org.jboss.logging.Logger;

@@ -17,6 +17,8 @@
  */
 package org.keycloak.testsuite.client;
 
+import java.util.Collections;
+
 import org.keycloak.OAuth2Constants;
 import org.keycloak.OAuthErrorException;
 import org.keycloak.authentication.authenticators.client.ClientIdAndSecretAuthenticator;
@@ -33,8 +35,6 @@ import org.keycloak.representations.oidc.OIDCClientRepresentation;
 import org.keycloak.services.clientpolicy.ClientPolicyException;
 import org.keycloak.services.clientpolicy.condition.AnyClientConditionFactory;
 import org.keycloak.testsuite.util.ClientPoliciesUtil;
-
-import java.util.Collections;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

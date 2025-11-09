@@ -17,6 +17,12 @@
 
 package org.keycloak.testsuite.keys;
 
+import java.security.interfaces.RSAPublicKey;
+import java.util.Arrays;
+import java.util.List;
+
+import jakarta.ws.rs.core.Response;
+
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.Rule;
 import org.junit.Test;
@@ -38,11 +44,6 @@ import org.keycloak.testsuite.pages.AppPage;
 import org.keycloak.testsuite.pages.LoginPage;
 import org.keycloak.testsuite.util.KeyUtils;
 import org.keycloak.utils.StringUtil;
-
-import jakarta.ws.rs.core.Response;
-import java.security.interfaces.RSAPublicKey;
-import java.util.Arrays;
-import java.util.List;
 
 import static org.junit.Assert.*;
 import static org.keycloak.testsuite.AbstractAdminTest.loadJson;
@@ -263,4 +264,3 @@ public class GeneratedRsaKeyProviderTest extends AbstractKeycloakTest {
     }
 
 }
-

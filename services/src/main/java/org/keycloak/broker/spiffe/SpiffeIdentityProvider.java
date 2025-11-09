@@ -1,5 +1,7 @@
 package org.keycloak.broker.spiffe;
 
+import java.nio.charset.StandardCharsets;
+
 import org.jboss.logging.Logger;
 import org.keycloak.authentication.ClientAuthenticationFlowContext;
 import org.keycloak.authentication.authenticators.client.AbstractJWTClientValidator;
@@ -13,8 +15,6 @@ import org.keycloak.keys.PublicKeyStorageProvider;
 import org.keycloak.keys.PublicKeyStorageUtils;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.representations.JsonWebToken;
-
-import java.nio.charset.StandardCharsets;
 
 /**
  * Implementation for https://datatracker.ietf.org/doc/draft-schwenkschuster-oauth-spiffe-client-auth/

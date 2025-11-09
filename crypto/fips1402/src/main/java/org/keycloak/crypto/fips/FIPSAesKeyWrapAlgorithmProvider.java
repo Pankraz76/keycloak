@@ -8,8 +8,8 @@ import org.bouncycastle.crypto.SymmetricKey;
 import org.bouncycastle.crypto.SymmetricSecretKey;
 import org.bouncycastle.crypto.fips.FipsAES;
 import org.keycloak.jose.jwe.JWEHeader;
-import org.keycloak.jose.jwe.JWEKeyStorage;
 import org.keycloak.jose.jwe.JWEHeader.JWEHeaderBuilder;
+import org.keycloak.jose.jwe.JWEKeyStorage;
 import org.keycloak.jose.jwe.alg.JWEAlgorithmProvider;
 import org.keycloak.jose.jwe.enc.JWEEncryptionProvider;
 

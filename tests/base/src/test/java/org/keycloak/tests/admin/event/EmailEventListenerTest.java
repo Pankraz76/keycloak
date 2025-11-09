@@ -19,6 +19,7 @@ package org.keycloak.tests.admin.event;
 
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.keycloak.events.email.EmailEventListenerProviderFactory;

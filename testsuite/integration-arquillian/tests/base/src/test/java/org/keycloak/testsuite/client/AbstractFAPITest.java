@@ -17,9 +17,6 @@
  */
 package org.keycloak.testsuite.client;
 
-import static org.junit.Assert.assertEquals;
-import static org.keycloak.testsuite.AbstractAdminTest.loadJson;
-
 import java.nio.charset.StandardCharsets;
 import java.security.KeyPair;
 import java.security.PrivateKey;
@@ -65,11 +62,14 @@ import org.keycloak.testsuite.pages.AppPage;
 import org.keycloak.testsuite.pages.ErrorPage;
 import org.keycloak.testsuite.pages.LoginPage;
 import org.keycloak.testsuite.pages.OAuthGrantPage;
+import org.keycloak.testsuite.util.ServerURLs;
 import org.keycloak.testsuite.util.SignatureSignerUtil;
 import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
-import org.keycloak.testsuite.util.ServerURLs;
 import org.keycloak.testsuite.util.oauth.AuthorizationEndpointResponse;
 import org.keycloak.testsuite.util.oauth.PkceGenerator;
+
+import static org.junit.Assert.assertEquals;
+import static org.keycloak.testsuite.AbstractAdminTest.loadJson;
 
 public abstract class AbstractFAPITest extends AbstractClientPoliciesTest {
 

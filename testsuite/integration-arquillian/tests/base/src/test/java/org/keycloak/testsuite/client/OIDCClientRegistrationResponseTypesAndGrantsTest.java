@@ -19,9 +19,10 @@
 
 package org.keycloak.testsuite.client;
 
-import jakarta.ws.rs.core.Response;
 import java.util.Collections;
 import java.util.List;
+
+import jakarta.ws.rs.core.Response;
 
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
@@ -37,8 +38,8 @@ import org.keycloak.representations.idm.ClientInitialAccessPresentation;
 import org.keycloak.representations.idm.ClientRepresentation;
 import org.keycloak.representations.idm.OAuth2ErrorRepresentation;
 import org.keycloak.representations.oidc.OIDCClientRepresentation;
-import org.keycloak.util.JsonSerialization;
 import org.keycloak.testsuite.Assert;
+import org.keycloak.util.JsonSerialization;
 
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.keycloak.OAuth2Constants.AUTHORIZATION_CODE;

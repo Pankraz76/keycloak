@@ -17,6 +17,9 @@
 
 package org.keycloak.testsuite.keys;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.Rule;
 import org.junit.Test;
@@ -30,9 +33,6 @@ import org.keycloak.testsuite.AssertEvents;
 import org.keycloak.testsuite.pages.AppPage;
 import org.keycloak.testsuite.pages.LoginPage;
 import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
-
-import java.util.LinkedList;
-import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -137,4 +137,3 @@ public class FallbackKeyProviderTest extends AbstractKeycloakTest {
         Assert.assertNames(providers, expected);
     }
 }
-

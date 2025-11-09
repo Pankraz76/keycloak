@@ -80,8 +80,8 @@ import org.keycloak.util.JWKSUtils;
 import org.keycloak.util.TokenUtil;
 import org.keycloak.utils.StringUtil;
 
-import static org.keycloak.OAuth2Constants.DPOP_JWT_HEADER_TYPE;
 import static org.keycloak.OAuth2Constants.DPOP_HTTP_HEADER;
+import static org.keycloak.OAuth2Constants.DPOP_JWT_HEADER_TYPE;
 import static org.keycloak.utils.StringUtil.isNotBlank;
 
 /**

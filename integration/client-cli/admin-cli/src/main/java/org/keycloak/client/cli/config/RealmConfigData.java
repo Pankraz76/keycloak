@@ -16,13 +16,12 @@
  */
 package org.keycloak.client.cli.config;
 
-import org.keycloak.util.JsonSerialization;
-
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import org.keycloak.util.JsonSerialization;
 
 /**
  * @author <a href="mailto:mstrukel@redhat.com">Marko Strukelj</a>

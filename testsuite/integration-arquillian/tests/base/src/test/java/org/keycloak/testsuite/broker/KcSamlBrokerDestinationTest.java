@@ -2,6 +2,8 @@ package org.keycloak.testsuite.broker;
 
 import java.util.Collections;
 
+import jakarta.ws.rs.core.Response;
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.keycloak.events.Errors;
@@ -13,8 +15,6 @@ import org.keycloak.testsuite.updaters.ClientAttributeUpdater;
 import org.keycloak.testsuite.util.SamlClient;
 import org.keycloak.testsuite.util.SamlClientBuilder;
 import org.w3c.dom.Element;
-
-import jakarta.ws.rs.core.Response;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.keycloak.testsuite.broker.BrokerTestConstants.IDP_SAML_ALIAS;

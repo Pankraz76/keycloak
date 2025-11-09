@@ -19,6 +19,11 @@
 
 package org.keycloak.testsuite.oauth.tokenexchange;
 
+import java.util.Arrays;
+import java.util.List;
+
+import jakarta.ws.rs.core.Response;
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.keycloak.OAuth2Constants;
@@ -40,10 +45,6 @@ import org.keycloak.testsuite.arquillian.annotation.EnableFeature;
 import org.keycloak.testsuite.arquillian.annotation.UncaughtServerErrorExpected;
 import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
 import org.keycloak.testsuite.util.oauth.AuthorizationEndpointResponse;
-import jakarta.ws.rs.core.Response;
-
-import java.util.Arrays;
-import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

@@ -17,13 +17,13 @@
 
 package org.keycloak.models;
 
-import org.infinispan.protostream.annotations.Proto;
-import org.infinispan.protostream.annotations.ProtoTypeId;
-import org.keycloak.util.EnumWithStableIndex;
-
 import java.util.Collection;
 import java.util.Map;
 import java.util.Objects;
+
+import org.infinispan.protostream.annotations.Proto;
+import org.infinispan.protostream.annotations.ProtoTypeId;
+import org.keycloak.util.EnumWithStableIndex;
 
 /**
  * @author <a href="mailto:sthorger@redhat.com">Stian Thorgersen</a>

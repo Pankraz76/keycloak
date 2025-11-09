@@ -16,10 +16,10 @@
  */
 package org.keycloak.subsystem.adapter.saml.extension;
 
-import org.keycloak.adapters.saml.AdapterConstants;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+
 import org.jboss.as.controller.capability.CapabilityServiceSupport;
 import org.jboss.as.server.deployment.Attachments;
 import org.jboss.as.server.deployment.DeploymentPhaseContext;
@@ -34,6 +34,7 @@ import org.jboss.metadata.web.spec.LoginConfigMetaData;
 import org.jboss.msc.service.ServiceController;
 import org.jboss.msc.service.ServiceName;
 import org.jboss.msc.service.ServiceTarget;
+import org.keycloak.adapters.saml.AdapterConstants;
 
 /**
  *

@@ -17,13 +17,6 @@
 
 package org.keycloak.spi.infinispan.impl.embedded;
 
-import static org.keycloak.connections.infinispan.InfinispanConnectionProvider.ALL_CACHES_NAME;
-import static org.keycloak.connections.infinispan.InfinispanConnectionProvider.CLUSTERED_CACHE_NUM_OWNERS;
-import static org.keycloak.connections.infinispan.InfinispanConnectionProvider.CLUSTERED_MAX_COUNT_CACHES;
-import static org.keycloak.connections.infinispan.InfinispanConnectionProvider.LOCAL_CACHE_NAMES;
-import static org.keycloak.connections.infinispan.InfinispanConnectionProvider.LOCAL_MAX_COUNT_CACHES;
-import static org.keycloak.spi.infinispan.impl.embedded.JGroupsConfigurator.createJGroupsProperties;
-
 import java.io.IOException;
 import java.lang.invoke.MethodHandles;
 import java.nio.file.Paths;
@@ -32,6 +25,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Stream;
 
+import io.micrometer.core.instrument.Metrics;
 import org.infinispan.configuration.cache.ConfigurationBuilder;
 import org.infinispan.configuration.cache.StatisticsConfigurationBuilder;
 import org.infinispan.configuration.global.ShutdownHookBehavior;
@@ -57,7 +51,12 @@ import org.keycloak.spi.infinispan.CacheEmbeddedConfigProviderFactory;
 import org.keycloak.spi.infinispan.JGroupsCertificateProvider;
 import org.keycloak.spi.infinispan.impl.Util;
 
-import io.micrometer.core.instrument.Metrics;
+import static org.keycloak.connections.infinispan.InfinispanConnectionProvider.ALL_CACHES_NAME;
+import static org.keycloak.connections.infinispan.InfinispanConnectionProvider.CLUSTERED_CACHE_NUM_OWNERS;
+import static org.keycloak.connections.infinispan.InfinispanConnectionProvider.CLUSTERED_MAX_COUNT_CACHES;
+import static org.keycloak.connections.infinispan.InfinispanConnectionProvider.LOCAL_CACHE_NAMES;
+import static org.keycloak.connections.infinispan.InfinispanConnectionProvider.LOCAL_MAX_COUNT_CACHES;
+import static org.keycloak.spi.infinispan.impl.embedded.JGroupsConfigurator.createJGroupsProperties;
 
 /**
  * The default implementation of {@link CacheEmbeddedConfigProviderFactory}.

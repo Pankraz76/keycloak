@@ -17,11 +17,6 @@
 
 package org.keycloak.storage;
 
-import static org.keycloak.models.utils.KeycloakModelUtils.runJobInTransaction;
-import static org.keycloak.storage.managers.UserStorageSyncManager.notifyToRefreshPeriodicSync;
-import static org.keycloak.utils.StreamsUtil.distinctByKey;
-import static org.keycloak.utils.StreamsUtil.paginatedStream;
-
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
@@ -85,6 +80,11 @@ import org.keycloak.userprofile.UserProfileDecorator;
 import org.keycloak.userprofile.UserProfileMetadata;
 import org.keycloak.utils.StreamsUtil;
 import org.keycloak.utils.StringUtil;
+
+import static org.keycloak.models.utils.KeycloakModelUtils.runJobInTransaction;
+import static org.keycloak.storage.managers.UserStorageSyncManager.notifyToRefreshPeriodicSync;
+import static org.keycloak.utils.StreamsUtil.distinctByKey;
+import static org.keycloak.utils.StreamsUtil.paginatedStream;
 
 /**
  * @author <a href="mailto:bill@burkecentral.com">Bill Burke</a>

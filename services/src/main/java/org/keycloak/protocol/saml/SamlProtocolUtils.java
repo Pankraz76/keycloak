@@ -17,8 +17,6 @@
 
 package org.keycloak.protocol.saml;
 
-import jakarta.ws.rs.core.MultivaluedMap;
-import jakarta.ws.rs.core.UriInfo;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.net.URI;
@@ -27,6 +25,10 @@ import java.security.Key;
 import java.security.PublicKey;
 import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
+
+import jakarta.ws.rs.core.MultivaluedMap;
+import jakarta.ws.rs.core.UriInfo;
+
 import org.apache.xml.security.encryption.XMLCipher;
 import org.jboss.logging.Logger;
 import org.keycloak.common.VerificationException;

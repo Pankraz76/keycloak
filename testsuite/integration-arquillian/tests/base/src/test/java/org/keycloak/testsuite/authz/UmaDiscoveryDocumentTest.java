@@ -16,8 +16,6 @@
  */
 package org.keycloak.testsuite.authz;
 
-import static org.junit.Assert.assertEquals;
-
 import java.net.URI;
 import java.util.HashMap;
 import java.util.List;
@@ -34,10 +32,12 @@ import org.keycloak.authorization.config.UmaWellKnownProviderFactory;
 import org.keycloak.protocol.oidc.OIDCLoginProtocolService;
 import org.keycloak.representations.idm.RealmRepresentation;
 import org.keycloak.services.resources.RealmsResource;
-import org.keycloak.testsuite.AbstractKeycloakTest;
 import org.keycloak.testsuite.AbstractAdminTest;
+import org.keycloak.testsuite.AbstractKeycloakTest;
 import org.keycloak.testsuite.util.AdminClientUtil;
 import org.keycloak.testsuite.util.oauth.OAuthClient;
+
+import static org.junit.Assert.assertEquals;
 
 public class UmaDiscoveryDocumentTest extends AbstractKeycloakTest {
 

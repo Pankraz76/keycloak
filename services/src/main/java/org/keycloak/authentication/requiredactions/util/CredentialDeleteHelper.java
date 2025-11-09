@@ -25,6 +25,7 @@ import java.util.function.Supplier;
 import jakarta.ws.rs.BadRequestException;
 import jakarta.ws.rs.ForbiddenException;
 import jakarta.ws.rs.NotFoundException;
+
 import org.jboss.logging.Logger;
 import org.keycloak.authentication.AuthenticatorUtil;
 import org.keycloak.authentication.authenticators.util.LoAUtil;

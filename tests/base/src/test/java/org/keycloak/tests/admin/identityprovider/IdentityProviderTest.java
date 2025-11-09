@@ -1,6 +1,11 @@
 package org.keycloak.tests.admin.identityprovider;
 
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+
 import jakarta.ws.rs.core.Response;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.keycloak.models.IdentityProviderModel;
@@ -11,10 +16,6 @@ import org.keycloak.testframework.annotations.KeycloakIntegrationTest;
 import org.keycloak.testframework.injection.LifeCycle;
 import org.keycloak.testframework.realm.ManagedRealm;
 import org.keycloak.tests.utils.Assert;
-
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.contains;

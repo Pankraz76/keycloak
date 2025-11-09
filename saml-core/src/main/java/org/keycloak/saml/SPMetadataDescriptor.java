@@ -26,7 +26,6 @@ import java.util.concurrent.TimeUnit;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.Duration;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
@@ -41,8 +40,8 @@ import org.keycloak.saml.processing.core.saml.v2.common.IDGenerator;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-import static org.keycloak.saml.common.constants.JBossSAMLURIConstants.XMLDSIG_NSURI;
 import static org.keycloak.saml.common.constants.JBossSAMLURIConstants.PROTOCOL_NSURI;
+import static org.keycloak.saml.common.constants.JBossSAMLURIConstants.XMLDSIG_NSURI;
 
 /**
  * @author <a href="mailto:bill@burkecentral.com">Bill Burke</a>

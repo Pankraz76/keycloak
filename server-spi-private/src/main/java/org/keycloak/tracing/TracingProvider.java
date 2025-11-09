@@ -17,6 +17,9 @@
 
 package org.keycloak.tracing;
 
+import java.util.function.Consumer;
+import java.util.function.Function;
+
 import io.opentelemetry.api.trace.Span;
 import io.opentelemetry.api.trace.SpanBuilder;
 import io.opentelemetry.api.trace.StatusCode;
@@ -24,9 +27,6 @@ import io.opentelemetry.api.trace.Tracer;
 import io.opentelemetry.context.Context;
 import org.keycloak.common.Version;
 import org.keycloak.provider.Provider;
-
-import java.util.function.Consumer;
-import java.util.function.Function;
 
 public interface TracingProvider extends Provider {
 

@@ -17,6 +17,10 @@
 
 package org.keycloak.testsuite.oidc;
 
+import java.io.IOException;
+import java.util.*;
+import java.util.stream.Collectors;
+
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.After;
 import org.junit.Before;
@@ -41,10 +45,6 @@ import org.keycloak.testsuite.updaters.RealmAttributeUpdater;
 import org.keycloak.testsuite.util.FlowUtil;
 import org.keycloak.testsuite.util.UserBuilder;
 import org.keycloak.util.JsonSerialization;
-
-import java.io.IOException;
-import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * @author Ben Cresitello-Dittmar

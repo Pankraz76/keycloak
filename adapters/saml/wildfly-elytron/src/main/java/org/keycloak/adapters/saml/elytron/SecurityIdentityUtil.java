@@ -19,7 +19,6 @@ package org.keycloak.adapters.saml.elytron;
 
 import java.io.IOException;
 import java.security.Principal;
-
 import javax.security.auth.callback.Callback;
 import javax.security.auth.callback.CallbackHandler;
 import javax.security.auth.callback.UnsupportedCallbackException;

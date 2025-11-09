@@ -18,6 +18,7 @@
 package org.keycloak.testsuite.broker;
 
 import java.util.List;
+
 import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.junit.Rule;

@@ -17,6 +17,14 @@
 
 package org.keycloak.saml.common;
 
+import java.io.IOException;
+import java.security.GeneralSecurityException;
+import javax.security.auth.login.LoginException;
+import javax.xml.crypto.dsig.XMLSignatureException;
+import javax.xml.stream.Location;
+
+import jakarta.xml.ws.WebServiceException;
+
 import org.jboss.logging.Logger;
 import org.keycloak.saml.common.constants.GeneralConstants;
 import org.keycloak.saml.common.constants.WSTrustConstants;
@@ -31,14 +39,6 @@ import org.keycloak.saml.common.exceptions.fed.IssuerNotTrustedException;
 import org.keycloak.saml.common.exceptions.fed.SignatureValidationException;
 import org.keycloak.saml.common.exceptions.fed.WSTrustException;
 import org.w3c.dom.Element;
-
-import javax.security.auth.login.LoginException;
-import javax.xml.crypto.dsig.XMLSignatureException;
-import javax.xml.stream.Location;
-
-import jakarta.xml.ws.WebServiceException;
-import java.io.IOException;
-import java.security.GeneralSecurityException;
 
 /**
  *@author <a href="mailto:psilva@redhat.com">Pedro Silva</a>

@@ -17,11 +17,11 @@
 
 package org.keycloak.client.registration;
 
+import java.io.IOException;
+
 import org.apache.http.StatusLine;
 import org.keycloak.representations.idm.OAuth2ErrorRepresentation;
 import org.keycloak.util.JsonSerialization;
-
-import java.io.IOException;
 
 /**
  * @author <a href="mailto:sthorger@redhat.com">Stian Thorgersen</a>

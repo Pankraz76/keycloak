@@ -17,6 +17,9 @@
 
 package org.keycloak.testsuite.webauthn.pages;
 
+import java.util.List;
+import java.util.NoSuchElementException;
+
 import org.jboss.arquillian.graphene.page.Page;
 import org.keycloak.testsuite.pages.LanguageComboboxAwarePage;
 import org.keycloak.testsuite.util.UIUtils;
@@ -24,9 +27,6 @@ import org.keycloak.testsuite.util.WaitUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import java.util.List;
-import java.util.NoSuchElementException;
 
 /**
  * Page shown during WebAuthn login. Page is useful with Chrome testing API

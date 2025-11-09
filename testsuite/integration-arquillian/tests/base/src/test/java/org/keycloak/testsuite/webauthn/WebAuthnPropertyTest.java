@@ -17,6 +17,10 @@
 
 package org.keycloak.testsuite.webauthn;
 
+import java.io.Closeable;
+import java.io.IOException;
+import java.util.Objects;
+
 import org.junit.Test;
 import org.keycloak.WebAuthnConstants;
 import org.keycloak.models.Constants;
@@ -27,10 +31,6 @@ import org.keycloak.testsuite.arquillian.annotation.IgnoreBrowserDriver;
 import org.keycloak.testsuite.util.WaitUtils;
 import org.keycloak.testsuite.webauthn.utils.WebAuthnRealmData;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
-import java.io.Closeable;
-import java.io.IOException;
-import java.util.Objects;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;

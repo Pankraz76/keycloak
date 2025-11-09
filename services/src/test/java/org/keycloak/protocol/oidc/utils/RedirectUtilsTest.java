@@ -20,6 +20,7 @@ import java.net.URI;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
 import org.jboss.resteasy.mock.MockHttpRequest;
 import org.junit.Assert;
 import org.junit.BeforeClass;

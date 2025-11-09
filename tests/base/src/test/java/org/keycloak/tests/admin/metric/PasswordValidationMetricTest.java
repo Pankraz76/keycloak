@@ -1,5 +1,9 @@
 package org.keycloak.tests.admin.metric;
 
+import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.util.EntityUtils;
@@ -23,10 +27,6 @@ import org.keycloak.testframework.ui.annotations.InjectWebDriver;
 import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
 import org.keycloak.testsuite.util.oauth.AuthorizationEndpointResponse;
 import org.openqa.selenium.WebDriver;
-
-import java.io.IOException;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 @KeycloakIntegrationTest(config = PasswordValidationMetricTest.ServerConfigWithMetrics.class)
 public class PasswordValidationMetricTest {

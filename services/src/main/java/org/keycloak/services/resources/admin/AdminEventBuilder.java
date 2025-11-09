@@ -16,7 +16,13 @@
  */
 package org.keycloak.services.resources.admin;
 
-import static org.keycloak.models.utils.StripSecretsUtils.stripSecrets;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.UUID;
+
+import jakarta.ws.rs.core.UriInfo;
 
 import org.jboss.logging.Logger;
 import org.keycloak.common.ClientConnection;
@@ -34,15 +40,9 @@ import org.keycloak.models.RealmModel;
 import org.keycloak.models.UserModel;
 import org.keycloak.services.ServicesLogger;
 import org.keycloak.util.JsonSerialization;
-
-import jakarta.ws.rs.core.UriInfo;
 import org.keycloak.utils.StringUtil;
 
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.UUID;
+import static org.keycloak.models.utils.StripSecretsUtils.stripSecrets;
 
 public class AdminEventBuilder {
 

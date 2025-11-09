@@ -17,6 +17,11 @@
 
 package org.keycloak.authentication.authenticators.broker;
 
+import java.util.List;
+import java.util.Map;
+
+import jakarta.ws.rs.core.Response;
+
 import org.jboss.logging.Logger;
 import org.keycloak.authentication.AuthenticationFlowContext;
 import org.keycloak.authentication.authenticators.broker.util.ExistingUserInfo;
@@ -32,10 +37,6 @@ import org.keycloak.models.UserModel;
 import org.keycloak.models.light.LightweightUserAdapter;
 import org.keycloak.services.ServicesLogger;
 import org.keycloak.services.messages.Messages;
-
-import jakarta.ws.rs.core.Response;
-import java.util.List;
-import java.util.Map;
 
 import static org.keycloak.authentication.actiontoken.idpverifyemail.IdpVerifyAccountLinkActionTokenHandler.runIfUserVerified;
 import static org.keycloak.broker.provider.AbstractIdentityProvider.BROKER_REGISTERED_NEW_USER;

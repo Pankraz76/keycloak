@@ -37,7 +37,6 @@ import java.security.spec.ECParameterSpec;
 import java.security.spec.ECPoint;
 import java.security.spec.ECPublicKeySpec;
 import java.security.spec.InvalidKeySpecException;
-
 import javax.crypto.KeyAgreement;
 
 import org.bouncycastle.crypto.Wrapper;

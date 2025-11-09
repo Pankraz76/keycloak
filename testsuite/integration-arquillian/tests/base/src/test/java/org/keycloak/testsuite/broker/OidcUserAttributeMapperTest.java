@@ -1,12 +1,11 @@
 package org.keycloak.testsuite.broker;
 
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.Lists;
 import org.keycloak.broker.oidc.mappers.UserAttributeMapper;
 import org.keycloak.models.IdentityProviderMapperModel;
 import org.keycloak.models.IdentityProviderMapperSyncMode;
 import org.keycloak.representations.idm.IdentityProviderMapperRepresentation;
-
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Lists;
 
 public class OidcUserAttributeMapperTest extends AbstractUserAttributeMapperTest {
 

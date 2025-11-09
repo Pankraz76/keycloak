@@ -22,10 +22,10 @@ import java.util.Set;
 
 import org.jboss.logging.Logger;
 import org.jboss.logging.Logger.Level;
-import org.keycloak.http.HttpRequest;
 import org.keycloak.common.crypto.CryptoIntegration;
 import org.keycloak.common.util.PemException;
 import org.keycloak.common.util.PemUtils;
+import org.keycloak.http.HttpRequest;
 
 /**
  * The NGINX Provider extract end user X.509 certificate send during TLS mutual authentication,

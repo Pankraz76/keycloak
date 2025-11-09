@@ -17,6 +17,9 @@
 
 package org.keycloak.testsuite.model.user;
 
+import java.util.function.BiFunction;
+import java.util.function.Consumer;
+
 import org.junit.Test;
 import org.keycloak.cluster.ClusterProvider;
 import org.keycloak.component.ComponentModel;
@@ -39,9 +42,6 @@ import org.keycloak.storage.user.ImportSynchronization;
 import org.keycloak.testsuite.model.KeycloakModelTest;
 import org.keycloak.testsuite.model.RequireProvider;
 import org.keycloak.testsuite.util.LDAPTestUtils;
-
-import java.util.function.BiFunction;
-import java.util.function.Consumer;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
@@ -217,4 +217,3 @@ public class FederatedUserTest extends KeycloakModelTest {
         });
     }
 }
-

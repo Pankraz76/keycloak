@@ -18,7 +18,6 @@
 package org.keycloak.it.storage.database;
 
 import io.quarkus.test.junit.main.Launch;
-
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.keycloak.common.util.Retry;

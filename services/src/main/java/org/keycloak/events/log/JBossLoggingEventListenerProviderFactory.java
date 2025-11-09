@@ -20,6 +20,7 @@ package org.keycloak.events.log;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+
 import org.jboss.logging.Logger;
 import org.keycloak.Config;
 import org.keycloak.events.EventListenerProvider;

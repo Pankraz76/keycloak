@@ -1,12 +1,11 @@
 package org.keycloak.representations;
 
-import org.keycloak.TokenCategory;
-import org.keycloak.util.TokenUtil;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.util.HashMap;
 import java.util.Map;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import org.keycloak.TokenCategory;
+import org.keycloak.util.TokenUtil;
 
 public class LogoutToken extends JsonWebToken {
 
