@@ -6,7 +6,6 @@ import java.util.List;
 
 import jakarta.ws.rs.core.Response;
 
-import org.junit.jupiter.api.Test;
 import org.keycloak.admin.client.resource.RealmResource;
 import org.keycloak.admin.client.resource.RoleMappingResource;
 import org.keycloak.events.admin.OperationType;
@@ -27,10 +26,13 @@ import org.keycloak.testframework.realm.UserConfigBuilder;
 import org.keycloak.tests.utils.admin.AdminEventPaths;
 import org.keycloak.tests.utils.admin.ApiUtil;
 
+import org.junit.jupiter.api.Test;
+
+import static org.keycloak.tests.utils.Assert.assertNames;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.keycloak.tests.utils.Assert.assertNames;
 
 @KeycloakIntegrationTest
 public class UserRoleTest extends AbstractUserTest {

@@ -22,8 +22,6 @@ import java.util.List;
 
 import jakarta.ws.rs.NotFoundException;
 
-import org.junit.After;
-import org.junit.Before;
 import org.keycloak.client.registration.Auth;
 import org.keycloak.client.registration.ClientRegistration;
 import org.keycloak.client.registration.ClientRegistrationException;
@@ -34,6 +32,9 @@ import org.keycloak.representations.idm.CredentialRepresentation;
 import org.keycloak.representations.idm.RealmRepresentation;
 import org.keycloak.representations.idm.UserRepresentation;
 import org.keycloak.testsuite.AbstractKeycloakTest;
+
+import org.junit.After;
+import org.junit.Before;
 
 /**
  * @author <a href="mailto:sthorger@redhat.com">Stian Thorgersen</a>

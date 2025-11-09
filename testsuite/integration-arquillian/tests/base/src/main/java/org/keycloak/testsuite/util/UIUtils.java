@@ -4,10 +4,11 @@ import java.time.Duration;
 import java.util.Optional;
 import java.util.function.Supplier;
 
-import org.apache.commons.lang3.StringUtils;
-import org.junit.Assert;
 import org.keycloak.testsuite.page.AbstractPatternFlyAlert;
 import org.keycloak.testsuite.pages.AbstractPage;
+
+import org.apache.commons.lang3.StringUtils;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;

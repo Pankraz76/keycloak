@@ -21,7 +21,6 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.regex.Pattern;
 
-import org.jboss.logging.Logger;
 import org.keycloak.common.Version;
 import org.keycloak.migration.MigrationModel;
 import org.keycloak.migration.ModelVersion;
@@ -77,6 +76,8 @@ import org.keycloak.models.ModelException;
 import org.keycloak.models.RealmModel;
 import org.keycloak.representations.idm.RealmRepresentation;
 import org.keycloak.storage.MigrationManager;
+
+import org.jboss.logging.Logger;
 
 /**
  * This wraps the functionality for migrations of the storage.

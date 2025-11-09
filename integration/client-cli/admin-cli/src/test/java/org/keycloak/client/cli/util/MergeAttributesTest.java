@@ -20,12 +20,13 @@ import java.nio.charset.StandardCharsets;
 import java.util.LinkedList;
 import java.util.List;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-import org.junit.Test;
 import org.keycloak.client.admin.cli.CmdStdinContext;
 import org.keycloak.client.admin.cli.ReflectionUtil;
 import org.keycloak.client.cli.common.AttributeOperation;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+import org.junit.Test;
 
 import static org.keycloak.client.cli.common.AttributeOperation.Type.DELETE;
 import static org.keycloak.client.cli.common.AttributeOperation.Type.SET;

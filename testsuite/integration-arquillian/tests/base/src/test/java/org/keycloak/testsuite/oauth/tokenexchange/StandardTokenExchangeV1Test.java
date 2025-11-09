@@ -24,8 +24,6 @@ import java.util.List;
 
 import jakarta.ws.rs.core.Response;
 
-import org.junit.Rule;
-import org.junit.Test;
 import org.keycloak.OAuth2Constants;
 import org.keycloak.OAuthErrorException;
 import org.keycloak.TokenVerifier;
@@ -46,11 +44,15 @@ import org.keycloak.testsuite.arquillian.annotation.UncaughtServerErrorExpected;
 import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
 import org.keycloak.testsuite.util.oauth.AuthorizationEndpointResponse;
 
+import org.junit.Rule;
+import org.junit.Test;
+
+import static org.keycloak.testsuite.auth.page.AuthRealm.TEST;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import static org.keycloak.testsuite.auth.page.AuthRealm.TEST;
 
 /**
  * Tests for standard token exchange (internal-internal) and token-exchange-v1

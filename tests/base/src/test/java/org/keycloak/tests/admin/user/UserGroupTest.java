@@ -9,7 +9,6 @@ import java.util.stream.Collectors;
 
 import jakarta.ws.rs.core.Response;
 
-import org.junit.jupiter.api.Test;
 import org.keycloak.admin.client.resource.UserResource;
 import org.keycloak.events.admin.OperationType;
 import org.keycloak.events.admin.ResourceType;
@@ -22,12 +21,15 @@ import org.keycloak.testframework.realm.UserConfigBuilder;
 import org.keycloak.tests.utils.admin.AdminEventPaths;
 import org.keycloak.tests.utils.admin.ApiUtil;
 
+import org.junit.jupiter.api.Test;
+
+import static org.keycloak.tests.utils.Assert.assertNames;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.keycloak.tests.utils.Assert.assertNames;
 
 @KeycloakIntegrationTest
 public class UserGroupTest extends AbstractUserTest {

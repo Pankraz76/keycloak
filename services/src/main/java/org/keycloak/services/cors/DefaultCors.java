@@ -26,7 +26,6 @@ import java.util.Set;
 import jakarta.ws.rs.ForbiddenException;
 import jakarta.ws.rs.core.Response.ResponseBuilder;
 
-import org.jboss.logging.Logger;
 import org.keycloak.common.util.CollectionUtil;
 import org.keycloak.common.util.UriUtils;
 import org.keycloak.http.HttpRequest;
@@ -35,6 +34,8 @@ import org.keycloak.models.ClientModel;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.protocol.oidc.utils.WebOriginsUtils;
 import org.keycloak.representations.AccessToken;
+
+import org.jboss.logging.Logger;
 
 /**
  * @author <a href="mailto:sthorger@redhat.com">Stian Thorgersen</a>

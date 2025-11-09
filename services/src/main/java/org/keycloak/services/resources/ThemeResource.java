@@ -45,7 +45,6 @@ import jakarta.ws.rs.core.UriBuilder;
 import jakarta.ws.rs.core.UriInfo;
 import jakarta.ws.rs.ext.Provider;
 
-import org.jboss.logging.Logger;
 import org.keycloak.common.Profile;
 import org.keycloak.common.Version;
 import org.keycloak.common.util.MimeTypeUtil;
@@ -58,6 +57,8 @@ import org.keycloak.services.cors.Cors;
 import org.keycloak.services.util.CacheControlUtil;
 import org.keycloak.services.util.LocaleUtil;
 import org.keycloak.theme.Theme;
+
+import org.jboss.logging.Logger;
 
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toSet;

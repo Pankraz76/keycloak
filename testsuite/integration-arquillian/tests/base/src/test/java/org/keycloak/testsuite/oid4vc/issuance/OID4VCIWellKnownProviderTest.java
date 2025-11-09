@@ -22,7 +22,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-import org.junit.Test;
 import org.keycloak.common.util.MultivaluedHashMap;
 import org.keycloak.common.util.SecretGenerator;
 import org.keycloak.crypto.Algorithm;
@@ -32,10 +31,13 @@ import org.keycloak.representations.idm.ComponentExportRepresentation;
 import org.keycloak.representations.idm.RealmRepresentation;
 import org.keycloak.testsuite.oid4vc.issuance.signing.OID4VCTest;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import org.junit.Test;
+
 import static org.keycloak.common.crypto.CryptoConstants.A128KW;
 import static org.keycloak.jose.jwe.JWEConstants.RSA_OAEP_256;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class OID4VCIWellKnownProviderTest extends OID4VCTest {
 

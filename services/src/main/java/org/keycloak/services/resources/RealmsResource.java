@@ -32,7 +32,6 @@ import jakarta.ws.rs.core.UriBuilder;
 import jakarta.ws.rs.core.UriInfo;
 import jakarta.ws.rs.ext.Provider;
 
-import org.jboss.logging.Logger;
 import org.keycloak.OAuthErrorException;
 import org.keycloak.authorization.AuthorizationProvider;
 import org.keycloak.authorization.AuthorizationService;
@@ -56,6 +55,8 @@ import org.keycloak.services.util.ResolveRelative;
 import org.keycloak.utils.ProfileHelper;
 import org.keycloak.wellknown.WellKnownProvider;
 import org.keycloak.wellknown.WellKnownProviderFactory;
+
+import org.jboss.logging.Logger;
 
 import static org.keycloak.utils.MediaType.APPLICATION_JWT;
 

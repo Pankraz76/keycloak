@@ -6,10 +6,11 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import io.quarkus.maven.dependency.Dependency;
-import org.jboss.logging.Logger;
 import org.keycloak.it.utils.OutputConsumer;
 import org.keycloak.it.utils.RawKeycloakDistribution;
+
+import io.quarkus.maven.dependency.Dependency;
+import org.jboss.logging.Logger;
 
 public class DistributionKeycloakServer implements KeycloakServer {
 

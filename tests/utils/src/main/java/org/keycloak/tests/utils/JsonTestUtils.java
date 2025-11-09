@@ -21,8 +21,9 @@ package org.keycloak.tests.utils;
 
 import java.io.IOException;
 
-import org.junit.jupiter.api.Assertions;
 import org.keycloak.util.JsonSerialization;
+
+import org.junit.jupiter.api.Assertions;
 
 /**
  * Utility for comparing JSON objects

@@ -11,6 +11,10 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 
+import org.keycloak.common.profile.CommaSeparatedListProfileConfigResolver;
+import org.keycloak.common.profile.ProfileException;
+import org.keycloak.common.profile.PropertiesProfileConfigResolver;
+
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.After;
@@ -19,9 +23,6 @@ import org.junit.BeforeClass;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
-import org.keycloak.common.profile.CommaSeparatedListProfileConfigResolver;
-import org.keycloak.common.profile.ProfileException;
-import org.keycloak.common.profile.PropertiesProfileConfigResolver;
 
 import static org.junit.Assert.assertThrows;
 

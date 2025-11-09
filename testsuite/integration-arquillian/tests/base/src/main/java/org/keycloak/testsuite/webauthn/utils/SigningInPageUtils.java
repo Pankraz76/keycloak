@@ -28,10 +28,11 @@ import org.keycloak.testsuite.pages.DeleteCredentialPage;
 import org.keycloak.testsuite.webauthn.pages.AbstractLoggedInPage;
 import org.keycloak.testsuite.webauthn.pages.SigningInPage;
 
+import static org.keycloak.testsuite.util.UIUtils.refreshPageAndWaitForLoad;
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.keycloak.testsuite.util.UIUtils.refreshPageAndWaitForLoad;
 
 /**
  * Helper class for SigningIn page

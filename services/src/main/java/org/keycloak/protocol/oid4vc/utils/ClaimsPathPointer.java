@@ -22,9 +22,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-import org.jboss.logging.Logger;
 import org.keycloak.protocol.oid4vc.model.ClaimsDescription;
 import org.keycloak.utils.StringUtil;
+
+import org.jboss.logging.Logger;
 
 /**
  * Utility class for handling claims path pointers.

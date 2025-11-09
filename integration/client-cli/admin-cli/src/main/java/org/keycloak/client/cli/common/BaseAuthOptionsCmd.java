@@ -29,6 +29,7 @@ import org.keycloak.client.cli.util.AuthUtil;
 import org.keycloak.client.cli.util.ConfigUtil;
 import org.keycloak.client.cli.util.HttpUtil;
 import org.keycloak.common.util.IoUtils;
+
 import picocli.CommandLine.Option;
 
 import static org.keycloak.client.cli.config.FileConfigHandler.setConfigFile;

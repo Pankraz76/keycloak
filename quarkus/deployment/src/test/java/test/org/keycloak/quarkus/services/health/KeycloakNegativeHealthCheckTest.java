@@ -16,6 +16,8 @@
  */
 package test.org.keycloak.quarkus.services.health;
 
+import org.keycloak.quarkus.runtime.services.health.KeycloakReadyHealthCheck;
+
 import io.agroal.api.AgroalDataSource;
 import io.agroal.api.AgroalDataSourceMetrics;
 import io.quarkus.agroal.runtime.health.DataSourceHealthCheck;
@@ -26,7 +28,6 @@ import io.restassured.RestAssured;
 import org.eclipse.microprofile.health.HealthCheckResponse;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
-import org.keycloak.quarkus.runtime.services.health.KeycloakReadyHealthCheck;
 import org.mockito.Mockito;
 
 import static io.restassured.RestAssured.given;

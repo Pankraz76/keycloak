@@ -31,6 +31,8 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 
+import org.keycloak.common.enums.HostnameVerificationPolicy;
+
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.conn.ssl.BrowserCompatHostnameVerifier;
 import org.apache.http.conn.ssl.DefaultHostnameVerifier;
@@ -42,7 +44,6 @@ import org.apache.http.impl.NoConnectionReuseStrategy;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.ssl.SSLContexts;
-import org.keycloak.common.enums.HostnameVerificationPolicy;
 
 /**
  * Abstraction for creating HttpClients. Allows SSL configuration.

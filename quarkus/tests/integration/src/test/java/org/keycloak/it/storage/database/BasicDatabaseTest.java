@@ -24,6 +24,10 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import org.keycloak.it.junit5.extension.CLIResult;
+import org.keycloak.it.utils.RawDistRootPath;
+import org.keycloak.quarkus.runtime.cli.command.AbstractAutoBuildCommand;
+
 import io.quarkus.logging.Log;
 import io.quarkus.test.junit.main.Launch;
 import org.apache.commons.io.FileUtils;
@@ -31,9 +35,6 @@ import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-import org.keycloak.it.junit5.extension.CLIResult;
-import org.keycloak.it.utils.RawDistRootPath;
-import org.keycloak.quarkus.runtime.cli.command.AbstractAutoBuildCommand;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;

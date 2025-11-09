@@ -25,10 +25,6 @@ import java.util.concurrent.atomic.AtomicReference;
 import jakarta.ws.rs.ForbiddenException;
 import jakarta.ws.rs.core.Response;
 
-import org.hamcrest.Matchers;
-import org.jgroups.util.UUID;
-import org.junit.Assert;
-import org.junit.jupiter.api.Test;
 import org.keycloak.admin.client.Keycloak;
 import org.keycloak.admin.client.resource.ClientResource;
 import org.keycloak.admin.client.resource.RealmResource;
@@ -63,6 +59,11 @@ import org.keycloak.tests.utils.admin.ApiUtil;
 import org.keycloak.testsuite.util.CredentialBuilder;
 import org.keycloak.testsuite.util.FederatedIdentityBuilder;
 import org.keycloak.testsuite.util.IdentityProviderBuilder;
+
+import org.hamcrest.Matchers;
+import org.jgroups.util.UUID;
+import org.junit.Assert;
+import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 

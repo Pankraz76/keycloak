@@ -2,7 +2,6 @@ package org.keycloak.testsuite.federation.storage;
 
 import java.util.stream.Stream;
 
-import org.jboss.logging.Logger;
 import org.keycloak.common.util.reflections.Types;
 import org.keycloak.component.ComponentModel;
 import org.keycloak.models.KeycloakSession;
@@ -12,6 +11,8 @@ import org.keycloak.models.StorageProviderRealmModel;
 import org.keycloak.storage.UserStorageProvider;
 import org.keycloak.storage.UserStorageProviderFactory;
 import org.keycloak.storage.UserStorageProviderModel;
+
+import org.jboss.logging.Logger;
 
 public class UserStorageProvidersTestUtils {
 

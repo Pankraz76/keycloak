@@ -45,11 +45,12 @@ import jakarta.ws.rs.core.HttpHeaders;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-import org.jboss.resteasy.reactive.NoCache;
 import org.keycloak.adapters.saml.SamlAuthenticationError;
 import org.keycloak.adapters.saml.SamlPrincipal;
 import org.keycloak.adapters.saml.SamlSession;
 import org.keycloak.adapters.spi.AuthenticationError;
+
+import org.jboss.resteasy.reactive.NoCache;
 import org.w3c.dom.Document;
 
 /**

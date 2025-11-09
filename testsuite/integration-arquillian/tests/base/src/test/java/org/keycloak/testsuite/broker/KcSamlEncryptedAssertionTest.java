@@ -29,12 +29,14 @@ import org.keycloak.saml.common.exceptions.ProcessingException;
 import org.keycloak.saml.common.util.DocumentUtil;
 import org.keycloak.saml.processing.core.util.XMLEncryptionUtil;
 import org.keycloak.testsuite.util.saml.SamlDocumentStepBuilder;
+
 import org.w3c.dom.Node;
+
+import static org.keycloak.saml.common.constants.JBossSAMLURIConstants.ASSERTION_NSURI;
+import static org.keycloak.testsuite.utils.io.IOUtil.setDocElementAttributeValue;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.keycloak.saml.common.constants.JBossSAMLURIConstants.ASSERTION_NSURI;
-import static org.keycloak.testsuite.utils.io.IOUtil.setDocElementAttributeValue;
 
 public class KcSamlEncryptedAssertionTest extends AbstractKcSamlEncryptedElementsTest {
 

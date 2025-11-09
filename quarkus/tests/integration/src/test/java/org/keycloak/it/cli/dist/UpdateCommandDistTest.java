@@ -23,8 +23,6 @@ import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 
-import io.quarkus.test.junit.main.Launch;
-import org.junit.jupiter.api.Test;
 import org.keycloak.common.Profile;
 import org.keycloak.common.Version;
 import org.keycloak.compatibility.CompatibilityResult;
@@ -48,10 +46,14 @@ import org.keycloak.spi.infinispan.impl.embedded.DefaultCacheEmbeddedConfigProvi
 import org.keycloak.spi.infinispan.impl.remote.DefaultCacheRemoteConfigProviderFactory;
 import org.keycloak.util.JsonSerialization;
 
+import io.quarkus.test.junit.main.Launch;
+import org.junit.jupiter.api.Test;
+
+import static org.keycloak.it.cli.dist.Util.createTempFile;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.keycloak.it.cli.dist.Util.createTempFile;
 
 @DistributionTest
 @RawDistOnly(reason = "Requires creating JSON file to be available between containers")

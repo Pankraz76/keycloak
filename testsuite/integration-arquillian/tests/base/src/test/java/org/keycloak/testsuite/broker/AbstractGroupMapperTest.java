@@ -7,7 +7,6 @@ import java.util.stream.Collectors;
 
 import jakarta.ws.rs.core.Response;
 
-import org.junit.Before;
 import org.keycloak.admin.client.CreatedResponseUtil;
 import org.keycloak.broker.provider.ConfigConstants;
 import org.keycloak.models.IdentityProviderMapperSyncMode;
@@ -17,6 +16,8 @@ import org.keycloak.representations.idm.IdentityProviderMapperRepresentation;
 import org.keycloak.representations.idm.IdentityProviderRepresentation;
 import org.keycloak.representations.idm.UserRepresentation;
 import org.keycloak.testsuite.util.AccountHelper;
+
+import org.junit.Before;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.contains;

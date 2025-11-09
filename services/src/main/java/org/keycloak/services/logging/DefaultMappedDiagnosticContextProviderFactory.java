@@ -7,7 +7,6 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import org.jboss.logging.MDC;
 import org.keycloak.Config;
 import org.keycloak.common.Profile;
 import org.keycloak.logging.MappedDiagnosticContextProvider;
@@ -24,6 +23,8 @@ import org.keycloak.provider.EnvironmentDependentProviderFactory;
 import org.keycloak.provider.ProviderConfigProperty;
 import org.keycloak.provider.ProviderConfigurationBuilder;
 import org.keycloak.sessions.AuthenticationSessionModel;
+
+import org.jboss.logging.MDC;
 
 /**
  * The default provider factory can be configured via --spi-mapped-diagnostic-context-default-mdc-keys to define mdc

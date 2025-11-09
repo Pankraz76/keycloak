@@ -21,7 +21,6 @@ import java.security.PublicKey;
 import java.security.cert.X509Certificate;
 import java.util.Collections;
 
-import org.jboss.logging.Logger;
 import org.keycloak.authentication.authenticators.client.JWTClientAuthenticator;
 import org.keycloak.common.util.KeyUtils;
 import org.keycloak.crypto.JavaAlgorithm;
@@ -43,6 +42,8 @@ import org.keycloak.services.util.CertificateInfoHelper;
 import org.keycloak.services.util.ResolveRelative;
 import org.keycloak.util.JWKSUtils;
 import org.keycloak.util.JsonSerialization;
+
+import org.jboss.logging.Logger;
 
 /**
  * @author <a href="mailto:mposolda@redhat.com">Marek Posolda</a>

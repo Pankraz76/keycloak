@@ -3,12 +3,13 @@ package org.keycloak.testframework.conditions;
 import java.lang.annotation.Annotation;
 import java.util.Arrays;
 
-import org.junit.jupiter.api.extension.ConditionEvaluationResult;
-import org.junit.jupiter.api.extension.ExecutionCondition;
-import org.junit.jupiter.api.extension.ExtensionContext;
 import org.keycloak.testframework.injection.Extensions;
 import org.keycloak.testframework.injection.Supplier;
 import org.keycloak.testframework.injection.SupplierHelpers;
+
+import org.junit.jupiter.api.extension.ConditionEvaluationResult;
+import org.junit.jupiter.api.extension.ExecutionCondition;
+import org.junit.jupiter.api.extension.ExtensionContext;
 
 abstract class AbstractDisabledForSupplierCondition implements ExecutionCondition {
 

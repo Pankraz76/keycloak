@@ -7,9 +7,10 @@ package org.keycloak.testsuite.util.matchers;
 
 import java.net.URI;
 
-import org.hamcrest.*;
 import org.keycloak.dom.saml.v2.SAML2Object;
 import org.keycloak.dom.saml.v2.protocol.LogoutRequestType;
+
+import org.hamcrest.*;
 
 import static org.hamcrest.Matchers.*;
 

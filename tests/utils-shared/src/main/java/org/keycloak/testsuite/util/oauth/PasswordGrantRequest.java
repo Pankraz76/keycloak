@@ -2,9 +2,10 @@ package org.keycloak.testsuite.util.oauth;
 
 import java.io.IOException;
 
-import org.apache.http.client.methods.CloseableHttpResponse;
 import org.keycloak.OAuth2Constants;
 import org.keycloak.util.TokenUtil;
+
+import org.apache.http.client.methods.CloseableHttpResponse;
 
 public class PasswordGrantRequest extends AbstractHttpPostRequest<PasswordGrantRequest, AccessTokenResponse> {
 

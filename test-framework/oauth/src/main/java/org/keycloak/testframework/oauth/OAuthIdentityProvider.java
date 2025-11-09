@@ -9,9 +9,6 @@ import java.security.spec.ECGenParameterSpec;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.sun.net.httpserver.HttpExchange;
-import com.sun.net.httpserver.HttpHandler;
-import com.sun.net.httpserver.HttpServer;
 import org.keycloak.common.crypto.CryptoIntegration;
 import org.keycloak.crypto.Algorithm;
 import org.keycloak.crypto.ECDSASignatureSignerContext;
@@ -23,6 +20,10 @@ import org.keycloak.jose.jwk.JWKBuilder;
 import org.keycloak.jose.jws.JWSBuilder;
 import org.keycloak.representations.JsonWebToken;
 import org.keycloak.util.JsonSerialization;
+
+import com.sun.net.httpserver.HttpExchange;
+import com.sun.net.httpserver.HttpHandler;
+import com.sun.net.httpserver.HttpServer;
 
 public class OAuthIdentityProvider {
 

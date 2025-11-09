@@ -24,6 +24,11 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.keycloak.common.util.Time;
+import org.keycloak.common.util.reflections.Reflections;
+import org.keycloak.connections.jpa.updater.liquibase.LiquibaseConstants;
+import org.keycloak.models.dblock.DBLockProvider;
+
 import liquibase.Scope;
 import liquibase.database.core.DerbyDatabase;
 import liquibase.exception.DatabaseException;
@@ -45,10 +50,6 @@ import liquibase.structure.core.PrimaryKey;
 import liquibase.structure.core.Schema;
 import liquibase.structure.core.Table;
 import org.jboss.logging.Logger;
-import org.keycloak.common.util.Time;
-import org.keycloak.common.util.reflections.Reflections;
-import org.keycloak.connections.jpa.updater.liquibase.LiquibaseConstants;
-import org.keycloak.models.dblock.DBLockProvider;
 
 /**
  * Liquibase lock service, which has some bugfixes and assumes timeouts to be configured in milliseconds

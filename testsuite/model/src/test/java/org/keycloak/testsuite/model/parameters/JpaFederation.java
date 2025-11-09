@@ -20,7 +20,6 @@ import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Stream;
 
-import com.google.common.collect.ImmutableSet;
 import org.keycloak.provider.ProviderFactory;
 import org.keycloak.provider.Spi;
 import org.keycloak.storage.UserStorageProviderSpi;
@@ -33,6 +32,8 @@ import org.keycloak.storage.jpa.JpaUserFederatedStorageProviderFactory;
 import org.keycloak.testsuite.federation.HardcodedClientScopeStorageProviderFactory;
 import org.keycloak.testsuite.model.Config;
 import org.keycloak.testsuite.model.KeycloakModelParameters;
+
+import com.google.common.collect.ImmutableSet;
 
 /**
  *

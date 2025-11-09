@@ -2,9 +2,10 @@ package org.keycloak.testsuite.util.oauth.ciba;
 
 import java.io.IOException;
 
+import org.keycloak.testsuite.util.oauth.AbstractHttpResponse;
+
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.apache.http.client.methods.CloseableHttpResponse;
-import org.keycloak.testsuite.util.oauth.AbstractHttpResponse;
 
 public class AuthenticationRequestAcknowledgement extends AbstractHttpResponse {
 

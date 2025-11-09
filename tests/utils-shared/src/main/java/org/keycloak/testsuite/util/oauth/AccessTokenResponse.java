@@ -4,8 +4,9 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.http.client.methods.CloseableHttpResponse;
 import org.keycloak.OAuth2Constants;
+
+import org.apache.http.client.methods.CloseableHttpResponse;
 
 public class AccessTokenResponse extends AbstractHttpResponse {
 

@@ -10,9 +10,6 @@ import java.security.PublicKey;
 
 import jakarta.ws.rs.core.HttpHeaders;
 
-import com.sun.net.httpserver.HttpExchange;
-import com.sun.net.httpserver.HttpHandler;
-import com.sun.net.httpserver.HttpServer;
 import org.keycloak.common.util.KeyUtils;
 import org.keycloak.dom.saml.v2.protocol.LogoutRequestType;
 import org.keycloak.dom.saml.v2.protocol.StatusResponseType;
@@ -24,6 +21,10 @@ import org.keycloak.saml.SAML2LogoutResponseBuilder;
 import org.keycloak.saml.SignatureAlgorithm;
 import org.keycloak.saml.processing.api.saml.v2.response.SAML2Response;
 import org.keycloak.saml.processing.core.saml.v2.common.SAMLDocumentHolder;
+
+import com.sun.net.httpserver.HttpExchange;
+import com.sun.net.httpserver.HttpHandler;
+import com.sun.net.httpserver.HttpServer;
 import org.w3c.dom.Document;
 
 public class SamlBackchannelLogoutReceiver implements AutoCloseable {

@@ -20,17 +20,6 @@ import jakarta.mail.internet.MimeMessage;
 import jakarta.ws.rs.NotFoundException;
 import jakarta.ws.rs.core.Response;
 
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang3.RandomStringUtils;
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
-import org.jboss.arquillian.graphene.page.Page;
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Rule;
-import org.junit.Test;
 import org.keycloak.admin.client.resource.RealmResource;
 import org.keycloak.admin.client.resource.UserProfileResource;
 import org.keycloak.admin.client.resource.UserResource;
@@ -79,11 +68,33 @@ import org.keycloak.testsuite.util.GreenMailRule;
 import org.keycloak.testsuite.util.TestCleanup;
 import org.keycloak.testsuite.util.userprofile.UserProfileUtil;
 import org.keycloak.userprofile.DefaultAttributes;
+
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.RandomStringUtils;
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
+import org.jboss.arquillian.graphene.page.Page;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Ignore;
+import org.junit.Rule;
+import org.junit.Test;
 import org.openqa.selenium.Cookie;
 
 import static java.util.Calendar.DAY_OF_WEEK;
 import static java.util.Calendar.HOUR_OF_DAY;
 import static java.util.Calendar.MINUTE;
+
+import static org.keycloak.models.UserModel.RequiredAction.UPDATE_PROFILE;
+import static org.keycloak.storage.UserStorageProviderModel.CACHE_POLICY;
+import static org.keycloak.storage.UserStorageProviderModel.EVICTION_DAY;
+import static org.keycloak.storage.UserStorageProviderModel.EVICTION_HOUR;
+import static org.keycloak.storage.UserStorageProviderModel.EVICTION_MINUTE;
+import static org.keycloak.storage.UserStorageProviderModel.IMPORT_ENABLED;
+import static org.keycloak.storage.UserStorageProviderModel.MAX_LIFESPAN;
+import static org.keycloak.testsuite.actions.RequiredActionEmailVerificationTest.getEmailLink;
+import static org.keycloak.testsuite.util.URLAssert.assertCurrentUrlDoesntStartWith;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsInAnyOrder;
@@ -96,15 +107,6 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
-import static org.keycloak.models.UserModel.RequiredAction.UPDATE_PROFILE;
-import static org.keycloak.storage.UserStorageProviderModel.CACHE_POLICY;
-import static org.keycloak.storage.UserStorageProviderModel.EVICTION_DAY;
-import static org.keycloak.storage.UserStorageProviderModel.EVICTION_HOUR;
-import static org.keycloak.storage.UserStorageProviderModel.EVICTION_MINUTE;
-import static org.keycloak.storage.UserStorageProviderModel.IMPORT_ENABLED;
-import static org.keycloak.storage.UserStorageProviderModel.MAX_LIFESPAN;
-import static org.keycloak.testsuite.actions.RequiredActionEmailVerificationTest.getEmailLink;
-import static org.keycloak.testsuite.util.URLAssert.assertCurrentUrlDoesntStartWith;
 
 /**
  *

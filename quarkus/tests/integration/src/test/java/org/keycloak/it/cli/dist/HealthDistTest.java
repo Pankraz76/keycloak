@@ -22,11 +22,12 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 
+import org.keycloak.it.junit5.extension.DistributionTest;
+import org.keycloak.it.utils.KeycloakDistribution;
+
 import io.quarkus.test.junit.main.Launch;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import org.keycloak.it.junit5.extension.DistributionTest;
-import org.keycloak.it.utils.KeycloakDistribution;
 
 import static io.restassured.RestAssured.when;
 import static org.hamcrest.CoreMatchers.equalTo;

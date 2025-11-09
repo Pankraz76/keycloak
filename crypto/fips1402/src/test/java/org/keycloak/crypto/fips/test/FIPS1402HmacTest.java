@@ -6,13 +6,14 @@ import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.SecretKeySpec;
 
+import org.keycloak.common.util.BouncyIntegration;
+import org.keycloak.common.util.Environment;
+import org.keycloak.jose.HmacTest;
+
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
 import org.junit.Assume;
 import org.junit.Before;
 import org.junit.Test;
-import org.keycloak.common.util.BouncyIntegration;
-import org.keycloak.common.util.Environment;
-import org.keycloak.jose.HmacTest;
 
 
 /**

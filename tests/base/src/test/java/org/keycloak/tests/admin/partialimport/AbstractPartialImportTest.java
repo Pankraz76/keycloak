@@ -9,7 +9,6 @@ import java.util.UUID;
 
 import jakarta.ws.rs.core.Response;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.keycloak.common.constants.ServiceAccountConstants;
 import org.keycloak.models.UserModel;
 import org.keycloak.partialimport.PartialImportResults;
@@ -37,6 +36,8 @@ import org.keycloak.testframework.realm.UserConfigBuilder;
 import org.keycloak.testframework.server.KeycloakServerConfig;
 import org.keycloak.testframework.server.KeycloakServerConfigBuilder;
 import org.keycloak.util.JsonSerialization;
+
+import org.junit.jupiter.api.BeforeEach;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;

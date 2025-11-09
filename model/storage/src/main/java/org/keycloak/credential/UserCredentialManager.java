@@ -22,7 +22,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Stream;
 
-import io.opentelemetry.api.trace.StatusCode;
 import org.keycloak.common.util.reflections.Types;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.RealmModel;
@@ -35,6 +34,8 @@ import org.keycloak.storage.UserStorageProvider;
 import org.keycloak.storage.UserStorageProviderFactory;
 import org.keycloak.storage.UserStorageProviderModel;
 import org.keycloak.tracing.TracingProvider;
+
+import io.opentelemetry.api.trace.StatusCode;
 
 /**
  * Handling credentials for a given user for the store.

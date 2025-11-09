@@ -33,6 +33,8 @@ import java.util.Optional;
 import java.util.concurrent.atomic.AtomicBoolean;
 import javax.net.ssl.SSLContext;
 
+import org.keycloak.util.JsonSerialization;
+
 import org.apache.http.HeaderIterator;
 import org.apache.http.HttpHeaders;
 import org.apache.http.HttpResponse;
@@ -51,7 +53,6 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.ssl.SSLContextBuilder;
 import org.apache.http.ssl.SSLContexts;
-import org.keycloak.util.JsonSerialization;
 
 /**
  * @author <a href="mailto:mstrukel@redhat.com">Marko Strukelj</a>

@@ -21,9 +21,10 @@ import java.util.Arrays;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import org.jboss.logging.Logger;
 import org.keycloak.quarkus.runtime.cli.command.AbstractAutoBuildCommand;
 import org.keycloak.quarkus.runtime.cli.command.Build;
+
+import org.jboss.logging.Logger;
 import picocli.CommandLine;
 
 public final class Messages {

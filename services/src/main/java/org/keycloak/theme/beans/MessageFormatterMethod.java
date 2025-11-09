@@ -24,10 +24,11 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Properties;
 
+import org.keycloak.theme.TemplatingUtil;
+
 import freemarker.template.SimpleScalar;
 import freemarker.template.TemplateMethodModelEx;
 import freemarker.template.TemplateModelException;
-import org.keycloak.theme.TemplatingUtil;
 
 import static java.util.Optional.ofNullable;
 

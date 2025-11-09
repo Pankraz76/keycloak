@@ -2,7 +2,6 @@ package org.keycloak.testsuite.util;
 
 import java.io.InputStream;
 
-import org.apache.tools.ant.filters.StringInputStream;
 import org.keycloak.adapters.saml.SamlDeployment;
 import org.keycloak.adapters.saml.config.parsers.DeploymentBuilder;
 import org.keycloak.adapters.saml.config.parsers.ResourceLoader;
@@ -15,6 +14,8 @@ import org.keycloak.saml.common.exceptions.ParsingException;
 import org.keycloak.saml.processing.core.parsers.saml.SAMLParser;
 import org.keycloak.testsuite.utils.arquillian.DeploymentArchiveProcessorUtils;
 import org.keycloak.testsuite.utils.io.IOUtil;
+
+import org.apache.tools.ant.filters.StringInputStream;
 import org.w3c.dom.Document;
 
 public class SamlUtils {

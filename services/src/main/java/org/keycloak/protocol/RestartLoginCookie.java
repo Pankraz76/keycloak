@@ -22,8 +22,6 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.crypto.SecretKey;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import org.jboss.logging.Logger;
 import org.keycloak.Token;
 import org.keycloak.TokenCategory;
 import org.keycloak.cookie.CookieProvider;
@@ -36,6 +34,9 @@ import org.keycloak.services.managers.AuthenticationSessionManager;
 import org.keycloak.sessions.AuthenticationSessionModel;
 import org.keycloak.sessions.RootAuthenticationSessionModel;
 import org.keycloak.util.TokenUtil;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import org.jboss.logging.Logger;
 
 /**
  * This is an an encoded token that is stored as a cookie so that if there is a client timeout, then the authentication session

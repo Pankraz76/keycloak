@@ -28,8 +28,9 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.security.auth.x500.X500Principal;
 
-import org.junit.Test;
 import org.keycloak.crypto.elytron.ElytronCertificateUtilsProvider;
+
+import org.junit.Test;
 import org.wildfly.security.x500.GeneralName;
 import org.wildfly.security.x500.cert.CRLDistributionPoint;
 import org.wildfly.security.x500.cert.CRLDistributionPoint.DistributionPointName;

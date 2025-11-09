@@ -24,12 +24,13 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.function.Function;
 
-import io.smallrye.config.ConfigValue;
-import org.jboss.logging.Logger;
 import org.keycloak.platform.Platform;
 import org.keycloak.quarkus.runtime.Environment;
 import org.keycloak.quarkus.runtime.Messages;
 import org.keycloak.quarkus.runtime.integration.QuarkusPlatform;
+
+import io.smallrye.config.ConfigValue;
+import org.jboss.logging.Logger;
 import picocli.CommandLine;
 import picocli.CommandLine.ParseResult;
 

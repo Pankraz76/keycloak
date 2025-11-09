@@ -21,12 +21,13 @@ import java.util.UUID;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 
-import org.junit.Assert;
-import org.junit.Test;
 import org.keycloak.jose.HmacTest;
 import org.keycloak.jose.jws.JWSBuilder;
 import org.keycloak.jose.jws.JWSInput;
 import org.keycloak.jose.jws.crypto.HMACProvider;
+
+import org.junit.Assert;
+import org.junit.Test;
 
 
 /**

@@ -29,6 +29,10 @@ import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.concurrent.TimeUnit;
 
+import org.keycloak.common.util.reflections.Reflections;
+import org.keycloak.cookie.CookieType;
+import org.keycloak.testsuite.utils.tls.TLSUtils;
+
 import io.undertow.Undertow;
 import io.undertow.server.HttpHandler;
 import io.undertow.server.HttpServerExchange;
@@ -45,9 +49,6 @@ import io.undertow.server.handlers.proxy.RouteParsingStrategy;
 import io.undertow.util.AttachmentKey;
 import io.undertow.util.Headers;
 import org.jboss.logging.Logger;
-import org.keycloak.common.util.reflections.Reflections;
-import org.keycloak.cookie.CookieType;
-import org.keycloak.testsuite.utils.tls.TLSUtils;
 import org.xnio.OptionMap;
 
 /**

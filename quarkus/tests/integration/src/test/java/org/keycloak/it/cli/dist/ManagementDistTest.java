@@ -18,6 +18,11 @@ package org.keycloak.it.cli.dist;
 
 import java.io.IOException;
 
+import org.keycloak.it.junit5.extension.CLIResult;
+import org.keycloak.it.junit5.extension.DistributionTest;
+import org.keycloak.it.junit5.extension.DistributionType;
+import org.keycloak.it.utils.KeycloakDistribution;
+
 import io.quarkus.test.junit.main.Launch;
 import io.quarkus.test.junit.main.LaunchResult;
 import org.junit.jupiter.api.MethodOrderer;
@@ -25,10 +30,6 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-import org.keycloak.it.junit5.extension.CLIResult;
-import org.keycloak.it.junit5.extension.DistributionTest;
-import org.keycloak.it.junit5.extension.DistributionType;
-import org.keycloak.it.utils.KeycloakDistribution;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;

@@ -33,9 +33,6 @@ import java.util.function.Consumer;
 
 import jakarta.ws.rs.core.Response;
 
-import org.hamcrest.Matchers;
-import org.junit.Assert;
-import org.junit.Test;
 import org.keycloak.admin.client.resource.RealmResource;
 import org.keycloak.authentication.requiredactions.TermsAndConditions;
 import org.keycloak.common.util.MultivaluedHashMap;
@@ -84,7 +81,15 @@ import org.keycloak.validate.validators.EmailValidator;
 import org.keycloak.validate.validators.LengthValidator;
 import org.keycloak.validate.validators.UriValidator;
 
+import org.hamcrest.Matchers;
+import org.junit.Assert;
+import org.junit.Test;
+
 import static java.util.Optional.ofNullable;
+
+import static org.keycloak.userprofile.config.UPConfigUtils.ROLE_ADMIN;
+import static org.keycloak.userprofile.config.UPConfigUtils.ROLE_USER;
+import static org.keycloak.userprofile.config.UPConfigUtils.parseSystemDefaultConfig;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsInAnyOrder;
@@ -95,9 +100,6 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
-import static org.keycloak.userprofile.config.UPConfigUtils.ROLE_ADMIN;
-import static org.keycloak.userprofile.config.UPConfigUtils.ROLE_USER;
-import static org.keycloak.userprofile.config.UPConfigUtils.parseSystemDefaultConfig;
 
 /**
  * @author <a href="mailto:psilva@redhat.com">Pedro Igor</a>

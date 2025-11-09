@@ -5,9 +5,10 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import org.keycloak.common.Profile;
 import org.keycloak.util.JsonSerialization;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
 
 public class FeatureCompatibilityMetadataProvider implements CompatibilityMetadataProvider {
 

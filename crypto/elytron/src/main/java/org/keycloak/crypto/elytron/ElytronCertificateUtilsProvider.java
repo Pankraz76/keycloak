@@ -35,8 +35,9 @@ import java.util.Date;
 import java.util.List;
 import javax.security.auth.x500.X500Principal;
 
-import org.jboss.logging.Logger;
 import org.keycloak.common.crypto.CertificateUtilsProvider;
+
+import org.jboss.logging.Logger;
 import org.wildfly.security.asn1.ASN1;
 import org.wildfly.security.asn1.DERDecoder;
 import org.wildfly.security.x500.GeneralName;

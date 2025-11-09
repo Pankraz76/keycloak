@@ -25,11 +25,12 @@ import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.ext.Provider;
 
-import io.smallrye.common.annotation.NonBlocking;
-import org.jboss.logging.Logger;
 import org.keycloak.health.LoadBalancerCheckProvider;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.utils.MediaType;
+
+import io.smallrye.common.annotation.NonBlocking;
+import org.jboss.logging.Logger;
 
 /**
  * Prepare information for the load balancer (possibly in a multi-site setup) whether this Keycloak cluster should receive traffic.

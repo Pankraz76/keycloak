@@ -23,9 +23,6 @@ import java.util.Map;
 import jakarta.ws.rs.BadRequestException;
 import jakarta.ws.rs.core.Response;
 
-import org.hamcrest.Matchers;
-import org.junit.ClassRule;
-import org.junit.Test;
 import org.keycloak.models.LDAPConstants;
 import org.keycloak.representations.idm.ComponentRepresentation;
 import org.keycloak.representations.idm.LDAPCapabilityRepresentation;
@@ -36,6 +33,10 @@ import org.keycloak.testsuite.AbstractAdminTest;
 import org.keycloak.testsuite.Assert;
 import org.keycloak.testsuite.arquillian.annotation.EnableVault;
 import org.keycloak.testsuite.util.LDAPRule;
+
+import org.hamcrest.Matchers;
+import org.junit.ClassRule;
+import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 

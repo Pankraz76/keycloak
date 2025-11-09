@@ -19,12 +19,13 @@ package org.keycloak.models;
 import java.nio.charset.StandardCharsets;
 import java.util.Calendar;
 
-import org.junit.Assert;
-import org.junit.Test;
 import org.keycloak.models.credential.OTPCredentialModel;
 import org.keycloak.models.credential.OTPCredentialModel.SecretEncoding;
 import org.keycloak.models.utils.Base32;
 import org.keycloak.models.utils.TimeBasedOTP;
+
+import org.junit.Assert;
+import org.junit.Test;
 
 public class TotpTest {
 

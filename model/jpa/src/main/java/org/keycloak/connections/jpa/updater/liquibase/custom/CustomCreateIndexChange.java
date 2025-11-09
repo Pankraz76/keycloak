@@ -18,6 +18,10 @@ package org.keycloak.connections.jpa.updater.liquibase.custom;
 
 import java.io.StringWriter;
 
+import org.keycloak.connections.jpa.updater.liquibase.LiquibaseConstants;
+import org.keycloak.connections.jpa.updater.liquibase.LiquibaseJpaUpdaterProvider;
+import org.keycloak.connections.jpa.updater.liquibase.conn.DefaultLiquibaseConnectionProvider;
+
 import liquibase.Scope;
 import liquibase.change.AddColumnConfig;
 import liquibase.change.ChangeFactory;
@@ -42,9 +46,6 @@ import liquibase.statement.core.RawSqlStatement;
 import liquibase.structure.core.Schema;
 import liquibase.structure.core.Table;
 import org.jboss.logging.Logger;
-import org.keycloak.connections.jpa.updater.liquibase.LiquibaseConstants;
-import org.keycloak.connections.jpa.updater.liquibase.LiquibaseJpaUpdaterProvider;
-import org.keycloak.connections.jpa.updater.liquibase.conn.DefaultLiquibaseConnectionProvider;
 
 /**
  * @author <a href="mailto:yoshiyuki.tabata.jy@hitachi.com">Yoshiyuki Tabata</a>

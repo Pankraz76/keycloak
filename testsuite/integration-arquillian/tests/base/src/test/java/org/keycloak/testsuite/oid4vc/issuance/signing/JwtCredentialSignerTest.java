@@ -24,9 +24,6 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 
-import org.jboss.logging.Logger;
-import org.junit.Before;
-import org.junit.Test;
 import org.keycloak.TokenVerifier;
 import org.keycloak.common.VerificationException;
 import org.keycloak.common.crypto.CryptoIntegration;
@@ -49,6 +46,10 @@ import org.keycloak.representations.JsonWebToken;
 import org.keycloak.representations.idm.RealmRepresentation;
 import org.keycloak.testsuite.runonserver.RunOnServerException;
 import org.keycloak.util.JsonSerialization;
+
+import org.jboss.logging.Logger;
+import org.junit.Before;
+import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

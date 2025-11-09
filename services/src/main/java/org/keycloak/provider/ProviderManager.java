@@ -24,9 +24,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.ServiceLoader;
 
-import org.jboss.logging.Logger;
 import org.keycloak.common.util.MultivaluedHashMap;
 import org.keycloak.services.DefaultKeycloakSessionFactory;
+
+import org.jboss.logging.Logger;
 
 /**
  * @author <a href="mailto:sthorger@redhat.com">Stian Thorgersen</a>

@@ -22,12 +22,14 @@ import java.util.stream.Collectors;
 import org.keycloak.common.util.CollectionUtil;
 import org.keycloak.models.AuthenticatedClientSessionModel;
 import org.keycloak.testsuite.util.DroneUtils;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import static org.junit.Assert.assertTrue;
 import static org.keycloak.testsuite.util.UIUtils.clickLink;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * @author <a href="mailto:sthorger@redhat.com">Stian Thorgersen</a>

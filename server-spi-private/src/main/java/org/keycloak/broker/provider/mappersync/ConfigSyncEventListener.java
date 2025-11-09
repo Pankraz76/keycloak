@@ -20,9 +20,10 @@ package org.keycloak.broker.provider.mappersync;
 import java.util.Arrays;
 import java.util.List;
 
-import org.jboss.logging.Logger;
 import org.keycloak.provider.ProviderEvent;
 import org.keycloak.provider.ProviderEventListener;
+
+import org.jboss.logging.Logger;
 
 /**
  * Event listener which synchronizes mapper configs, when references change.

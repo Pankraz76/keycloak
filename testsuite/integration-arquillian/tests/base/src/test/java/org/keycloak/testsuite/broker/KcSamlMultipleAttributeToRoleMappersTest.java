@@ -16,7 +16,6 @@
  */
 package org.keycloak.testsuite.broker;
 
-import com.google.common.collect.ImmutableMap;
 import org.keycloak.broker.provider.ConfigConstants;
 import org.keycloak.broker.saml.mappers.AdvancedAttributeToRoleMapper;
 import org.keycloak.broker.saml.mappers.AttributeToRoleMapper;
@@ -24,6 +23,8 @@ import org.keycloak.broker.saml.mappers.UserAttributeMapper;
 import org.keycloak.models.IdentityProviderMapperModel;
 import org.keycloak.models.IdentityProviderMapperSyncMode;
 import org.keycloak.representations.idm.IdentityProviderMapperRepresentation;
+
+import com.google.common.collect.ImmutableMap;
 
 /**
  * Runs the same tests as {@link AttributeToRoleMapperTest} but using multiple SAML mappers that map different IDP attributes

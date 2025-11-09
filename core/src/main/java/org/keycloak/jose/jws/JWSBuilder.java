@@ -27,13 +27,14 @@ import java.util.List;
 import java.util.stream.Collectors;
 import javax.crypto.SecretKey;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import org.keycloak.common.util.Base64Url;
 import org.keycloak.crypto.SignatureSignerContext;
 import org.keycloak.jose.jwk.JWK;
 import org.keycloak.jose.jws.crypto.HMACProvider;
 import org.keycloak.jose.jws.crypto.RSAProvider;
 import org.keycloak.util.JsonSerialization;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
 
 /**
  * @author <a href="mailto:bill@burkecentral.com">Bill Burke</a>

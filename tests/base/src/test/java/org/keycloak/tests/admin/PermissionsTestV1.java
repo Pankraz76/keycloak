@@ -19,7 +19,6 @@ package org.keycloak.tests.admin;
 
 import java.util.Collections;
 
-import org.junit.jupiter.api.Test;
 import org.keycloak.admin.client.resource.AuthorizationResource;
 import org.keycloak.representations.idm.ClientRepresentation;
 import org.keycloak.representations.idm.authorization.PolicyRepresentation;
@@ -33,6 +32,8 @@ import org.keycloak.testframework.realm.ClientConfigBuilder;
 import org.keycloak.testframework.realm.ManagedRealm;
 import org.keycloak.tests.admin.authz.fgap.KeycloakAdminPermissionsV1ServerConfig;
 import org.keycloak.tests.utils.admin.ApiUtil;
+
+import org.junit.jupiter.api.Test;
 
 import static org.keycloak.services.resources.admin.AdminAuth.Resource.AUTHORIZATION;
 import static org.keycloak.services.resources.admin.AdminAuth.Resource.CLIENT;

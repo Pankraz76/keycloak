@@ -22,7 +22,6 @@ import java.util.List;
 
 import jakarta.mail.internet.MimeMessage;
 
-import org.junit.jupiter.api.Test;
 import org.keycloak.models.RealmModel;
 import org.keycloak.models.UserModel;
 import org.keycloak.models.workflow.DisableUserStepProviderFactory;
@@ -38,15 +37,18 @@ import org.keycloak.testframework.realm.ManagedUser;
 import org.keycloak.testframework.realm.UserConfig;
 import org.keycloak.testframework.realm.UserConfigBuilder;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Test;
+
 import static org.keycloak.models.workflow.ResourceOperationType.USER_ADDED;
 import static org.keycloak.models.workflow.ResourceOperationType.USER_LOGGED_IN;
 import static org.keycloak.tests.admin.model.workflow.WorkflowManagementTest.findEmailByRecipient;
 import static org.keycloak.tests.admin.model.workflow.WorkflowManagementTest.findEmailsByRecipient;
 import static org.keycloak.tests.admin.model.workflow.WorkflowManagementTest.verifyEmailContent;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @KeycloakIntegrationTest(config = WorkflowsBlockingServerConfig.class)
 public class UserSessionRefreshTimeWorkflowTest extends AbstractWorkflowTest {

@@ -8,6 +8,12 @@ import java.util.List;
 
 import jakarta.ws.rs.core.Response;
 
+import org.keycloak.saml.common.constants.GeneralConstants;
+import org.keycloak.saml.processing.web.util.PostBindingUtil;
+import org.keycloak.testsuite.arquillian.annotation.AppServerContainer;
+import org.keycloak.testsuite.saml.AbstractSamlTest;
+import org.keycloak.testsuite.utils.arquillian.ContainerConstants;
+
 import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -23,16 +29,12 @@ import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.StringAsset;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Test;
-import org.keycloak.saml.common.constants.GeneralConstants;
-import org.keycloak.saml.processing.web.util.PostBindingUtil;
-import org.keycloak.testsuite.arquillian.annotation.AppServerContainer;
-import org.keycloak.testsuite.saml.AbstractSamlTest;
-import org.keycloak.testsuite.utils.arquillian.ContainerConstants;
+
+import static org.keycloak.testsuite.util.Matchers.bodyHC;
+import static org.keycloak.testsuite.util.Matchers.statusCodeIsHC;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.keycloak.testsuite.util.Matchers.bodyHC;
-import static org.keycloak.testsuite.util.Matchers.statusCodeIsHC;
 
 @AppServerContainer(ContainerConstants.APP_SERVER_WILDFLY)
 @AppServerContainer(ContainerConstants.APP_SERVER_EAP)

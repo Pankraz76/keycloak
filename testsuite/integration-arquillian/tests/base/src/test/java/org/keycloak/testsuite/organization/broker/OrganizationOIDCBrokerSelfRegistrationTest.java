@@ -19,9 +19,10 @@ package org.keycloak.testsuite.organization.broker;
 
 import java.util.List;
 
-import org.junit.Test;
 import org.keycloak.admin.client.resource.OrganizationResource;
 import org.keycloak.representations.idm.IdentityProviderRepresentation;
+
+import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 

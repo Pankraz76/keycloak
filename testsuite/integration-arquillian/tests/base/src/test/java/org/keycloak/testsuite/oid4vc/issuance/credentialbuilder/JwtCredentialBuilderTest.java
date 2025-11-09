@@ -23,8 +23,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import org.junit.Test;
 import org.keycloak.constants.Oid4VciConstants;
 import org.keycloak.jose.jws.JWSInput;
 import org.keycloak.jose.jws.JWSInputException;
@@ -33,6 +31,9 @@ import org.keycloak.protocol.oid4vc.issuance.credentialbuilder.JwtCredentialBody
 import org.keycloak.protocol.oid4vc.issuance.credentialbuilder.JwtCredentialBuilder;
 import org.keycloak.protocol.oid4vc.model.CredentialBuildConfig;
 import org.keycloak.protocol.oid4vc.model.VerifiableCredential;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 

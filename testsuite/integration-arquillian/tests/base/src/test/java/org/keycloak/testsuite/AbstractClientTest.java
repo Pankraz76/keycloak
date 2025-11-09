@@ -21,9 +21,6 @@ import java.util.List;
 
 import jakarta.ws.rs.core.Response;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Rule;
 import org.keycloak.admin.client.resource.ClientResource;
 import org.keycloak.events.admin.OperationType;
 import org.keycloak.events.admin.ResourceType;
@@ -35,6 +32,10 @@ import org.keycloak.testsuite.events.TestEventsListenerProviderFactory;
 import org.keycloak.testsuite.util.AdminEventPaths;
 import org.keycloak.testsuite.util.AssertAdminEvents;
 import org.keycloak.testsuite.util.RealmBuilder;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Rule;
 
 import static org.keycloak.testsuite.auth.page.AuthRealm.TEST;
 

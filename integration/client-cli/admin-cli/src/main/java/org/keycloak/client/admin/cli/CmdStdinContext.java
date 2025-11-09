@@ -19,12 +19,13 @@ package org.keycloak.client.admin.cli;
 import java.io.IOException;
 import java.util.List;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.keycloak.client.cli.common.AttributeOperation;
 import org.keycloak.client.cli.util.AttributeException;
 import org.keycloak.util.JsonSerialization;
+
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import static org.keycloak.client.admin.cli.ReflectionUtil.setAttributes;
 import static org.keycloak.client.cli.util.IoUtil.readFileOrStdin;

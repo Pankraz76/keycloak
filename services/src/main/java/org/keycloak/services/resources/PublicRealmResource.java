@@ -24,8 +24,6 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.UriInfo;
 
-import org.jboss.logging.Logger;
-import org.jboss.resteasy.reactive.NoCache;
 import org.keycloak.common.util.PemUtils;
 import org.keycloak.http.HttpRequest;
 import org.keycloak.http.HttpResponse;
@@ -35,6 +33,9 @@ import org.keycloak.protocol.oidc.OIDCLoginProtocolService;
 import org.keycloak.representations.idm.PublishedRealmRepresentation;
 import org.keycloak.services.Urls;
 import org.keycloak.services.cors.Cors;
+
+import org.jboss.logging.Logger;
+import org.jboss.resteasy.reactive.NoCache;
 
 /**
  * Resource class for public realm information

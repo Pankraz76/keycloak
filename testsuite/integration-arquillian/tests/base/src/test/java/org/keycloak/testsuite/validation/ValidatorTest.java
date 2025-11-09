@@ -22,7 +22,6 @@ package org.keycloak.testsuite.validation;
 import java.util.Collections;
 import java.util.Locale;
 
-import org.junit.Test;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.RealmModel;
 import org.keycloak.models.UserModel;
@@ -31,6 +30,8 @@ import org.keycloak.testsuite.AbstractTestRealmKeycloakTest;
 import org.keycloak.testsuite.runonserver.RunOnServer;
 import org.keycloak.validate.BuiltinValidators;
 import org.keycloak.validate.ValidationContext;
+
+import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

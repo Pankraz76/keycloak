@@ -44,6 +44,16 @@ import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManagerFactory;
 
+import org.keycloak.common.crypto.CertificateUtilsProvider;
+import org.keycloak.common.crypto.CryptoConstants;
+import org.keycloak.common.crypto.CryptoProvider;
+import org.keycloak.common.crypto.ECDSACryptoProvider;
+import org.keycloak.common.crypto.PemUtilsProvider;
+import org.keycloak.common.crypto.UserIdentityExtractorProvider;
+import org.keycloak.common.util.BouncyIntegration;
+import org.keycloak.common.util.KeystoreUtil.KeystoreFormat;
+import org.keycloak.crypto.JavaAlgorithm;
+
 import org.bouncycastle.asn1.x9.ECNamedCurveTable;
 import org.bouncycastle.asn1.x9.X9ECParameters;
 import org.bouncycastle.crypto.CryptoServicesRegistrar;
@@ -55,15 +65,6 @@ import org.bouncycastle.jsse.util.CustomSSLSocketFactory;
 import org.bouncycastle.math.ec.ECCurve;
 import org.bouncycastle.util.IPAddress;
 import org.jboss.logging.Logger;
-import org.keycloak.common.crypto.CertificateUtilsProvider;
-import org.keycloak.common.crypto.CryptoConstants;
-import org.keycloak.common.crypto.CryptoProvider;
-import org.keycloak.common.crypto.ECDSACryptoProvider;
-import org.keycloak.common.crypto.PemUtilsProvider;
-import org.keycloak.common.crypto.UserIdentityExtractorProvider;
-import org.keycloak.common.util.BouncyIntegration;
-import org.keycloak.common.util.KeystoreUtil.KeystoreFormat;
-import org.keycloak.crypto.JavaAlgorithm;
 
 
 /**

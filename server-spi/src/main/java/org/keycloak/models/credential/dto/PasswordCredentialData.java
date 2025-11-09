@@ -3,9 +3,10 @@ package org.keycloak.models.credential.dto;
 import java.util.List;
 import java.util.Map;
 
+import org.keycloak.common.util.MultivaluedHashMap;
+
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.keycloak.common.util.MultivaluedHashMap;
 
 public class PasswordCredentialData {
     private final int hashIterations;

@@ -5,11 +5,12 @@ import java.util.Arrays;
 import java.util.Base64;
 import java.util.Collections;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.Test;
 import org.keycloak.credential.CredentialModel;
 import org.keycloak.models.credential.dto.PasswordCredentialData;
 import org.keycloak.models.credential.dto.PasswordSecretData;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;

@@ -3,8 +3,9 @@ package org.keycloak.representations.docker;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import org.keycloak.representations.JsonWebToken;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  *  * {

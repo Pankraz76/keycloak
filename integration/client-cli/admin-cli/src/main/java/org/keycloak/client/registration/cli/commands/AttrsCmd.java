@@ -15,6 +15,7 @@ import org.keycloak.client.registration.cli.EndpointType;
 import org.keycloak.client.registration.cli.ReflectionUtil;
 import org.keycloak.representations.idm.ClientRepresentation;
 import org.keycloak.representations.oidc.OIDCClientRepresentation;
+
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;

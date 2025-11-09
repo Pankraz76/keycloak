@@ -38,7 +38,6 @@ import jakarta.mail.internet.MimeMessage;
 import jakarta.mail.internet.MimeMultipart;
 import jakarta.mail.internet.MimeUtility;
 
-import org.jboss.logging.Logger;
 import org.keycloak.common.enums.HostnameVerificationPolicy;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.UserModel;
@@ -46,6 +45,8 @@ import org.keycloak.services.ServicesLogger;
 import org.keycloak.truststore.JSSETruststoreConfigurator;
 import org.keycloak.utils.EmailValidationUtil;
 import org.keycloak.utils.SMTPUtil;
+
+import org.jboss.logging.Logger;
 
 import static org.keycloak.utils.StringUtil.isNotBlank;
 

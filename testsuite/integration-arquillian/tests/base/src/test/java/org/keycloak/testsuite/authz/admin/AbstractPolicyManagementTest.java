@@ -25,8 +25,6 @@ import java.util.function.Supplier;
 
 import jakarta.ws.rs.core.Response;
 
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.keycloak.admin.client.resource.ClientResource;
 import org.keycloak.admin.client.resource.ClientsResource;
 import org.keycloak.admin.client.resource.RealmResource;
@@ -42,11 +40,15 @@ import org.keycloak.testsuite.util.ClientBuilder;
 import org.keycloak.testsuite.util.RealmBuilder;
 import org.keycloak.testsuite.util.UserBuilder;
 
+import org.junit.Before;
+import org.junit.BeforeClass;
+
+import static org.keycloak.common.Profile.Feature.AUTHORIZATION;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
-import static org.keycloak.common.Profile.Feature.AUTHORIZATION;
 
 /**
  * @author <a href="mailto:psilva@redhat.com">Pedro Igor</a>

@@ -35,8 +35,6 @@ import jakarta.persistence.criteria.Path;
 import jakarta.persistence.criteria.Predicate;
 import jakarta.persistence.criteria.Root;
 
-import org.hibernate.Session;
-import org.jboss.logging.Logger;
 import org.keycloak.broker.provider.IdentityProvider;
 import org.keycloak.broker.provider.IdentityProviderFactory;
 import org.keycloak.broker.provider.util.IdentityProviderTypeUtil;
@@ -55,6 +53,9 @@ import org.keycloak.models.jpa.entities.IdentityProviderEntity;
 import org.keycloak.models.jpa.entities.IdentityProviderMapperEntity;
 import org.keycloak.models.utils.KeycloakModelUtils;
 import org.keycloak.utils.StringUtil;
+
+import org.hibernate.Session;
+import org.jboss.logging.Logger;
 
 import static org.keycloak.models.IdentityProviderModel.ALIAS;
 import static org.keycloak.models.IdentityProviderModel.ALIAS_NOT_IN;

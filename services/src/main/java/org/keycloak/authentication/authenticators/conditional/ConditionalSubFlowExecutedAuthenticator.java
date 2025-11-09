@@ -19,7 +19,6 @@ package org.keycloak.authentication.authenticators.conditional;
 
 import java.util.stream.Stream;
 
-import org.jboss.logging.Logger;
 import org.keycloak.authentication.AuthenticationFlowContext;
 import org.keycloak.models.AuthenticationExecutionModel;
 import org.keycloak.models.AuthenticationFlowModel;
@@ -28,6 +27,8 @@ import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.RealmModel;
 import org.keycloak.models.UserModel;
 import org.keycloak.sessions.AuthenticationSessionModel;
+
+import org.jboss.logging.Logger;
 
 /**
  * <p>Conditional authenticator to know if a sub-flow was executed successfully in the authentication flow.</p>

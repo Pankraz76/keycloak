@@ -19,9 +19,10 @@ package org.keycloak.testsuite;
 
 import java.util.Set;
 
-import org.junit.Assume;
 import org.keycloak.common.Profile;
 import org.keycloak.testsuite.arquillian.TestContext;
+
+import org.junit.Assume;
 
 /**
  * @author <a href="mailto:sthorger@redhat.com">Stian Thorgersen</a>

@@ -19,13 +19,14 @@ package org.keycloak.quarkus.runtime.services;
 
 import java.util.Objects;
 
+import org.keycloak.representations.idm.OAuth2ErrorRepresentation;
+import org.keycloak.services.util.ObjectMapperResolver;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.vertx.core.Handler;
 import io.vertx.ext.web.RoutingContext;
 import org.jboss.logging.Logger;
-import org.keycloak.representations.idm.OAuth2ErrorRepresentation;
-import org.keycloak.services.util.ObjectMapperResolver;
 
 /**
  * This filter rejects all paths that need normalization as of RFC3986 or that have double slashes.

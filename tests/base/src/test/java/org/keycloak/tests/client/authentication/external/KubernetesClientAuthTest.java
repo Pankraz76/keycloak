@@ -2,10 +2,6 @@ package org.keycloak.tests.client.authentication.external;
 
 import java.util.UUID;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
 import org.keycloak.authentication.authenticators.client.FederatedJWTClientAuthenticator;
 import org.keycloak.broker.kubernetes.KubernetesIdentityProviderConfig;
 import org.keycloak.broker.kubernetes.KubernetesIdentityProviderFactory;
@@ -24,6 +20,11 @@ import org.keycloak.testframework.remote.timeoffset.InjectTimeOffSet;
 import org.keycloak.testframework.remote.timeoffset.TimeOffSet;
 import org.keycloak.testframework.server.KeycloakServerConfigBuilder;
 import org.keycloak.testsuite.util.IdentityProviderBuilder;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 
 @KeycloakIntegrationTest(config = KubernetesClientAuthTest.KubernetesServerConfig.class)
 @TestMethodOrder(MethodOrderer.MethodName.class)

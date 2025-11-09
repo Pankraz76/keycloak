@@ -7,6 +7,7 @@ import org.keycloak.client.cli.config.RealmConfigData;
 import org.keycloak.client.registration.cli.CmdStdinContext;
 import org.keycloak.client.registration.cli.KcRegMain;
 import org.keycloak.common.util.IoUtils;
+
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;

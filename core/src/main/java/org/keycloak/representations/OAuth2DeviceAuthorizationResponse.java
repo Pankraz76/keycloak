@@ -17,8 +17,9 @@
 
 package org.keycloak.representations;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import org.keycloak.OAuth2Constants;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import static org.keycloak.OAuth2Constants.EXPIRES_IN;
 import static org.keycloak.OAuth2Constants.INTERVAL;

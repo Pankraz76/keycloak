@@ -19,9 +19,10 @@ package org.keycloak.testsuite.auth.page;
 
 import java.net.URL;
 
-import org.jboss.arquillian.test.api.ArquillianResource;
 import org.keycloak.testsuite.arquillian.annotation.AuthServerBrowserContext;
 import org.keycloak.testsuite.page.AbstractPageWithInjectedUrl;
+
+import org.jboss.arquillian.test.api.ArquillianResource;
 
 /**
  * Context root of the tested Keycloak server.

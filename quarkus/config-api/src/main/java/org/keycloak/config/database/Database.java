@@ -28,9 +28,10 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-import io.quarkus.runtime.util.StringUtil;
 import org.keycloak.config.DatabaseOptions;
 import org.keycloak.config.Option;
+
+import io.quarkus.runtime.util.StringUtil;
 
 import static java.util.Arrays.asList;
 

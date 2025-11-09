@@ -20,9 +20,10 @@ package org.keycloak.saml.processing.core.parsers.saml;
 
 import java.io.InputStream;
 
+import org.keycloak.dom.saml.v2.protocol.AuthnRequestType;
+
 import org.junit.Before;
 import org.junit.Test;
-import org.keycloak.dom.saml.v2.protocol.AuthnRequestType;
 import org.w3c.dom.Element;
 
 import static org.hamcrest.CoreMatchers.*;

@@ -20,8 +20,6 @@ package org.keycloak.tests.admin.user;
 import java.util.List;
 import java.util.Set;
 
-import org.hamcrest.Matchers;
-import org.junit.jupiter.api.Test;
 import org.keycloak.admin.client.resource.UserProfileResource;
 import org.keycloak.admin.client.resource.UsersResource;
 import org.keycloak.models.UserModel;
@@ -36,6 +34,9 @@ import org.keycloak.testframework.annotations.KeycloakIntegrationTest;
 import org.keycloak.testframework.injection.LifeCycle;
 import org.keycloak.testframework.realm.ManagedRealm;
 import org.keycloak.testframework.realm.UserConfigBuilder;
+
+import org.hamcrest.Matchers;
+import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasSize;

@@ -10,12 +10,13 @@ import jakarta.mail.AuthenticationFailedException;
 import jakarta.mail.MessagingException;
 import jakarta.mail.Transport;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import org.jboss.logging.Logger;
 import org.keycloak.http.simple.SimpleHttp;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.utils.KeycloakSessionUtil;
 import org.keycloak.vault.VaultStringSecret;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import org.jboss.logging.Logger;
 
 public class TokenAuthEmailAuthenticator implements EmailAuthenticator {
 

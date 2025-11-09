@@ -92,6 +92,7 @@ import org.keycloak.saml.common.util.SecurityActions;
 import org.keycloak.saml.common.util.StringUtil;
 import org.keycloak.saml.common.util.SystemPropertiesUtil;
 import org.keycloak.saml.common.util.TransformerUtil;
+
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

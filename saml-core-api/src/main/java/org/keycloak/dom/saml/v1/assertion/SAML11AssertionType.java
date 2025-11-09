@@ -22,6 +22,7 @@ import java.util.List;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 import org.keycloak.dom.saml.common.CommonAssertionType;
+
 import org.w3c.dom.Element;
 
 /**

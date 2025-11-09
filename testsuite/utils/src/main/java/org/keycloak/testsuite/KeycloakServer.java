@@ -43,18 +43,6 @@ import javax.net.ssl.TrustManagerFactory;
 import jakarta.servlet.DispatcherType;
 import jakarta.servlet.Filter;
 
-import io.undertow.Undertow;
-import io.undertow.Undertow.Builder;
-import io.undertow.servlet.Servlets;
-import io.undertow.servlet.api.DefaultServletConfig;
-import io.undertow.servlet.api.DeploymentInfo;
-import io.undertow.servlet.api.FilterInfo;
-import io.undertow.servlet.api.InstanceHandle;
-import org.jboss.logging.Logger;
-import org.jboss.resteasy.core.ResteasyDeploymentImpl;
-import org.jboss.resteasy.plugins.server.servlet.ResteasyContextParameters;
-import org.jboss.resteasy.plugins.server.undertow.UndertowJaxrsServer;
-import org.jboss.resteasy.spi.ResteasyDeployment;
 import org.keycloak.authentication.AuthenticatorSpi;
 import org.keycloak.authentication.authenticators.browser.DeployedScriptAuthenticatorFactory;
 import org.keycloak.authorization.policy.provider.PolicySpi;
@@ -83,6 +71,19 @@ import org.keycloak.services.resources.KeycloakApplication;
 import org.keycloak.services.resteasy.ResteasyKeycloakApplication;
 import org.keycloak.testsuite.util.cli.TestsuiteCLI;
 import org.keycloak.util.JsonSerialization;
+
+import io.undertow.Undertow;
+import io.undertow.Undertow.Builder;
+import io.undertow.servlet.Servlets;
+import io.undertow.servlet.api.DefaultServletConfig;
+import io.undertow.servlet.api.DeploymentInfo;
+import io.undertow.servlet.api.FilterInfo;
+import io.undertow.servlet.api.InstanceHandle;
+import org.jboss.logging.Logger;
+import org.jboss.resteasy.core.ResteasyDeploymentImpl;
+import org.jboss.resteasy.plugins.server.servlet.ResteasyContextParameters;
+import org.jboss.resteasy.plugins.server.undertow.UndertowJaxrsServer;
+import org.jboss.resteasy.spi.ResteasyDeployment;
 import org.xnio.Options;
 import org.xnio.SslClientAuthMode;
 

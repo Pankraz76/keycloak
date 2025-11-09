@@ -19,10 +19,11 @@ package org.keycloak.forms.login.freemarker.model;
 import java.io.IOException;
 import java.net.URI;
 
-import org.jboss.logging.Logger;
 import org.keycloak.models.RealmModel;
 import org.keycloak.services.Urls;
 import org.keycloak.theme.Theme;
+
+import org.jboss.logging.Logger;
 
 import static org.keycloak.protocol.oidc.grants.device.DeviceGrantType.realmOAuth2DeviceVerificationAction;
 

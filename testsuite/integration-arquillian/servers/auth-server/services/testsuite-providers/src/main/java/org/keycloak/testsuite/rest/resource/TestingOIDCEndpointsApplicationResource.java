@@ -49,8 +49,6 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.Response.Status;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import org.jboss.resteasy.reactive.NoCache;
 import org.keycloak.OAuth2Constants;
 import org.keycloak.OAuthErrorException;
 import org.keycloak.common.util.Base64Url;
@@ -88,6 +86,9 @@ import org.keycloak.services.managers.AppAuthManager;
 import org.keycloak.testsuite.rest.TestApplicationResourceProviderFactory;
 import org.keycloak.testsuite.rest.representation.TestAuthenticationChannelRequest;
 import org.keycloak.util.JsonSerialization;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import org.jboss.resteasy.reactive.NoCache;
 
 /**
  * @author <a href="mailto:mposolda@redhat.com">Marek Posolda</a>

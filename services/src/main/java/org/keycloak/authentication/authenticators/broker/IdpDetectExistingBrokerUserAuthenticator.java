@@ -19,7 +19,6 @@ package org.keycloak.authentication.authenticators.broker;
 
 import jakarta.ws.rs.core.Response;
 
-import org.jboss.logging.Logger;
 import org.keycloak.authentication.AuthenticationFlowContext;
 import org.keycloak.authentication.authenticators.broker.util.ExistingUserInfo;
 import org.keycloak.authentication.authenticators.broker.util.SerializedBrokeredIdentityContext;
@@ -31,6 +30,8 @@ import org.keycloak.models.RealmModel;
 import org.keycloak.models.UserModel;
 import org.keycloak.services.ServicesLogger;
 import org.keycloak.services.messages.Messages;
+
+import org.jboss.logging.Logger;
 
 public class IdpDetectExistingBrokerUserAuthenticator extends IdpCreateUserIfUniqueAuthenticator {
 

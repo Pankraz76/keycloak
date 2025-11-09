@@ -28,6 +28,7 @@ import java.util.Set;
 import org.keycloak.common.util.MultivaluedHashMap;
 import org.keycloak.dom.saml.v2.assertion.AssertionType;
 import org.keycloak.dom.saml.v2.assertion.NameIDType;
+
 import org.w3c.dom.Document;
 
 /**

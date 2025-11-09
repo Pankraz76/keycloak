@@ -29,11 +29,12 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.Produces;
 
-import org.infinispan.Cache;
-import org.infinispan.stream.CacheCollectors;
 import org.keycloak.connections.infinispan.InfinispanConnectionProvider;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.utils.MediaType;
+
+import org.infinispan.Cache;
+import org.infinispan.stream.CacheCollectors;
 
 /**
  * @author <a href="mailto:mposolda@redhat.com">Marek Posolda</a>

@@ -30,9 +30,6 @@ import java.util.function.Consumer;
 
 import jakarta.ws.rs.core.Response;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import org.junit.BeforeClass;
-import org.junit.Test;
 import org.keycloak.admin.client.resource.AuthorizationResource;
 import org.keycloak.admin.client.resource.ClientResource;
 import org.keycloak.admin.client.resource.ClientsResource;
@@ -62,6 +59,12 @@ import org.keycloak.testsuite.util.TokenUtil;
 import org.keycloak.testsuite.util.UserBuilder;
 import org.keycloak.util.JsonSerialization;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import static org.keycloak.common.util.Encode.encodePathAsIs;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.empty;
 import static org.junit.Assert.assertEquals;
@@ -69,7 +72,6 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
-import static org.keycloak.common.util.Encode.encodePathAsIs;
 
 /**
  * @author <a href="mailto:psilva@redhat.com">Pedro Igor</a>

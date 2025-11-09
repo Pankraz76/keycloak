@@ -19,7 +19,6 @@ package org.keycloak.services.clientpolicy.executor;
 
 import jakarta.ws.rs.core.MultivaluedMap;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import org.keycloak.OAuthErrorException;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.protocol.oidc.endpoints.request.AuthorizationEndpointRequest;
@@ -31,6 +30,8 @@ import org.keycloak.services.clientpolicy.ClientPolicyContext;
 import org.keycloak.services.clientpolicy.ClientPolicyException;
 import org.keycloak.services.clientpolicy.context.AuthorizationRequestContext;
 import org.keycloak.services.clientpolicy.context.ClientCRUDContext;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import static org.keycloak.OAuth2Constants.CODE;
 

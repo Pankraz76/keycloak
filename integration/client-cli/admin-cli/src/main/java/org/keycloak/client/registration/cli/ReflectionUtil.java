@@ -29,11 +29,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import com.fasterxml.jackson.core.JsonParseException;
 import org.keycloak.client.cli.common.AttributeKey;
 import org.keycloak.client.cli.common.AttributeOperation;
 import org.keycloak.client.cli.util.AttributeException;
 import org.keycloak.util.JsonSerialization;
+
+import com.fasterxml.jackson.core.JsonParseException;
 
 /**
  * @author <a href="mailto:mstrukel@redhat.com">Marko Strukelj</a>

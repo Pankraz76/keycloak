@@ -37,6 +37,7 @@ import org.keycloak.saml.common.PicketLinkLoggerFactory;
 import org.keycloak.saml.common.constants.GeneralConstants;
 import org.keycloak.saml.common.constants.JBossSAMLConstants;
 import org.keycloak.saml.processing.core.constants.PicketLinkFederationConstants;
+
 import org.xml.sax.SAXException;
 
 /**

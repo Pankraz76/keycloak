@@ -11,9 +11,10 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-import com.fasterxml.jackson.jakarta.rs.yaml.YAMLMediaTypes;
 import org.keycloak.representations.workflows.WorkflowRepresentation;
 import org.keycloak.representations.workflows.WorkflowSetRepresentation;
+
+import com.fasterxml.jackson.jakarta.rs.yaml.YAMLMediaTypes;
 
 /**
  * @since Keycloak server 26.4.0. All the child endpoints are also available since that version<p>

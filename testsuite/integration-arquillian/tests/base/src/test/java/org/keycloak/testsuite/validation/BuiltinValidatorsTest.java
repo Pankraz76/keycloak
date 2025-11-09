@@ -27,9 +27,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.regex.Pattern;
 
-import com.google.common.collect.ImmutableMap;
-import org.junit.Assert;
-import org.junit.Test;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.representations.idm.RealmRepresentation;
 import org.keycloak.testsuite.AbstractKeycloakTest;
@@ -49,6 +46,10 @@ import org.keycloak.validate.validators.LengthValidator;
 import org.keycloak.validate.validators.OptionsValidator;
 import org.keycloak.validate.validators.PatternValidator;
 import org.keycloak.validate.validators.UriValidator;
+
+import com.google.common.collect.ImmutableMap;
+import org.junit.Assert;
+import org.junit.Test;
 
 import static org.keycloak.validate.ValidatorConfig.configFromMap;
 

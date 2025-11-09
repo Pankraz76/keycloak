@@ -11,9 +11,10 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import freemarker.template.TemplateException;
 import org.keycloak.guides.maven.GuideBuilder;
 import org.keycloak.guides.maven.GuideMojo;
+
+import freemarker.template.TemplateException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;

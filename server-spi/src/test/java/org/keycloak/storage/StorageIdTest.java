@@ -16,8 +16,9 @@
  */
 package org.keycloak.storage;
 
-import org.junit.Test;
 import org.keycloak.component.ComponentModel;
+
+import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;

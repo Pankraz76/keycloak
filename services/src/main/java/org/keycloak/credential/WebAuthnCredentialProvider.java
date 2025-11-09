@@ -26,6 +26,18 @@ import java.util.stream.Collectors;
 
 import jakarta.annotation.Nonnull;
 
+import org.keycloak.authentication.authenticators.browser.WebAuthnMetadataService;
+import org.keycloak.authentication.requiredactions.WebAuthnRegisterFactory;
+import org.keycloak.common.util.Time;
+import org.keycloak.models.KeycloakSession;
+import org.keycloak.models.RealmModel;
+import org.keycloak.models.UserModel;
+import org.keycloak.models.WebAuthnPolicy;
+import org.keycloak.models.credential.WebAuthnCredentialModel;
+import org.keycloak.models.credential.dto.WebAuthnCredentialData;
+import org.keycloak.models.credential.dto.WebAuthnCredentialPresentationData;
+import org.keycloak.util.JsonSerialization;
+
 import com.webauthn4j.WebAuthnAuthenticationManager;
 import com.webauthn4j.authenticator.Authenticator;
 import com.webauthn4j.authenticator.AuthenticatorImpl;
@@ -44,17 +56,6 @@ import com.webauthn4j.util.exception.WebAuthnException;
 import com.webauthn4j.verifier.OriginVerifierImpl;
 import com.webauthn4j.verifier.exception.BadOriginException;
 import org.jboss.logging.Logger;
-import org.keycloak.authentication.authenticators.browser.WebAuthnMetadataService;
-import org.keycloak.authentication.requiredactions.WebAuthnRegisterFactory;
-import org.keycloak.common.util.Time;
-import org.keycloak.models.KeycloakSession;
-import org.keycloak.models.RealmModel;
-import org.keycloak.models.UserModel;
-import org.keycloak.models.WebAuthnPolicy;
-import org.keycloak.models.credential.WebAuthnCredentialModel;
-import org.keycloak.models.credential.dto.WebAuthnCredentialData;
-import org.keycloak.models.credential.dto.WebAuthnCredentialPresentationData;
-import org.keycloak.util.JsonSerialization;
 
 /**
  * Credential provider for WebAuthn 2-factor credential of the user

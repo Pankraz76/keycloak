@@ -32,11 +32,6 @@ import javax.crypto.spec.PBEKeySpec;
 import jakarta.persistence.EntityManager;
 import jakarta.ws.rs.BadRequestException;
 
-import org.bouncycastle.crypto.generators.Argon2BytesGenerator;
-import org.jboss.arquillian.graphene.page.Page;
-import org.junit.Assert;
-import org.junit.Assume;
-import org.junit.Test;
 import org.keycloak.common.crypto.FipsMode;
 import org.keycloak.connections.jpa.JpaConnectionProvider;
 import org.keycloak.credential.CredentialModel;
@@ -67,6 +62,12 @@ import org.keycloak.testsuite.pages.LoginPage;
 import org.keycloak.testsuite.util.AccountHelper;
 import org.keycloak.testsuite.util.DefaultPasswordHash;
 import org.keycloak.testsuite.util.UserBuilder;
+
+import org.bouncycastle.crypto.generators.Argon2BytesGenerator;
+import org.jboss.arquillian.graphene.page.Page;
+import org.junit.Assert;
+import org.junit.Assume;
+import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;

@@ -19,13 +19,14 @@ package org.keycloak.quarkus.runtime.cli.command;
 
 import java.util.Optional;
 
-import io.quarkus.bootstrap.runner.RunnerClassLoader;
-import io.quarkus.runtime.LaunchMode;
-import io.smallrye.config.ConfigValue;
 import org.keycloak.quarkus.runtime.Environment;
 import org.keycloak.quarkus.runtime.Messages;
 import org.keycloak.quarkus.runtime.configuration.Configuration;
 import org.keycloak.quarkus.runtime.configuration.PersistedConfigSource;
+
+import io.quarkus.bootstrap.runner.RunnerClassLoader;
+import io.quarkus.runtime.LaunchMode;
+import io.smallrye.config.ConfigValue;
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 

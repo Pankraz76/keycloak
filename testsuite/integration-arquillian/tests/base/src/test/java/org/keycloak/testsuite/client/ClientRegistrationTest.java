@@ -38,17 +38,6 @@ import java.util.stream.Collectors;
 import jakarta.ws.rs.NotFoundException;
 import jakarta.ws.rs.core.Response;
 
-import org.apache.http.Header;
-import org.apache.http.HeaderElement;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.util.EntityUtils;
-import org.hamcrest.CoreMatchers;
-import org.hamcrest.Matchers;
-import org.junit.Test;
 import org.keycloak.client.registration.Auth;
 import org.keycloak.client.registration.ClientRegistration;
 import org.keycloak.client.registration.ClientRegistrationException;
@@ -74,7 +63,23 @@ import org.keycloak.testsuite.admin.ApiUtil;
 import org.keycloak.testsuite.arquillian.annotation.UncaughtServerErrorExpected;
 import org.keycloak.util.JsonSerialization;
 
+import org.apache.http.Header;
+import org.apache.http.HeaderElement;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.util.EntityUtils;
+import org.hamcrest.CoreMatchers;
+import org.hamcrest.Matchers;
+import org.junit.Test;
+
 import static java.util.Arrays.asList;
+
+import static org.keycloak.services.clientregistration.ErrorCodes.INVALID_CLIENT_METADATA;
+import static org.keycloak.services.clientregistration.ErrorCodes.INVALID_REDIRECT_URI;
+import static org.keycloak.utils.MediaType.APPLICATION_JSON;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsInAnyOrder;
@@ -87,9 +92,6 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
-import static org.keycloak.services.clientregistration.ErrorCodes.INVALID_CLIENT_METADATA;
-import static org.keycloak.services.clientregistration.ErrorCodes.INVALID_REDIRECT_URI;
-import static org.keycloak.utils.MediaType.APPLICATION_JSON;
 
 /**
  * @author <a href="mailto:sthorger@redhat.com">Stian Thorgersen</a>

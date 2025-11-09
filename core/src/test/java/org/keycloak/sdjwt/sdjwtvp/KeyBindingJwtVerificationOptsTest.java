@@ -17,8 +17,9 @@
 
 package org.keycloak.sdjwt.sdjwtvp;
 
-import org.junit.Test;
 import org.keycloak.sdjwt.vp.KeyBindingJwtVerificationOpts;
+
+import org.junit.Test;
 
 public class KeyBindingJwtVerificationOptsTest {
 

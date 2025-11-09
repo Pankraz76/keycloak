@@ -23,10 +23,6 @@ import java.util.Optional;
 import java.util.function.BiConsumer;
 import java.util.stream.Collectors;
 
-import org.apache.http.client.methods.HttpGet;
-import org.jboss.arquillian.container.test.api.*;
-import org.jboss.arquillian.test.api.ArquillianResource;
-import org.junit.*;
 import org.keycloak.admin.client.resource.RealmResource;
 import org.keycloak.common.util.Retry;
 import org.keycloak.representations.idm.*;
@@ -39,12 +35,18 @@ import org.keycloak.testsuite.util.SamlClient.Binding;
 import org.keycloak.testsuite.util.SamlClientBuilder;
 import org.keycloak.testsuite.util.ServerURLs;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.Matchers.not;
+import org.apache.http.client.methods.HttpGet;
+import org.jboss.arquillian.container.test.api.*;
+import org.jboss.arquillian.test.api.ArquillianResource;
+import org.junit.*;
+
 import static org.keycloak.testsuite.admin.Users.setPasswordFor;
 import static org.keycloak.testsuite.auth.page.AuthRealm.DEMO;
 import static org.keycloak.testsuite.utils.io.IOUtil.loadRealm;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.not;
 
 /**
  *

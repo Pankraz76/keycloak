@@ -4,8 +4,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 import org.keycloak.admin.client.resource.IdentityProviderResource;
 import org.keycloak.admin.client.resource.UserResource;
 import org.keycloak.common.util.MultivaluedHashMap;
@@ -29,8 +27,12 @@ import org.keycloak.tests.utils.admin.AdminEventPaths;
 import org.keycloak.tests.utils.admin.ApiUtil;
 import org.keycloak.testsuite.federation.UserMapStorageFactory;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+
 import static org.keycloak.storage.UserStorageProviderModel.IMPORT_ENABLED;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @KeycloakIntegrationTest(config = UserFedarationTest.UserFederationServerConfig.class)
 public class UserFedarationTest extends AbstractUserTest {

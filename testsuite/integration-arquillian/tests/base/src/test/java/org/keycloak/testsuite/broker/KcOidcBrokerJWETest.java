@@ -21,8 +21,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Predicate;
 
-import com.google.common.collect.ImmutableMap;
-import org.junit.Test;
 import org.keycloak.admin.client.resource.ClientResource;
 import org.keycloak.admin.client.resource.IdentityProviderResource;
 import org.keycloak.admin.client.resource.ProtocolMappersResource;
@@ -49,6 +47,9 @@ import org.keycloak.representations.idm.IdentityProviderMapperRepresentation;
 import org.keycloak.representations.idm.ProtocolMapperRepresentation;
 import org.keycloak.representations.idm.RealmRepresentation;
 import org.keycloak.representations.idm.UserRepresentation;
+
+import com.google.common.collect.ImmutableMap;
+import org.junit.Test;
 
 import static java.util.Optional.ofNullable;
 

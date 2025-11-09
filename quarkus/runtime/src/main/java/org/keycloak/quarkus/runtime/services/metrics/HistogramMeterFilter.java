@@ -23,11 +23,12 @@ import java.util.concurrent.TimeUnit;
 
 import jakarta.inject.Singleton;
 
+import org.keycloak.config.HttpOptions;
+import org.keycloak.quarkus.runtime.configuration.Configuration;
+
 import io.micrometer.core.instrument.Meter;
 import io.micrometer.core.instrument.config.MeterFilter;
 import io.micrometer.core.instrument.distribution.DistributionStatisticConfig;
-import org.keycloak.config.HttpOptions;
-import org.keycloak.quarkus.runtime.configuration.Configuration;
 
 /**
  * @author Alexander Schwartz

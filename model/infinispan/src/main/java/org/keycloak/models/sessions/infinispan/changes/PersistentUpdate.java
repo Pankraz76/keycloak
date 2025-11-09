@@ -20,8 +20,9 @@ package org.keycloak.models.sessions.infinispan.changes;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
-import io.opentelemetry.api.trace.Span;
 import org.keycloak.models.KeycloakSession;
+
+import io.opentelemetry.api.trace.Span;
 
 /**
  * Capture information for a deferred update of the session stores.

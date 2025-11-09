@@ -27,15 +27,16 @@ import javax.xml.stream.events.StartDocument;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 
+import org.keycloak.saml.common.exceptions.ParsingException;
+import org.keycloak.saml.processing.core.parsers.saml.protocol.SAMLProtocolQNames;
+import org.keycloak.saml.processing.core.parsers.util.HasQName;
+
 import org.apache.commons.io.IOUtils;
 import org.hamcrest.Matcher;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
-import org.keycloak.saml.common.exceptions.ParsingException;
-import org.keycloak.saml.processing.core.parsers.saml.protocol.SAMLProtocolQNames;
-import org.keycloak.saml.processing.core.parsers.util.HasQName;
 import org.w3c.dom.Element;
 import org.w3c.dom.Text;
 

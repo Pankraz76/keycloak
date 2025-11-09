@@ -20,7 +20,6 @@ package org.keycloak.testsuite;
 import java.lang.reflect.Field;
 import java.util.List;
 
-import org.junit.Before;
 import org.keycloak.admin.client.resource.RealmResource;
 import org.keycloak.common.util.reflections.Reflections;
 import org.keycloak.events.Details;
@@ -31,6 +30,8 @@ import org.keycloak.representations.idm.EventRepresentation;
 import org.keycloak.representations.idm.RealmRepresentation;
 import org.keycloak.representations.idm.UserRepresentation;
 import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
+
+import org.junit.Before;
 
 import static org.keycloak.testsuite.AbstractAdminTest.loadJson;
 

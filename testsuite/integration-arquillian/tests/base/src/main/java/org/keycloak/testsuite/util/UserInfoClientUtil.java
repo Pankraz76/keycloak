@@ -26,11 +26,12 @@ import jakarta.ws.rs.core.HttpHeaders;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.UriBuilder;
 
-import org.junit.Assert;
 import org.keycloak.protocol.oidc.OIDCLoginProtocolService;
 import org.keycloak.representations.UserInfo;
 import org.keycloak.testsuite.util.oauth.OAuthClient;
 import org.keycloak.utils.MediaType;
+
+import org.junit.Assert;
 
 /**
  * @author <a href="mailto:mposolda@redhat.com">Marek Posolda</a>

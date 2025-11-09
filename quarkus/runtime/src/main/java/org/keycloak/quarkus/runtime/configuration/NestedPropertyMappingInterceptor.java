@@ -22,11 +22,12 @@ import java.util.function.Function;
 
 import jakarta.annotation.Priority;
 
+import org.keycloak.quarkus.runtime.configuration.mappers.PropertyMappers;
+
 import io.smallrye.config.ConfigSourceInterceptor;
 import io.smallrye.config.ConfigSourceInterceptorContext;
 import io.smallrye.config.ConfigValue;
 import io.smallrye.config.Priorities;
-import org.keycloak.quarkus.runtime.configuration.mappers.PropertyMappers;
 
 /**
  * Some resolution of values that come from PropertyMappers

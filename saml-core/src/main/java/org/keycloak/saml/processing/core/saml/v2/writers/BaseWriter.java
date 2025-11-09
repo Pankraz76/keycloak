@@ -44,6 +44,7 @@ import org.keycloak.saml.common.exceptions.ProcessingException;
 import org.keycloak.saml.common.util.StaxUtil;
 import org.keycloak.saml.common.util.StringUtil;
 import org.keycloak.saml.processing.core.saml.v2.util.StaxWriterUtil;
+
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 

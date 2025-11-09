@@ -7,14 +7,15 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import org.apache.commons.io.FileUtils;
-import org.jboss.logging.Logger;
 import org.keycloak.Config;
 import org.keycloak.common.Version;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.platform.Platform;
 import org.keycloak.provider.ProviderConfigProperty;
 import org.keycloak.provider.ProviderConfigurationBuilder;
+
+import org.apache.commons.io.FileUtils;
+import org.jboss.logging.Logger;
 
 public class GzipResourceEncodingProviderFactory implements ResourceEncodingProviderFactory {
 

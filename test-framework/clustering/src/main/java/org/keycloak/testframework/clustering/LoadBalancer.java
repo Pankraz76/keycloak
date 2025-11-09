@@ -2,6 +2,9 @@ package org.keycloak.testframework.clustering;
 
 import java.util.HashMap;
 
+import org.keycloak.testframework.server.ClusteredKeycloakServer;
+import org.keycloak.testframework.server.KeycloakUrls;
+
 import io.vertx.core.Future;
 import io.vertx.core.Vertx;
 import io.vertx.core.http.HttpClient;
@@ -11,8 +14,6 @@ import io.vertx.httpproxy.ProxyContext;
 import io.vertx.httpproxy.ProxyInterceptor;
 import io.vertx.httpproxy.ProxyResponse;
 import org.jboss.logging.Logger;
-import org.keycloak.testframework.server.ClusteredKeycloakServer;
-import org.keycloak.testframework.server.KeycloakUrls;
 
 public class LoadBalancer {
 

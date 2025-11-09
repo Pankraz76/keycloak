@@ -7,14 +7,15 @@ import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.keycloak.broker.provider.IdentityBrokerException;
+import org.keycloak.models.IdentityProviderModel;
+import org.keycloak.models.KeycloakSession;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.io.IOUtils;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.keycloak.broker.provider.IdentityBrokerException;
-import org.keycloak.models.IdentityProviderModel;
-import org.keycloak.models.KeycloakSession;
 
 public class OpenshiftV4IdentityProviderTest {
 

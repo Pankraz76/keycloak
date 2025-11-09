@@ -23,13 +23,14 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import org.keycloak.common.VerificationException;
+import org.keycloak.rule.CryptoInitRule;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.junit.ClassRule;
 import org.junit.Test;
-import org.keycloak.common.VerificationException;
-import org.keycloak.rule.CryptoInitRule;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

@@ -3,9 +3,10 @@ package org.keycloak.representations;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import org.keycloak.TokenCategory;
 import org.keycloak.util.TokenUtil;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class LogoutToken extends JsonWebToken {
 

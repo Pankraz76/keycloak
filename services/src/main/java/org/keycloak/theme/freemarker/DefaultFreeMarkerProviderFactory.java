@@ -2,11 +2,12 @@ package org.keycloak.theme.freemarker;
 
 import java.util.concurrent.ConcurrentHashMap;
 
-import freemarker.template.Template;
 import org.keycloak.Config;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.KeycloakSessionFactory;
 import org.keycloak.theme.KeycloakSanitizerMethod;
+
+import freemarker.template.Template;
 
 public class DefaultFreeMarkerProviderFactory implements FreeMarkerProviderFactory {
 

@@ -29,8 +29,6 @@ import java.security.cert.X509Certificate;
 import jakarta.ws.rs.core.MultivaluedMap;
 import jakarta.ws.rs.core.UriInfo;
 
-import org.apache.xml.security.encryption.XMLCipher;
-import org.jboss.logging.Logger;
 import org.keycloak.common.VerificationException;
 import org.keycloak.common.util.PemUtils;
 import org.keycloak.crypto.KeyType;
@@ -69,6 +67,9 @@ import org.keycloak.saml.processing.core.util.KeycloakKeySamlExtensionGenerator;
 import org.keycloak.saml.processing.core.util.RedirectBindingSignatureUtil;
 import org.keycloak.saml.processing.web.util.RedirectBindingUtil;
 import org.keycloak.utils.StringUtil;
+
+import org.apache.xml.security.encryption.XMLCipher;
+import org.jboss.logging.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 

@@ -35,7 +35,6 @@ import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-import org.jboss.logging.Logger;
 import org.keycloak.broker.social.SocialIdentityProvider;
 import org.keycloak.common.Profile;
 import org.keycloak.common.Profile.Feature;
@@ -65,6 +64,8 @@ import org.keycloak.services.validation.Validation;
 import org.keycloak.theme.Theme;
 import org.keycloak.utils.BrokerUtil;
 import org.keycloak.utils.StreamsUtil;
+
+import org.jboss.logging.Logger;
 
 import static org.keycloak.models.Constants.ACCOUNT_CONSOLE_CLIENT_ID;
 

@@ -18,12 +18,13 @@ package org.keycloak.testsuite.authz.admin.permissions;
 
 import java.util.List;
 
-import org.junit.After;
-import org.junit.Test;
 import org.keycloak.representations.idm.ClientRepresentation;
 import org.keycloak.representations.idm.RealmRepresentation;
 import org.keycloak.representations.idm.authorization.ResourceServerRepresentation;
 import org.keycloak.testsuite.exportimport.ExportImportTest;
+
+import org.junit.After;
+import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;

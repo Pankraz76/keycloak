@@ -26,6 +26,18 @@ import jakarta.servlet.DispatcherType;
 import jakarta.servlet.Filter;
 import jakarta.servlet.ServletException;
 
+import org.keycloak.common.util.reflections.Reflections;
+import org.keycloak.models.KeycloakSession;
+import org.keycloak.services.DefaultKeycloakSessionFactory;
+import org.keycloak.services.managers.ApplianceBootstrap;
+import org.keycloak.services.resources.KeycloakApplication;
+import org.keycloak.services.resteasy.ResteasyKeycloakApplication;
+import org.keycloak.testsuite.KeycloakServer;
+import org.keycloak.testsuite.UndertowRequestFilter;
+import org.keycloak.testsuite.utils.tls.TLSUtils;
+import org.keycloak.testsuite.utils.undertow.UndertowDeployerHelper;
+import org.keycloak.testsuite.utils.undertow.UndertowWarClassLoader;
+
 import io.undertow.Undertow;
 import io.undertow.server.HttpHandler;
 import io.undertow.server.handlers.PathHandler;
@@ -54,17 +66,6 @@ import org.jboss.shrinkwrap.api.Archive;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.jboss.shrinkwrap.descriptor.api.Descriptor;
 import org.jboss.shrinkwrap.undertow.api.UndertowWebArchive;
-import org.keycloak.common.util.reflections.Reflections;
-import org.keycloak.models.KeycloakSession;
-import org.keycloak.services.DefaultKeycloakSessionFactory;
-import org.keycloak.services.managers.ApplianceBootstrap;
-import org.keycloak.services.resources.KeycloakApplication;
-import org.keycloak.services.resteasy.ResteasyKeycloakApplication;
-import org.keycloak.testsuite.KeycloakServer;
-import org.keycloak.testsuite.UndertowRequestFilter;
-import org.keycloak.testsuite.utils.tls.TLSUtils;
-import org.keycloak.testsuite.utils.undertow.UndertowDeployerHelper;
-import org.keycloak.testsuite.utils.undertow.UndertowWarClassLoader;
 import org.xnio.Options;
 import org.xnio.SslClientAuthMode;
 

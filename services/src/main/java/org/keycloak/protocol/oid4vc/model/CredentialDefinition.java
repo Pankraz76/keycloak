@@ -20,9 +20,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.keycloak.models.oid4vci.CredentialScopeModel;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.keycloak.models.oid4vci.CredentialScopeModel;
 
 /**
  * Pojo to represent a CredentialDefinition for internal handling

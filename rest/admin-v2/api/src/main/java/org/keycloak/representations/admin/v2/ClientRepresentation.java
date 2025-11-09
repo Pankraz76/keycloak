@@ -7,11 +7,12 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
+import org.keycloak.representations.admin.v2.validation.CreateClient;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyDescription;
 import org.hibernate.validator.constraints.URL;
-import org.keycloak.representations.admin.v2.validation.CreateClient;
 
 public class ClientRepresentation extends BaseRepresentation {
 

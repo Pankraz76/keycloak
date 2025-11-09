@@ -23,11 +23,12 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.ServiceLoader;
 
-import org.junit.Assert;
-import org.junit.Test;
 import org.keycloak.protocol.oid4vc.OID4VCLoginProtocolFactory;
 import org.keycloak.protocol.oidc.OIDCLoginProtocolFactory;
 import org.keycloak.protocol.saml.SamlProtocolFactory;
+
+import org.junit.Assert;
+import org.junit.Test;
 
 /**
  * @author Pascal Knüppel

@@ -26,8 +26,9 @@ import java.util.stream.Stream;
 
 import jakarta.persistence.EntityManager;
 
-import org.hibernate.Session;
 import org.keycloak.models.KeycloakSession;
+
+import org.hibernate.Session;
 
 public class EntityManagers {
 

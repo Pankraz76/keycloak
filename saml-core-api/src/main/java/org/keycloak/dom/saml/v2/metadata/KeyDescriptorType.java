@@ -21,6 +21,7 @@ import java.util.Collections;
 import java.util.List;
 
 import org.keycloak.dom.xmlsec.w3.xmlenc.EncryptionMethodType;
+
 import org.w3c.dom.Element;
 
 /**

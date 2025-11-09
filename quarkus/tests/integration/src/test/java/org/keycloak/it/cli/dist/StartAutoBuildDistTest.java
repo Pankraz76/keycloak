@@ -17,12 +17,6 @@
 
 package org.keycloak.it.cli.dist;
 
-import com.acme.provider.legacy.jpa.user.CustomUserProvider;
-import io.quarkus.test.junit.main.Launch;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
 import org.keycloak.it.junit5.extension.CLIResult;
 import org.keycloak.it.junit5.extension.DistributionTest;
 import org.keycloak.it.junit5.extension.DryRun;
@@ -30,8 +24,16 @@ import org.keycloak.it.junit5.extension.RawDistOnly;
 import org.keycloak.it.junit5.extension.TestProvider;
 import org.keycloak.it.utils.KeycloakDistribution;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import com.acme.provider.legacy.jpa.user.CustomUserProvider;
+import io.quarkus.test.junit.main.Launch;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
+
 import static org.keycloak.quarkus.runtime.cli.command.AbstractAutoBuildCommand.OPTIMIZED_BUILD_OPTION_LONG;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DistributionTest
 @RawDistOnly(reason = "Containers are immutable")

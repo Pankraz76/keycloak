@@ -20,8 +20,9 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.keycloak.util.JsonSerialization;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * @author <a href="mailto:mstrukel@redhat.com">Marko Strukelj</a>

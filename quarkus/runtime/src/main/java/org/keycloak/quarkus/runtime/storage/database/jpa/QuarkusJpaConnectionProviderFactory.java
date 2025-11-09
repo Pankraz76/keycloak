@@ -31,9 +31,6 @@ import jakarta.enterprise.inject.Instance;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 
-import io.quarkus.arc.Arc;
-import io.quarkus.runtime.configuration.DurationConverter;
-import org.jboss.logging.Logger;
 import org.keycloak.ServerStartupError;
 import org.keycloak.common.Version;
 import org.keycloak.config.DatabaseOptions;
@@ -51,6 +48,10 @@ import org.keycloak.provider.ProviderConfigurationBuilder;
 import org.keycloak.provider.ServerInfoAwareProviderFactory;
 import org.keycloak.quarkus.runtime.Environment;
 import org.keycloak.quarkus.runtime.configuration.Configuration;
+
+import io.quarkus.arc.Arc;
+import io.quarkus.runtime.configuration.DurationConverter;
+import org.jboss.logging.Logger;
 
 import static org.keycloak.connections.jpa.util.JpaUtils.configureNamedQuery;
 import static org.keycloak.models.utils.KeycloakModelUtils.runJobInTransaction;

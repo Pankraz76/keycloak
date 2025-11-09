@@ -25,7 +25,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
-import org.jboss.logging.Logger;
 import org.keycloak.Config;
 import org.keycloak.connections.jpa.support.EntityManagers;
 import org.keycloak.exportimport.AbstractFileBasedImportProvider;
@@ -41,6 +40,8 @@ import org.keycloak.services.ServicesLogger;
 import org.keycloak.storage.datastore.DefaultExportImportManager;
 import org.keycloak.util.JsonSerialization;
 import org.keycloak.utils.KeycloakSessionUtil;
+
+import org.jboss.logging.Logger;
 
 /**
  * @author <a href="mailto:mposolda@redhat.com">Marek Posolda</a>

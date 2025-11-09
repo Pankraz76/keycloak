@@ -4,13 +4,14 @@ import java.io.Closeable;
 import java.util.List;
 import java.util.UUID;
 
-import org.junit.Ignore;
-import org.junit.Test;
 import org.keycloak.protocol.saml.SamlProtocol;
 import org.keycloak.testsuite.AbstractConcurrencyTest;
 import org.keycloak.testsuite.updaters.ClientAttributeUpdater;
 import org.keycloak.testsuite.util.SamlClient;
 import org.keycloak.testsuite.util.SamlClientBuilder;
+
+import org.junit.Ignore;
+import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;

@@ -30,8 +30,9 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.security.auth.x500.X500Principal;
 
-import org.junit.Test;
 import org.keycloak.crypto.elytron.ElytronOCSPProvider;
+
+import org.junit.Test;
 import org.wildfly.security.x500.GeneralName;
 import org.wildfly.security.x500.cert.AccessDescription;
 import org.wildfly.security.x500.cert.AuthorityInformationAccessExtension;

@@ -19,9 +19,10 @@ package org.keycloak.forms.login.freemarker.model;
 
 import java.lang.reflect.Proxy;
 
+import org.keycloak.models.RealmModel;
+
 import org.junit.Assert;
 import org.junit.Test;
-import org.keycloak.models.RealmModel;
 
 public class LoginRealmBeanTest {
 

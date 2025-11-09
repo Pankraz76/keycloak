@@ -51,6 +51,7 @@ import org.keycloak.theme.Theme;
 import org.keycloak.theme.beans.LinkExpirationFormatterMethod;
 import org.keycloak.theme.beans.MessageFormatterMethod;
 import org.keycloak.theme.freemarker.FreeMarkerProvider;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -34,7 +34,6 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import org.jboss.logging.Logger;
 import org.keycloak.adapters.cloned.HttpClientBuilder;
 import org.keycloak.adapters.saml.DefaultSamlDeployment;
 import org.keycloak.adapters.saml.RoleMappingsProviderUtils;
@@ -47,6 +46,8 @@ import org.keycloak.adapters.saml.config.SP;
 import org.keycloak.common.enums.SslRequired;
 import org.keycloak.saml.SignatureAlgorithm;
 import org.keycloak.saml.common.exceptions.ParsingException;
+
+import org.jboss.logging.Logger;
 
 /**
  * @author <a href="mailto:bill@burkecentral.com">Bill Burke</a>

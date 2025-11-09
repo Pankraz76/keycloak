@@ -19,9 +19,10 @@ package org.keycloak.protocol.oid4vc.issuance;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.Test;
 import org.keycloak.protocol.oid4vc.model.AuthorizationDetail;
 import org.keycloak.protocol.oid4vc.model.ClaimsDescription;
+
+import org.junit.Test;
 
 import static org.junit.Assert.*;
 

@@ -2,6 +2,7 @@ package org.keycloak.client.registration.cli.commands;
 
 import org.keycloak.client.cli.common.BaseAuthOptionsCmd;
 import org.keycloak.client.registration.cli.KcRegMain;
+
 import picocli.CommandLine.Option;
 
 /**

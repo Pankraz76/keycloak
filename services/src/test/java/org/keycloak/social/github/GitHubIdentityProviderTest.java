@@ -16,8 +16,9 @@
  */
 package org.keycloak.social.github;
 
-import org.junit.Test;
 import org.keycloak.broker.oidc.OAuth2IdentityProviderConfig;
+
+import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 

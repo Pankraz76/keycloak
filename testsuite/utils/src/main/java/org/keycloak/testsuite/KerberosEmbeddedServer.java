@@ -28,6 +28,8 @@ import java.util.Properties;
 import java.util.Set;
 import javax.security.auth.kerberos.KerberosPrincipal;
 
+import org.keycloak.util.ldap.LDAPEmbeddedServer;
+
 import org.apache.directory.api.ldap.model.constants.SupportedSaslMechanisms;
 import org.apache.directory.api.ldap.model.exception.LdapInvalidDnException;
 import org.apache.directory.server.core.api.DirectoryService;
@@ -46,7 +48,6 @@ import org.apache.directory.shared.kerberos.KerberosTime;
 import org.apache.directory.shared.kerberos.KerberosUtils;
 import org.apache.directory.shared.kerberos.codec.types.EncryptionType;
 import org.jboss.logging.Logger;
-import org.keycloak.util.ldap.LDAPEmbeddedServer;
 
 /**
  * @author <a href="mailto:mposolda@redhat.com">Marek Posolda</a>

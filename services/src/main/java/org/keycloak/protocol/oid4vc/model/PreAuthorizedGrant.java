@@ -19,9 +19,10 @@ package org.keycloak.protocol.oid4vc.model;
 
 import java.util.Objects;
 
+import org.keycloak.protocol.oidc.grants.PreAuthorizedCodeGrantTypeFactory;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.keycloak.protocol.oidc.grants.PreAuthorizedCodeGrantTypeFactory;
 
 /**
  * Container for the pre-authorized code to be used in a Credential Offer

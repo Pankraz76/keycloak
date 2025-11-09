@@ -21,10 +21,6 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-import org.jboss.arquillian.graphene.page.Page;
-import org.jboss.logging.Logger;
-import org.junit.Rule;
-import org.junit.Test;
 import org.keycloak.WebAuthnConstants;
 import org.keycloak.admin.client.resource.UserResource;
 import org.keycloak.authentication.authenticators.browser.*;
@@ -49,14 +45,20 @@ import org.keycloak.testsuite.pages.AppPage.RequestType;
 import org.keycloak.testsuite.util.FlowUtil;
 import org.keycloak.testsuite.webauthn.pages.WebAuthnLoginPage;
 import org.keycloak.testsuite.webauthn.pages.WebAuthnRegisterPage;
+
+import org.jboss.arquillian.graphene.page.Page;
+import org.jboss.logging.Logger;
+import org.junit.Rule;
+import org.junit.Test;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import static org.hamcrest.CoreMatchers.*;
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.keycloak.models.AuthenticationExecutionModel.Requirement.ALTERNATIVE;
 import static org.keycloak.models.AuthenticationExecutionModel.Requirement.REQUIRED;
 import static org.keycloak.testsuite.webauthn.utils.PropertyRequirement.NO;
 import static org.keycloak.testsuite.webauthn.utils.PropertyRequirement.YES;
+
+import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.openqa.selenium.virtualauthenticator.VirtualAuthenticatorOptions.Protocol;
 import static org.openqa.selenium.virtualauthenticator.VirtualAuthenticatorOptions.Transport;
 

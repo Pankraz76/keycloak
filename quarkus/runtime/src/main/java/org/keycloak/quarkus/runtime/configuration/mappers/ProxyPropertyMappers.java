@@ -2,11 +2,12 @@ package org.keycloak.quarkus.runtime.configuration.mappers;
 
 import java.util.List;
 
-import io.smallrye.common.net.Inet;
-import io.smallrye.config.ConfigSourceInterceptorContext;
 import org.keycloak.config.ProxyOptions;
 import org.keycloak.quarkus.runtime.cli.PropertyException;
 import org.keycloak.quarkus.runtime.configuration.Configuration;
+
+import io.smallrye.common.net.Inet;
+import io.smallrye.config.ConfigSourceInterceptorContext;
 
 import static org.keycloak.quarkus.runtime.configuration.mappers.PropertyMapper.fromOption;
 

@@ -20,6 +20,7 @@ package org.keycloak.quarkus.runtime.cli.command;
 import org.keycloak.quarkus.runtime.Environment;
 import org.keycloak.quarkus.runtime.Messages;
 import org.keycloak.quarkus.runtime.cli.PropertyException;
+
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 

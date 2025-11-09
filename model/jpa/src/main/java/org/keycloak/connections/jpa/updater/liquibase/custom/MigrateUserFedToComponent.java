@@ -19,10 +19,11 @@ package org.keycloak.connections.jpa.updater.liquibase.custom;
 
 import java.util.function.Predicate;
 
-import liquibase.exception.CustomChangeException;
 import org.keycloak.models.LDAPConstants;
 import org.keycloak.provider.ProviderFactory;
 import org.keycloak.storage.UserStorageProvider;
+
+import liquibase.exception.CustomChangeException;
 
 /**
  * @author <a href="mailto:bburke@redhat.com">Bill Burke</a>

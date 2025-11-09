@@ -21,11 +21,12 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 
-import com.fasterxml.jackson.core.type.TypeReference;
 import org.keycloak.compatibility.CompatibilityResult;
 import org.keycloak.compatibility.Util;
 import org.keycloak.quarkus.runtime.cli.PropertyException;
 import org.keycloak.util.JsonSerialization;
+
+import com.fasterxml.jackson.core.type.TypeReference;
 import picocli.CommandLine;
 
 @CommandLine.Command(

@@ -23,6 +23,7 @@ import java.util.stream.Collectors;
 import org.keycloak.config.OptionCategory;
 import org.keycloak.quarkus.runtime.Environment;
 import org.keycloak.quarkus.runtime.integration.jaxrs.QuarkusKeycloakApplication;
+
 import picocli.CommandLine;
 
 public abstract class AbstractNonServerCommand extends AbstractAutoBuildCommand {

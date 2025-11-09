@@ -24,7 +24,6 @@ import java.util.UUID;
 
 import jakarta.ws.rs.core.UriInfo;
 
-import org.jboss.logging.Logger;
 import org.keycloak.common.ClientConnection;
 import org.keycloak.common.util.Time;
 import org.keycloak.events.EventListenerProvider;
@@ -41,6 +40,8 @@ import org.keycloak.models.UserModel;
 import org.keycloak.services.ServicesLogger;
 import org.keycloak.util.JsonSerialization;
 import org.keycloak.utils.StringUtil;
+
+import org.jboss.logging.Logger;
 
 import static org.keycloak.models.utils.StripSecretsUtils.stripSecrets;
 

@@ -20,7 +20,6 @@ package org.keycloak.broker.oidc.mappers;
 import java.util.List;
 import java.util.Map;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import org.keycloak.broker.oidc.KeycloakOIDCIdentityProvider;
 import org.keycloak.broker.oidc.OIDCIdentityProvider;
 import org.keycloak.broker.provider.AbstractIdentityProviderMapper;
@@ -30,6 +29,8 @@ import org.keycloak.jose.jws.JWSInputException;
 import org.keycloak.models.IdentityProviderMapperModel;
 import org.keycloak.representations.JsonWebToken;
 import org.keycloak.util.JsonSerialization;
+
+import com.fasterxml.jackson.databind.JsonNode;
 
 import static org.keycloak.utils.JsonUtils.splitClaimPath;
 

@@ -20,7 +20,6 @@ package org.keycloak.ipatuura_user_spi;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.jboss.logging.Logger;
 import org.keycloak.Config;
 import org.keycloak.common.Profile;
 import org.keycloak.component.ComponentModel;
@@ -33,6 +32,8 @@ import org.keycloak.provider.EnvironmentDependentProviderFactory;
 import org.keycloak.provider.ProviderConfigProperty;
 import org.keycloak.provider.ProviderConfigurationBuilder;
 import org.keycloak.storage.UserStorageProviderFactory;
+
+import org.jboss.logging.Logger;
 
 /**
  * @author <a href="mailto:jstephen@redhat.com">Justin Stephenson</a>

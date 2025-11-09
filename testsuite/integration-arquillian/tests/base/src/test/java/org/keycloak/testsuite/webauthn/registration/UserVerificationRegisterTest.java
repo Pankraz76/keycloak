@@ -21,12 +21,13 @@ import java.io.Closeable;
 import java.io.IOException;
 import java.util.function.Consumer;
 
-import com.webauthn4j.data.UserVerificationRequirement;
-import org.junit.Test;
 import org.keycloak.testsuite.arquillian.annotation.IgnoreBrowserDriver;
 import org.keycloak.testsuite.util.WaitUtils;
 import org.keycloak.testsuite.webauthn.AbstractWebAuthnVirtualTest;
 import org.keycloak.testsuite.webauthn.utils.WebAuthnRealmData;
+
+import com.webauthn4j.data.UserVerificationRequirement;
+import org.junit.Test;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.virtualauthenticator.VirtualAuthenticatorOptions;
 

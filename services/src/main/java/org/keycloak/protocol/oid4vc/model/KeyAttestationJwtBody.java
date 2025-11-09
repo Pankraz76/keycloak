@@ -20,9 +20,10 @@ package org.keycloak.protocol.oid4vc.model;
 import java.util.List;
 import java.util.Map;
 
+import org.keycloak.jose.jwk.JWK;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.keycloak.jose.jwk.JWK;
 
 /**
  * Represents the JWT payload for a key attestation as per OID4VCI specification.

@@ -22,6 +22,10 @@ import javax.naming.NamingException;
 
 import jakarta.servlet.ServletContext;
 
+import org.keycloak.adapters.saml.AdapterConstants;
+import org.keycloak.adapters.spi.SessionIdMapper;
+import org.keycloak.adapters.spi.SessionIdMapperUpdater;
+
 import org.infinispan.Cache;
 import org.infinispan.configuration.cache.CacheMode;
 import org.infinispan.configuration.cache.Configuration;
@@ -30,9 +34,6 @@ import org.infinispan.manager.EmbeddedCacheManager;
 import org.infinispan.persistence.manager.PersistenceManager;
 import org.infinispan.persistence.remote.RemoteStore;
 import org.jboss.logging.Logger;
-import org.keycloak.adapters.saml.AdapterConstants;
-import org.keycloak.adapters.spi.SessionIdMapper;
-import org.keycloak.adapters.spi.SessionIdMapperUpdater;
 
 /**
  *

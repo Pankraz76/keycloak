@@ -27,13 +27,14 @@ import java.util.Base64;
 import java.util.List;
 import java.util.Optional;
 
-import org.jboss.logging.Logger;
 import org.keycloak.common.util.CertificateUtils;
 import org.keycloak.common.util.PemUtils;
 import org.keycloak.component.ComponentModel;
 import org.keycloak.crypto.KeyUse;
 import org.keycloak.crypto.KeyWrapper;
 import org.keycloak.models.RealmModel;
+
+import org.jboss.logging.Logger;
 
 public class GeneratedEcdsaKeyProvider extends AbstractEcKeyProvider {
     private static final Logger logger = Logger.getLogger(GeneratedEcdsaKeyProvider.class);

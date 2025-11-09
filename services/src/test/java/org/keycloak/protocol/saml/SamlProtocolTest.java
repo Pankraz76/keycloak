@@ -13,11 +13,6 @@ import java.util.stream.Stream;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.UriInfo;
 
-import org.jboss.resteasy.core.ResteasyContext;
-import org.jboss.resteasy.mock.MockHttpRequest;
-import org.jboss.resteasy.specimpl.ResteasyUriInfo;
-import org.junit.BeforeClass;
-import org.junit.Test;
 import org.keycloak.common.Profile;
 import org.keycloak.common.crypto.CryptoIntegration;
 import org.keycloak.common.crypto.CryptoProvider;
@@ -36,6 +31,12 @@ import org.keycloak.services.DefaultKeycloakSessionFactory;
 import org.keycloak.services.resteasy.HttpRequestImpl;
 import org.keycloak.services.resteasy.ResteasyKeycloakSession;
 import org.keycloak.services.resteasy.ResteasyKeycloakSessionFactory;
+
+import org.jboss.resteasy.core.ResteasyContext;
+import org.jboss.resteasy.mock.MockHttpRequest;
+import org.jboss.resteasy.specimpl.ResteasyUriInfo;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
 import static  org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;

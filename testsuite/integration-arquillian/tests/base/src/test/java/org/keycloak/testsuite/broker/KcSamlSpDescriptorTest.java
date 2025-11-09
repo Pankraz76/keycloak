@@ -12,10 +12,6 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import javax.xml.crypto.dsig.XMLSignature;
 
-import com.google.common.collect.ImmutableMap;
-import org.apache.tools.ant.filters.StringInputStream;
-import org.junit.Assert;
-import org.junit.Test;
 import org.keycloak.broker.provider.ConfigConstants;
 import org.keycloak.broker.saml.SAMLIdentityProviderConfig;
 import org.keycloak.broker.saml.mappers.AttributeToRoleMapper;
@@ -38,6 +34,13 @@ import org.keycloak.saml.common.exceptions.ParsingException;
 import org.keycloak.saml.processing.core.parsers.saml.SAMLParser;
 import org.keycloak.testsuite.updaters.IdentityProviderAttributeUpdater;
 
+import com.google.common.collect.ImmutableMap;
+import org.apache.tools.ant.filters.StringInputStream;
+import org.junit.Assert;
+import org.junit.Test;
+
+import static org.keycloak.testsuite.util.KeyUtils.generateNewRealmKey;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.empty;
@@ -45,7 +48,6 @@ import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.junit.Assert.assertTrue;
-import static org.keycloak.testsuite.util.KeyUtils.generateNewRealmKey;
 
 public class KcSamlSpDescriptorTest extends AbstractBrokerTest {
 

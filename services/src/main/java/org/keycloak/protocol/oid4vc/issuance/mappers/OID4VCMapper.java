@@ -24,7 +24,6 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-import org.apache.commons.collections4.ListUtils;
 import org.keycloak.Config;
 import org.keycloak.constants.Oid4VciConstants;
 import org.keycloak.models.KeycloakSessionFactory;
@@ -37,6 +36,8 @@ import org.keycloak.protocol.oid4vc.OID4VCLoginProtocolFactory;
 import org.keycloak.protocol.oid4vc.model.Format;
 import org.keycloak.protocol.oid4vc.model.VerifiableCredential;
 import org.keycloak.provider.ProviderConfigProperty;
+
+import org.apache.commons.collections4.ListUtils;
 
 /**
  * Base class for OID4VC Mappers, to provide common configuration and functionality for all of them

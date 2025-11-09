@@ -18,8 +18,9 @@ package org.keycloak.common.util;
 
 import java.net.URI;
 
-import org.junit.Test;
 import org.keycloak.common.util.StringSerialization.Deserializer;
+
+import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;

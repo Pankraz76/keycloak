@@ -18,6 +18,7 @@ package org.keycloak.client.admin.cli.commands;
 
 import org.keycloak.client.admin.cli.KcAdmMain;
 import org.keycloak.client.cli.common.BaseConfigTruststoreCmd;
+
 import picocli.CommandLine.Command;
 
 /**

@@ -14,13 +14,14 @@ import javax.naming.ldap.StartTlsRequest;
 import javax.naming.ldap.StartTlsResponse;
 import javax.net.ssl.SSLSocketFactory;
 
-import org.jboss.logging.Logger;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.LDAPConstants;
 import org.keycloak.storage.ldap.LDAPConfig;
 import org.keycloak.tracing.TracingProvider;
 import org.keycloak.truststore.TruststoreProvider;
 import org.keycloak.vault.VaultStringSecret;
+
+import org.jboss.logging.Logger;
 
 import static javax.naming.Context.SECURITY_CREDENTIALS;
 

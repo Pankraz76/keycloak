@@ -25,9 +25,10 @@ import jakarta.servlet.http.HttpSessionEvent;
 import jakarta.servlet.http.HttpSessionIdListener;
 import jakarta.servlet.http.HttpSessionListener;
 
-import org.jboss.logging.Logger;
 import org.keycloak.adapters.saml.SamlSession;
 import org.keycloak.adapters.spi.SessionIdMapper;
+
+import org.jboss.logging.Logger;
 
 /**
  *

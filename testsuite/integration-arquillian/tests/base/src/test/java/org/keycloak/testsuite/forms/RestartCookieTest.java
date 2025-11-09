@@ -25,9 +25,6 @@ import javax.crypto.SecretKey;
 
 import jakarta.ws.rs.core.Response;
 
-import org.jboss.arquillian.graphene.page.Page;
-import org.junit.Rule;
-import org.junit.Test;
 import org.keycloak.OAuth2Constants;
 import org.keycloak.TokenCategory;
 import org.keycloak.common.util.MultivaluedHashMap;
@@ -55,6 +52,10 @@ import org.keycloak.testsuite.pages.LoginPage;
 import org.keycloak.testsuite.util.ClientBuilder;
 import org.keycloak.testsuite.util.oauth.ParResponse;
 import org.keycloak.util.TokenUtil;
+
+import org.jboss.arquillian.graphene.page.Page;
+import org.junit.Rule;
+import org.junit.Test;
 import org.openqa.selenium.Cookie;
 
 import static org.junit.Assert.assertEquals;

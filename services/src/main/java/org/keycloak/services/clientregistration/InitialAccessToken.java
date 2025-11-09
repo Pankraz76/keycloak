@@ -19,8 +19,9 @@ package org.keycloak.services.clientregistration;
 
 import java.util.Set;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import org.keycloak.representations.JsonWebToken;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * @author <a href="mailto:mposolda@redhat.com">Marek Posolda</a>

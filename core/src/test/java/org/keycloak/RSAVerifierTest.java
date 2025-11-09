@@ -25,11 +25,6 @@ import java.util.Base64;
 import java.util.List;
 import java.util.Map;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.ClassRule;
-import org.junit.Test;
 import org.keycloak.common.VerificationException;
 import org.keycloak.common.util.CertificateUtils;
 import org.keycloak.common.util.Time;
@@ -41,6 +36,12 @@ import org.keycloak.representations.JsonWebToken;
 import org.keycloak.rule.CryptoInitRule;
 import org.keycloak.util.JsonSerialization;
 import org.keycloak.util.TokenUtil;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.ClassRule;
+import org.junit.Test;
 
 /**
  * @author <a href="mailto:bill@burkecentral.com">Bill Burke</a>

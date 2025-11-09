@@ -21,9 +21,10 @@ import javax.naming.NamingException;
 
 import jakarta.transaction.TransactionManager;
 
-import org.jboss.logging.Logger;
 import org.keycloak.Config;
 import org.keycloak.models.KeycloakSessionFactory;
+
+import org.jboss.logging.Logger;
 
 /**
  * @author <a href="mailto:bill@burkecentral.com">Bill Burke</a>

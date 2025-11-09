@@ -26,11 +26,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import org.keycloak.client.admin.cli.CmdStdinContext;
 import org.keycloak.client.cli.common.AttributeOperation;
 import org.keycloak.client.cli.common.BaseGlobalOptionsCmd;
 import org.keycloak.client.cli.util.AccessibleBufferOutputStream;
+
+import com.fasterxml.jackson.databind.JsonNode;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 

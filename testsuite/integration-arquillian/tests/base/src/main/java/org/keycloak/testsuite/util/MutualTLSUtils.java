@@ -13,14 +13,15 @@ import javax.net.ssl.KeyManagerFactory;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManagerFactory;
 
+import org.keycloak.common.util.Base64Url;
+import org.keycloak.common.util.KeystoreUtil;
+
 import org.apache.http.client.RedirectStrategy;
 import org.apache.http.conn.ssl.NoopHostnameVerifier;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.DefaultRedirectStrategy;
 import org.apache.http.impl.client.HttpClientBuilder;
-import org.keycloak.common.util.Base64Url;
-import org.keycloak.common.util.KeystoreUtil;
 
 /**
  * Utilities for Holder of key mechanism and other Mutual TLS tests.

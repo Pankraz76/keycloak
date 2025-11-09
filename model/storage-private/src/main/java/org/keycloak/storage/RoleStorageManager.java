@@ -19,7 +19,6 @@ package org.keycloak.storage;
 import java.util.Objects;
 import java.util.stream.Stream;
 
-import org.jboss.logging.Logger;
 import org.keycloak.common.util.reflections.Types;
 import org.keycloak.component.ComponentModel;
 import org.keycloak.models.ClientModel;
@@ -34,6 +33,8 @@ import org.keycloak.storage.role.RoleStorageProvider;
 import org.keycloak.storage.role.RoleStorageProviderFactory;
 import org.keycloak.storage.role.RoleStorageProviderModel;
 import org.keycloak.utils.ServicesUtils;
+
+import org.jboss.logging.Logger;
 
 public class RoleStorageManager implements RoleProvider {
     private static final Logger logger = Logger.getLogger(RoleStorageManager.class);

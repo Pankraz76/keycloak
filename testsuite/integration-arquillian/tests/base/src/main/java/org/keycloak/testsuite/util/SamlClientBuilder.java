@@ -24,10 +24,6 @@ import java.util.function.Function;
 
 import jakarta.ws.rs.core.Response.Status;
 
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpUriRequest;
-import org.hamcrest.Matcher;
 import org.keycloak.dom.saml.v2.SAML2Object;
 import org.keycloak.saml.processing.core.saml.v2.common.SAMLDocumentHolder;
 import org.keycloak.testsuite.page.AbstractPage;
@@ -44,11 +40,17 @@ import org.keycloak.testsuite.util.saml.LoginBuilder;
 import org.keycloak.testsuite.util.saml.ModifySamlResponseStepBuilder;
 import org.keycloak.testsuite.util.saml.RequiredConsentBuilder;
 import org.keycloak.testsuite.util.saml.UpdateProfileBuilder;
+
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpUriRequest;
+import org.hamcrest.Matcher;
 import org.w3c.dom.Document;
+
+import static org.keycloak.testsuite.util.saml.SamlDocumentStepBuilder.saml2Object2String;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.notNullValue;
-import static org.keycloak.testsuite.util.saml.SamlDocumentStepBuilder.saml2Object2String;
 
 /**
  *

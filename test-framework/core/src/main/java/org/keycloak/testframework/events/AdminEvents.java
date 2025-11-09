@@ -2,9 +2,10 @@ package org.keycloak.testframework.events;
 
 import java.util.List;
 
-import org.jboss.logging.Logger;
 import org.keycloak.representations.idm.AdminEventRepresentation;
 import org.keycloak.testframework.realm.ManagedRealm;
+
+import org.jboss.logging.Logger;
 
 public class AdminEvents extends AbstractEvents<AdminEventRepresentation> {
 

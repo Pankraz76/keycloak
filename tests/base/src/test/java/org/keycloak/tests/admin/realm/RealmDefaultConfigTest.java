@@ -24,8 +24,6 @@ import java.util.List;
 
 import jakarta.ws.rs.NotFoundException;
 
-import org.apache.commons.io.IOUtils;
-import org.junit.jupiter.api.Test;
 import org.keycloak.admin.client.resource.RealmResource;
 import org.keycloak.events.admin.OperationType;
 import org.keycloak.events.admin.ResourceType;
@@ -46,6 +44,9 @@ import org.keycloak.testframework.remote.runonserver.RunOnServerClient;
 import org.keycloak.tests.utils.admin.AdminEventPaths;
 import org.keycloak.tests.utils.runonserver.RunHelpers;
 import org.keycloak.util.JsonSerialization;
+
+import org.apache.commons.io.IOUtils;
+import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsInAnyOrder;

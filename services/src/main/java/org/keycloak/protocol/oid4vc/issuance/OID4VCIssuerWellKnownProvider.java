@@ -27,8 +27,6 @@ import java.util.stream.Collectors;
 import jakarta.ws.rs.core.UriBuilder;
 import jakarta.ws.rs.core.UriInfo;
 
-import org.apache.http.HttpHeaders;
-import org.jboss.logging.Logger;
 import org.keycloak.common.util.Time;
 import org.keycloak.constants.Oid4VciConstants;
 import org.keycloak.crypto.CryptoUtils;
@@ -60,6 +58,9 @@ import org.keycloak.urls.UrlType;
 import org.keycloak.util.JsonSerialization;
 import org.keycloak.utils.MediaType;
 import org.keycloak.wellknown.WellKnownProvider;
+
+import org.apache.http.HttpHeaders;
+import org.jboss.logging.Logger;
 
 import static org.keycloak.constants.Oid4VciConstants.SIGNED_METADATA_JWT_TYPE;
 import static org.keycloak.crypto.KeyType.RSA;

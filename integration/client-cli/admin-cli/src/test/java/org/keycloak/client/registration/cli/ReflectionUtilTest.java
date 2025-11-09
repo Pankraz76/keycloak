@@ -11,12 +11,13 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
 import org.keycloak.client.cli.common.AttributeKey;
 import org.keycloak.client.cli.common.AttributeKey.Component;
 import org.keycloak.client.cli.common.AttributeOperation;
+
+import org.junit.Assert;
+import org.junit.Ignore;
+import org.junit.Test;
 
 import static org.keycloak.client.cli.common.AttributeOperation.Type.DELETE;
 import static org.keycloak.client.cli.common.AttributeOperation.Type.SET;

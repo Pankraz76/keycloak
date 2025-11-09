@@ -2,8 +2,9 @@ package org.keycloak.quarkus.runtime.configuration.mappers;
 
 import java.util.List;
 
-import io.smallrye.config.ConfigSourceInterceptorContext;
 import org.keycloak.config.TransactionOptions;
+
+import io.smallrye.config.ConfigSourceInterceptorContext;
 
 import static org.keycloak.quarkus.runtime.configuration.mappers.PropertyMapper.fromOption;
 

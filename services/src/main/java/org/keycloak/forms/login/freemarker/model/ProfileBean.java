@@ -22,8 +22,9 @@ import java.util.Map;
 
 import jakarta.ws.rs.core.MultivaluedMap;
 
-import org.jboss.logging.Logger;
 import org.keycloak.authentication.requiredactions.util.UpdateProfileContext;
+
+import org.jboss.logging.Logger;
 
 /**
  * @author <a href="mailto:sthorger@redhat.com">Stian Thorgersen</a>

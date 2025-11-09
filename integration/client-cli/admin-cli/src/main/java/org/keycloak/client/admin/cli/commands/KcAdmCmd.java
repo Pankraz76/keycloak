@@ -21,6 +21,7 @@ import java.io.StringWriter;
 
 import org.keycloak.client.admin.cli.KcAdmMain;
 import org.keycloak.client.cli.common.BaseGlobalOptionsCmd;
+
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 

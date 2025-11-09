@@ -24,9 +24,6 @@ import java.nio.charset.StandardCharsets;
 
 import jakarta.ws.rs.core.Response;
 
-import org.hamcrest.Matcher;
-import org.hamcrest.Matchers;
-import org.junit.Test;
 import org.keycloak.admin.client.resource.OrganizationResource;
 import org.keycloak.models.RealmModel;
 import org.keycloak.models.UserModel.RequiredAction;
@@ -43,10 +40,15 @@ import org.keycloak.testsuite.updaters.RealmAttributeUpdater;
 import org.keycloak.testsuite.util.FlowUtil;
 import org.keycloak.testsuite.util.UserBuilder;
 
+import org.hamcrest.Matcher;
+import org.hamcrest.Matchers;
+import org.junit.Test;
+
+import static org.keycloak.testsuite.broker.BrokerTestTools.waitForPage;
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
-import static org.keycloak.testsuite.broker.BrokerTestTools.waitForPage;
 
 public class OrganizationAuthenticationTest extends AbstractOrganizationTest {
 

@@ -23,7 +23,6 @@ import java.util.Set;
 import jakarta.ws.rs.ForbiddenException;
 import jakarta.ws.rs.core.Response;
 
-import org.junit.jupiter.api.Test;
 import org.keycloak.admin.client.Keycloak;
 import org.keycloak.admin.client.resource.ClientScopeResource;
 import org.keycloak.authorization.fgap.AdminPermissionsSchema;
@@ -37,17 +36,20 @@ import org.keycloak.testframework.annotations.InjectAdminClient;
 import org.keycloak.testframework.annotations.KeycloakIntegrationTest;
 import org.keycloak.testframework.util.ApiUtil;
 
+import org.junit.jupiter.api.Test;
+
+import static org.keycloak.authorization.fgap.AdminPermissionsSchema.MAP_ROLE;
+import static org.keycloak.authorization.fgap.AdminPermissionsSchema.MAP_ROLES;
+import static org.keycloak.authorization.fgap.AdminPermissionsSchema.MAP_ROLE_CLIENT_SCOPE;
+import static org.keycloak.authorization.fgap.AdminPermissionsSchema.MAP_ROLE_COMPOSITE;
+import static org.keycloak.authorization.fgap.AdminPermissionsSchema.VIEW;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.empty;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.instanceOf;
 import static org.hamcrest.Matchers.not;
 import static org.junit.jupiter.api.Assertions.fail;
-import static org.keycloak.authorization.fgap.AdminPermissionsSchema.MAP_ROLE;
-import static org.keycloak.authorization.fgap.AdminPermissionsSchema.MAP_ROLES;
-import static org.keycloak.authorization.fgap.AdminPermissionsSchema.MAP_ROLE_CLIENT_SCOPE;
-import static org.keycloak.authorization.fgap.AdminPermissionsSchema.MAP_ROLE_COMPOSITE;
-import static org.keycloak.authorization.fgap.AdminPermissionsSchema.VIEW;
 
 @KeycloakIntegrationTest
 public class RoleResourceTypeEvaluationTest extends AbstractPermissionTest {

@@ -25,10 +25,11 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 import java.util.concurrent.TimeUnit;
 
-import org.infinispan.Cache;
-import org.jboss.logging.Logger;
 import org.keycloak.common.util.Time;
 import org.keycloak.crl.CrlStorageProvider;
+
+import org.infinispan.Cache;
+import org.jboss.logging.Logger;
 
 /**
  *

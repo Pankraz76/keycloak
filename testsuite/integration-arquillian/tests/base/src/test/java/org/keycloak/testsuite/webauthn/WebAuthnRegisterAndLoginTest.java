@@ -24,10 +24,6 @@ import java.util.Objects;
 
 import jakarta.ws.rs.core.Response;
 
-import org.hamcrest.Matchers;
-import org.jboss.arquillian.graphene.page.Page;
-import org.junit.Assert;
-import org.junit.Test;
 import org.keycloak.WebAuthnConstants;
 import org.keycloak.admin.client.resource.RealmResource;
 import org.keycloak.admin.client.resource.UserResource;
@@ -59,15 +55,21 @@ import org.keycloak.testsuite.util.FlowUtil;
 import org.keycloak.testsuite.webauthn.pages.WebAuthnAuthenticatorsList;
 import org.keycloak.testsuite.webauthn.updaters.WebAuthnRealmAttributeUpdater;
 import org.keycloak.util.JsonSerialization;
+
+import org.hamcrest.Matchers;
+import org.jboss.arquillian.graphene.page.Page;
+import org.junit.Assert;
+import org.junit.Test;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import static org.keycloak.models.AuthenticationExecutionModel.Requirement.ALTERNATIVE;
+import static org.keycloak.models.AuthenticationExecutionModel.Requirement.REQUIRED;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.hasItem;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.keycloak.models.AuthenticationExecutionModel.Requirement.ALTERNATIVE;
-import static org.keycloak.models.AuthenticationExecutionModel.Requirement.REQUIRED;
 
 public class WebAuthnRegisterAndLoginTest extends AbstractWebAuthnVirtualTest {
 

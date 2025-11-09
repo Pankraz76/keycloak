@@ -22,6 +22,8 @@ import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
+import org.keycloak.tracing.TracingProvider;
+
 import io.opentelemetry.api.OpenTelemetry;
 import io.opentelemetry.api.common.AttributeKey;
 import io.opentelemetry.api.common.Attributes;
@@ -34,7 +36,6 @@ import io.opentelemetry.sdk.trace.ReadableSpan;
 import io.opentelemetry.semconv.ExceptionAttributes;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.jboss.logging.Logger;
-import org.keycloak.tracing.TracingProvider;
 
 /**
  * Tracing provider leverages OpenTelemetry Tracing

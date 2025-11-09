@@ -23,8 +23,6 @@ import java.util.stream.Stream;
 
 import jakarta.ws.rs.core.UriBuilder;
 
-import org.junit.Assert;
-import org.junit.Test;
 import org.keycloak.admin.client.resource.OrganizationResource;
 import org.keycloak.dom.saml.v2.assertion.AttributeStatementType;
 import org.keycloak.dom.saml.v2.assertion.AttributeStatementType.ASTChoiceType;
@@ -43,9 +41,13 @@ import org.keycloak.testsuite.util.Matchers;
 import org.keycloak.testsuite.util.SamlClient;
 import org.keycloak.testsuite.util.SamlClientBuilder;
 
-import static org.hamcrest.MatcherAssert.assertThat;
+import org.junit.Assert;
+import org.junit.Test;
+
 import static org.keycloak.testsuite.util.SamlStreams.assertionsUnencrypted;
 import static org.keycloak.testsuite.util.SamlStreams.attributeStatements;
+
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class OrganizationSAMLProtocolMapperTest extends AbstractOrganizationTest {
 

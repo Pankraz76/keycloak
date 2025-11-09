@@ -16,10 +16,11 @@
 
 package org.keycloak.credential;
 
+import org.keycloak.common.util.Base64Url;
+
 import com.webauthn4j.converter.util.CborConverter;
 import com.webauthn4j.converter.util.ObjectConverter;
 import com.webauthn4j.data.attestation.authenticator.COSEKey;
-import org.keycloak.common.util.Base64Url;
 
 public class CredentialPublicKeyConverter {
 

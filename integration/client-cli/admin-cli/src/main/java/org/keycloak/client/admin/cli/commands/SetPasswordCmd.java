@@ -20,6 +20,7 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 
 import org.keycloak.client.cli.config.ConfigData;
+
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 

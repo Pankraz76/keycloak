@@ -41,6 +41,11 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.keycloak.common.util.BouncyIntegration;
+import org.keycloak.jose.jwe.JWEUtils;
+import org.keycloak.models.KeycloakSession;
+import org.keycloak.utils.OCSPProvider;
+
 import org.bouncycastle.asn1.ASN1IA5String;
 import org.bouncycastle.asn1.ASN1InputStream;
 import org.bouncycastle.asn1.ASN1Sequence;
@@ -76,10 +81,6 @@ import org.bouncycastle.operator.DigestCalculatorProvider;
 import org.bouncycastle.operator.OperatorCreationException;
 import org.bouncycastle.operator.jcajce.JcaContentVerifierProviderBuilder;
 import org.bouncycastle.operator.jcajce.JcaDigestCalculatorProviderBuilder;
-import org.keycloak.common.util.BouncyIntegration;
-import org.keycloak.jose.jwe.JWEUtils;
-import org.keycloak.models.KeycloakSession;
-import org.keycloak.utils.OCSPProvider;
 
 
 /**

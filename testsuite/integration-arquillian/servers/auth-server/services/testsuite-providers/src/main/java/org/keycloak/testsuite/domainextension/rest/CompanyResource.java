@@ -29,10 +29,11 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-import org.jboss.resteasy.reactive.NoCache;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.testsuite.domainextension.CompanyRepresentation;
 import org.keycloak.testsuite.domainextension.spi.ExampleService;
+
+import org.jboss.resteasy.reactive.NoCache;
 
 public class CompanyResource {
 

@@ -7,13 +7,14 @@ import java.net.URL;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import org.keycloak.theme.FreeMarkerException;
+import org.keycloak.theme.KeycloakSanitizerMethod;
+import org.keycloak.theme.Theme;
+
 import freemarker.cache.URLTemplateLoader;
 import freemarker.core.HTMLOutputFormat;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
-import org.keycloak.theme.FreeMarkerException;
-import org.keycloak.theme.KeycloakSanitizerMethod;
-import org.keycloak.theme.Theme;
 
 public class DefaultFreeMarkerProvider implements FreeMarkerProvider {
     private final ConcurrentHashMap<String, Template> cache;

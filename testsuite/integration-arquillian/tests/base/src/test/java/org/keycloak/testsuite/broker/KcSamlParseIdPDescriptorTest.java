@@ -22,6 +22,12 @@ import java.util.Map;
 
 import jakarta.ws.rs.core.MediaType;
 
+import org.keycloak.broker.saml.SAMLIdentityProviderConfig;
+import org.keycloak.representations.idm.RealmRepresentation;
+import org.keycloak.saml.common.constants.JBossSAMLURIConstants;
+import org.keycloak.testsuite.AbstractKeycloakTest;
+import org.keycloak.testsuite.util.RealmBuilder;
+
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -30,11 +36,6 @@ import org.apache.http.util.EntityUtils;
 import org.jboss.resteasy.plugins.providers.multipart.MultipartFormDataOutput;
 import org.junit.Assert;
 import org.junit.Test;
-import org.keycloak.broker.saml.SAMLIdentityProviderConfig;
-import org.keycloak.representations.idm.RealmRepresentation;
-import org.keycloak.saml.common.constants.JBossSAMLURIConstants;
-import org.keycloak.testsuite.AbstractKeycloakTest;
-import org.keycloak.testsuite.util.RealmBuilder;
 
 /**
  *

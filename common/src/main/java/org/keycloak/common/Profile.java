@@ -31,12 +31,13 @@ import java.util.function.BooleanSupplier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import org.jboss.logging.Logger;
 import org.keycloak.common.Profile.Feature.Type;
 import org.keycloak.common.profile.ProfileConfigResolver;
 import org.keycloak.common.profile.ProfileConfigResolver.FeatureConfig;
 import org.keycloak.common.profile.ProfileException;
 import org.keycloak.common.util.KerberosJdkProvider;
+
+import org.jboss.logging.Logger;
 
 /**
  * @author <a href="mailto:bill@burkecentral.com">Bill Burke</a>

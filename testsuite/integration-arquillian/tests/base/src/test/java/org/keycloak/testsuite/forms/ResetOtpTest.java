@@ -3,9 +3,6 @@ package org.keycloak.testsuite.forms;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import org.jboss.arquillian.graphene.page.Page;
-import org.junit.After;
-import org.junit.Test;
 import org.keycloak.admin.client.CreatedResponseUtil;
 import org.keycloak.admin.client.resource.RealmResource;
 import org.keycloak.models.AuthenticationExecutionModel;
@@ -21,6 +18,10 @@ import org.keycloak.testsuite.pages.LoginPasswordResetPage;
 import org.keycloak.testsuite.pages.ResetOtpPage;
 import org.keycloak.testsuite.util.RealmBuilder;
 import org.keycloak.testsuite.util.UserBuilder;
+
+import org.jboss.arquillian.graphene.page.Page;
+import org.junit.After;
+import org.junit.Test;
 
 import static org.wildfly.common.Assert.assertTrue;
 

@@ -35,6 +35,9 @@ import javax.net.ssl.SSLSocket;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 
+import org.keycloak.common.util.EnvUtil;
+import org.keycloak.common.util.KeystoreUtil;
+
 import org.apache.http.HttpHost;
 import org.apache.http.client.CookieStore;
 import org.apache.http.client.HttpClient;
@@ -56,8 +59,6 @@ import org.apache.http.impl.conn.SingleClientConnManager;
 import org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager;
 import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
-import org.keycloak.common.util.EnvUtil;
-import org.keycloak.common.util.KeystoreUtil;
 
 /**
  * Abstraction for creating HttpClients. Allows SSL configuration.

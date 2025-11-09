@@ -26,8 +26,9 @@ import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import org.jboss.logging.Logger;
 import org.keycloak.saml.common.util.SecurityActions;
+
+import org.jboss.logging.Logger;
 import org.w3c.dom.ls.LSInput;
 import org.w3c.dom.ls.LSResourceResolver;
 

@@ -23,13 +23,14 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import javax.script.ScriptContext;
 
-import org.junit.Test;
 import org.keycloak.authorization.policy.provider.js.ScriptCache;
 import org.keycloak.models.ScriptModel;
 import org.keycloak.models.utils.KeycloakModelUtils;
 import org.keycloak.scripting.EvaluatableScriptAdapter;
 import org.keycloak.scripting.ScriptBindingsConfigurer;
 import org.keycloak.scripting.ScriptExecutionException;
+
+import org.junit.Test;
 
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.concurrent.locks.LockSupport.parkNanos;

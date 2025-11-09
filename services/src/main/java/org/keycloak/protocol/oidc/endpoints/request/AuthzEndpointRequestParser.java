@@ -23,7 +23,6 @@ import java.util.Set;
 
 import jakarta.ws.rs.core.Response;
 
-import org.jboss.logging.Logger;
 import org.keycloak.OAuth2Constants;
 import org.keycloak.OAuthErrorException;
 import org.keycloak.constants.AdapterConstants;
@@ -33,6 +32,8 @@ import org.keycloak.protocol.LoginProtocol;
 import org.keycloak.protocol.oidc.OIDCLoginProtocol;
 import org.keycloak.protocol.oidc.OIDCProviderConfig;
 import org.keycloak.services.ErrorResponseException;
+
+import org.jboss.logging.Logger;
 
 /**
  * This endpoint parser supports, per default, up to

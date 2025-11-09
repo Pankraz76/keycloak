@@ -20,10 +20,11 @@ package org.keycloak.forms.login.freemarker.model;
 import java.net.URI;
 import java.util.List;
 
-import freemarker.template.TemplateMethodModelEx;
-import freemarker.template.TemplateModelException;
 import org.keycloak.models.RealmModel;
 import org.keycloak.services.Urls;
+
+import freemarker.template.TemplateMethodModelEx;
+import freemarker.template.TemplateModelException;
 
 /**
  */

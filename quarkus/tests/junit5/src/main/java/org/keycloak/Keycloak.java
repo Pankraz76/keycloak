@@ -24,6 +24,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeoutException;
 
+import org.keycloak.common.Version;
+import org.keycloak.common.crypto.FipsMode;
+import org.keycloak.config.HttpOptions;
+import org.keycloak.config.LoggingOptions;
+import org.keycloak.config.Option;
+import org.keycloak.config.SecurityOptions;
+import org.keycloak.platform.Platform;
+import org.keycloak.quarkus.runtime.Environment;
+import org.keycloak.quarkus.runtime.cli.Picocli;
+import org.keycloak.quarkus.runtime.configuration.ConfigArgsConfigSource;
+import org.keycloak.quarkus.runtime.configuration.Configuration;
+import org.keycloak.quarkus.runtime.configuration.IgnoredArtifacts;
+
 import io.quarkus.bootstrap.app.AugmentAction;
 import io.quarkus.bootstrap.app.CuratedApplication;
 import io.quarkus.bootstrap.app.QuarkusBootstrap;
@@ -41,18 +54,6 @@ import io.quarkus.maven.dependency.Dependency;
 import io.quarkus.maven.dependency.DependencyBuilder;
 import io.quarkus.runtime.configuration.QuarkusConfigFactory;
 import org.eclipse.microprofile.config.spi.ConfigProviderResolver;
-import org.keycloak.common.Version;
-import org.keycloak.common.crypto.FipsMode;
-import org.keycloak.config.HttpOptions;
-import org.keycloak.config.LoggingOptions;
-import org.keycloak.config.Option;
-import org.keycloak.config.SecurityOptions;
-import org.keycloak.platform.Platform;
-import org.keycloak.quarkus.runtime.Environment;
-import org.keycloak.quarkus.runtime.cli.Picocli;
-import org.keycloak.quarkus.runtime.configuration.ConfigArgsConfigSource;
-import org.keycloak.quarkus.runtime.configuration.Configuration;
-import org.keycloak.quarkus.runtime.configuration.IgnoredArtifacts;
 
 import static java.util.Optional.ofNullable;
 

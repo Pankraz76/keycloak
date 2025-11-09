@@ -9,12 +9,6 @@ import jakarta.ws.rs.core.HttpHeaders;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectReader;
-import io.fabric8.zjsonpatch.JsonPatch;
-import io.fabric8.zjsonpatch.JsonPatchException;
 import org.keycloak.admin.api.FieldValidation;
 import org.keycloak.http.HttpResponse;
 import org.keycloak.models.ClientModel;
@@ -24,6 +18,13 @@ import org.keycloak.representations.admin.v2.ClientRepresentation;
 import org.keycloak.services.ErrorResponse;
 import org.keycloak.services.ServiceException;
 import org.keycloak.services.client.ClientService;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectReader;
+import io.fabric8.zjsonpatch.JsonPatch;
+import io.fabric8.zjsonpatch.JsonPatchException;
 
 public class DefaultClientApi implements ClientApi {
     private final KeycloakSession session;

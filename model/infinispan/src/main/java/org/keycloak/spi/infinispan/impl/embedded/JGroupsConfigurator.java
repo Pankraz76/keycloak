@@ -34,25 +34,6 @@ import javax.net.ssl.SSLParameters;
 import javax.net.ssl.SSLServerSocket;
 import javax.net.ssl.TrustManager;
 
-import org.infinispan.commons.configuration.attributes.Attribute;
-import org.infinispan.configuration.global.TransportConfigurationBuilder;
-import org.infinispan.configuration.parsing.ConfigurationBuilderHolder;
-import org.infinispan.remoting.transport.jgroups.EmbeddedJGroupsChannelConfigurator;
-import org.infinispan.remoting.transport.jgroups.JGroupsTransport;
-import org.jboss.logging.Logger;
-import org.jgroups.Address;
-import org.jgroups.Global;
-import org.jgroups.JChannel;
-import org.jgroups.conf.ClassConfigurator;
-import org.jgroups.conf.ProtocolConfiguration;
-import org.jgroups.protocols.TCP;
-import org.jgroups.protocols.TCP_NIO2;
-import org.jgroups.protocols.UDP;
-import org.jgroups.stack.Protocol;
-import org.jgroups.util.DefaultSocketFactory;
-import org.jgroups.util.ExtendedUUID;
-import org.jgroups.util.SocketFactory;
-import org.jgroups.util.UUID;
 import org.keycloak.Config;
 import org.keycloak.common.util.Retry;
 import org.keycloak.config.CachingOptions;
@@ -73,8 +54,26 @@ import org.keycloak.spi.infinispan.JGroupsCertificateProvider;
 import org.keycloak.spi.infinispan.impl.Util;
 import org.keycloak.storage.configuration.ServerConfigStorageProvider;
 
-import static org.infinispan.configuration.global.TransportConfiguration.CLUSTER_NAME;
-import static org.infinispan.configuration.global.TransportConfiguration.STACK;
+import org.infinispan.commons.configuration.attributes.Attribute;
+import org.infinispan.configuration.global.TransportConfigurationBuilder;
+import org.infinispan.configuration.parsing.ConfigurationBuilderHolder;
+import org.infinispan.remoting.transport.jgroups.EmbeddedJGroupsChannelConfigurator;
+import org.infinispan.remoting.transport.jgroups.JGroupsTransport;
+import org.jboss.logging.Logger;
+import org.jgroups.Address;
+import org.jgroups.Global;
+import org.jgroups.JChannel;
+import org.jgroups.conf.ClassConfigurator;
+import org.jgroups.conf.ProtocolConfiguration;
+import org.jgroups.protocols.TCP;
+import org.jgroups.protocols.TCP_NIO2;
+import org.jgroups.protocols.UDP;
+import org.jgroups.stack.Protocol;
+import org.jgroups.util.DefaultSocketFactory;
+import org.jgroups.util.ExtendedUUID;
+import org.jgroups.util.SocketFactory;
+import org.jgroups.util.UUID;
+
 import static org.keycloak.config.CachingOptions.CACHE_EMBEDDED_PREFIX;
 import static org.keycloak.connections.infinispan.InfinispanConnectionProvider.JBOSS_NODE_NAME;
 import static org.keycloak.connections.infinispan.InfinispanConnectionProvider.JBOSS_SITE_NAME;
@@ -84,6 +83,9 @@ import static org.keycloak.spi.infinispan.impl.embedded.DefaultCacheEmbeddedConf
 import static org.keycloak.spi.infinispan.impl.embedded.DefaultCacheEmbeddedConfigProviderFactory.RACK_NAME;
 import static org.keycloak.spi.infinispan.impl.embedded.DefaultCacheEmbeddedConfigProviderFactory.SITE_NAME;
 import static org.keycloak.spi.infinispan.impl.embedded.DefaultCacheEmbeddedConfigProviderFactory.TRACING;
+
+import static org.infinispan.configuration.global.TransportConfiguration.CLUSTER_NAME;
+import static org.infinispan.configuration.global.TransportConfiguration.STACK;
 
 /**
  * Utility class to configure JGroups based on the Keycloak configuration.

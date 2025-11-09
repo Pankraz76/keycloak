@@ -20,11 +20,12 @@ package org.keycloak.saml.processing.core.saml.v2.util;
 import java.io.InputStream;
 import java.util.Optional;
 
-import junit.framework.TestCase;
-import org.junit.Assert;
 import org.keycloak.saml.common.util.DocumentUtil;
 import org.keycloak.saml.processing.api.saml.v2.request.SAML2Request;
 import org.keycloak.saml.processing.core.saml.v2.common.SAMLDocumentHolder;
+
+import junit.framework.TestCase;
+import org.junit.Assert;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;

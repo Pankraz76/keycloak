@@ -25,7 +25,6 @@ import java.util.stream.Stream;
 import jakarta.ws.rs.core.MultivaluedMap;
 import jakarta.ws.rs.core.Response;
 
-import org.jboss.logging.Logger;
 import org.keycloak.Config;
 import org.keycloak.authentication.Authenticator;
 import org.keycloak.authentication.AuthenticatorFactory;
@@ -61,6 +60,8 @@ import org.keycloak.services.messages.Messages;
 import org.keycloak.services.validation.Validation;
 import org.keycloak.sessions.AuthenticationSessionModel;
 import org.keycloak.utils.CredentialHelper;
+
+import org.jboss.logging.Logger;
 
 import static org.keycloak.models.AuthenticationExecutionModel.Requirement.DISABLED;
 

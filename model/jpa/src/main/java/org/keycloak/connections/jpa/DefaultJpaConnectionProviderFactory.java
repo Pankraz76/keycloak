@@ -36,10 +36,6 @@ import jakarta.persistence.SynchronizationType;
 import jakarta.transaction.TransactionManager;
 import jakarta.transaction.UserTransaction;
 
-import liquibase.GlobalConfiguration;
-import org.hibernate.cfg.AvailableSettings;
-import org.hibernate.engine.transaction.jta.platform.internal.AbstractJtaPlatform;
-import org.jboss.logging.Logger;
 import org.keycloak.Config;
 import org.keycloak.ServerStartupError;
 import org.keycloak.common.util.StackUtil;
@@ -58,6 +54,11 @@ import org.keycloak.models.utils.KeycloakModelUtils;
 import org.keycloak.provider.ServerInfoAwareProviderFactory;
 import org.keycloak.timer.TimerProvider;
 import org.keycloak.transaction.JtaTransactionManagerLookup;
+
+import liquibase.GlobalConfiguration;
+import org.hibernate.cfg.AvailableSettings;
+import org.hibernate.engine.transaction.jta.platform.internal.AbstractJtaPlatform;
+import org.jboss.logging.Logger;
 
 import static org.keycloak.connections.jpa.util.JpaUtils.configureNamedQuery;
 import static org.keycloak.connections.jpa.util.JpaUtils.getDatabaseType;

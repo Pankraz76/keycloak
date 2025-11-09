@@ -25,7 +25,6 @@ import java.util.Optional;
 import java.util.function.BiConsumer;
 import java.util.stream.Stream;
 
-import org.jboss.logging.Logger;
 import org.keycloak.Token;
 import org.keycloak.TokenCategory;
 import org.keycloak.common.util.SecretGenerator;
@@ -64,6 +63,8 @@ import org.keycloak.representations.LogoutToken;
 import org.keycloak.services.util.DefaultClientSessionContext;
 import org.keycloak.util.JsonSerialization;
 import org.keycloak.util.TokenUtil;
+
+import org.jboss.logging.Logger;
 
 public class DefaultTokenManager implements TokenManager {
 

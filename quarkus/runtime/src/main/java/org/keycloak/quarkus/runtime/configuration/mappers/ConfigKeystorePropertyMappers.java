@@ -4,9 +4,10 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
-import io.smallrye.config.ConfigSourceInterceptorContext;
 import org.keycloak.config.ConfigKeystoreOptions;
 import org.keycloak.quarkus.runtime.configuration.MicroProfileConfigProvider;
+
+import io.smallrye.config.ConfigSourceInterceptorContext;
 
 import static org.keycloak.quarkus.runtime.configuration.mappers.PropertyMapper.fromOption;
 

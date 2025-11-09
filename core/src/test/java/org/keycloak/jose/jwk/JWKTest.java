@@ -30,8 +30,6 @@ import java.security.spec.ECGenParameterSpec;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.ClassRule;
-import org.junit.Test;
 import org.keycloak.common.crypto.CryptoIntegration;
 import org.keycloak.common.util.Base64Url;
 import org.keycloak.common.util.KeyUtils;
@@ -41,12 +39,16 @@ import org.keycloak.crypto.KeyType;
 import org.keycloak.rule.CryptoInitRule;
 import org.keycloak.util.JsonSerialization;
 
+import org.junit.ClassRule;
+import org.junit.Test;
+
+import static org.keycloak.common.util.CertificateUtils.generateV1SelfSignedCertificate;
+import static org.keycloak.common.util.CertificateUtils.generateV3Certificate;
+
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
-import static org.keycloak.common.util.CertificateUtils.generateV1SelfSignedCertificate;
-import static org.keycloak.common.util.CertificateUtils.generateV3Certificate;
 
 /**
  * This is not tested in keycloak-core. The subclasses should be created in the crypto modules to make sure it is tested with corresponding modules (bouncycastle VS bouncycastle-fips)

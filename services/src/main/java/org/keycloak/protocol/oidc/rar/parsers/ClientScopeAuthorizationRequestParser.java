@@ -26,7 +26,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-import org.jboss.logging.Logger;
 import org.keycloak.models.ClientModel;
 import org.keycloak.models.ClientScopeModel;
 import org.keycloak.protocol.oidc.TokenManager;
@@ -36,6 +35,8 @@ import org.keycloak.rar.AuthorizationDetails;
 import org.keycloak.rar.AuthorizationRequestContext;
 import org.keycloak.rar.AuthorizationRequestSource;
 import org.keycloak.representations.AuthorizationDetailsJSONRepresentation;
+
+import org.jboss.logging.Logger;
 
 import static org.keycloak.representations.AuthorizationDetailsJSONRepresentation.DYNAMIC_SCOPE_RAR_TYPE;
 import static org.keycloak.representations.AuthorizationDetailsJSONRepresentation.STATIC_SCOPE_RAR_TYPE;

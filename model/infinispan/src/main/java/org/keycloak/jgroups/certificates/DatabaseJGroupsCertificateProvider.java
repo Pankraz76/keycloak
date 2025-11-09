@@ -30,7 +30,6 @@ import java.util.concurrent.locks.ReentrantLock;
 import javax.net.ssl.KeyManager;
 import javax.net.ssl.TrustManager;
 
-import org.jboss.logging.Logger;
 import org.keycloak.common.util.Retry;
 import org.keycloak.common.util.Time;
 import org.keycloak.models.KeycloakSession;
@@ -38,6 +37,8 @@ import org.keycloak.models.KeycloakSessionFactory;
 import org.keycloak.models.utils.KeycloakModelUtils;
 import org.keycloak.spi.infinispan.JGroupsCertificateProvider;
 import org.keycloak.storage.configuration.ServerConfigStorageProvider;
+
+import org.jboss.logging.Logger;
 
 import static org.keycloak.jgroups.certificates.JGroupsCertificate.fromJson;
 import static org.keycloak.jgroups.certificates.JGroupsCertificate.toJson;

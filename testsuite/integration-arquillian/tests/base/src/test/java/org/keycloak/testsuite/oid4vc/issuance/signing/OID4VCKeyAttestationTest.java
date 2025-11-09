@@ -27,8 +27,6 @@ import java.util.List;
 import java.util.Map;
 import javax.net.ssl.TrustManagerFactory;
 
-import org.jboss.logging.Logger;
-import org.junit.Test;
 import org.keycloak.common.util.CertificateUtils;
 import org.keycloak.crypto.ECDSASignatureSignerContext;
 import org.keycloak.crypto.KeyType;
@@ -51,12 +49,16 @@ import org.keycloak.protocol.oid4vc.model.KeyAttestationJwtBody;
 import org.keycloak.protocol.oid4vc.model.KeyAttestationsRequired;
 import org.keycloak.protocol.oid4vc.model.Proofs;
 
+import org.jboss.logging.Logger;
+import org.junit.Test;
+
+import static org.keycloak.protocol.oid4vc.model.ProofType.JWT;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
-import static org.keycloak.protocol.oid4vc.model.ProofType.JWT;
 
 /**
  * @author Bertrand Ogen

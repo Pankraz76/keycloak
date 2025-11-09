@@ -2,8 +2,6 @@ package org.keycloak.testsuite.cli.registration;
 
 import java.io.IOException;
 
-import org.junit.Assert;
-import org.junit.Test;
 import org.keycloak.client.cli.config.ConfigData;
 import org.keycloak.client.cli.config.FileConfigHandler;
 import org.keycloak.client.cli.config.RealmConfigData;
@@ -12,6 +10,9 @@ import org.keycloak.representations.idm.ClientRepresentation;
 import org.keycloak.testsuite.cli.KcRegExec;
 import org.keycloak.testsuite.util.TempFileResource;
 import org.keycloak.util.JsonSerialization;
+
+import org.junit.Assert;
+import org.junit.Test;
 
 import static org.keycloak.testsuite.cli.KcRegExec.execute;
 

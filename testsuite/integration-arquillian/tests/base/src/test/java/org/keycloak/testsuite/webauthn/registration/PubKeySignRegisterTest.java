@@ -21,24 +21,26 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 
-import com.webauthn4j.data.attestation.authenticator.COSEKey;
-import com.webauthn4j.data.attestation.statement.COSEAlgorithmIdentifier;
-import org.junit.Test;
 import org.keycloak.models.credential.dto.WebAuthnCredentialData;
 import org.keycloak.testsuite.arquillian.annotation.IgnoreBrowserDriver;
 import org.keycloak.testsuite.webauthn.AbstractWebAuthnVirtualTest;
 import org.keycloak.testsuite.webauthn.utils.WebAuthnDataWrapper;
 import org.keycloak.testsuite.webauthn.utils.WebAuthnRealmData;
+
+import com.webauthn4j.data.attestation.authenticator.COSEKey;
+import com.webauthn4j.data.attestation.statement.COSEAlgorithmIdentifier;
+import org.junit.Test;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import static org.keycloak.crypto.Algorithm.ES256;
+import static org.keycloak.crypto.Algorithm.ES512;
+import static org.keycloak.crypto.Algorithm.RS384;
+import static org.keycloak.crypto.Algorithm.RS512;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.keycloak.crypto.Algorithm.ES256;
-import static org.keycloak.crypto.Algorithm.ES512;
-import static org.keycloak.crypto.Algorithm.RS384;
-import static org.keycloak.crypto.Algorithm.RS512;
 
 /**
  * @author <a href="mailto:mabartos@redhat.com">Martin Bartos</a>

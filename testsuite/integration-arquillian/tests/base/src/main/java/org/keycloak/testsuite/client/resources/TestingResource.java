@@ -31,8 +31,6 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.Response;
 
-import org.infinispan.commons.time.TimeService;
-import org.jboss.resteasy.reactive.NoCache;
 import org.keycloak.common.Profile;
 import org.keycloak.common.enums.HostnameVerificationPolicy;
 import org.keycloak.events.EventType;
@@ -43,6 +41,9 @@ import org.keycloak.representations.idm.EventRepresentation;
 import org.keycloak.representations.idm.UserRepresentation;
 import org.keycloak.testsuite.rest.representation.AuthenticatorState;
 import org.keycloak.utils.MediaType;
+
+import org.infinispan.commons.time.TimeService;
+import org.jboss.resteasy.reactive.NoCache;
 
 /**
  * @author <a href="mailto:mstrukel@redhat.com">Marko Strukelj</a>

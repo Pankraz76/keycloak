@@ -20,7 +20,6 @@ import javax.crypto.SecretKey;
 
 import jakarta.ws.rs.core.Response;
 
-import org.junit.jupiter.api.Assertions;
 import org.keycloak.admin.client.resource.RealmResource;
 import org.keycloak.common.crypto.CryptoIntegration;
 import org.keycloak.common.util.BouncyIntegration;
@@ -36,6 +35,8 @@ import org.keycloak.keys.KeyProvider;
 import org.keycloak.representations.idm.ComponentRepresentation;
 import org.keycloak.representations.idm.KeysMetadataRepresentation;
 import org.keycloak.tests.utils.admin.ApiUtil;
+
+import org.junit.jupiter.api.Assertions;
 
 
 /**

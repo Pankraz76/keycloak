@@ -18,11 +18,12 @@ package org.keycloak.it.cli.dist;
 
 import java.io.IOException;
 
+import org.keycloak.it.junit5.extension.CLIResult;
+import org.keycloak.it.junit5.extension.DistributionTest;
+
 import io.quarkus.test.junit.main.Launch;
 import io.quarkus.test.junit.main.LaunchResult;
 import org.junit.jupiter.api.Test;
-import org.keycloak.it.junit5.extension.CLIResult;
-import org.keycloak.it.junit5.extension.DistributionTest;
 
 import static io.restassured.RestAssured.when;
 import static org.junit.jupiter.api.Assertions.assertThrows;

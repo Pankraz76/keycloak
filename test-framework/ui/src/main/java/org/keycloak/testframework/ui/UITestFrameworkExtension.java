@@ -11,6 +11,7 @@ import org.keycloak.testframework.ui.webdriver.ChromeWebDriverSupplier;
 import org.keycloak.testframework.ui.webdriver.FirefoxHeadlessWebDriverSupplier;
 import org.keycloak.testframework.ui.webdriver.FirefoxWebDriverSupplier;
 import org.keycloak.testframework.ui.webdriver.HtmlUnitWebDriverSupplier;
+
 import org.openqa.selenium.WebDriver;
 
 public class UITestFrameworkExtension implements TestFrameworkExtension {

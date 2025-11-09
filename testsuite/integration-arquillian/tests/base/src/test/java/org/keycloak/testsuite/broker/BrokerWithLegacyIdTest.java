@@ -19,7 +19,6 @@ package org.keycloak.testsuite.broker;
 
 import java.util.List;
 
-import org.junit.Test;
 import org.keycloak.admin.client.resource.RealmResource;
 import org.keycloak.admin.client.resource.UserResource;
 import org.keycloak.models.IdentityProviderSyncMode;
@@ -31,10 +30,13 @@ import org.keycloak.testsuite.util.AccountHelper;
 import org.keycloak.testsuite.util.FederatedIdentityBuilder;
 import org.keycloak.testsuite.util.UserBuilder;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
 import static org.keycloak.testsuite.admin.ApiUtil.createUserWithAdminClient;
 import static org.keycloak.testsuite.broker.BrokerTestConstants.IDP_OIDC_ALIAS;
 import static org.keycloak.testsuite.broker.oidc.LegacyIdIdentityProvider.LEGACY_ID;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author Vaclav Muzikar <vmuzikar@redhat.com>

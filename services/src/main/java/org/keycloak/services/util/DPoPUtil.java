@@ -33,7 +33,6 @@ import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.UriBuilder;
 import jakarta.ws.rs.core.UriInfo;
 
-import org.apache.commons.codec.binary.Hex;
 import org.keycloak.OAuth2Constants;
 import org.keycloak.OAuthErrorException;
 import org.keycloak.TokenVerifier;
@@ -79,6 +78,8 @@ import org.keycloak.services.cors.Cors;
 import org.keycloak.util.JWKSUtils;
 import org.keycloak.util.TokenUtil;
 import org.keycloak.utils.StringUtil;
+
+import org.apache.commons.codec.binary.Hex;
 
 import static org.keycloak.OAuth2Constants.DPOP_HTTP_HEADER;
 import static org.keycloak.OAuth2Constants.DPOP_JWT_HEADER_TYPE;

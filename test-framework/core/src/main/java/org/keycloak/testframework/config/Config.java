@@ -8,6 +8,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Optional;
 
+import org.keycloak.testframework.injection.ValueTypeAlias;
+
 import io.quarkus.runtime.configuration.CharsetConverter;
 import io.quarkus.runtime.configuration.InetSocketAddressConverter;
 import io.quarkus.runtime.configuration.MemorySizeConverter;
@@ -19,7 +21,6 @@ import io.smallrye.config.common.utils.ConfigSourceUtil;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 import org.eclipse.microprofile.config.spi.ConfigSource;
 import org.eclipse.microprofile.config.spi.Converter;
-import org.keycloak.testframework.injection.ValueTypeAlias;
 
 public class Config {
 

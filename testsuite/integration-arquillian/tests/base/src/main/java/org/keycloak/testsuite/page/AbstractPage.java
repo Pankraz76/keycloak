@@ -23,11 +23,12 @@ import java.util.Map;
 
 import jakarta.ws.rs.core.UriBuilder;
 
+import org.keycloak.testsuite.util.DroneUtils;
+import org.keycloak.testsuite.util.URLUtils;
+
 import org.jboss.arquillian.drone.api.annotation.Drone;
 import org.jboss.logging.Logger;
 import org.junit.Assert;
-import org.keycloak.testsuite.util.DroneUtils;
-import org.keycloak.testsuite.util.URLUtils;
 import org.openqa.selenium.WebDriver;
 
 /**

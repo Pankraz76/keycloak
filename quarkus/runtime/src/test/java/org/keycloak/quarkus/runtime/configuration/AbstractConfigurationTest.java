@@ -22,16 +22,17 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.function.Function;
 
-import io.smallrye.config.ConfigValue;
-import io.smallrye.config.ConfigValue.ConfigValueBuilder;
-import io.smallrye.config.SmallRyeConfig;
-import org.junit.After;
-import org.junit.BeforeClass;
 import org.keycloak.Config;
 import org.keycloak.common.Profile;
 import org.keycloak.quarkus.runtime.Environment;
 import org.keycloak.quarkus.runtime.cli.ExecutionExceptionHandler;
 import org.keycloak.quarkus.runtime.configuration.mappers.PropertyMappers;
+
+import io.smallrye.config.ConfigValue;
+import io.smallrye.config.ConfigValue.ConfigValueBuilder;
+import io.smallrye.config.SmallRyeConfig;
+import org.junit.After;
+import org.junit.BeforeClass;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;

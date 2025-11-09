@@ -32,7 +32,6 @@ import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 
-import org.jboss.logging.Logger;
 import org.keycloak.adapters.saml.AdapterConstants;
 import org.keycloak.adapters.saml.DefaultSamlDeployment;
 import org.keycloak.adapters.saml.SamlConfigResolver;
@@ -45,6 +44,8 @@ import org.keycloak.adapters.spi.InMemorySessionIdMapper;
 import org.keycloak.adapters.spi.SessionIdMapper;
 import org.keycloak.adapters.spi.SessionIdMapperUpdater;
 import org.keycloak.saml.common.exceptions.ParsingException;
+
+import org.jboss.logging.Logger;
 
 /**
  * <p>A {@link ServletContextListener} that parses the keycloak adapter configuration and set the same configuration

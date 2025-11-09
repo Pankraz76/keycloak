@@ -25,11 +25,12 @@ import jakarta.ws.rs.container.ContainerResponseContext;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.MultivaluedMap;
 
-import org.jboss.logging.Logger;
 import org.keycloak.models.BrowserSecurityHeaders;
 import org.keycloak.models.ContentSecurityPolicyBuilder;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.RealmModel;
+
+import org.jboss.logging.Logger;
 
 import static jakarta.ws.rs.HttpMethod.HEAD;
 import static jakarta.ws.rs.HttpMethod.OPTIONS;

@@ -22,8 +22,9 @@ import java.net.URL;
 import javax.xml.XMLConstants;
 import javax.xml.validation.SchemaFactory;
 
-import org.junit.Test;
 import org.keycloak.saml.common.util.SecurityActions;
+
+import org.junit.Test;
 import org.w3c.dom.ls.LSInput;
 import org.w3c.dom.ls.LSResourceResolver;
 

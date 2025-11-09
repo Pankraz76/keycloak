@@ -15,9 +15,6 @@ import java.util.logging.Level;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import io.quarkus.runtime.configuration.MemorySizeConverter;
-import io.smallrye.config.ConfigSourceInterceptorContext;
-import org.jboss.logmanager.LogContext;
 import org.keycloak.common.Profile;
 import org.keycloak.config.LoggingOptions;
 import org.keycloak.config.Option;
@@ -25,6 +22,10 @@ import org.keycloak.quarkus.runtime.Messages;
 import org.keycloak.quarkus.runtime.cli.Picocli;
 import org.keycloak.quarkus.runtime.cli.PropertyException;
 import org.keycloak.quarkus.runtime.configuration.Configuration;
+
+import io.quarkus.runtime.configuration.MemorySizeConverter;
+import io.smallrye.config.ConfigSourceInterceptorContext;
+import org.jboss.logmanager.LogContext;
 
 import static org.keycloak.config.LoggingOptions.DEFAULT_LOG_FORMAT;
 import static org.keycloak.config.LoggingOptions.LOG_CONSOLE_ENABLED;

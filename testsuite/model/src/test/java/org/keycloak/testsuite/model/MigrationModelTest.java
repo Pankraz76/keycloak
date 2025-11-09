@@ -20,8 +20,6 @@ import java.util.List;
 
 import jakarta.persistence.EntityManager;
 
-import org.jboss.logging.Logger;
-import org.junit.Test;
 import org.keycloak.common.Version;
 import org.keycloak.connections.jpa.JpaConnectionProvider;
 import org.keycloak.migration.MigrationModel;
@@ -35,6 +33,9 @@ import org.keycloak.models.ModelDuplicateException;
 import org.keycloak.models.RealmModel;
 import org.keycloak.models.RealmProvider;
 import org.keycloak.models.jpa.entities.MigrationModelEntity;
+
+import org.jboss.logging.Logger;
+import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;

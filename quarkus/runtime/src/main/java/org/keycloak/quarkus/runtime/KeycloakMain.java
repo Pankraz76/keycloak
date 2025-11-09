@@ -23,13 +23,6 @@ import java.util.concurrent.ForkJoinPool;
 
 import jakarta.enterprise.context.ApplicationScoped;
 
-import io.quarkus.arc.Arc;
-import io.quarkus.bootstrap.runner.RunnerClassLoader;
-import io.quarkus.runtime.ApplicationLifecycleManager;
-import io.quarkus.runtime.Quarkus;
-import io.quarkus.runtime.QuarkusApplication;
-import io.quarkus.runtime.annotations.QuarkusMain;
-import org.jboss.logging.Logger;
 import org.keycloak.common.Version;
 import org.keycloak.infinispan.util.InfinispanUtils;
 import org.keycloak.quarkus.runtime.cli.ExecutionExceptionHandler;
@@ -39,6 +32,14 @@ import org.keycloak.quarkus.runtime.cli.command.AbstractNonServerCommand;
 import org.keycloak.quarkus.runtime.cli.command.DryRunMixin;
 import org.keycloak.quarkus.runtime.configuration.PersistedConfigSource;
 import org.keycloak.quarkus.runtime.integration.jaxrs.QuarkusKeycloakApplication;
+
+import io.quarkus.arc.Arc;
+import io.quarkus.bootstrap.runner.RunnerClassLoader;
+import io.quarkus.runtime.ApplicationLifecycleManager;
+import io.quarkus.runtime.Quarkus;
+import io.quarkus.runtime.QuarkusApplication;
+import io.quarkus.runtime.annotations.QuarkusMain;
+import org.jboss.logging.Logger;
 import picocli.CommandLine;
 
 import static org.keycloak.quarkus.runtime.Environment.getKeycloakModeFromProfile;

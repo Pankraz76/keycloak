@@ -16,10 +16,11 @@
  */
 package org.keycloak.sdjwt.vp;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import org.keycloak.crypto.SignatureSignerContext;
 import org.keycloak.jose.jws.JWSInput;
 import org.keycloak.sdjwt.SdJws;
+
+import com.fasterxml.jackson.databind.JsonNode;
 
 /**
  *

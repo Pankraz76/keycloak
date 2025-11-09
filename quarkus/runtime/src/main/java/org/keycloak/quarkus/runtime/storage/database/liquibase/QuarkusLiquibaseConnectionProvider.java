@@ -22,13 +22,14 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.xml.parsers.SAXParserFactory;
 
+import org.keycloak.connections.jpa.updater.liquibase.conn.DefaultLiquibaseConnectionProvider;
+
 import liquibase.Scope;
 import liquibase.parser.ChangeLogParser;
 import liquibase.parser.ChangeLogParserFactory;
 import liquibase.parser.core.xml.XMLChangeLogSAXParser;
 import liquibase.ui.LoggerUIService;
 import org.jboss.logging.Logger;
-import org.keycloak.connections.jpa.updater.liquibase.conn.DefaultLiquibaseConnectionProvider;
 
 public class QuarkusLiquibaseConnectionProvider extends DefaultLiquibaseConnectionProvider {
 

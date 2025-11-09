@@ -23,10 +23,6 @@ import java.util.function.Supplier;
 
 import jakarta.ws.rs.core.HttpHeaders;
 
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpUriRequest;
-import org.apache.http.client.protocol.HttpClientContext;
-import org.apache.http.impl.client.CloseableHttpClient;
 import org.keycloak.dom.saml.v2.protocol.AuthnRequestType;
 import org.keycloak.representations.idm.UserRepresentation;
 import org.keycloak.saml.common.exceptions.ConfigurationException;
@@ -37,6 +33,11 @@ import org.keycloak.saml.processing.api.saml.v2.request.SAML2Request;
 import org.keycloak.testsuite.admin.Users;
 import org.keycloak.testsuite.util.SamlClient.Binding;
 import org.keycloak.testsuite.util.SamlClientBuilder;
+
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpUriRequest;
+import org.apache.http.client.protocol.HttpClientContext;
+import org.apache.http.impl.client.CloseableHttpClient;
 import org.w3c.dom.Document;
 
 

@@ -22,8 +22,9 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import org.keycloak.common.VerificationException;
+
+import com.fasterxml.jackson.databind.JsonNode;
 
 /**
  * A simple presentation definition of the kind of credential expected.

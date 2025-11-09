@@ -19,15 +19,16 @@ package org.keycloak.it.cli.dist;
 
 import java.nio.file.Path;
 
-import io.quarkus.test.junit.main.Launch;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
 import org.keycloak.crypto.fips.FIPS1402Provider;
 import org.keycloak.it.junit5.extension.CLIResult;
 import org.keycloak.it.junit5.extension.DistributionTest;
 import org.keycloak.it.junit5.extension.RawDistOnly;
 import org.keycloak.it.utils.KeycloakDistribution;
 import org.keycloak.it.utils.RawKeycloakDistribution;
+
+import io.quarkus.test.junit.main.Launch;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
 
 @DistributionTest(keepAlive = true, defaultOptions = { "--db=dev-file", "--features=fips", "--http-enabled=true", "--hostname-strict=false" })
 @RawDistOnly(reason = "Containers are immutable")

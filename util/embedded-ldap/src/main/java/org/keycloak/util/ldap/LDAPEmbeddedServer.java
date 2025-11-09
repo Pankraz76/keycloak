@@ -25,6 +25,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
+import org.keycloak.common.util.FindFile;
+import org.keycloak.common.util.StreamUtil;
+
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.text.StrSubstitutor;
@@ -46,8 +49,6 @@ import org.apache.directory.server.ldap.handlers.extended.StartTlsHandler;
 import org.apache.directory.server.protocol.shared.transport.TcpTransport;
 import org.apache.directory.server.protocol.shared.transport.Transport;
 import org.jboss.logging.Logger;
-import org.keycloak.common.util.FindFile;
-import org.keycloak.common.util.StreamUtil;
 
 /**
  * @author <a href="mailto:mposolda@redhat.com">Marek Posolda</a>

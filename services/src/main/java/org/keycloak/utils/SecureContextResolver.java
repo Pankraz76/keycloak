@@ -5,10 +5,11 @@ import java.net.URI;
 import java.net.UnknownHostException;
 import java.util.function.Supplier;
 
-import io.netty.util.NetUtil;
 import org.keycloak.device.DeviceRepresentationProvider;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.representations.account.DeviceRepresentation;
+
+import io.netty.util.NetUtil;
 
 public class SecureContextResolver {
 

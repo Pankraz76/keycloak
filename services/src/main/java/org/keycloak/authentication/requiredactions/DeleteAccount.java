@@ -23,7 +23,6 @@ import java.util.Objects;
 
 import jakarta.ws.rs.ForbiddenException;
 
-import org.jboss.logging.Logger;
 import org.keycloak.Config;
 import org.keycloak.authentication.AuthenticationProcessor;
 import org.keycloak.authentication.InitiatedActionSupport;
@@ -48,6 +47,8 @@ import org.keycloak.services.managers.AuthenticationManager;
 import org.keycloak.services.managers.AuthenticationSessionManager;
 import org.keycloak.services.messages.Messages;
 import org.keycloak.sessions.AuthenticationSessionModel;
+
+import org.jboss.logging.Logger;
 public class DeleteAccount implements RequiredActionProvider, RequiredActionFactory {
 
   public static final String PROVIDER_ID = "delete_account";

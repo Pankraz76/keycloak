@@ -27,6 +27,15 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
+import org.keycloak.Config;
+import org.keycloak.config.CachingOptions;
+import org.keycloak.quarkus.runtime.Environment;
+import org.keycloak.quarkus.runtime.configuration.mappers.HttpPropertyMappers;
+import org.keycloak.quarkus.runtime.vault.FilesKeystoreVaultProviderFactory;
+import org.keycloak.quarkus.runtime.vault.FilesPlainTextVaultProviderFactory;
+import org.keycloak.spi.infinispan.CacheEmbeddedConfigProviderSpi;
+import org.keycloak.spi.infinispan.impl.embedded.DefaultCacheEmbeddedConfigProviderFactory;
+
 import io.smallrye.config.ConfigValue;
 import io.smallrye.config.Expressions;
 import io.smallrye.config.PropertiesConfigSource;
@@ -38,14 +47,6 @@ import org.hibernate.dialect.MariaDBDialect;
 import org.hibernate.dialect.PostgreSQLDialect;
 import org.junit.Assert;
 import org.junit.Test;
-import org.keycloak.Config;
-import org.keycloak.config.CachingOptions;
-import org.keycloak.quarkus.runtime.Environment;
-import org.keycloak.quarkus.runtime.configuration.mappers.HttpPropertyMappers;
-import org.keycloak.quarkus.runtime.vault.FilesKeystoreVaultProviderFactory;
-import org.keycloak.quarkus.runtime.vault.FilesPlainTextVaultProviderFactory;
-import org.keycloak.spi.infinispan.CacheEmbeddedConfigProviderSpi;
-import org.keycloak.spi.infinispan.impl.embedded.DefaultCacheEmbeddedConfigProviderFactory;
 import org.mariadb.jdbc.MariaDbDataSource;
 import org.postgresql.xa.PGXADataSource;
 

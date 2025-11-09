@@ -29,9 +29,10 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import javax.security.auth.x500.X500Principal;
 
-import org.jboss.logging.Logger;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.truststore.TruststoreProvider;
+
+import org.jboss.logging.Logger;
 
 /**
  * @author <a href="mailto:brat000012001@gmail.com">Peter Nalyvayko</a>

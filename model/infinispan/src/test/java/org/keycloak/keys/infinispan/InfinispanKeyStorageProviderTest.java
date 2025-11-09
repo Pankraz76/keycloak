@@ -24,6 +24,11 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.FutureTask;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import org.keycloak.common.util.Time;
+import org.keycloak.connections.infinispan.InfinispanConnectionProvider;
+import org.keycloak.crypto.PublicKeysWrapper;
+import org.keycloak.keys.PublicKeyLoader;
+
 import org.infinispan.Cache;
 import org.infinispan.configuration.cache.Configuration;
 import org.infinispan.configuration.cache.ConfigurationBuilder;
@@ -34,10 +39,6 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.keycloak.common.util.Time;
-import org.keycloak.connections.infinispan.InfinispanConnectionProvider;
-import org.keycloak.crypto.PublicKeysWrapper;
-import org.keycloak.keys.PublicKeyLoader;
 
 /**
  * @author <a href="mailto:mposolda@redhat.com">Marek Posolda</a>

@@ -28,13 +28,6 @@ import java.util.Map;
 import jakarta.ws.rs.client.Client;
 import jakarta.ws.rs.core.Response;
 
-import com.google.common.collect.ImmutableMap;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClientBuilder;
-import org.jboss.arquillian.graphene.page.Page;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
 import org.keycloak.OAuth2Constants;
 import org.keycloak.OAuthErrorException;
 import org.keycloak.admin.client.resource.ClientResource;
@@ -101,6 +94,18 @@ import org.keycloak.testsuite.util.oauth.AuthorizationEndpointResponse;
 import org.keycloak.util.JWKSUtils;
 import org.keycloak.util.JsonSerialization;
 
+import com.google.common.collect.ImmutableMap;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.jboss.arquillian.graphene.page.Page;
+import org.junit.Before;
+import org.junit.Rule;
+import org.junit.Test;
+
+import static org.keycloak.jose.jwe.JWEConstants.RSA_OAEP;
+import static org.keycloak.jose.jwe.JWEConstants.RSA_OAEP_256;
+import static org.keycloak.testsuite.admin.ApiUtil.findClientResourceByClientId;
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
@@ -108,9 +113,6 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
-import static org.keycloak.jose.jwe.JWEConstants.RSA_OAEP;
-import static org.keycloak.jose.jwe.JWEConstants.RSA_OAEP_256;
-import static org.keycloak.testsuite.admin.ApiUtil.findClientResourceByClientId;
 
 /**
  * Test for supporting advanced parameters of OIDC specs (max_age, prompt, ...)

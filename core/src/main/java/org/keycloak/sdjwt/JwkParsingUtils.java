@@ -19,7 +19,6 @@ package org.keycloak.sdjwt;
 
 import java.util.Objects;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import org.keycloak.crypto.Algorithm;
 import org.keycloak.crypto.AsymmetricSignatureVerifierContext;
 import org.keycloak.crypto.ECCurve;
@@ -29,6 +28,8 @@ import org.keycloak.crypto.KeyWrapper;
 import org.keycloak.crypto.SignatureVerifierContext;
 import org.keycloak.jose.jwk.JWK;
 import org.keycloak.util.JWKSUtils;
+
+import com.fasterxml.jackson.databind.JsonNode;
 
 /**
  * @author <a href="mailto:Ingrid.Kamga@adorsys.com">Ingrid Kamga</a>

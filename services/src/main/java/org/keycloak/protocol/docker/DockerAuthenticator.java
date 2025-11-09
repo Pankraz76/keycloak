@@ -8,8 +8,6 @@ import jakarta.ws.rs.core.HttpHeaders;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-import org.jboss.logging.Logger;
-import org.jboss.resteasy.reactive.server.jaxrs.ResponseBuilderImpl;
 import org.keycloak.authentication.AuthenticationFlowContext;
 import org.keycloak.authentication.AuthenticationFlowError;
 import org.keycloak.events.Errors;
@@ -20,6 +18,9 @@ import org.keycloak.protocol.saml.profile.ecp.authenticator.HttpBasicAuthenticat
 import org.keycloak.representations.docker.DockerAccess;
 import org.keycloak.representations.docker.DockerError;
 import org.keycloak.representations.docker.DockerErrorResponseToken;
+
+import org.jboss.logging.Logger;
+import org.jboss.resteasy.reactive.server.jaxrs.ResponseBuilderImpl;
 
 public class DockerAuthenticator extends HttpBasicAuthenticator {
     private static final Logger logger = Logger.getLogger(DockerAuthenticator.class);

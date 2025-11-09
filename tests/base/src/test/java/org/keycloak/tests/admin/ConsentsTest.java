@@ -20,10 +20,6 @@ package org.keycloak.tests.admin;
 import java.util.List;
 import java.util.Map;
 
-import org.hamcrest.MatcherAssert;
-import org.jboss.logging.Logger;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 import org.keycloak.OAuth2Constants;
 import org.keycloak.OAuthErrorException;
 import org.keycloak.admin.client.resource.ClientResource;
@@ -66,13 +62,19 @@ import org.keycloak.testframework.ui.page.LoginPage;
 import org.keycloak.testsuite.util.AccountHelper;
 import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
 import org.keycloak.testsuite.util.oauth.AuthorizationEndpointResponse;
+
+import org.hamcrest.MatcherAssert;
+import org.jboss.logging.Logger;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
+import static org.keycloak.tests.utils.admin.ApiUtil.findClientByClientId;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.keycloak.tests.utils.admin.ApiUtil.findClientByClientId;
 
 /**
  * @author <a href="mailto:mstrukel@redhat.com">Marko Strukelj</a>

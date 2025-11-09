@@ -27,8 +27,6 @@ import javax.security.auth.x500.X500Principal;
 
 import jakarta.ws.rs.core.Response;
 
-import org.apache.commons.codec.binary.Hex;
-import org.jboss.logging.Logger;
 import org.keycloak.authentication.AuthenticationFlowContext;
 import org.keycloak.authentication.Authenticator;
 import org.keycloak.common.crypto.CryptoIntegration;
@@ -44,6 +42,9 @@ import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.RealmModel;
 import org.keycloak.models.UserModel;
 import org.keycloak.services.x509.X509ClientCertificateLookup;
+
+import org.apache.commons.codec.binary.Hex;
+import org.jboss.logging.Logger;
 
 
 /**

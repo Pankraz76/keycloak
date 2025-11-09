@@ -6,13 +6,14 @@ import java.security.SecureRandom;
 import java.util.Base64;
 import java.util.Collections;
 
-import org.jboss.logging.Logger;
 import org.keycloak.models.AuthenticatedClientSessionModel;
 import org.keycloak.models.ClientModel;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.protocol.saml.util.ArtifactBindingUtils;
 import org.keycloak.saml.common.constants.GeneralConstants;
 import org.keycloak.utils.StringUtil;
+
+import org.jboss.logging.Logger;
 
 import static org.keycloak.protocol.saml.DefaultSamlArtifactResolverFactory.TYPE_CODE;
 import static org.keycloak.protocol.saml.SamlConfigAttributes.SAML_ARTIFACT_BINDING_IDENTIFIER;

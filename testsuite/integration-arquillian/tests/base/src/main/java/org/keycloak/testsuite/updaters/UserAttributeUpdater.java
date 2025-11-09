@@ -15,9 +15,10 @@ import org.keycloak.models.UserModel;
 import org.keycloak.representations.idm.GroupRepresentation;
 import org.keycloak.representations.idm.UserRepresentation;
 
+import static org.keycloak.testsuite.updaters.ServerResourceUpdater.updateViaAddRemove;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasSize;
-import static org.keycloak.testsuite.updaters.ServerResourceUpdater.updateViaAddRemove;
 
 /**
  * Updater for user attributes. See {@link ServerResourceUpdater} for further details.

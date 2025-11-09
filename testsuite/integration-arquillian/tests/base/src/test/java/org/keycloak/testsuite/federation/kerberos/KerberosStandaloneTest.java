@@ -27,15 +27,6 @@ import jakarta.ws.rs.core.Form;
 import jakarta.ws.rs.core.MultivaluedMap;
 import jakarta.ws.rs.core.Response;
 
-import org.hamcrest.MatcherAssert;
-import org.hamcrest.Matchers;
-import org.jboss.arquillian.graphene.page.Page;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
-import org.junit.ClassRule;
-import org.junit.Rule;
-import org.junit.Test;
 import org.keycloak.admin.client.resource.UserResource;
 import org.keycloak.common.constants.KerberosConstants;
 import org.keycloak.events.Details;
@@ -62,6 +53,16 @@ import org.keycloak.testsuite.util.GreenMailRule;
 import org.keycloak.testsuite.util.KerberosRule;
 import org.keycloak.testsuite.util.MailUtils;
 import org.keycloak.testsuite.util.oauth.OAuthClient;
+
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
+import org.jboss.arquillian.graphene.page.Page;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
+import org.junit.ClassRule;
+import org.junit.Rule;
+import org.junit.Test;
 
 import static org.keycloak.userprofile.UserProfileUtil.USER_METADATA_GROUP;
 

@@ -19,8 +19,6 @@ package org.keycloak.quarkus.runtime.configuration.mappers;
 
 import java.util.List;
 
-import io.smallrye.config.ConfigSourceInterceptorContext;
-import io.smallrye.config.ConfigValue;
 import org.keycloak.config.ImportOptions;
 import org.keycloak.config.Option;
 import org.keycloak.config.OptionBuilder;
@@ -29,6 +27,9 @@ import org.keycloak.exportimport.Strategy;
 import org.keycloak.quarkus.runtime.cli.Picocli;
 import org.keycloak.quarkus.runtime.cli.PropertyException;
 import org.keycloak.quarkus.runtime.cli.command.Import;
+
+import io.smallrye.config.ConfigSourceInterceptorContext;
+import io.smallrye.config.ConfigValue;
 
 import static org.keycloak.exportimport.ExportImportConfig.PROVIDER;
 import static org.keycloak.quarkus.runtime.configuration.Configuration.getOptionalValue;

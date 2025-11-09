@@ -25,14 +25,6 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Stream;
 
-import io.micrometer.core.instrument.Metrics;
-import org.infinispan.configuration.cache.ConfigurationBuilder;
-import org.infinispan.configuration.cache.StatisticsConfigurationBuilder;
-import org.infinispan.configuration.global.ShutdownHookBehavior;
-import org.infinispan.configuration.parsing.ConfigurationBuilderHolder;
-import org.infinispan.configuration.parsing.ParserRegistry;
-import org.infinispan.metrics.config.MicrometerMeterRegisterConfigurationBuilder;
-import org.jboss.logging.Logger;
 import org.keycloak.Config;
 import org.keycloak.common.Profile;
 import org.keycloak.config.CachingOptions;
@@ -50,6 +42,15 @@ import org.keycloak.spi.infinispan.CacheEmbeddedConfigProvider;
 import org.keycloak.spi.infinispan.CacheEmbeddedConfigProviderFactory;
 import org.keycloak.spi.infinispan.JGroupsCertificateProvider;
 import org.keycloak.spi.infinispan.impl.Util;
+
+import io.micrometer.core.instrument.Metrics;
+import org.infinispan.configuration.cache.ConfigurationBuilder;
+import org.infinispan.configuration.cache.StatisticsConfigurationBuilder;
+import org.infinispan.configuration.global.ShutdownHookBehavior;
+import org.infinispan.configuration.parsing.ConfigurationBuilderHolder;
+import org.infinispan.configuration.parsing.ParserRegistry;
+import org.infinispan.metrics.config.MicrometerMeterRegisterConfigurationBuilder;
+import org.jboss.logging.Logger;
 
 import static org.keycloak.connections.infinispan.InfinispanConnectionProvider.ALL_CACHES_NAME;
 import static org.keycloak.connections.infinispan.InfinispanConnectionProvider.CLUSTERED_CACHE_NUM_OWNERS;

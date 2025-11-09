@@ -24,10 +24,11 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-import org.jboss.arquillian.graphene.context.GrapheneContext;
-import org.jboss.arquillian.graphene.page.Page;
 import org.keycloak.testsuite.page.AbstractPage;
 import org.keycloak.testsuite.util.oauth.OAuthClient;
+
+import org.jboss.arquillian.graphene.context.GrapheneContext;
+import org.jboss.arquillian.graphene.page.Page;
 import org.openqa.selenium.WebDriver;
 
 /**

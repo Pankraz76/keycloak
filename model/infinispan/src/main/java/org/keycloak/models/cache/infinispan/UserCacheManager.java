@@ -20,12 +20,13 @@ package org.keycloak.models.cache.infinispan;
 import java.util.Map;
 import java.util.Set;
 
-import org.infinispan.Cache;
-import org.jboss.logging.Logger;
 import org.keycloak.models.cache.infinispan.entities.Revisioned;
 import org.keycloak.models.cache.infinispan.events.InvalidationEvent;
 import org.keycloak.models.cache.infinispan.events.UserCacheInvalidationEvent;
 import org.keycloak.models.cache.infinispan.stream.InRealmPredicate;
+
+import org.infinispan.Cache;
+import org.jboss.logging.Logger;
 
 /**
  * @author <a href="mailto:sthorger@redhat.com">Stian Thorgersen</a>

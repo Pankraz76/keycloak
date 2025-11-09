@@ -23,9 +23,10 @@ import java.security.cert.X509Certificate;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.jboss.logging.Logger;
 import org.keycloak.common.util.PemException;
 import org.keycloak.http.HttpRequest;
+
+import org.jboss.logging.Logger;
 
 /**
  *

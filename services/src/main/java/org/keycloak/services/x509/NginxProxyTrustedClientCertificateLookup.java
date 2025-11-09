@@ -4,10 +4,11 @@ import java.nio.charset.StandardCharsets;
 import java.security.GeneralSecurityException;
 import java.security.cert.X509Certificate;
 
-import org.jboss.logging.Logger;
 import org.keycloak.common.util.PemException;
 import org.keycloak.common.util.PemUtils;
 import org.keycloak.http.HttpRequest;
+
+import org.jboss.logging.Logger;
 
 /**
  * The NGINX Trusted Provider verify extract end user X.509 certificate sent during TLS mutual authentication,

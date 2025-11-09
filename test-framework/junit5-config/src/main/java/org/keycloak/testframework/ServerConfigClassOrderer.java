@@ -2,11 +2,12 @@ package org.keycloak.testframework;
 
 import java.util.Optional;
 
+import org.keycloak.testframework.annotations.KeycloakIntegrationTest;
+
 import org.infinispan.util.function.SerializableComparator;
 import org.junit.jupiter.api.ClassDescriptor;
 import org.junit.jupiter.api.ClassOrderer;
 import org.junit.jupiter.api.ClassOrdererContext;
-import org.keycloak.testframework.annotations.KeycloakIntegrationTest;
 
 public class ServerConfigClassOrderer implements ClassOrderer {
 

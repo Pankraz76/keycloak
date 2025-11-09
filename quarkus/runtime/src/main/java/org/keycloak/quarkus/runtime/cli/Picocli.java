@@ -32,11 +32,6 @@ import java.util.Properties;
 import java.util.Set;
 import java.util.function.Function;
 
-import io.quarkus.bootstrap.runner.QuarkusEntryPoint;
-import io.quarkus.dev.console.QuarkusConsole;
-import io.quarkus.runtime.LaunchMode;
-import io.smallrye.config.ConfigValue;
-import io.smallrye.mutiny.tuples.Functions.TriConsumer;
 import org.keycloak.common.profile.ProfileException;
 import org.keycloak.config.DeprecatedMetadata;
 import org.keycloak.config.Option;
@@ -58,6 +53,12 @@ import org.keycloak.quarkus.runtime.configuration.PropertyMappingInterceptor;
 import org.keycloak.quarkus.runtime.configuration.QuarkusPropertiesConfigSource;
 import org.keycloak.quarkus.runtime.configuration.mappers.PropertyMapper;
 import org.keycloak.quarkus.runtime.configuration.mappers.PropertyMappers;
+
+import io.quarkus.bootstrap.runner.QuarkusEntryPoint;
+import io.quarkus.dev.console.QuarkusConsole;
+import io.quarkus.runtime.LaunchMode;
+import io.smallrye.config.ConfigValue;
+import io.smallrye.mutiny.tuples.Functions.TriConsumer;
 import picocli.CommandLine;
 import picocli.CommandLine.DuplicateOptionAnnotationsException;
 import picocli.CommandLine.Help.Ansi;
@@ -80,6 +81,7 @@ import static org.keycloak.quarkus.runtime.cli.OptionRenderer.decorateDuplicitOp
 import static org.keycloak.quarkus.runtime.cli.command.AbstractAutoBuildCommand.OPTIMIZED_BUILD_OPTION_LONG;
 import static org.keycloak.quarkus.runtime.configuration.Configuration.isUserModifiable;
 import static org.keycloak.quarkus.runtime.configuration.MicroProfileConfigProvider.NS_KEYCLOAK_PREFIX;
+
 import static picocli.CommandLine.Model.UsageMessageSpec.SECTION_KEY_COMMAND_LIST;
 
 public class Picocli {

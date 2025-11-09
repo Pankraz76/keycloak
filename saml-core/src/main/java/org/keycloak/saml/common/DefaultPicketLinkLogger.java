@@ -25,7 +25,6 @@ import javax.xml.stream.Location;
 
 import jakarta.xml.ws.WebServiceException;
 
-import org.jboss.logging.Logger;
 import org.keycloak.saml.common.constants.GeneralConstants;
 import org.keycloak.saml.common.constants.WSTrustConstants;
 import org.keycloak.saml.common.exceptions.ConfigurationException;
@@ -38,6 +37,8 @@ import org.keycloak.saml.common.exceptions.fed.IssueInstantMissingException;
 import org.keycloak.saml.common.exceptions.fed.IssuerNotTrustedException;
 import org.keycloak.saml.common.exceptions.fed.SignatureValidationException;
 import org.keycloak.saml.common.exceptions.fed.WSTrustException;
+
+import org.jboss.logging.Logger;
 import org.w3c.dom.Element;
 
 /**

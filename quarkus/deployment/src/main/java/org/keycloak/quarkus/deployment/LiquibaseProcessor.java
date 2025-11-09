@@ -10,6 +10,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.keycloak.connections.jpa.updater.liquibase.lock.DummyLockService;
+import org.keycloak.quarkus.runtime.KeycloakRecorder;
+
 import io.quarkus.agroal.spi.JdbcDataSourceBuildItem;
 import io.quarkus.deployment.annotations.BuildStep;
 import io.quarkus.deployment.annotations.ExecutionTime;
@@ -25,8 +28,6 @@ import org.jboss.jandex.AnnotationInstance;
 import org.jboss.jandex.ClassInfo;
 import org.jboss.jandex.DotName;
 import org.jboss.jandex.IndexView;
-import org.keycloak.connections.jpa.updater.liquibase.lock.DummyLockService;
-import org.keycloak.quarkus.runtime.KeycloakRecorder;
 
 import static org.keycloak.quarkus.deployment.KeycloakProcessor.getDefaultDataSource;
 

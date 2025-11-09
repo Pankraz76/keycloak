@@ -21,6 +21,8 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
+import org.keycloak.testsuite.util.WaitUtils;
+
 import org.jboss.arquillian.core.api.InstanceProducer;
 import org.jboss.arquillian.core.api.annotation.Inject;
 import org.jboss.arquillian.core.api.annotation.Observes;
@@ -32,7 +34,6 @@ import org.jboss.arquillian.graphene.proxy.Interceptor;
 import org.jboss.arquillian.graphene.proxy.InvocationContext;
 import org.jboss.arquillian.test.spi.annotation.ClassScoped;
 import org.jboss.logging.Logger;
-import org.keycloak.testsuite.util.WaitUtils;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;

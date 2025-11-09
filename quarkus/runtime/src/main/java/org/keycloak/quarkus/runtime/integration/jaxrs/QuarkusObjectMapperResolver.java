@@ -21,8 +21,9 @@ import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.inject.Produces;
 import jakarta.ws.rs.ext.Provider;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.keycloak.services.util.ObjectMapperResolver;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Provider
 @ApplicationScoped

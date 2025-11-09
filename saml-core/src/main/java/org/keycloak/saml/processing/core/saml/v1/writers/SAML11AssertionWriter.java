@@ -49,6 +49,7 @@ import org.keycloak.saml.common.exceptions.ProcessingException;
 import org.keycloak.saml.common.util.StaxUtil;
 import org.keycloak.saml.common.util.StringUtil;
 import org.keycloak.saml.processing.core.saml.v1.SAML11Constants;
+
 import org.w3c.dom.Element;
 
 /**

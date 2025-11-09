@@ -4,7 +4,6 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.util.UUID;
 
-import org.junit.Test;
 import org.keycloak.dom.saml.v2.protocol.ArtifactResponseType;
 import org.keycloak.dom.saml.v2.protocol.ResponseType;
 import org.keycloak.saml.SAML2LoginResponseBuilder;
@@ -16,6 +15,8 @@ import org.keycloak.saml.common.util.DocumentUtil;
 import org.keycloak.saml.common.util.StaxUtil;
 import org.keycloak.saml.processing.core.saml.v2.common.IDGenerator;
 import org.keycloak.saml.processing.core.saml.v2.writers.SAMLResponseWriter;
+
+import org.junit.Test;
 import org.w3c.dom.Document;
 
 import static org.hamcrest.MatcherAssert.assertThat;

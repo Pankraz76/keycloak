@@ -20,13 +20,14 @@ package org.keycloak.testsuite.error;
 import java.net.URI;
 import java.util.List;
 
-import org.hamcrest.CoreMatchers;
-import org.jboss.arquillian.graphene.page.Page;
-import org.junit.Test;
 import org.keycloak.common.util.KeycloakUriBuilder;
 import org.keycloak.representations.idm.RealmRepresentation;
 import org.keycloak.testsuite.AbstractKeycloakTest;
 import org.keycloak.testsuite.pages.ErrorPage;
+
+import org.hamcrest.CoreMatchers;
+import org.jboss.arquillian.graphene.page.Page;
+import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 

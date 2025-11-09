@@ -5,10 +5,11 @@ import java.util.Map;
 import jakarta.ws.rs.core.Cookie;
 import jakarta.ws.rs.core.NewCookie;
 
-import org.jboss.logging.Logger;
 import org.keycloak.models.KeycloakContext;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.utils.SecureContextResolver;
+
+import org.jboss.logging.Logger;
 
 public class DefaultCookieProvider implements CookieProvider {
 

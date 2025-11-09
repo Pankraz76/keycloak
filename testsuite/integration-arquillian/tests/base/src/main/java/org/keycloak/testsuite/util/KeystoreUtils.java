@@ -30,14 +30,15 @@ import java.util.Arrays;
 import java.util.stream.Stream;
 import javax.crypto.SecretKey;
 
-import org.junit.Assume;
-import org.junit.rules.TemporaryFolder;
 import org.keycloak.common.crypto.CryptoIntegration;
 import org.keycloak.common.util.CertificateUtils;
 import org.keycloak.common.util.KeyUtils;
 import org.keycloak.common.util.KeystoreUtil;
 import org.keycloak.common.util.PemUtils;
 import org.keycloak.representations.idm.CertificateRepresentation;
+
+import org.junit.Assume;
+import org.junit.rules.TemporaryFolder;
 
 import static org.junit.Assert.fail;
 

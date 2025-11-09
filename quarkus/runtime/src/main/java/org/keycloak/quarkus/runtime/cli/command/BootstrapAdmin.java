@@ -18,6 +18,7 @@
 package org.keycloak.quarkus.runtime.cli.command;
 
 import org.keycloak.quarkus.runtime.cli.Picocli;
+
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 import picocli.CommandLine.ScopeType;

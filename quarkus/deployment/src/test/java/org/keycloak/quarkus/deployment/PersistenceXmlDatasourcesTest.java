@@ -6,13 +6,6 @@ import java.nio.file.Path;
 import java.util.List;
 import java.util.function.Consumer;
 
-import io.smallrye.config.SmallRyeConfig;
-import org.hibernate.cfg.AvailableSettings;
-import org.hibernate.cfg.JdbcSettings;
-import org.hibernate.jpa.boot.internal.ParsedPersistenceXmlDescriptor;
-import org.hibernate.jpa.boot.spi.PersistenceXmlParser;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
 import org.keycloak.Config;
 import org.keycloak.quarkus.runtime.Environment;
 import org.keycloak.quarkus.runtime.configuration.ConfigArgsConfigSource;
@@ -20,13 +13,22 @@ import org.keycloak.quarkus.runtime.configuration.Configuration;
 import org.keycloak.quarkus.runtime.configuration.KeycloakConfigSourceProvider;
 import org.keycloak.quarkus.runtime.configuration.MicroProfileConfigProvider;
 
+import io.smallrye.config.SmallRyeConfig;
+import org.hibernate.cfg.AvailableSettings;
+import org.hibernate.cfg.JdbcSettings;
+import org.hibernate.jpa.boot.internal.ParsedPersistenceXmlDescriptor;
+import org.hibernate.jpa.boot.spi.PersistenceXmlParser;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+import static org.keycloak.quarkus.deployment.KeycloakProcessor.configurePersistenceUnitProperties;
+import static org.keycloak.quarkus.deployment.KeycloakProcessor.getDatasourceNameFromPersistenceXml;
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.keycloak.quarkus.deployment.KeycloakProcessor.configurePersistenceUnitProperties;
-import static org.keycloak.quarkus.deployment.KeycloakProcessor.getDatasourceNameFromPersistenceXml;
 import static org.wildfly.common.Assert.assertNotNull;
 
 public class PersistenceXmlDatasourcesTest {

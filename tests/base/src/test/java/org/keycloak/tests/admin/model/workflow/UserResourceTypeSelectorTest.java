@@ -5,7 +5,6 @@ import java.util.List;
 
 import jakarta.mail.internet.MimeMessage;
 
-import org.junit.jupiter.api.Test;
 import org.keycloak.common.util.Time;
 import org.keycloak.models.RealmModel;
 import org.keycloak.models.UserModel;
@@ -19,12 +18,15 @@ import org.keycloak.testframework.annotations.KeycloakIntegrationTest;
 import org.keycloak.testframework.mail.MailServer;
 import org.keycloak.testframework.mail.annotations.InjectMailServer;
 
+import org.junit.jupiter.api.Test;
+
+import static org.keycloak.models.workflow.ResourceOperationType.USER_ADDED;
+import static org.keycloak.tests.admin.model.workflow.WorkflowManagementTest.findEmailByRecipient;
+
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.keycloak.models.workflow.ResourceOperationType.USER_ADDED;
-import static org.keycloak.tests.admin.model.workflow.WorkflowManagementTest.findEmailByRecipient;
 
 @KeycloakIntegrationTest(config = WorkflowsBlockingServerConfig.class)
 public class UserResourceTypeSelectorTest extends AbstractWorkflowTest {

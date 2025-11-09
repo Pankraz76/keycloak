@@ -35,6 +35,9 @@ import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.PersistenceUnitTransactionType;
 import jakarta.persistence.ValidationMode;
 
+import org.keycloak.connections.jpa.entityprovider.JpaEntityProvider;
+import org.keycloak.models.KeycloakSession;
+
 import org.hibernate.dialect.Dialect;
 import org.hibernate.engine.jdbc.env.spi.IdentifierHelper;
 import org.hibernate.engine.spi.SessionFactoryImplementor;
@@ -44,8 +47,6 @@ import org.hibernate.jpa.boot.spi.Bootstrap;
 import org.hibernate.jpa.boot.spi.PersistenceUnitDescriptor;
 import org.hibernate.jpa.boot.spi.PersistenceXmlParser;
 import org.jboss.logging.Logger;
-import org.keycloak.connections.jpa.entityprovider.JpaEntityProvider;
-import org.keycloak.models.KeycloakSession;
 
 /**
  * @author <a href="mailto:mposolda@redhat.com">Marek Posolda</a>

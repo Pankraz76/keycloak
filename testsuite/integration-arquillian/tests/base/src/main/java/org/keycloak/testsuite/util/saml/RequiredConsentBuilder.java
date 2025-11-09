@@ -24,6 +24,9 @@ import java.util.List;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.UriBuilder;
 
+import org.keycloak.testsuite.util.SamlClient.Step;
+import org.keycloak.testsuite.util.SamlClientBuilder;
+
 import org.apache.http.NameValuePair;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -36,12 +39,11 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;
-import org.keycloak.testsuite.util.SamlClient.Step;
-import org.keycloak.testsuite.util.SamlClientBuilder;
+
+import static org.keycloak.testsuite.util.Matchers.statusCodeIsHC;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
-import static org.keycloak.testsuite.util.Matchers.statusCodeIsHC;
 
 /**
  * @author hmlnarik

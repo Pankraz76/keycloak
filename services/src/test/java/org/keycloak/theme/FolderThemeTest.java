@@ -23,8 +23,9 @@ import java.util.Set;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
 import static org.keycloak.theme.Theme.Type.LOGIN;
+
+import static org.junit.Assert.*;
 
 public class FolderThemeTest {
 

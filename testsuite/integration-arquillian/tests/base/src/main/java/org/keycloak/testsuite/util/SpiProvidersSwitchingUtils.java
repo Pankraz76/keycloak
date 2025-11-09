@@ -7,13 +7,14 @@ import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
-import org.jboss.arquillian.container.spi.Container;
-import org.jboss.logging.Logger;
 import org.keycloak.testsuite.arquillian.ContainerInfo;
 import org.keycloak.testsuite.arquillian.SuiteContext;
 import org.keycloak.testsuite.arquillian.annotation.SetDefaultProvider;
 import org.keycloak.testsuite.arquillian.containers.AbstractQuarkusDeployableContainer;
 import org.keycloak.utils.StringUtil;
+
+import org.jboss.arquillian.container.spi.Container;
+import org.jboss.logging.Logger;
 
 public class SpiProvidersSwitchingUtils {
 

@@ -6,7 +6,6 @@ import java.util.regex.Pattern;
 
 import jakarta.ws.rs.core.Response;
 
-import org.jboss.logging.Logger;
 import org.keycloak.OAuth2Constants;
 import org.keycloak.OAuthErrorException;
 import org.keycloak.common.util.Base64Url;
@@ -19,6 +18,8 @@ import org.keycloak.jose.jws.crypto.HashUtils;
 import org.keycloak.protocol.oidc.OIDCLoginProtocol;
 import org.keycloak.services.CorsErrorResponseException;
 import org.keycloak.services.cors.Cors;
+
+import org.jboss.logging.Logger;
 
 public class PkceUtils {
 

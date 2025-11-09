@@ -20,7 +20,6 @@ package org.keycloak.testsuite.model.user;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
 
-import org.junit.Test;
 import org.keycloak.cluster.ClusterProvider;
 import org.keycloak.component.ComponentModel;
 import org.keycloak.models.Constants;
@@ -43,12 +42,15 @@ import org.keycloak.testsuite.model.KeycloakModelTest;
 import org.keycloak.testsuite.model.RequireProvider;
 import org.keycloak.testsuite.util.LDAPTestUtils;
 
+import org.junit.Test;
+
+import static org.keycloak.models.LDAPConstants.LDAP_ID;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assume.assumeThat;
-import static org.keycloak.models.LDAPConstants.LDAP_ID;
 
 @RequireProvider(UserProvider.class)
 @RequireProvider(ClusterProvider.class)

@@ -2,9 +2,10 @@ package org.keycloak.testframework.events;
 
 import java.util.List;
 
-import org.jboss.logging.Logger;
 import org.keycloak.representations.idm.EventRepresentation;
 import org.keycloak.testframework.realm.ManagedRealm;
+
+import org.jboss.logging.Logger;
 
 public class Events extends AbstractEvents<EventRepresentation> {
 

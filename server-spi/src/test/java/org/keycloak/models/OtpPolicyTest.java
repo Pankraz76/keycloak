@@ -2,11 +2,12 @@ package org.keycloak.models;
 
 import java.net.URI;
 
+import org.keycloak.models.credential.OTPCredentialModel;
+import org.keycloak.models.utils.HmacOTP;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.keycloak.models.credential.OTPCredentialModel;
-import org.keycloak.models.utils.HmacOTP;
 
 public class OtpPolicyTest {
 

@@ -13,12 +13,13 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.keycloak.common.Profile;
+import org.keycloak.testframework.infinispan.CacheType;
+
 import io.quarkus.maven.dependency.Dependency;
 import io.quarkus.maven.dependency.DependencyBuilder;
 import io.smallrye.config.SmallRyeConfig;
 import org.eclipse.microprofile.config.spi.ConfigSource;
-import org.keycloak.common.Profile;
-import org.keycloak.testframework.infinispan.CacheType;
 
 public class KeycloakServerConfigBuilder {
 

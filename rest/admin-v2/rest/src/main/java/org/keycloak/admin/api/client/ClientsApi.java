@@ -12,13 +12,14 @@ import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.MediaType;
 
-import org.eclipse.microprofile.openapi.annotations.Operation;
-import org.eclipse.microprofile.openapi.annotations.extensions.Extension;
-import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 import org.keycloak.admin.api.FieldValidation;
 import org.keycloak.provider.Provider;
 import org.keycloak.representations.admin.v2.ClientRepresentation;
 import org.keycloak.services.resources.KeycloakOpenAPI;
+
+import org.eclipse.microprofile.openapi.annotations.Operation;
+import org.eclipse.microprofile.openapi.annotations.extensions.Extension;
+import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
 @Tag(name = KeycloakOpenAPI.Admin.Tags.CLIENTS_V2)
 @Extension(name = KeycloakOpenAPI.Profiles.ADMIN, value = "")

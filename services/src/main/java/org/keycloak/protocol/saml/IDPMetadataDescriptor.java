@@ -41,6 +41,7 @@ import org.keycloak.saml.common.exceptions.ConfigurationException;
 import org.keycloak.saml.common.exceptions.ParsingException;
 import org.keycloak.saml.common.exceptions.ProcessingException;
 import org.keycloak.saml.processing.core.saml.v2.util.SAMLMetadataUtil;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 

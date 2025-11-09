@@ -25,12 +25,13 @@ import javax.security.auth.callback.NameCallback;
 import javax.security.auth.callback.UnsupportedCallbackException;
 import javax.security.auth.login.LoginException;
 
+import org.keycloak.adapters.spi.KeycloakAccount;
+
 import org.jboss.logging.Logger;
 import org.jboss.security.SimpleGroup;
 import org.jboss.security.SimplePrincipal;
 import org.jboss.security.auth.callback.ObjectCallback;
 import org.jboss.security.auth.spi.AbstractServerLoginModule;
-import org.keycloak.adapters.spi.KeycloakAccount;
 
 /**
  * @author <a href="mailto:bill@burkecentral.com">Bill Burke</a>

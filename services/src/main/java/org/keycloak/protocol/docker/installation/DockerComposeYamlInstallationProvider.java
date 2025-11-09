@@ -13,7 +13,6 @@ import java.util.zip.ZipOutputStream;
 
 import jakarta.ws.rs.core.Response;
 
-import org.jboss.logging.Logger;
 import org.keycloak.Config;
 import org.keycloak.models.ClientModel;
 import org.keycloak.models.KeycloakSession;
@@ -22,6 +21,8 @@ import org.keycloak.models.RealmModel;
 import org.keycloak.protocol.ClientInstallationProvider;
 import org.keycloak.protocol.docker.DockerAuthV2Protocol;
 import org.keycloak.protocol.docker.installation.compose.DockerComposeZipContent;
+
+import org.jboss.logging.Logger;
 
 public class DockerComposeYamlInstallationProvider implements ClientInstallationProvider {
     private static Logger log = Logger.getLogger(DockerComposeYamlInstallationProvider.class);

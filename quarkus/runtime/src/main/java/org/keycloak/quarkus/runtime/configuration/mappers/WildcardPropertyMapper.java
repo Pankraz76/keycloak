@@ -11,10 +11,11 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import io.smallrye.config.ConfigValue;
 import org.keycloak.config.LoggingOptions;
 import org.keycloak.config.Option;
 import org.keycloak.quarkus.runtime.cli.command.AbstractCommand;
+
+import io.smallrye.config.ConfigValue;
 
 import static org.keycloak.config.WildcardOptionsUtil.WILDCARD_END;
 import static org.keycloak.config.WildcardOptionsUtil.getWildcardNamedKey;

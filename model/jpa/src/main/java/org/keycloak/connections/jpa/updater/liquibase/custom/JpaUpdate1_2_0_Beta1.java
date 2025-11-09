@@ -23,17 +23,18 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
-import liquibase.exception.CustomChangeException;
-import liquibase.exception.DatabaseException;
-import liquibase.statement.core.InsertStatement;
-import liquibase.statement.core.UpdateStatement;
-import liquibase.structure.core.Table;
 import org.keycloak.Config;
 import org.keycloak.migration.MigrationProvider;
 import org.keycloak.models.AdminRoles;
 import org.keycloak.models.ClaimMask;
 import org.keycloak.models.utils.KeycloakModelUtils;
 import org.keycloak.representations.idm.ProtocolMapperRepresentation;
+
+import liquibase.exception.CustomChangeException;
+import liquibase.exception.DatabaseException;
+import liquibase.statement.core.InsertStatement;
+import liquibase.statement.core.UpdateStatement;
+import liquibase.structure.core.Table;
 
 /**
  * @author <a href="mailto:mposolda@redhat.com">Marek Posolda</a>

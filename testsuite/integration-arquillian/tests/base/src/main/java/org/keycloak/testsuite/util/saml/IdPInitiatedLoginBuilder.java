@@ -19,14 +19,15 @@ package org.keycloak.testsuite.util.saml;
 import java.net.URI;
 import java.util.function.Supplier;
 
+import org.keycloak.saml.common.constants.GeneralConstants;
+import org.keycloak.testsuite.util.SamlClient.Step;
+import org.keycloak.testsuite.util.SamlClientBuilder;
+
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.client.protocol.HttpClientContext;
 import org.apache.http.impl.client.CloseableHttpClient;
-import org.keycloak.saml.common.constants.GeneralConstants;
-import org.keycloak.testsuite.util.SamlClient.Step;
-import org.keycloak.testsuite.util.SamlClientBuilder;
 
 
 /**

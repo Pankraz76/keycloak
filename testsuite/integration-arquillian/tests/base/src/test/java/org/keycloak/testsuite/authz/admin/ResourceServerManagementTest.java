@@ -22,7 +22,6 @@ import java.util.Objects;
 
 import jakarta.ws.rs.NotFoundException;
 
-import org.junit.Test;
 import org.keycloak.admin.client.resource.AuthorizationResource;
 import org.keycloak.admin.client.resource.ClientsResource;
 import org.keycloak.models.utils.KeycloakModelUtils;
@@ -35,6 +34,8 @@ import org.keycloak.representations.idm.authorization.ResourceServerRepresentati
 import org.keycloak.representations.idm.authorization.ScopeRepresentation;
 import org.keycloak.testsuite.util.ClientBuilder;
 import org.keycloak.util.JsonSerialization;
+
+import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

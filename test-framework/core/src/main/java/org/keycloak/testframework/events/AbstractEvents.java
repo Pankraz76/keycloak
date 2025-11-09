@@ -7,10 +7,11 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-import org.jboss.logging.Logger;
-import org.junit.jupiter.api.Assertions;
 import org.keycloak.common.util.Time;
 import org.keycloak.testframework.realm.ManagedRealm;
+
+import org.jboss.logging.Logger;
+import org.junit.jupiter.api.Assertions;
 
 public abstract class AbstractEvents<R> {
 

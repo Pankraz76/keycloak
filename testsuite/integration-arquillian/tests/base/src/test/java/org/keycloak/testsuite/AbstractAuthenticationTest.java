@@ -19,14 +19,15 @@ package org.keycloak.testsuite;
 
 import java.util.List;
 
-import org.junit.Before;
-import org.junit.Rule;
 import org.keycloak.admin.client.resource.AuthenticationManagementResource;
 import org.keycloak.admin.client.resource.RealmResource;
 import org.keycloak.representations.idm.AuthenticationFlowRepresentation;
 import org.keycloak.representations.idm.RealmRepresentation;
 import org.keycloak.testsuite.util.AssertAdminEvents;
 import org.keycloak.testsuite.util.RealmBuilder;
+
+import org.junit.Before;
+import org.junit.Rule;
 
 
 /**

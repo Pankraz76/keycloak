@@ -21,8 +21,9 @@ import java.util.Set;
 
 import jakarta.ws.rs.core.MultivaluedMap;
 
-import org.jboss.logging.Logger;
 import org.keycloak.models.KeycloakSession;
+
+import org.jboss.logging.Logger;
 
 /**
  * Parse the parameters from request queryString

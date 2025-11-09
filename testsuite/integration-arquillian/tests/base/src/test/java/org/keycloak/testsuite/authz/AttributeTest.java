@@ -23,9 +23,10 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.function.Consumer;
 
+import org.keycloak.authorization.attribute.Attributes;
+
 import org.apache.commons.collections.map.HashedMap;
 import org.junit.Test;
-import org.keycloak.authorization.attribute.Attributes;
 
 import static java.util.Arrays.asList;
 

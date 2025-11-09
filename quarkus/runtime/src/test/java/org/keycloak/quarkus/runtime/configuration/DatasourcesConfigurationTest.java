@@ -5,6 +5,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
+import org.keycloak.quarkus.runtime.Environment;
+
 import io.smallrye.config.Expressions;
 import io.smallrye.config.SmallRyeConfig;
 import org.h2.jdbcx.JdbcDataSource;
@@ -12,7 +14,6 @@ import org.hibernate.dialect.H2Dialect;
 import org.hibernate.dialect.MariaDBDialect;
 import org.hibernate.dialect.PostgreSQLDialect;
 import org.junit.Test;
-import org.keycloak.quarkus.runtime.Environment;
 import org.mariadb.jdbc.MariaDbDataSource;
 import org.postgresql.xa.PGXADataSource;
 

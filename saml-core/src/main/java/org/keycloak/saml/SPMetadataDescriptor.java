@@ -37,6 +37,7 @@ import org.keycloak.dom.saml.v2.metadata.KeyTypes;
 import org.keycloak.dom.saml.v2.metadata.SPSSODescriptorType;
 import org.keycloak.dom.xmlsec.w3.xmlenc.EncryptionMethodType;
 import org.keycloak.saml.processing.core.saml.v2.common.IDGenerator;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 

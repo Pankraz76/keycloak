@@ -17,9 +17,10 @@
 
 package org.keycloak.jose.jwk;
 
+import org.keycloak.crypto.KeyType;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.keycloak.crypto.KeyType;
 
 /**
  * @author <a href="mailto:takashi.norimatsu.ws@hitachi.com">Takashi Norimatsu</a>

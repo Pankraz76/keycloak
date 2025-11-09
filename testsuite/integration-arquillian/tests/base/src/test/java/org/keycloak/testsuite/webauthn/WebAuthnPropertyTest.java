@@ -21,7 +21,6 @@ import java.io.Closeable;
 import java.io.IOException;
 import java.util.Objects;
 
-import org.junit.Test;
 import org.keycloak.WebAuthnConstants;
 import org.keycloak.models.Constants;
 import org.keycloak.models.credential.WebAuthnCredentialModel;
@@ -30,15 +29,18 @@ import org.keycloak.representations.idm.UserRepresentation;
 import org.keycloak.testsuite.arquillian.annotation.IgnoreBrowserDriver;
 import org.keycloak.testsuite.util.WaitUtils;
 import org.keycloak.testsuite.webauthn.utils.WebAuthnRealmData;
+
+import org.junit.Test;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import static org.keycloak.testsuite.webauthn.authenticators.DefaultVirtualAuthOptions.DEFAULT;
+import static org.keycloak.testsuite.webauthn.authenticators.DefaultVirtualAuthOptions.DEFAULT_RESIDENT_KEY;
+import static org.keycloak.testsuite.webauthn.utils.PropertyRequirement.YES;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.keycloak.testsuite.webauthn.authenticators.DefaultVirtualAuthOptions.DEFAULT;
-import static org.keycloak.testsuite.webauthn.authenticators.DefaultVirtualAuthOptions.DEFAULT_RESIDENT_KEY;
-import static org.keycloak.testsuite.webauthn.utils.PropertyRequirement.YES;
 
 /**
  * @author <a href="mailto:mabartos@redhat.com">Martin Bartos</a>

@@ -24,9 +24,10 @@ import jakarta.ws.rs.core.HttpHeaders;
 import jakarta.ws.rs.core.NewCookie;
 import jakarta.ws.rs.ext.RuntimeDelegate;
 
+import org.keycloak.http.HttpResponse;
+
 import org.jboss.resteasy.reactive.server.core.ResteasyReactiveRequestContext;
 import org.jboss.resteasy.reactive.server.vertx.VertxResteasyReactiveRequestContext;
-import org.keycloak.http.HttpResponse;
 
 public final class QuarkusHttpResponse implements HttpResponse {
 

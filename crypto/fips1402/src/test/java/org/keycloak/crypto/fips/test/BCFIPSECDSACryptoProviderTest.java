@@ -27,10 +27,6 @@ import java.security.spec.ECGenParameterSpec;
 import java.util.Arrays;
 import java.util.Collection;
 
-import org.junit.ClassRule;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 import org.keycloak.common.crypto.CryptoIntegration;
 import org.keycloak.crypto.Algorithm;
 import org.keycloak.crypto.fips.BCFIPSECDSACryptoProvider;
@@ -38,6 +34,11 @@ import org.keycloak.keys.AbstractEcKeyProviderFactory;
 import org.keycloak.keys.GeneratedEcdhKeyProviderFactory;
 import org.keycloak.keys.GeneratedEcdsaKeyProviderFactory;
 import org.keycloak.rule.CryptoInitRule;
+
+import org.junit.ClassRule;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 
 import static org.junit.Assert.assertEquals;
 

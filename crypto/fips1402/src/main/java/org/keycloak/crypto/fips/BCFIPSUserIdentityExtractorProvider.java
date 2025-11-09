@@ -29,6 +29,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
 
+import org.keycloak.common.crypto.UserIdentityExtractor;
+import org.keycloak.common.crypto.UserIdentityExtractorProvider;
+
 import org.bouncycastle.asn1.ASN1Encodable;
 import org.bouncycastle.asn1.ASN1InputStream;
 import org.bouncycastle.asn1.ASN1ObjectIdentifier;
@@ -41,8 +44,6 @@ import org.bouncycastle.asn1.x500.X500Name;
 import org.bouncycastle.asn1.x500.style.BCStyle;
 import org.bouncycastle.asn1.x500.style.IETFUtils;
 import org.jboss.logging.Logger;
-import org.keycloak.common.crypto.UserIdentityExtractor;
-import org.keycloak.common.crypto.UserIdentityExtractorProvider;
 
 /**
  * @author <a href="mailto:pnalyvayko@agi.com">Peter Nalyvayko</a>

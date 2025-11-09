@@ -31,9 +31,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.keycloak.common.util.Base64Url;
 import org.keycloak.common.util.MultivaluedMap;
 import org.keycloak.crypto.KeyType;
@@ -82,8 +79,13 @@ import org.keycloak.testsuite.services.clientpolicy.executor.TestRaiseExceptionE
 import org.keycloak.util.DPoPGenerator;
 import org.keycloak.util.JsonSerialization;
 
-import static org.junit.Assert.fail;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import static org.keycloak.jose.jwk.JWKUtil.toIntegerBytes;
+
+import static org.junit.Assert.fail;
 
 public final class ClientPoliciesUtil {
 

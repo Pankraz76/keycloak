@@ -20,10 +20,11 @@ package org.keycloak.testsuite.account.custom;
 import java.util.List;
 import java.util.function.Function;
 
-import org.junit.Before;
 import org.keycloak.admin.client.resource.AuthenticationManagementResource;
 import org.keycloak.models.AuthenticationExecutionModel;
 import org.keycloak.representations.idm.AuthenticationExecutionInfoRepresentation;
+
+import org.junit.Before;
 
 /**
  *

@@ -6,10 +6,11 @@ import java.nio.file.Path;
 import java.util.Set;
 import java.util.concurrent.TimeoutException;
 
-import io.quarkus.maven.dependency.Dependency;
 import org.keycloak.Keycloak;
 import org.keycloak.common.Version;
 import org.keycloak.platform.Platform;
+
+import io.quarkus.maven.dependency.Dependency;
 
 public class EmbeddedKeycloakServer implements KeycloakServer {
 

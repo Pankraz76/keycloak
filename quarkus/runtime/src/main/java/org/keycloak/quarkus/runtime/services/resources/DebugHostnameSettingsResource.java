@@ -40,7 +40,6 @@ import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.ext.Provider;
 
-import io.quarkus.resteasy.reactive.server.EndpointDisabled;
 import org.keycloak.common.util.UriUtils;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.RealmModel;
@@ -54,6 +53,8 @@ import org.keycloak.theme.Theme;
 import org.keycloak.theme.freemarker.FreeMarkerProvider;
 import org.keycloak.urls.UrlType;
 import org.keycloak.utils.SecureContextResolver;
+
+import io.quarkus.resteasy.reactive.server.EndpointDisabled;
 
 @Provider
 @Path("/realms")

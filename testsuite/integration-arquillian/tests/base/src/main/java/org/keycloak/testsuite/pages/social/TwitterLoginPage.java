@@ -20,6 +20,7 @@ package org.keycloak.testsuite.pages.social;
 import java.util.List;
 
 import org.keycloak.testsuite.util.WaitUtils;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;

@@ -21,9 +21,6 @@ import java.util.List;
 
 import jakarta.ws.rs.core.Response;
 
-import org.junit.Assert;
-import org.junit.ClassRule;
-import org.junit.Test;
 import org.keycloak.events.Details;
 import org.keycloak.federation.kerberos.CommonKerberosConfig;
 import org.keycloak.models.KeycloakSessionFactory;
@@ -49,6 +46,10 @@ import org.keycloak.testsuite.util.KerberosRule;
 import org.keycloak.testsuite.util.LDAPTestUtils;
 import org.keycloak.testsuite.util.TestAppHelper;
 import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
+
+import org.junit.Assert;
+import org.junit.ClassRule;
+import org.junit.Test;
 
 import static org.keycloak.common.constants.KerberosConstants.KERBEROS_PRINCIPAL;
 

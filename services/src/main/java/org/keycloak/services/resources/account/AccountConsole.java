@@ -20,7 +20,6 @@ import jakarta.ws.rs.PathParam;
 import jakarta.ws.rs.core.MultivaluedMap;
 import jakarta.ws.rs.core.Response;
 
-import org.jboss.resteasy.reactive.NoCache;
 import org.keycloak.authentication.requiredactions.DeleteAccount;
 import org.keycloak.authentication.requiredactions.UpdateEmail;
 import org.keycloak.common.Profile;
@@ -56,6 +55,8 @@ import org.keycloak.urls.UrlType;
 import org.keycloak.util.JsonSerialization;
 import org.keycloak.utils.MediaType;
 import org.keycloak.utils.SecureContextResolver;
+
+import org.jboss.resteasy.reactive.NoCache;
 
 /**
  * Created by st on 29/03/17.

@@ -20,9 +20,10 @@ package org.keycloak.test;
 import java.util.Arrays;
 import java.util.Collections;
 
+import org.keycloak.protocol.oidc.utils.OIDCResponseType;
+
 import org.junit.Assert;
 import org.junit.Test;
-import org.keycloak.protocol.oidc.utils.OIDCResponseType;
 
 /**
  * @author <a href="mailto:mposolda@redhat.com">Marek Posolda</a>

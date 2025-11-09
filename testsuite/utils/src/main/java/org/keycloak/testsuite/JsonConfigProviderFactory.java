@@ -22,13 +22,14 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import org.jboss.logging.Logger;
 import org.keycloak.Config;
 import org.keycloak.config.ConfigProviderFactory;
 import org.keycloak.services.ServicesLogger;
 import org.keycloak.util.JsonSerialization;
 import org.keycloak.utils.JsonConfigProvider;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import org.jboss.logging.Logger;
 
 public class JsonConfigProviderFactory implements ConfigProviderFactory {
 

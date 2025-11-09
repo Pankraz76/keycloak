@@ -11,12 +11,13 @@ import java.util.concurrent.Executors;
 import java.util.function.Consumer;
 import java.util.stream.IntStream;
 
+import org.keycloak.common.Version;
+import org.keycloak.it.junit5.extension.CLIResult;
+
 import com.github.dockerjava.api.DockerClient;
 import com.github.dockerjava.api.exception.NotFoundException;
 import io.restassured.RestAssured;
 import org.jboss.logging.Logger;
-import org.keycloak.common.Version;
-import org.keycloak.it.junit5.extension.CLIResult;
 import org.testcontainers.DockerClientFactory;
 import org.testcontainers.containers.GenericContainer;
 import org.testcontainers.containers.output.OutputFrame;

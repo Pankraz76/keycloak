@@ -28,6 +28,7 @@ import jakarta.ws.rs.core.UriBuilder;
 
 import org.keycloak.testsuite.page.AbstractPageWithInjectedUrl;
 import org.keycloak.testsuite.util.WaitUtils;
+
 import org.openqa.selenium.By;
 
 import static org.keycloak.testsuite.util.WaitUtils.waitForPageToLoad;

@@ -20,11 +20,12 @@ import java.util.List;
 
 import jakarta.ws.rs.core.Response;
 
-import org.junit.Assert;
-import org.junit.Test;
 import org.keycloak.representations.idm.RealmRepresentation;
 import org.keycloak.testsuite.AbstractKeycloakTest;
 import org.keycloak.testsuite.arquillian.annotation.AuthServerContainerExclude;
+
+import org.junit.Assert;
+import org.junit.Test;
 
 /**
  * @author Réda Housni Alaoui

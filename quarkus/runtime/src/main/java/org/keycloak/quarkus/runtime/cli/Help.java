@@ -26,6 +26,7 @@ import org.keycloak.config.OptionCategory;
 import org.keycloak.quarkus.runtime.configuration.mappers.PropertyMapper;
 import org.keycloak.quarkus.runtime.configuration.mappers.PropertyMappers;
 import org.keycloak.utils.StringUtil;
+
 import picocli.CommandLine;
 import picocli.CommandLine.Model.ArgGroupSpec;
 import picocli.CommandLine.Model.OptionSpec;
@@ -33,6 +34,7 @@ import picocli.CommandLine.Model.OptionSpec;
 import static org.keycloak.quarkus.runtime.cli.OptionRenderer.undecorateDuplicitOptionName;
 import static org.keycloak.quarkus.runtime.configuration.mappers.PropertyMappers.getMapper;
 import static org.keycloak.utils.StringUtil.removeSuffix;
+
 import static picocli.CommandLine.Help.Column.Overflow.SPAN;
 import static picocli.CommandLine.Help.Column.Overflow.WRAP;
 

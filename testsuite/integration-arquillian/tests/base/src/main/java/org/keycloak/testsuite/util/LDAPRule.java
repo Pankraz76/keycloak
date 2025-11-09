@@ -26,13 +26,14 @@ import java.lang.annotation.Target;
 import java.util.Map;
 import java.util.Properties;
 
+import org.keycloak.models.LDAPConstants;
+import org.keycloak.util.ldap.LDAPEmbeddedServer;
+
 import org.jboss.logging.Logger;
 import org.junit.Assume;
 import org.junit.rules.ExternalResource;
 import org.junit.runner.Description;
 import org.junit.runners.model.Statement;
-import org.keycloak.models.LDAPConstants;
-import org.keycloak.util.ldap.LDAPEmbeddedServer;
 
 import static org.keycloak.testsuite.utils.io.IOUtil.PROJECT_BUILD_DIRECTORY;
 

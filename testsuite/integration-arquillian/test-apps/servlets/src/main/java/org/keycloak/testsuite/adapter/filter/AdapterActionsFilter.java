@@ -25,8 +25,9 @@ import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-import org.jboss.logging.Logger;
 import org.keycloak.common.util.Time;
+
+import org.jboss.logging.Logger;
 
 /**
  * Filter to handle "special" requests to perform actions on adapter side (for example setting time offset )

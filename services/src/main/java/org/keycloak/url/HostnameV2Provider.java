@@ -23,11 +23,12 @@ import java.util.Optional;
 import jakarta.ws.rs.core.UriBuilder;
 import jakarta.ws.rs.core.UriInfo;
 
-import org.jboss.logging.Logger;
 import org.keycloak.common.enums.SslRequired;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.urls.HostnameProvider;
 import org.keycloak.urls.UrlType;
+
+import org.jboss.logging.Logger;
 
 import static org.keycloak.common.util.UriUtils.checkUrl;
 import static org.keycloak.urls.UrlType.FRONTEND;

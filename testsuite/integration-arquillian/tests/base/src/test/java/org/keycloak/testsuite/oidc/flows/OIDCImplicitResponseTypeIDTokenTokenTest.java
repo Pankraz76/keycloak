@@ -20,14 +20,15 @@ package org.keycloak.testsuite.oidc.flows;
 import java.util.Collections;
 import java.util.List;
 
-import org.junit.Before;
-import org.junit.Test;
 import org.keycloak.events.Details;
 import org.keycloak.protocol.oidc.utils.OIDCResponseType;
 import org.keycloak.representations.IDToken;
 import org.keycloak.representations.idm.EventRepresentation;
 import org.keycloak.testsuite.Assert;
 import org.keycloak.testsuite.util.oauth.AuthorizationEndpointResponse;
+
+import org.junit.Before;
+import org.junit.Test;
 
 /**
  * Tests with response_type=id_token token

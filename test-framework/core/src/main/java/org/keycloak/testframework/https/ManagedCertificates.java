@@ -15,12 +15,13 @@ import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import javax.net.ssl.SSLContext;
 
-import org.apache.http.ssl.SSLContextBuilder;
-import org.jboss.logging.Logger;
 import org.keycloak.common.crypto.CryptoIntegration;
 import org.keycloak.common.crypto.CryptoProvider;
 import org.keycloak.common.util.KeystoreUtil;
 import org.keycloak.crypto.def.DefaultCryptoProvider;
+
+import org.apache.http.ssl.SSLContextBuilder;
+import org.jboss.logging.Logger;
 
 public class ManagedCertificates {
 

@@ -25,16 +25,17 @@ import java.util.Map;
 import java.util.Optional;
 import javax.net.ssl.SSLPeerUnverifiedException;
 
+import org.keycloak.models.KeycloakSession;
+import org.keycloak.services.resteasy.ResteasyKeycloakSession;
+import org.keycloak.services.resteasy.ResteasyKeycloakSessionFactory;
+import org.keycloak.utils.ScopeUtil;
+
 import org.apache.http.HttpStatus;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.junit.Assume;
 import org.junit.Test;
-import org.keycloak.models.KeycloakSession;
-import org.keycloak.services.resteasy.ResteasyKeycloakSession;
-import org.keycloak.services.resteasy.ResteasyKeycloakSessionFactory;
-import org.keycloak.utils.ScopeUtil;
 
 import static org.junit.Assert.assertEquals;
 

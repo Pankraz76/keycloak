@@ -19,8 +19,6 @@ package org.keycloak.services.clientpolicy.condition;
 
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonAlias;
-import org.jboss.logging.Logger;
 import org.keycloak.OAuth2Constants;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.protocol.oidc.utils.OIDCResponseType;
@@ -29,6 +27,9 @@ import org.keycloak.services.clientpolicy.ClientPolicyContext;
 import org.keycloak.services.clientpolicy.ClientPolicyException;
 import org.keycloak.services.clientpolicy.ClientPolicyVote;
 import org.keycloak.services.clientpolicy.context.AuthorizationRequestContext;
+
+import com.fasterxml.jackson.annotation.JsonAlias;
+import org.jboss.logging.Logger;
 
 /**
  * @author <a href="mailto:ggrazian@redhat.com">Giuseppe Graziano/a>

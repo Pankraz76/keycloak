@@ -19,7 +19,6 @@ package org.keycloak.quarkus.runtime.tracing;
 
 import jakarta.enterprise.inject.spi.CDI;
 
-import io.opentelemetry.api.OpenTelemetry;
 import org.keycloak.Config;
 import org.keycloak.common.Profile;
 import org.keycloak.config.TracingOptions;
@@ -28,6 +27,8 @@ import org.keycloak.models.KeycloakSessionFactory;
 import org.keycloak.quarkus.runtime.configuration.Configuration;
 import org.keycloak.tracing.TracingProvider;
 import org.keycloak.tracing.TracingProviderFactory;
+
+import io.opentelemetry.api.OpenTelemetry;
 
 public class OTelTracingProviderFactory implements TracingProviderFactory {
     public static final String PROVIDER_ID = "opentelemetry";

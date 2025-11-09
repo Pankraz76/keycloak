@@ -19,6 +19,7 @@ package org.keycloak.testsuite.auth.page.login;
 import jakarta.ws.rs.core.UriBuilder;
 
 import org.keycloak.testsuite.util.URLUtils;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 

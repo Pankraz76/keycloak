@@ -23,13 +23,14 @@ import java.util.List;
 
 import jakarta.ws.rs.core.Response;
 
-import org.jboss.logging.Logger;
 import org.keycloak.OAuth2Constants;
 import org.keycloak.authentication.AuthenticationFlowError;
 import org.keycloak.authentication.ClientAuthenticationFlowContext;
 import org.keycloak.models.ClientModel;
 import org.keycloak.models.RealmModel;
 import org.keycloak.representations.JsonWebToken;
+
+import org.jboss.logging.Logger;
 
 /**
  * Common validation for JWT client authentication with private_key_jwt or with client_secret

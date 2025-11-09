@@ -18,6 +18,7 @@
 package org.keycloak.quarkus.runtime.cli.command;
 
 import org.keycloak.quarkus.runtime.cli.Help;
+
 import picocli.CommandLine;
 
 public final class HelpAllMixin {

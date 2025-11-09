@@ -24,8 +24,9 @@ import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.ext.ExceptionMapper;
 import jakarta.ws.rs.ext.Provider;
 
-import com.fasterxml.jackson.databind.exc.MismatchedInputException;
 import org.keycloak.models.KeycloakSession;
+
+import com.fasterxml.jackson.databind.exc.MismatchedInputException;
 
 /**
  * Override explicitly added ExceptionMapper for handling {@link MismatchedInputException} in RestEasy Jackson

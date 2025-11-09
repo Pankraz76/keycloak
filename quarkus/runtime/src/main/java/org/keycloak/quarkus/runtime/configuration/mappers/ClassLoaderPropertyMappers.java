@@ -2,10 +2,11 @@ package org.keycloak.quarkus.runtime.configuration.mappers;
 
 import java.util.List;
 
-import io.smallrye.config.ConfigSourceInterceptorContext;
 import org.keycloak.config.ClassLoaderOptions;
 import org.keycloak.quarkus.runtime.Environment;
 import org.keycloak.quarkus.runtime.configuration.IgnoredArtifacts;
+
+import io.smallrye.config.ConfigSourceInterceptorContext;
 
 import static org.keycloak.config.ClassLoaderOptions.QUARKUS_REMOVED_ARTIFACTS_PROPERTY;
 import static org.keycloak.quarkus.runtime.configuration.mappers.PropertyMapper.fromOption;

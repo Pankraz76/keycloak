@@ -20,10 +20,11 @@ package org.keycloak.quarkus.runtime.configuration;
 import java.util.HashMap;
 import java.util.Map;
 
-import io.quarkus.opentelemetry.runtime.config.build.SamplerType;
-import org.junit.Test;
 import org.keycloak.config.LoggingOptions;
 import org.keycloak.config.TracingOptions;
+
+import io.quarkus.opentelemetry.runtime.config.build.SamplerType;
+import org.junit.Test;
 
 public class TracingConfigurationTest extends AbstractConfigurationTest {
 

@@ -12,7 +12,6 @@ import java.util.stream.Stream;
 
 import jakarta.ws.rs.BadRequestException;
 
-import org.jboss.logging.Logger;
 import org.keycloak.common.util.MultivaluedHashMap;
 import org.keycloak.component.ComponentFactory;
 import org.keycloak.component.ComponentModel;
@@ -25,6 +24,8 @@ import org.keycloak.representations.workflows.WorkflowConstants;
 import org.keycloak.representations.workflows.WorkflowRepresentation;
 import org.keycloak.representations.workflows.WorkflowStepRepresentation;
 import org.keycloak.utils.StringUtil;
+
+import org.jboss.logging.Logger;
 
 import static java.util.Optional.ofNullable;
 

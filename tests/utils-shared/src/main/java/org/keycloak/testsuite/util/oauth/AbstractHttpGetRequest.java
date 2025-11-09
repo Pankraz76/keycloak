@@ -2,9 +2,10 @@ package org.keycloak.testsuite.util.oauth;
 
 import java.io.IOException;
 
+import org.keycloak.utils.MediaType;
+
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
-import org.keycloak.utils.MediaType;
 
 public abstract class AbstractHttpGetRequest<R> {
 

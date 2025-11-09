@@ -16,10 +16,11 @@
  */
 package org.keycloak.adapters.saml.elytron.infinispan;
 
-import org.infinispan.Cache;
-import org.jboss.logging.Logger;
 import org.keycloak.adapters.spi.SessionIdMapper;
 import org.keycloak.adapters.spi.SessionIdMapperUpdater;
+
+import org.infinispan.Cache;
+import org.jboss.logging.Logger;
 
 /**
  *

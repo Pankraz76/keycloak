@@ -6,10 +6,11 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.ext.Provider;
 
-import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.keycloak.common.Profile;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.services.resources.admin.AdminCorsPreflightService;
+
+import org.eclipse.microprofile.openapi.annotations.Operation;
 
 @Provider
 @Path("admin/api")

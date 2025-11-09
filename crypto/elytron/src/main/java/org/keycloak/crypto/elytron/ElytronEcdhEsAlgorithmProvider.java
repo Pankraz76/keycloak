@@ -37,10 +37,6 @@ import javax.crypto.Cipher;
 import javax.crypto.KeyAgreement;
 import javax.crypto.spec.SecretKeySpec;
 
-import org.jose4j.jwe.kdf.ConcatKeyDerivationFunction;
-import org.jose4j.keys.EcKeyUtil;
-import org.jose4j.keys.EllipticCurves;
-import org.jose4j.lang.JoseException;
 import org.keycloak.common.util.Base64Url;
 import org.keycloak.crypto.Algorithm;
 import org.keycloak.crypto.KeyType;
@@ -51,6 +47,11 @@ import org.keycloak.jose.jwe.alg.JWEAlgorithmProvider;
 import org.keycloak.jose.jwe.enc.JWEEncryptionProvider;
 import org.keycloak.jose.jwk.ECPublicJWK;
 import org.keycloak.jose.jwk.JWKUtil;
+
+import org.jose4j.jwe.kdf.ConcatKeyDerivationFunction;
+import org.jose4j.keys.EcKeyUtil;
+import org.jose4j.keys.EllipticCurves;
+import org.jose4j.lang.JoseException;
 
 /**
  * ECDH Ephemeral Static Algorithm Provider.

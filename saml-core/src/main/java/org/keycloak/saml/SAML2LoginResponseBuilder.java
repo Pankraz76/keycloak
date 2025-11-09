@@ -43,6 +43,7 @@ import org.keycloak.saml.processing.core.saml.v2.holders.IssuerInfoHolder;
 import org.keycloak.saml.processing.core.saml.v2.holders.SPInfoHolder;
 import org.keycloak.saml.processing.core.saml.v2.util.StatementUtil;
 import org.keycloak.saml.processing.core.saml.v2.util.XMLTimeUtil;
+
 import org.w3c.dom.Document;
 
 import static org.keycloak.saml.common.util.StringUtil.isNotNull;

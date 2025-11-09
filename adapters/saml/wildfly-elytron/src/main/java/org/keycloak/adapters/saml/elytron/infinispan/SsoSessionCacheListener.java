@@ -19,6 +19,8 @@ package org.keycloak.adapters.saml.elytron.infinispan;
 import java.util.Queue;
 import java.util.concurrent.*;
 
+import org.keycloak.adapters.spi.SessionIdMapper;
+
 import org.infinispan.Cache;
 import org.infinispan.client.hotrod.annotation.ClientCacheEntryCreated;
 import org.infinispan.client.hotrod.annotation.ClientCacheEntryRemoved;
@@ -34,7 +36,6 @@ import org.infinispan.notifications.cachemanagerlistener.annotation.CacheStopped
 import org.infinispan.notifications.cachemanagerlistener.event.CacheStartedEvent;
 import org.infinispan.notifications.cachemanagerlistener.event.CacheStoppedEvent;
 import org.jboss.logging.Logger;
-import org.keycloak.adapters.spi.SessionIdMapper;
 
 /**
  *

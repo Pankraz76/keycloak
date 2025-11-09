@@ -24,6 +24,10 @@ import java.util.List;
 import javax.xml.stream.XMLOutputFactory;
 import javax.xml.stream.XMLStreamException;
 
+import org.keycloak.adapters.saml.AdapterConstants;
+import org.keycloak.adapters.saml.elytron.KeycloakConfigurationServletListener;
+import org.keycloak.subsystem.adapter.saml.extension.logging.KeycloakLogger;
+
 import org.jboss.as.server.deployment.DeploymentPhaseContext;
 import org.jboss.as.server.deployment.DeploymentUnit;
 import org.jboss.as.server.deployment.DeploymentUnitProcessingException;
@@ -36,9 +40,6 @@ import org.jboss.metadata.web.spec.ListenerMetaData;
 import org.jboss.metadata.web.spec.LoginConfigMetaData;
 import org.jboss.staxmapper.FormattingXMLStreamWriter;
 import org.jboss.staxmapper.XMLExtendedStreamWriter;
-import org.keycloak.adapters.saml.AdapterConstants;
-import org.keycloak.adapters.saml.elytron.KeycloakConfigurationServletListener;
-import org.keycloak.subsystem.adapter.saml.extension.logging.KeycloakLogger;
 
 import static org.keycloak.subsystem.adapter.saml.extension.Elytron.isElytronEnabled;
 

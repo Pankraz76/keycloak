@@ -20,8 +20,9 @@ package org.keycloak.config;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Test;
 import org.keycloak.events.EventType;
+
+import org.junit.Test;
 
 import static org.junit.Assert.fail;
 

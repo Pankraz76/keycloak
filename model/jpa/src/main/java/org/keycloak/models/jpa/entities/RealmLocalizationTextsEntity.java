@@ -31,8 +31,9 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
-import org.hibernate.annotations.Nationalized;
 import org.keycloak.models.jpa.converter.MapStringConverter;
+
+import org.hibernate.annotations.Nationalized;
 
 @Entity
 @IdClass(RealmLocalizationTextsEntity.RealmLocalizationTextEntityKey.class)

@@ -20,10 +20,11 @@ package org.keycloak.utils;
 import java.io.IOException;
 import java.util.Map;
 
+import org.keycloak.utils.JsonConfigProvider.JsonScope;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Assert;
-import org.keycloak.utils.JsonConfigProvider.JsonScope;
 
 public class ScopeUtil {
 
