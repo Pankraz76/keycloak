@@ -21,10 +21,6 @@ import java.nio.charset.StandardCharsets;
 import java.security.SecureRandom;
 import java.util.Optional;
 
-import org.keycloak.common.VerificationException;
-import org.keycloak.common.util.Base64Url;
-import org.keycloak.jose.jws.crypto.HashUtils;
-
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.util.MinimalPrettyPrinter;
@@ -32,6 +28,9 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.node.ArrayNode;
+import org.keycloak.common.VerificationException;
+import org.keycloak.common.util.Base64Url;
+import org.keycloak.jose.jws.crypto.HashUtils;
 
 /**
  *

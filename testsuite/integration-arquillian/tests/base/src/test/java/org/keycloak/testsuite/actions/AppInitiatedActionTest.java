@@ -17,6 +17,7 @@
 package org.keycloak.testsuite.actions;
 
 import java.io.IOException;
+
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.Rule;
 import org.junit.Test;

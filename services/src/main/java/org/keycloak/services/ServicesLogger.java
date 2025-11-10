@@ -17,6 +17,11 @@
 
 package org.keycloak.services;
 
+import java.io.IOException;
+import java.lang.invoke.MethodHandles;
+import java.net.URI;
+import javax.naming.NamingException;
+
 import org.jboss.logging.BasicLogger;
 import org.jboss.logging.Logger;
 import org.jboss.logging.annotations.Cause;
@@ -27,11 +32,6 @@ import org.jboss.logging.annotations.Once;
 import org.keycloak.email.EmailException;
 import org.keycloak.events.EventListenerProvider;
 import org.keycloak.models.ModelDuplicateException;
-
-import javax.naming.NamingException;
-import java.io.IOException;
-import java.lang.invoke.MethodHandles;
-import java.net.URI;
 
 import static org.jboss.logging.Logger.Level.DEBUG;
 import static org.jboss.logging.Logger.Level.ERROR;

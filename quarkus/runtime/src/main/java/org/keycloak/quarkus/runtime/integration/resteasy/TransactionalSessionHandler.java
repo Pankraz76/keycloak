@@ -18,7 +18,6 @@
 package org.keycloak.quarkus.runtime.integration.resteasy;
 
 import io.quarkus.arc.Arc;
-
 import org.jboss.resteasy.reactive.server.core.ResteasyReactiveRequestContext;
 import org.jboss.resteasy.reactive.server.spi.ServerRestHandler;
 import org.keycloak.models.KeycloakSession;

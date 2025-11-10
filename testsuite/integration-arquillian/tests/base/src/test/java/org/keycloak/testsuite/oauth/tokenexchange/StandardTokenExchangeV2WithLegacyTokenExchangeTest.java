@@ -20,6 +20,7 @@
 package org.keycloak.testsuite.oauth.tokenexchange;
 
 import jakarta.ws.rs.core.Response;
+
 import org.junit.Test;
 import org.keycloak.OAuthErrorException;
 import org.keycloak.common.Profile;

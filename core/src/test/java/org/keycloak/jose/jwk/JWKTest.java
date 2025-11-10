@@ -17,17 +17,6 @@
 
 package org.keycloak.jose.jwk;
 
-import org.junit.ClassRule;
-import org.junit.Test;
-import org.keycloak.common.crypto.CryptoIntegration;
-import org.keycloak.common.util.Base64Url;
-import org.keycloak.common.util.KeyUtils;
-import org.keycloak.common.util.PemUtils;
-import org.keycloak.crypto.JavaAlgorithm;
-import org.keycloak.crypto.KeyType;
-import org.keycloak.rule.CryptoInitRule;
-import org.keycloak.util.JsonSerialization;
-
 import java.nio.charset.StandardCharsets;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
@@ -40,6 +29,17 @@ import java.security.interfaces.ECPublicKey;
 import java.security.spec.ECGenParameterSpec;
 import java.util.Arrays;
 import java.util.List;
+
+import org.junit.ClassRule;
+import org.junit.Test;
+import org.keycloak.common.crypto.CryptoIntegration;
+import org.keycloak.common.util.Base64Url;
+import org.keycloak.common.util.KeyUtils;
+import org.keycloak.common.util.PemUtils;
+import org.keycloak.crypto.JavaAlgorithm;
+import org.keycloak.crypto.KeyType;
+import org.keycloak.rule.CryptoInitRule;
+import org.keycloak.util.JsonSerialization;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;

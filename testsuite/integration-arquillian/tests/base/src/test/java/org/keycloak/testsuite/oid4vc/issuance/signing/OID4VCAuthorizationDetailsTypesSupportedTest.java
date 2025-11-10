@@ -17,8 +17,11 @@
 
 package org.keycloak.testsuite.oid4vc.issuance.signing;
 
+import java.util.List;
+
 import jakarta.ws.rs.client.Client;
 import jakarta.ws.rs.core.Response;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.keycloak.common.Profile;
@@ -29,8 +32,6 @@ import org.keycloak.representations.idm.RealmRepresentation;
 import org.keycloak.testsuite.arquillian.annotation.EnableFeature;
 import org.keycloak.testsuite.util.AdminClientUtil;
 import org.keycloak.testsuite.util.oauth.OAuthClient;
-
-import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

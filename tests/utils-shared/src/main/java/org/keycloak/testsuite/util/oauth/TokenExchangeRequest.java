@@ -1,11 +1,11 @@
 package org.keycloak.testsuite.util.oauth;
 
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.keycloak.OAuth2Constants;
-
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
+
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.keycloak.OAuth2Constants;
 
 public class TokenExchangeRequest extends AbstractHttpPostRequest<TokenExchangeRequest, AccessTokenResponse> {
 

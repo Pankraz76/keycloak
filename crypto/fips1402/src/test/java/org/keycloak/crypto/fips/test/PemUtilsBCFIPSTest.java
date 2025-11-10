@@ -13,4 +13,3 @@ public class PemUtilsBCFIPSTest extends PemUtilsTest {
         Assume.assumeTrue("Java is not in FIPS mode. Skipping the test.", Environment.isJavaInFipsMode());
     }
 }
-

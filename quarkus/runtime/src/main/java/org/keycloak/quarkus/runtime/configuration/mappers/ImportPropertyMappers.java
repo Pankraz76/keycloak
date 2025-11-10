@@ -17,6 +17,8 @@
 
 package org.keycloak.quarkus.runtime.configuration.mappers;
 
+import java.util.List;
+
 import io.smallrye.config.ConfigSourceInterceptorContext;
 import io.smallrye.config.ConfigValue;
 import org.keycloak.config.ImportOptions;
@@ -31,8 +33,6 @@ import org.keycloak.quarkus.runtime.cli.command.Import;
 import static org.keycloak.exportimport.ExportImportConfig.PROVIDER;
 import static org.keycloak.quarkus.runtime.configuration.Configuration.getOptionalValue;
 import static org.keycloak.quarkus.runtime.configuration.mappers.PropertyMapper.fromOption;
-
-import java.util.List;
 
 public final class ImportPropertyMappers implements PropertyMapperGrouping {
     private static final String IMPORTER_PROPERTY = "kc.spi-import--importer";

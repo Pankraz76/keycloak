@@ -16,8 +16,6 @@
  */
 package org.keycloak.crypto.elytron.test;
 
-import static org.junit.Assert.assertEquals;
-
 import java.security.KeyPair;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
@@ -27,6 +25,8 @@ import org.junit.Test;
 import org.keycloak.common.crypto.CryptoIntegration;
 import org.keycloak.common.crypto.PemUtilsProvider;
 import org.keycloak.rule.CryptoInitRule;
+
+import static org.junit.Assert.assertEquals;
 
 public class ElytronPemUtilsTest {
 
@@ -68,4 +68,3 @@ public class ElytronPemUtilsTest {
         pemutil.decodePrivateKey(key);
     }
 }
-

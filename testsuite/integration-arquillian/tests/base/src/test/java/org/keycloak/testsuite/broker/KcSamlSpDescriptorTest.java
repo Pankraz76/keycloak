@@ -1,7 +1,18 @@
 package org.keycloak.testsuite.broker;
 
-import com.google.common.collect.ImmutableMap;
+import java.io.Closeable;
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+import javax.xml.crypto.dsig.XMLSignature;
 
+import com.google.common.collect.ImmutableMap;
 import org.apache.tools.ant.filters.StringInputStream;
 import org.junit.Assert;
 import org.junit.Test;
@@ -21,29 +32,16 @@ import org.keycloak.models.IdentityProviderMapperModel;
 import org.keycloak.models.IdentityProviderMapperSyncMode;
 import org.keycloak.protocol.saml.SAMLEncryptionAlgorithms;
 import org.keycloak.representations.idm.IdentityProviderMapperRepresentation;
-import org.keycloak.saml.common.constants.JBossSAMLURIConstants;
 import org.keycloak.representations.idm.KeysMetadataRepresentation;
+import org.keycloak.saml.common.constants.JBossSAMLURIConstants;
 import org.keycloak.saml.common.exceptions.ParsingException;
 import org.keycloak.saml.processing.core.parsers.saml.SAMLParser;
 import org.keycloak.testsuite.updaters.IdentityProviderAttributeUpdater;
 
-import java.io.Closeable;
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
-import javax.xml.crypto.dsig.XMLSignature;
-
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsInAnyOrder;
-import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.empty;
+import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.junit.Assert.assertTrue;

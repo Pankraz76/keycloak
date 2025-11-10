@@ -32,6 +32,7 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import jakarta.ws.rs.NotFoundException;
 import jakarta.ws.rs.core.Response;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.keycloak.events.admin.OperationType;
@@ -71,7 +72,6 @@ import org.xml.sax.SAXException;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 import static org.keycloak.common.Profile.Feature.AUTHORIZATION;
-
 import static org.keycloak.saml.common.constants.JBossSAMLURIConstants.METADATA_NSURI;
 
 /**

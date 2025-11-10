@@ -20,8 +20,10 @@ package org.keycloak.testsuite.authz.admin;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.Response.Status;
+
 import org.junit.Test;
 import org.keycloak.admin.client.resource.AuthorizationResource;
 import org.keycloak.admin.client.resource.ClientResource;

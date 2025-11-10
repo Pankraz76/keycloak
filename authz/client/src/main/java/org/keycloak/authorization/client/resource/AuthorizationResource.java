@@ -21,6 +21,7 @@ package org.keycloak.authorization.client.resource;
 import java.util.List;
 import java.util.concurrent.Callable;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import org.keycloak.authorization.client.AuthorizationDeniedException;
 import org.keycloak.authorization.client.Configuration;
 import org.keycloak.authorization.client.representation.ServerConfiguration;
@@ -32,7 +33,6 @@ import org.keycloak.authorization.client.util.TokenCallable;
 import org.keycloak.representations.idm.authorization.AuthorizationRequest;
 import org.keycloak.representations.idm.authorization.AuthorizationResponse;
 import org.keycloak.representations.idm.authorization.Permission;
-import com.fasterxml.jackson.core.type.TypeReference;
 
 /**
  * An entry point for obtaining permissions from the server.

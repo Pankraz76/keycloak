@@ -1,5 +1,9 @@
 package org.keycloak.testsuite.broker;
 
+import java.io.Closeable;
+
+import org.hamcrest.Matchers;
+import org.junit.Test;
 import org.keycloak.broker.saml.SAMLIdentityProviderConfig;
 import org.keycloak.dom.saml.v2.protocol.AuthnContextComparisonType;
 import org.keycloak.dom.saml.v2.protocol.AuthnRequestType;
@@ -10,12 +14,9 @@ import org.keycloak.testsuite.updaters.IdentityProviderAttributeUpdater;
 import org.keycloak.testsuite.util.SamlClient;
 import org.keycloak.testsuite.util.SamlClient.Binding;
 import org.keycloak.testsuite.util.SamlClientBuilder;
-import java.io.Closeable;
-
-import org.hamcrest.Matchers;
-import org.junit.Test;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.keycloak.saml.common.constants.JBossSAMLURIConstants.AC_PASSWORD_PROTECTED_TRANSPORT;
 import static org.keycloak.saml.common.constants.JBossSAMLURIConstants.ASSERTION_NSURI;

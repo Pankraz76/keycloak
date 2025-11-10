@@ -17,7 +17,10 @@
 package org.keycloak.testsuite.broker;
 
 import java.util.Collections;
+import java.util.List;
+
 import jakarta.ws.rs.core.Response;
+
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.Before;
 import org.junit.Ignore;
@@ -44,8 +47,9 @@ import org.keycloak.testsuite.federation.UserMapStorageFactory;
 import org.keycloak.testsuite.pages.AppPage;
 import org.keycloak.testsuite.pages.LoginPage;
 import org.keycloak.testsuite.pages.UpdateAccountInformationPage;
-
-import java.util.List;
+import org.keycloak.testsuite.runonserver.RunOnServer;
+import org.keycloak.testsuite.util.AccountHelper;
+import org.keycloak.testsuite.util.FederatedIdentityBuilder;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -54,10 +58,6 @@ import static org.junit.Assert.assertTrue;
 import static org.keycloak.storage.UserStorageProviderModel.IMPORT_ENABLED;
 import static org.keycloak.testsuite.admin.ApiUtil.createUserAndResetPasswordWithAdminClient;
 import static org.keycloak.testsuite.admin.ApiUtil.createUserWithAdminClient;
-
-import org.keycloak.testsuite.runonserver.RunOnServer;
-import org.keycloak.testsuite.util.AccountHelper;
-import org.keycloak.testsuite.util.FederatedIdentityBuilder;
 
 /**
  * @author <a href="mailto:bill@burkecentral.com">Bill Burke</a>

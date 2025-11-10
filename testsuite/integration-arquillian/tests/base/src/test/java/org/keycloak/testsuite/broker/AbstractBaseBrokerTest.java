@@ -17,9 +17,15 @@
 
 package org.keycloak.testsuite.broker;
 
+import java.net.URI;
+import java.util.Collections;
+import java.util.List;
+import java.util.Objects;
+
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.UriBuilder;
 import jakarta.ws.rs.core.UriBuilderException;
+
 import org.hamcrest.Matchers;
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.After;
@@ -59,11 +65,6 @@ import org.keycloak.testsuite.util.oauth.OAuthClient;
 import org.keycloak.testsuite.util.userprofile.UserProfileUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
-
-import java.net.URI;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;

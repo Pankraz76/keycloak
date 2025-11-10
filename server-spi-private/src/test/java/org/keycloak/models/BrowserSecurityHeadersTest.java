@@ -1,5 +1,8 @@
 package org.keycloak.models;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -11,9 +14,6 @@ import static org.keycloak.models.BrowserSecurityHeaders.X_CONTENT_TYPE_OPTIONS;
 import static org.keycloak.models.BrowserSecurityHeaders.X_FRAME_OPTIONS;
 import static org.keycloak.models.BrowserSecurityHeaders.X_ROBOTS_TAG;
 import static org.keycloak.models.BrowserSecurityHeaders.realmDefaultHeaders;
-
-import java.util.Arrays;
-import java.util.List;
 
 public class BrowserSecurityHeadersTest {
 

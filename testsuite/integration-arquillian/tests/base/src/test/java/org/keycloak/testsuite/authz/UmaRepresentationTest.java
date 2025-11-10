@@ -17,6 +17,9 @@
 
 package org.keycloak.testsuite.authz;
 
+import java.util.List;
+import java.util.Set;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.keycloak.admin.client.resource.RealmResource;
@@ -28,9 +31,6 @@ import org.keycloak.representations.idm.authorization.PolicyEvaluationRequest;
 import org.keycloak.representations.idm.authorization.PolicyEvaluationResponse;
 import org.keycloak.representations.idm.authorization.PolicyEvaluationResponse.PolicyResultRepresentation;
 import org.keycloak.representations.idm.authorization.ResourceRepresentation;
-
-import java.util.List;
-import java.util.Set;
 
 public class UmaRepresentationTest extends AbstractResourceServerTest {
     private ResourceRepresentation resource;

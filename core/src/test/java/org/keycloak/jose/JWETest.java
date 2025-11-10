@@ -17,6 +17,12 @@
 
 package org.keycloak.jose;
 
+import java.nio.charset.StandardCharsets;
+import java.security.Key;
+import java.security.KeyPair;
+import javax.crypto.SecretKey;
+import javax.crypto.spec.SecretKeySpec;
+
 import org.junit.Assert;
 import org.junit.ClassRule;
 import org.junit.Ignore;
@@ -35,12 +41,6 @@ import org.keycloak.jose.jwe.enc.AesCbcHmacShaJWEEncryptionProvider;
 import org.keycloak.jose.jwe.enc.AesGcmJWEEncryptionProvider;
 import org.keycloak.jose.jwe.enc.JWEEncryptionProvider;
 import org.keycloak.rule.CryptoInitRule;
-
-import javax.crypto.SecretKey;
-import javax.crypto.spec.SecretKeySpec;
-import java.nio.charset.StandardCharsets;
-import java.security.Key;
-import java.security.KeyPair;
 
 /**
  * This is not tested in keycloak-core. The subclasses should be created in the crypto modules to make sure it is tested with corresponding modules (bouncycastle VS bouncycastle-fips)

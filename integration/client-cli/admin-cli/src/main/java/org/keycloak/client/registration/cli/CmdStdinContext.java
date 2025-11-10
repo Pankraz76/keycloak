@@ -17,17 +17,16 @@
 
 package org.keycloak.client.registration.cli;
 
-import org.keycloak.client.cli.common.AttributeOperation;
-import org.keycloak.client.cli.util.AttributeException;
-import org.keycloak.representations.idm.ClientRepresentation;
-import org.keycloak.representations.oidc.OIDCClientRepresentation;
-import org.keycloak.util.JsonSerialization;
-
 import java.io.IOException;
 import java.util.List;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException;
+import org.keycloak.client.cli.common.AttributeOperation;
+import org.keycloak.client.cli.util.AttributeException;
+import org.keycloak.representations.idm.ClientRepresentation;
+import org.keycloak.representations.oidc.OIDCClientRepresentation;
+import org.keycloak.util.JsonSerialization;
 
 import static org.keycloak.client.cli.util.IoUtil.readFileOrStdin;
 import static org.keycloak.client.registration.cli.ReflectionUtil.setAttributes;

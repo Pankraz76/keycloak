@@ -1,5 +1,8 @@
 package org.keycloak.testsuite.cluster;
 
+import jakarta.ws.rs.NotFoundException;
+import jakarta.ws.rs.core.Response;
+
 import org.apache.commons.lang.RandomStringUtils;
 import org.junit.Before;
 import org.keycloak.admin.client.resource.ClientResource;
@@ -7,9 +10,6 @@ import org.keycloak.admin.client.resource.ClientsResource;
 import org.keycloak.representations.idm.ClientRepresentation;
 import org.keycloak.testsuite.admin.ApiUtil;
 import org.keycloak.testsuite.arquillian.ContainerInfo;
-
-import jakarta.ws.rs.NotFoundException;
-import jakarta.ws.rs.core.Response;
 
 import static org.junit.Assert.assertNull;
 

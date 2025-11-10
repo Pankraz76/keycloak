@@ -1,7 +1,5 @@
 package org.keycloak.tests.welcomepage;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import java.net.InetAddress;
 import java.net.MalformedURLException;
 import java.net.NetworkInterface;
@@ -34,6 +32,8 @@ import org.keycloak.testframework.ui.page.WelcomePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @KeycloakIntegrationTest(config = WelcomePageTest.WelcomePageTestConfig.class)
 @TestMethodOrder(OrderAnnotation.class)

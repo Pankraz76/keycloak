@@ -16,8 +16,6 @@
  */
 package org.keycloak.services.resources.admin;
 
-import static org.keycloak.userprofile.UserProfileUtil.createUserProfileMetadata;
-
 import java.util.Collections;
 
 import jakarta.ws.rs.Consumes;
@@ -35,20 +33,21 @@ import org.eclipse.microprofile.openapi.annotations.media.Schema;
 import org.eclipse.microprofile.openapi.annotations.responses.APIResponse;
 import org.eclipse.microprofile.openapi.annotations.responses.APIResponses;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
-
 import org.keycloak.component.ComponentValidationException;
 import org.keycloak.events.admin.OperationType;
 import org.keycloak.events.admin.ResourceType;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.RealmModel;
 import org.keycloak.representations.idm.UserProfileMetadata;
+import org.keycloak.representations.userprofile.config.UPConfig;
 import org.keycloak.services.ErrorResponse;
 import org.keycloak.services.resources.KeycloakOpenAPI;
 import org.keycloak.services.resources.admin.fgap.AdminPermissionEvaluator;
 import org.keycloak.userprofile.UserProfile;
 import org.keycloak.userprofile.UserProfileContext;
 import org.keycloak.userprofile.UserProfileProvider;
-import org.keycloak.representations.userprofile.config.UPConfig;
+
+import static org.keycloak.userprofile.UserProfileUtil.createUserProfileMetadata;
 
 /**
  * @author Vlastimil Elias <velias@redhat.com>

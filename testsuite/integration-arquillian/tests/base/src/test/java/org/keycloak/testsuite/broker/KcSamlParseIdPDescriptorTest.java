@@ -16,10 +16,12 @@
  */
 package org.keycloak.testsuite.broker;
 
-import jakarta.ws.rs.core.MediaType;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+
+import jakarta.ws.rs.core.MediaType;
+
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;

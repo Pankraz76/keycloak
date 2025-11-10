@@ -1,5 +1,11 @@
 package org.keycloak.testsuite.federation.storage;
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
 import org.hamcrest.Matchers;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,14 +24,8 @@ import org.keycloak.testsuite.updaters.Creator;
 import org.keycloak.testsuite.util.GroupBuilder;
 import org.keycloak.testsuite.util.UserBuilder;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-
-import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.hasSize;
 import static org.keycloak.storage.UserStorageProviderModel.IMPORT_ENABLED;
 
 /**

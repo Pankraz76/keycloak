@@ -19,6 +19,15 @@ package org.keycloak.protocol.saml;
 
 
 
+import java.security.Key;
+import java.security.PrivateKey;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Objects;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 import org.apache.xml.security.encryption.EncryptedData;
 import org.apache.xml.security.encryption.EncryptedKey;
 import org.apache.xml.security.encryption.EncryptionMethod;
@@ -31,15 +40,6 @@ import org.keycloak.crypto.KeyWrapper;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.RealmModel;
 import org.keycloak.saml.processing.core.util.XMLEncryptionUtil;
-
-import java.security.Key;
-import java.security.PrivateKey;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Objects;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * This implementation locates the decryption keys within realm keys.

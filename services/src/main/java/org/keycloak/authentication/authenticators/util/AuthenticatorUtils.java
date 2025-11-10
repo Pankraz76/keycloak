@@ -17,6 +17,9 @@
 
 package org.keycloak.authentication.authenticators.util;
 
+import java.io.IOException;
+import java.util.Map;
+
 import com.fasterxml.jackson.core.type.TypeReference;
 import org.jboss.logging.Logger;
 import org.keycloak.authentication.AuthenticationFlowContext;
@@ -28,9 +31,6 @@ import org.keycloak.models.*;
 import org.keycloak.services.managers.BruteForceProtector;
 import org.keycloak.sessions.AuthenticationSessionModel;
 import org.keycloak.util.JsonSerialization;
-
-import java.io.IOException;
-import java.util.Map;
 
 import static org.keycloak.authentication.authenticators.browser.AbstractUsernameFormAuthenticator.USER_SET_BEFORE_USERNAME_PASSWORD_AUTH;
 

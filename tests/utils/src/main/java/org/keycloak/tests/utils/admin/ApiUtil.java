@@ -16,6 +16,13 @@
  */
 package org.keycloak.tests.utils.admin;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import jakarta.ws.rs.core.Response;
+
 import org.jboss.logging.Logger;
 import org.junit.jupiter.api.Assertions;
 import org.keycloak.admin.client.resource.AuthorizationResource;
@@ -34,12 +41,6 @@ import org.keycloak.representations.idm.ProtocolMapperRepresentation;
 import org.keycloak.representations.idm.RequiredActionProviderRepresentation;
 import org.keycloak.representations.idm.RoleRepresentation;
 import org.keycloak.representations.idm.UserRepresentation;
-
-import jakarta.ws.rs.core.Response;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
 
 import static org.keycloak.representations.idm.CredentialRepresentation.PASSWORD;
 

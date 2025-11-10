@@ -1,17 +1,17 @@
 package org.keycloak.models.cache.infinispan.stream;
 
+import java.util.Map;
+import java.util.function.Predicate;
+
 import org.infinispan.protostream.annotations.ProtoField;
 import org.infinispan.protostream.annotations.ProtoTypeId;
+import org.keycloak.marshalling.Marshalling;
 import org.keycloak.models.cache.infinispan.entities.CachedClient;
 import org.keycloak.models.cache.infinispan.entities.CachedClientScope;
 import org.keycloak.models.cache.infinispan.entities.CachedGroup;
 import org.keycloak.models.cache.infinispan.entities.CachedRole;
 import org.keycloak.models.cache.infinispan.entities.Revisioned;
 import org.keycloak.models.cache.infinispan.entities.RoleQuery;
-import org.keycloak.marshalling.Marshalling;
-
-import java.util.Map;
-import java.util.function.Predicate;
 
 /**
  * @author <a href="mailto:bill@burkecentral.com">Bill Burke</a>

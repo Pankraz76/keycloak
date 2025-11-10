@@ -19,10 +19,11 @@ package org.keycloak.testsuite.arquillian.decider;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.List;
-import org.jboss.arquillian.test.spi.execution.ExecutionDecision;
-import org.jboss.arquillian.test.spi.execution.TestExecutionDecider;
+
 import org.jboss.arquillian.core.api.Instance;
 import org.jboss.arquillian.core.api.annotation.Inject;
+import org.jboss.arquillian.test.spi.execution.ExecutionDecision;
+import org.jboss.arquillian.test.spi.execution.TestExecutionDecider;
 import org.keycloak.testsuite.arquillian.AppServerTestEnricher;
 import org.keycloak.testsuite.arquillian.AuthServerTestEnricher;
 import org.keycloak.testsuite.arquillian.TestContext;

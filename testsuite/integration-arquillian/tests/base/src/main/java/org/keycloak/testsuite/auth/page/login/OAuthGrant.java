@@ -16,15 +16,15 @@
  */
 package org.keycloak.testsuite.auth.page.login;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.keycloak.common.util.CollectionUtil;
 import org.keycloak.models.AuthenticatedClientSessionModel;
 import org.keycloak.testsuite.util.DroneUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 import static org.junit.Assert.assertTrue;
 import static org.keycloak.testsuite.util.UIUtils.clickLink;

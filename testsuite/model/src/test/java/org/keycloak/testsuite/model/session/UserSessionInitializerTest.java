@@ -238,4 +238,3 @@ public class UserSessionInitializerTest extends KeycloakModelTest {
         Assert.fail("Session with ID " + id + " not found in the list");
     }
 }
-

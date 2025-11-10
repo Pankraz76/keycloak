@@ -16,8 +16,10 @@
  */
 package org.keycloak.testsuite.broker;
 
-import jakarta.ws.rs.core.Response;
 import java.util.List;
+
+import jakarta.ws.rs.core.Response;
+
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Assert;

@@ -19,6 +19,7 @@ package org.keycloak.testsuite.webauthn.passwordless;
 
 import java.io.IOException;
 import java.util.Optional;
+
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.After;
 import org.junit.Assert;

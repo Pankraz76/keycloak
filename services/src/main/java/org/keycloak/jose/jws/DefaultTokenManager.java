@@ -16,6 +16,15 @@
  */
 package org.keycloak.jose.jws;
 
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.security.Key;
+import java.time.Duration;
+import java.util.Comparator;
+import java.util.Optional;
+import java.util.function.BiConsumer;
+import java.util.stream.Stream;
+
 import org.jboss.logging.Logger;
 import org.keycloak.Token;
 import org.keycloak.TokenCategory;
@@ -29,8 +38,8 @@ import org.keycloak.crypto.KeyUse;
 import org.keycloak.crypto.KeyWrapper;
 import org.keycloak.crypto.SignatureProvider;
 import org.keycloak.crypto.SignatureSignerContext;
-import org.keycloak.jose.JOSEParser;
 import org.keycloak.jose.JOSE;
+import org.keycloak.jose.JOSEParser;
 import org.keycloak.jose.jwe.JWE;
 import org.keycloak.jose.jwe.JWEConstants;
 import org.keycloak.jose.jwe.JWEException;
@@ -55,15 +64,6 @@ import org.keycloak.representations.LogoutToken;
 import org.keycloak.services.util.DefaultClientSessionContext;
 import org.keycloak.util.JsonSerialization;
 import org.keycloak.util.TokenUtil;
-
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.security.Key;
-import java.time.Duration;
-import java.util.Comparator;
-import java.util.Optional;
-import java.util.function.BiConsumer;
-import java.util.stream.Stream;
 
 public class DefaultTokenManager implements TokenManager {
 

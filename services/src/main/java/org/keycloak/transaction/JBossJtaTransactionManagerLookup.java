@@ -16,13 +16,14 @@
  */
 package org.keycloak.transaction;
 
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
+import jakarta.transaction.TransactionManager;
+
 import org.jboss.logging.Logger;
 import org.keycloak.Config;
 import org.keycloak.models.KeycloakSessionFactory;
-
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
-import jakarta.transaction.TransactionManager;
 
 /**
  * @author <a href="mailto:bill@burkecentral.com">Bill Burke</a>

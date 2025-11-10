@@ -11,22 +11,21 @@ import java.util.Map;
 import java.util.Set;
 
 import io.quarkus.agroal.spi.JdbcDataSourceBuildItem;
-import io.quarkus.deployment.builditem.CombinedIndexBuildItem;
-import org.jboss.jandex.AnnotationInstance;
-import org.jboss.jandex.ClassInfo;
-import org.jboss.jandex.DotName;
-import org.jboss.jandex.IndexView;
-import org.keycloak.connections.jpa.updater.liquibase.lock.DummyLockService;
-
 import io.quarkus.deployment.annotations.BuildStep;
 import io.quarkus.deployment.annotations.ExecutionTime;
 import io.quarkus.deployment.annotations.Record;
+import io.quarkus.deployment.builditem.CombinedIndexBuildItem;
 import liquibase.database.Database;
 import liquibase.lockservice.LockService;
 import liquibase.parser.ChangeLogParser;
 import liquibase.parser.core.xml.XMLChangeLogSAXParser;
 import liquibase.servicelocator.LiquibaseService;
 import liquibase.sqlgenerator.SqlGenerator;
+import org.jboss.jandex.AnnotationInstance;
+import org.jboss.jandex.ClassInfo;
+import org.jboss.jandex.DotName;
+import org.jboss.jandex.IndexView;
+import org.keycloak.connections.jpa.updater.liquibase.lock.DummyLockService;
 import org.keycloak.quarkus.runtime.KeycloakRecorder;
 
 import static org.keycloak.quarkus.deployment.KeycloakProcessor.getDefaultDataSource;

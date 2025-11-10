@@ -16,6 +16,10 @@
  */
 package org.keycloak.testsuite.arquillian.containers;
 
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+
 import org.jboss.arquillian.config.descriptor.api.ArquillianDescriptor;
 import org.jboss.arquillian.config.descriptor.api.ContainerDef;
 import org.jboss.arquillian.config.descriptor.api.GroupDef;
@@ -36,9 +40,6 @@ import org.jboss.shrinkwrap.descriptor.spi.node.Node;
 import org.jboss.shrinkwrap.descriptor.spi.node.NodeDescriptor;
 import org.keycloak.testsuite.arquillian.container.AppServerContainerService;
 import org.mvel2.MVEL;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
 
 import static org.keycloak.testsuite.arquillian.containers.SecurityActions.isClassPresent;
 import static org.keycloak.testsuite.arquillian.containers.SecurityActions.loadClass;

@@ -1,5 +1,7 @@
 package org.keycloak.test.examples;
 
+import java.util.Optional;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.keycloak.admin.client.Keycloak;
@@ -7,10 +9,8 @@ import org.keycloak.common.Profile;
 import org.keycloak.representations.info.FeatureRepresentation;
 import org.keycloak.testframework.annotations.InjectAdminClient;
 import org.keycloak.testframework.annotations.KeycloakIntegrationTest;
-import org.keycloak.testframework.server.KeycloakServerConfigBuilder;
 import org.keycloak.testframework.server.KeycloakServerConfig;
-
-import java.util.Optional;
+import org.keycloak.testframework.server.KeycloakServerConfigBuilder;
 
 @KeycloakIntegrationTest(config = CustomConfigTest.CustomServerConfig.class)
 public class CustomConfigTest {

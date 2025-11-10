@@ -20,6 +20,9 @@ package org.keycloak.testsuite.federation.ldap;
 import java.util.List;
 import java.util.Map;
 
+import jakarta.ws.rs.BadRequestException;
+import jakarta.ws.rs.core.Response;
+
 import org.hamcrest.Matchers;
 import org.junit.ClassRule;
 import org.junit.Test;
@@ -29,13 +32,10 @@ import org.keycloak.representations.idm.LDAPCapabilityRepresentation;
 import org.keycloak.representations.idm.TestLdapConnectionRepresentation;
 import org.keycloak.services.managers.LDAPServerCapabilitiesManager;
 import org.keycloak.storage.ldap.idm.store.ldap.extended.PasswordModifyRequest;
+import org.keycloak.testsuite.AbstractAdminTest;
 import org.keycloak.testsuite.Assert;
 import org.keycloak.testsuite.arquillian.annotation.EnableVault;
-import org.keycloak.testsuite.AbstractAdminTest;
 import org.keycloak.testsuite.util.LDAPRule;
-
-import jakarta.ws.rs.BadRequestException;
-import jakarta.ws.rs.core.Response;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 

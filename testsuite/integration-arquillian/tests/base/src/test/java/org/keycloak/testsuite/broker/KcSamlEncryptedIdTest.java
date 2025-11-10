@@ -1,5 +1,10 @@
 package org.keycloak.testsuite.broker;
 
+import java.security.PublicKey;
+import javax.crypto.SecretKey;
+import javax.crypto.spec.SecretKeySpec;
+import javax.xml.namespace.QName;
+
 import org.hamcrest.CoreMatchers;
 import org.keycloak.saml.RandomSecret;
 import org.keycloak.saml.common.constants.JBossSAMLConstants;
@@ -9,11 +14,6 @@ import org.keycloak.saml.processing.core.util.XMLEncryptionUtil;
 import org.keycloak.testsuite.util.saml.SamlDocumentStepBuilder;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
-
-import javax.crypto.SecretKey;
-import javax.crypto.spec.SecretKeySpec;
-import javax.xml.namespace.QName;
-import java.security.PublicKey;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;

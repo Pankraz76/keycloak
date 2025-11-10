@@ -19,9 +19,12 @@
 package org.keycloak.testsuite.admin;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+
 import jakarta.ws.rs.NotAuthorizedException;
 import jakarta.ws.rs.core.Response;
-import java.util.Map;
+
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
@@ -48,7 +51,6 @@ import org.keycloak.testsuite.util.ClientScopeBuilder;
 import org.keycloak.testsuite.util.RealmBuilder;
 import org.keycloak.testsuite.util.ServerURLs;
 import org.keycloak.testsuite.util.UserBuilder;
-import java.util.Objects;
 
 /**
  * Test for the various "Advanced" scenarios of java admin-client

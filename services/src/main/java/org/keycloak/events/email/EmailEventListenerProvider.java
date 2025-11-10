@@ -17,7 +17,7 @@
 
 package org.keycloak.events.email;
 
-import static org.keycloak.models.utils.KeycloakModelUtils.runJobInTransaction;
+import java.util.Set;
 
 import org.jboss.logging.Logger;
 import org.keycloak.email.EmailException;
@@ -37,7 +37,7 @@ import org.keycloak.models.RealmModel;
 import org.keycloak.models.RealmProvider;
 import org.keycloak.models.UserModel;
 
-import java.util.Set;
+import static org.keycloak.models.utils.KeycloakModelUtils.runJobInTransaction;
 
 /**
  * @author <a href="mailto:sthorger@redhat.com">Stian Thorgersen</a>

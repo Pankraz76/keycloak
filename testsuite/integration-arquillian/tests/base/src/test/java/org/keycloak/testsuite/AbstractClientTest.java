@@ -17,6 +17,10 @@
 
 package org.keycloak.testsuite;
 
+import java.util.List;
+
+import jakarta.ws.rs.core.Response;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
@@ -31,9 +35,6 @@ import org.keycloak.testsuite.events.TestEventsListenerProviderFactory;
 import org.keycloak.testsuite.util.AdminEventPaths;
 import org.keycloak.testsuite.util.AssertAdminEvents;
 import org.keycloak.testsuite.util.RealmBuilder;
-
-import jakarta.ws.rs.core.Response;
-import java.util.List;
 
 import static org.keycloak.testsuite.auth.page.AuthRealm.TEST;
 

@@ -44,9 +44,8 @@ import org.keycloak.testsuite.Assert;
 import org.keycloak.testsuite.admin.ApiUtil;
 import org.keycloak.testsuite.pages.AppPage;
 import org.keycloak.testsuite.util.AccountHelper;
-import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
 import org.keycloak.testsuite.util.TestAppHelper;
-
+import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
 
 import static org.keycloak.testsuite.admin.ApiUtil.findClientByClientId;
 

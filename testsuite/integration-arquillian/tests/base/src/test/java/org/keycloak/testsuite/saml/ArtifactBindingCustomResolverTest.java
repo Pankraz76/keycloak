@@ -1,5 +1,9 @@
 package org.keycloak.testsuite.saml;
 
+import java.io.ByteArrayInputStream;
+import java.util.Base64;
+import java.util.concurrent.atomic.AtomicReference;
+
 import org.junit.Ignore;
 import org.junit.Test;
 import org.keycloak.saml.common.constants.JBossSAMLURIConstants;
@@ -9,16 +13,12 @@ import org.keycloak.testsuite.util.ContainerAssume;
 import org.keycloak.testsuite.util.SamlClient;
 import org.keycloak.testsuite.util.SamlClientBuilder;
 
-import java.io.ByteArrayInputStream;
-import java.util.Base64;
-import java.util.concurrent.atomic.AtomicReference;
-
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.keycloak.testsuite.util.SamlClient.Binding.POST;
-import static org.hamcrest.MatcherAssert.assertThat;
 
 @SetDefaultProvider(spi = "saml-artifact-resolver", providerId = "0005")
 public class ArtifactBindingCustomResolverTest extends ArtifactBindingTest {

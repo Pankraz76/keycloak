@@ -17,6 +17,14 @@
 
 package org.keycloak.testsuite.keys;
 
+import java.io.IOException;
+import java.security.KeyPair;
+import java.security.PublicKey;
+import java.util.List;
+import java.util.Map;
+
+import jakarta.ws.rs.core.Response;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.Rule;
@@ -32,8 +40,8 @@ import org.keycloak.jose.jws.JWSInput;
 import org.keycloak.jose.jws.JWSInputException;
 import org.keycloak.keys.Attributes;
 import org.keycloak.keys.GeneratedHmacKeyProviderFactory;
-import org.keycloak.keys.KeyProvider;
 import org.keycloak.keys.ImportedRsaKeyProviderFactory;
+import org.keycloak.keys.KeyProvider;
 import org.keycloak.models.Constants;
 import org.keycloak.representations.idm.ClientInitialAccessCreatePresentation;
 import org.keycloak.representations.idm.ClientInitialAccessPresentation;
@@ -49,15 +57,8 @@ import org.keycloak.testsuite.pages.LoginPage;
 import org.keycloak.testsuite.util.AdminClientUtil;
 import org.keycloak.testsuite.util.ClientBuilder;
 import org.keycloak.testsuite.util.KeycloakModelUtils;
-import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
 import org.keycloak.testsuite.util.UserInfoClientUtil;
-
-import jakarta.ws.rs.core.Response;
-import java.io.IOException;
-import java.security.KeyPair;
-import java.security.PublicKey;
-import java.util.List;
-import java.util.Map;
+import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
 
 import static org.junit.Assert.*;
 import static org.keycloak.testsuite.AbstractAdminTest.loadJson;
@@ -351,4 +352,3 @@ public class KeyRotationTest extends AbstractKeycloakTest {
     }
 
 }
-

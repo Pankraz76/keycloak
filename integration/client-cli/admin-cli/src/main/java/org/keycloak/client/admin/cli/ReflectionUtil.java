@@ -16,18 +16,17 @@
  */
 package org.keycloak.client.admin.cli;
 
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.NullNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.databind.node.TextNode;
-
 import org.keycloak.client.cli.common.AttributeKey;
 import org.keycloak.client.cli.common.AttributeOperation;
-
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
 
 import static org.keycloak.client.cli.common.AttributeOperation.Type.SET;
 import static org.keycloak.client.cli.util.OutputUtil.MAPPER;

@@ -17,6 +17,7 @@
 package org.keycloak.tests.admin;
 
 import jakarta.ws.rs.core.Response;
+
 import org.junit.jupiter.api.Test;
 import org.keycloak.admin.client.resource.ClientResource;
 import org.keycloak.admin.client.resource.GroupResource;

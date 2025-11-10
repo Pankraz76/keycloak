@@ -16,6 +16,10 @@
  */
 package org.keycloak.protocol.oid4vc.model;
 
+import java.io.IOException;
+import java.util.List;
+import java.util.Objects;
+
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -27,10 +31,6 @@ import org.keycloak.util.JsonSerialization;
 import org.keycloak.utils.StringUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.io.IOException;
-import java.util.List;
-import java.util.Objects;
 
 /**
  * Represents a DisplayObject, as used in the OID4VCI Credentials Issuer Metadata

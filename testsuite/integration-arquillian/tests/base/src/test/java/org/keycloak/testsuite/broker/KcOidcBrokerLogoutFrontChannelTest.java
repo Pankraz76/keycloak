@@ -1,5 +1,7 @@
 package org.keycloak.testsuite.broker;
 
+import java.util.Map;
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.keycloak.TokenVerifier;
@@ -8,8 +10,6 @@ import org.keycloak.models.IdentityProviderSyncMode;
 import org.keycloak.representations.IDToken;
 import org.keycloak.testsuite.AssertEvents;
 import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
-
-import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 import static org.keycloak.testsuite.broker.BrokerTestConstants.REALM_CONS_NAME;

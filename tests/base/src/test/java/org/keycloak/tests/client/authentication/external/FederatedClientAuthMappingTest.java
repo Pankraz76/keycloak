@@ -1,5 +1,7 @@
 package org.keycloak.tests.client.authentication.external;
 
+import java.util.UUID;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.keycloak.authentication.authenticators.client.FederatedJWTClientAuthenticator;
@@ -20,8 +22,6 @@ import org.keycloak.testframework.realm.RealmConfig;
 import org.keycloak.testframework.realm.RealmConfigBuilder;
 import org.keycloak.testsuite.util.IdentityProviderBuilder;
 import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
-
-import java.util.UUID;
 
 @KeycloakIntegrationTest(config = ClientAuthIdpServerConfig.class)
 public class FederatedClientAuthMappingTest {

@@ -16,6 +16,9 @@
  */
 package org.keycloak.protocol.oid4vc.model;
 
+import java.util.List;
+import java.util.Optional;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -28,9 +31,6 @@ import org.keycloak.protocol.ProtocolMapper;
 import org.keycloak.protocol.oid4vc.issuance.mappers.OID4VCMapper;
 import org.keycloak.util.JsonSerialization;
 import org.keycloak.utils.StringUtil;
-
-import java.util.List;
-import java.util.Optional;
 
 /**
  * Holding metadata on a claim of verifiable credential.

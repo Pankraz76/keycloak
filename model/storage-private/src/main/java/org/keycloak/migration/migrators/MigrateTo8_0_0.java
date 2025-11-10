@@ -17,6 +17,9 @@
 
 package org.keycloak.migration.migrators;
 
+import java.util.Collections;
+import java.util.stream.Collectors;
+
 import org.jboss.logging.Logger;
 import org.keycloak.migration.ModelVersion;
 import org.keycloak.models.AuthenticationExecutionModel;
@@ -26,9 +29,6 @@ import org.keycloak.models.Constants;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.RealmModel;
 import org.keycloak.representations.idm.RealmRepresentation;
-
-import java.util.Collections;
-import java.util.stream.Collectors;
 
 /**
  * @author <a href="mailto:mposolda@redhat.com">Marek Posolda</a>

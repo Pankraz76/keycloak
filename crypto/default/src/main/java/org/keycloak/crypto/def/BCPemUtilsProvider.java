@@ -17,16 +17,16 @@
 
 package org.keycloak.crypto.def;
 
-import org.bouncycastle.asn1.x509.SubjectPublicKeyInfo;
-import org.bouncycastle.openssl.jcajce.JcaPEMKeyConverter;
-import org.bouncycastle.openssl.jcajce.JcaPEMWriter;
-import org.keycloak.common.util.DerUtils;
-import org.keycloak.common.util.PemException;
-import org.keycloak.common.crypto.PemUtilsProvider;
-
 import java.io.StringWriter;
 import java.security.PrivateKey;
 import java.security.PublicKey;
+
+import org.bouncycastle.asn1.x509.SubjectPublicKeyInfo;
+import org.bouncycastle.openssl.jcajce.JcaPEMKeyConverter;
+import org.bouncycastle.openssl.jcajce.JcaPEMWriter;
+import org.keycloak.common.crypto.PemUtilsProvider;
+import org.keycloak.common.util.DerUtils;
+import org.keycloak.common.util.PemException;
 
 /**
  * Encodes Key or Certificates to PEM format string

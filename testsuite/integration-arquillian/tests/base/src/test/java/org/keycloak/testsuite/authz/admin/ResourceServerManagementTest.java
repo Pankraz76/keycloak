@@ -17,6 +17,11 @@
 
 package org.keycloak.testsuite.authz.admin;
 
+import java.util.List;
+import java.util.Objects;
+
+import jakarta.ws.rs.NotFoundException;
+
 import org.junit.Test;
 import org.keycloak.admin.client.resource.AuthorizationResource;
 import org.keycloak.admin.client.resource.ClientsResource;
@@ -31,16 +36,11 @@ import org.keycloak.representations.idm.authorization.ScopeRepresentation;
 import org.keycloak.testsuite.util.ClientBuilder;
 import org.keycloak.util.JsonSerialization;
 
-import java.util.List;
-import java.util.Objects;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
-
-import jakarta.ws.rs.NotFoundException;
 
 /**
  *

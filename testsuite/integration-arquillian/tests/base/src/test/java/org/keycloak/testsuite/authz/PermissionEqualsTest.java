@@ -17,15 +17,15 @@
 
 package org.keycloak.testsuite.authz;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 
 import org.junit.Test;
 import org.keycloak.representations.idm.authorization.Permission;
+
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 /**
  * @author <a href="mailto:psilva@redhat.com">Pedro Igor</a>

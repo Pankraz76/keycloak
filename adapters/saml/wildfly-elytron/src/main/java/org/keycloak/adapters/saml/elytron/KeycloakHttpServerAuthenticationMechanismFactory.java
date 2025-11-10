@@ -19,7 +19,6 @@ package org.keycloak.adapters.saml.elytron;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import javax.security.auth.callback.CallbackHandler;
 
 import org.keycloak.adapters.saml.SamlDeploymentContext;

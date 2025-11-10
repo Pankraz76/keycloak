@@ -16,12 +16,12 @@
  */
 package org.keycloak.quarkus.runtime.configuration;
 
+import java.util.Map;
+
 import org.junit.Test;
 import org.keycloak.quarkus.runtime.cli.command.Build;
 import org.keycloak.quarkus.runtime.configuration.mappers.ManagementPropertyMappers;
 import org.keycloak.quarkus.runtime.configuration.mappers.PropertyMappers;
-
-import java.util.Map;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;

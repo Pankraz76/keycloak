@@ -19,9 +19,11 @@
 
 package org.keycloak.testsuite.actions;
 
+import java.util.List;
+
 import jakarta.mail.internet.MimeMessage;
 import jakarta.ws.rs.core.Response;
-import java.util.List;
+
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.jboss.arquillian.graphene.page.Page;

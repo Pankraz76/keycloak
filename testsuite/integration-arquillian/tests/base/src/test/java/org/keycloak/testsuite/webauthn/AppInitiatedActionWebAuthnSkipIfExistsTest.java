@@ -17,6 +17,7 @@
 package org.keycloak.testsuite.webauthn;
 
 import java.io.IOException;
+
 import org.junit.Test;
 import org.keycloak.models.Constants;
 import org.keycloak.models.credential.WebAuthnCredentialModel;

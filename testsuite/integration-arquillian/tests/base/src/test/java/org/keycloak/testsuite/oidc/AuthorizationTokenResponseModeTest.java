@@ -16,6 +16,9 @@
  */
 package org.keycloak.testsuite.oidc;
 
+import java.io.IOException;
+import java.net.URI;
+
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
@@ -33,9 +36,6 @@ import org.keycloak.testsuite.AssertEvents;
 import org.keycloak.testsuite.util.ClientManager;
 import org.keycloak.testsuite.util.oauth.AuthorizationEndpointResponse;
 import org.openqa.selenium.By;
-
-import java.io.IOException;
-import java.net.URI;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

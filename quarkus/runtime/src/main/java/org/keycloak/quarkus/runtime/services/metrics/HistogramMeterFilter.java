@@ -17,16 +17,17 @@
 
 package org.keycloak.quarkus.runtime.services.metrics;
 
-import io.micrometer.core.instrument.Meter;
-import io.micrometer.core.instrument.config.MeterFilter;
-import io.micrometer.core.instrument.distribution.DistributionStatisticConfig;
-import jakarta.inject.Singleton;
-import org.keycloak.config.HttpOptions;
-import org.keycloak.quarkus.runtime.configuration.Configuration;
-
 import java.util.Arrays;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
+
+import jakarta.inject.Singleton;
+
+import io.micrometer.core.instrument.Meter;
+import io.micrometer.core.instrument.config.MeterFilter;
+import io.micrometer.core.instrument.distribution.DistributionStatisticConfig;
+import org.keycloak.config.HttpOptions;
+import org.keycloak.quarkus.runtime.configuration.Configuration;
 
 /**
  * @author Alexander Schwartz

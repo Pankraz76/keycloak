@@ -1,12 +1,12 @@
 package org.keycloak.testsuite.util.oauth.device;
 
+import java.io.IOException;
+
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.keycloak.OAuth2Constants;
 import org.keycloak.testsuite.util.oauth.AbstractHttpPostRequest;
 import org.keycloak.testsuite.util.oauth.AbstractOAuthClient;
 import org.keycloak.testsuite.util.oauth.PkceGenerator;
-
-import java.io.IOException;
 
 public class DeviceAuthorizationRequest extends AbstractHttpPostRequest<DeviceAuthorizationRequest, DeviceAuthorizationResponse> {
 

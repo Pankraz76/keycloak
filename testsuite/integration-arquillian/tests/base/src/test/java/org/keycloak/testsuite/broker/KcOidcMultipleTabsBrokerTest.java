@@ -39,8 +39,8 @@ import org.keycloak.testsuite.util.BrowserTabUtil;
 import org.keycloak.testsuite.util.InfinispanTestTimeServiceRule;
 import org.keycloak.testsuite.util.oauth.AuthorizationEndpointResponse;
 import org.keycloak.testsuite.util.oauth.OAuthClient;
-
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assume.assumeTrue;
 import static org.keycloak.testsuite.AssertEvents.DEFAULT_REDIRECT_URI;

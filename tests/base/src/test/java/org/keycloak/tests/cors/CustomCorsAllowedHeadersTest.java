@@ -1,5 +1,9 @@
 package org.keycloak.tests.cors;
 
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
+
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Assertions;
@@ -13,10 +17,6 @@ import org.keycloak.testframework.annotations.KeycloakIntegrationTest;
 import org.keycloak.testframework.realm.ManagedRealm;
 import org.keycloak.testframework.server.KeycloakServerConfig;
 import org.keycloak.testframework.server.KeycloakServerConfigBuilder;
-
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
 
 @KeycloakIntegrationTest(config = CustomCorsAllowedHeadersTest.CustomCorsAllowedHeadersServerConfig.class)
 public class CustomCorsAllowedHeadersTest {

@@ -2,12 +2,12 @@ package org.keycloak.config;
 
 import org.junit.Test;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertNull;
 import static org.keycloak.config.WildcardOptionsUtil.getWildcardNamedKey;
 import static org.keycloak.config.WildcardOptionsUtil.getWildcardPrefix;
 import static org.keycloak.config.WildcardOptionsUtil.getWildcardValue;
-import static org.hamcrest.CoreMatchers.is;
 import static org.keycloak.config.WildcardOptionsUtil.isWildcardOption;
 
 public class WildcardOptionsUtilTest {

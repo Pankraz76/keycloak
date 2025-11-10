@@ -17,10 +17,6 @@
 
 package org.keycloak.config.database;
 
-import io.quarkus.runtime.util.StringUtil;
-import org.keycloak.config.DatabaseOptions;
-import org.keycloak.config.Option;
-
 import java.io.File;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -31,6 +27,10 @@ import java.util.Optional;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+
+import io.quarkus.runtime.util.StringUtil;
+import org.keycloak.config.DatabaseOptions;
+import org.keycloak.config.Option;
 
 import static java.util.Arrays.asList;
 

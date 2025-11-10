@@ -16,6 +16,13 @@
  */
 package org.keycloak.testsuite.oauth;
 
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import jakarta.ws.rs.core.Response;
+
 import org.hamcrest.Matchers;
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.Assert;
@@ -43,17 +50,10 @@ import org.keycloak.testsuite.pages.AppPage;
 import org.keycloak.testsuite.pages.ErrorPage;
 import org.keycloak.testsuite.pages.LogoutConfirmPage;
 import org.keycloak.testsuite.pages.OAuthGrantPage;
-import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
-import org.keycloak.testsuite.util.ProtocolMapperUtil;
 import org.keycloak.testsuite.util.AccountHelper;
+import org.keycloak.testsuite.util.ProtocolMapperUtil;
+import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
 import org.openqa.selenium.By;
-
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import jakarta.ws.rs.core.Response;
 
 import static org.junit.Assert.assertEquals;
 import static org.keycloak.testsuite.AbstractAdminTest.loadJson;

@@ -1,12 +1,12 @@
 package org.keycloak.testframework.database;
 
+import java.util.List;
+
 import org.jboss.logging.Logger;
 import org.keycloak.testframework.util.ContainerImages;
 import org.testcontainers.containers.JdbcDatabaseContainer;
 import org.testcontainers.containers.MSSQLServerContainer;
 import org.testcontainers.utility.DockerImageName;
-
-import java.util.List;
 
 class MSSQLServerTestDatabase extends AbstractContainerTestDatabase {
 

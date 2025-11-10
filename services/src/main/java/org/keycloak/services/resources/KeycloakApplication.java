@@ -16,6 +16,13 @@
  */
 package org.keycloak.services.resources;
 
+import java.util.NoSuchElementException;
+import java.util.ServiceLoader;
+
+import jakarta.transaction.SystemException;
+import jakarta.transaction.Transaction;
+import jakarta.ws.rs.core.Application;
+
 import org.jboss.logging.Logger;
 import org.keycloak.Config;
 import org.keycloak.common.Profile;
@@ -34,13 +41,6 @@ import org.keycloak.platform.Platform;
 import org.keycloak.platform.PlatformProvider;
 import org.keycloak.services.managers.ApplianceBootstrap;
 import org.keycloak.transaction.JtaTransactionManagerLookup;
-
-import java.util.NoSuchElementException;
-import java.util.ServiceLoader;
-
-import jakarta.transaction.SystemException;
-import jakarta.transaction.Transaction;
-import jakarta.ws.rs.core.Application;
 
 /**
  * @author <a href="mailto:bill@burkecentral.com">Bill Burke</a>

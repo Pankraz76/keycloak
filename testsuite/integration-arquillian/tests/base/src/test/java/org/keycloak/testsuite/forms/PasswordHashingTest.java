@@ -16,8 +16,22 @@
  */
 package org.keycloak.testsuite.forms;
 
+import java.nio.charset.StandardCharsets;
+import java.security.spec.KeySpec;
+import java.time.Duration;
+import java.util.Base64;
+import java.util.List;
+import java.util.UUID;
+import java.util.function.BiFunction;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.PBEKeySpec;
+
 import jakarta.persistence.EntityManager;
 import jakarta.ws.rs.BadRequestException;
+
 import org.bouncycastle.crypto.generators.Argon2BytesGenerator;
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.Assert;
@@ -53,19 +67,6 @@ import org.keycloak.testsuite.pages.LoginPage;
 import org.keycloak.testsuite.util.AccountHelper;
 import org.keycloak.testsuite.util.DefaultPasswordHash;
 import org.keycloak.testsuite.util.UserBuilder;
-
-import javax.crypto.SecretKeyFactory;
-import javax.crypto.spec.PBEKeySpec;
-import java.nio.charset.StandardCharsets;
-import java.security.spec.KeySpec;
-import java.time.Duration;
-import java.util.Base64;
-import java.util.List;
-import java.util.UUID;
-import java.util.function.BiFunction;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;

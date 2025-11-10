@@ -17,8 +17,6 @@
 
 package org.keycloak.it.cli.dist;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import java.nio.file.Path;
 
 import org.junit.jupiter.api.Tag;
@@ -28,6 +26,8 @@ import org.keycloak.it.junit5.extension.DistributionTest;
 import org.keycloak.it.junit5.extension.RawDistOnly;
 import org.keycloak.it.utils.KeycloakDistribution;
 import org.keycloak.it.utils.RawKeycloakDistribution;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @RawDistOnly(reason = "Containers are immutable")
 @DistributionTest(defaultOptions = "--db=dev-file")

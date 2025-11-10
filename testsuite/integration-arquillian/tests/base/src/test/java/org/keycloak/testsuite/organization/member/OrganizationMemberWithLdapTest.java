@@ -22,6 +22,7 @@ import java.util.Map;
 import java.util.concurrent.atomic.AtomicReference;
 
 import jakarta.ws.rs.core.Response;
+
 import org.junit.ClassRule;
 import org.junit.Test;
 import org.keycloak.admin.client.resource.OrganizationResource;

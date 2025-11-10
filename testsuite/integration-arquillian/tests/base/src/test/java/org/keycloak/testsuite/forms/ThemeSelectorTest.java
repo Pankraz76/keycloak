@@ -6,8 +6,8 @@ import org.keycloak.representations.idm.ClientRepresentation;
 import org.keycloak.representations.idm.RealmRepresentation;
 import org.keycloak.testsuite.AbstractTestRealmKeycloakTest;
 import org.keycloak.testsuite.pages.LoginPage;
-
 import org.keycloak.theme.ThemeSelectorProvider;
+
 import static org.junit.Assert.assertEquals;
 
 public class ThemeSelectorTest extends AbstractTestRealmKeycloakTest {

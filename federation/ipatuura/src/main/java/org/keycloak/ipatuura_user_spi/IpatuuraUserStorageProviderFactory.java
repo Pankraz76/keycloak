@@ -17,22 +17,22 @@
 
 package org.keycloak.ipatuura_user_spi;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import org.jboss.logging.Logger;
 import org.keycloak.Config;
 import org.keycloak.common.Profile;
 import org.keycloak.component.ComponentModel;
+import org.keycloak.component.ComponentValidationException;
 import org.keycloak.http.simple.SimpleHttpResponse;
+import org.keycloak.ipatuura_user_spi.authenticator.IpatuuraAuthenticator;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.RealmModel;
-import org.keycloak.component.ComponentValidationException;
 import org.keycloak.provider.EnvironmentDependentProviderFactory;
-import org.keycloak.storage.UserStorageProviderFactory;
 import org.keycloak.provider.ProviderConfigProperty;
 import org.keycloak.provider.ProviderConfigurationBuilder;
-import org.keycloak.ipatuura_user_spi.authenticator.IpatuuraAuthenticator;
-
-import java.util.LinkedList;
-import java.util.List;
+import org.keycloak.storage.UserStorageProviderFactory;
 
 /**
  * @author <a href="mailto:jstephen@redhat.com">Justin Stephenson</a>

@@ -1,5 +1,9 @@
 package org.keycloak.credential;
 
+import java.io.IOException;
+import java.util.Objects;
+import java.util.Optional;
+
 import org.jboss.logging.Logger;
 import org.keycloak.authentication.requiredactions.RecoveryAuthnCodesAction;
 import org.keycloak.models.KeycloakSession;
@@ -12,10 +16,6 @@ import org.keycloak.models.credential.dto.RecoveryAuthnCodesCredentialData;
 import org.keycloak.models.utils.RecoveryAuthnCodesUtils;
 import org.keycloak.util.JsonSerialization;
 import org.keycloak.utils.RequiredActionHelper;
-
-import java.io.IOException;
-import java.util.Objects;
-import java.util.Optional;
 
 import static org.keycloak.models.credential.RecoveryAuthnCodesCredentialModel.*;
 

@@ -35,8 +35,8 @@ import org.keycloak.testframework.events.AdminEvents;
 import org.keycloak.testframework.realm.ManagedRealm;
 import org.keycloak.testframework.realm.RealmConfig;
 import org.keycloak.testframework.realm.RealmConfigBuilder;
-import org.keycloak.tests.utils.admin.ApiUtil;
 import org.keycloak.tests.utils.admin.AdminEventPaths;
+import org.keycloak.tests.utils.admin.ApiUtil;
 import org.opentest4j.AssertionFailedError;
 
 /**

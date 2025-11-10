@@ -1,17 +1,17 @@
 package org.keycloak.tests.admin.model.workflow;
 
+import java.time.Duration;
+
 import org.awaitility.Awaitility;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.keycloak.models.UserModel;
 import org.keycloak.models.workflow.AddRequiredActionStepProvider;
 import org.keycloak.models.workflow.AddRequiredActionStepProviderFactory;
-import org.keycloak.representations.workflows.WorkflowStepRepresentation;
 import org.keycloak.representations.workflows.WorkflowRepresentation;
+import org.keycloak.representations.workflows.WorkflowStepRepresentation;
 import org.keycloak.testframework.annotations.KeycloakIntegrationTest;
 import org.keycloak.testframework.realm.UserConfigBuilder;
-
-import java.time.Duration;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasSize;

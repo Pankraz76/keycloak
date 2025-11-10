@@ -17,6 +17,7 @@
 package org.keycloak.storage.jpa;
 
 import java.util.UUID;
+
 import org.junit.Test;
 import org.keycloak.models.utils.KeycloakModelUtils;
 

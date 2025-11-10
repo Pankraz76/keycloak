@@ -16,6 +16,10 @@
  */
 package org.keycloak.saml;
 
+import java.net.URI;
+import java.util.LinkedList;
+import java.util.List;
+
 import org.keycloak.dom.saml.v2.assertion.NameIDType;
 import org.keycloak.dom.saml.v2.assertion.SubjectType;
 import org.keycloak.dom.saml.v2.protocol.AuthnRequestType;
@@ -25,10 +29,6 @@ import org.keycloak.saml.processing.api.saml.v2.request.SAML2Request;
 import org.keycloak.saml.processing.core.saml.v2.common.IDGenerator;
 import org.keycloak.saml.processing.core.saml.v2.util.XMLTimeUtil;
 import org.w3c.dom.Document;
-
-import java.net.URI;
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * @author pedroigor

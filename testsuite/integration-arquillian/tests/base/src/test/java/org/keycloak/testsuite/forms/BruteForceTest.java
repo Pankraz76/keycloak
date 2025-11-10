@@ -16,7 +16,13 @@
  */
 package org.keycloak.testsuite.forms;
 
+import java.net.MalformedURLException;
+import java.util.*;
+
+import jakarta.mail.MessagingException;
+import jakarta.mail.internet.MimeMessage;
 import jakarta.ws.rs.BadRequestException;
+
 import org.hamcrest.MatcherAssert;
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.After;
@@ -51,21 +57,15 @@ import org.keycloak.testsuite.pages.RegisterPage;
 import org.keycloak.testsuite.updaters.RealmAttributeUpdater;
 import org.keycloak.testsuite.util.GreenMailRule;
 import org.keycloak.testsuite.util.MailUtils;
-import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
 import org.keycloak.testsuite.util.RealmRepUtil;
 import org.keycloak.testsuite.util.UserBuilder;
-
-import jakarta.mail.MessagingException;
-import jakarta.mail.internet.MimeMessage;
 import org.keycloak.testsuite.util.WaitUtils;
-
-import java.net.MalformedURLException;
-import java.util.*;
+import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
 
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 

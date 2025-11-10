@@ -17,9 +17,6 @@
 
 package org.keycloak.tests.admin.model.workflow;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.keycloak.models.workflow.ResourceOperationType.USER_ADDED;
-
 import java.time.Duration;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
@@ -34,16 +31,19 @@ import org.keycloak.models.RealmModel;
 import org.keycloak.models.UserModel;
 import org.keycloak.models.UserProvider;
 import org.keycloak.models.workflow.DisableUserStepProviderFactory;
-import org.keycloak.models.workflow.WorkflowStepRunnerSuccessEvent;
 import org.keycloak.models.workflow.SetUserAttributeStepProviderFactory;
+import org.keycloak.models.workflow.WorkflowStepRunnerSuccessEvent;
 import org.keycloak.provider.ProviderEventListener;
 import org.keycloak.representations.idm.RealmRepresentation;
-import org.keycloak.representations.workflows.WorkflowStepRepresentation;
 import org.keycloak.representations.workflows.WorkflowRepresentation;
+import org.keycloak.representations.workflows.WorkflowStepRepresentation;
 import org.keycloak.storage.UserStoragePrivateUtil;
 import org.keycloak.testframework.annotations.InjectAdminClient;
 import org.keycloak.testframework.annotations.KeycloakIntegrationTest;
 import org.keycloak.testframework.realm.UserConfigBuilder;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.keycloak.models.workflow.ResourceOperationType.USER_ADDED;
 
 @KeycloakIntegrationTest(config = WorkflowsScheduledTaskServerConfig.class)
 public class StepRunnerScheduledTaskTest extends AbstractWorkflowTest {

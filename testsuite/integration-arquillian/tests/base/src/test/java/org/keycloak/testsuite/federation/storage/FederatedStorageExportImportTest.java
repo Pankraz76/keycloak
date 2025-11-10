@@ -16,6 +16,14 @@
  */
 package org.keycloak.testsuite.federation.storage;
 
+import java.io.Closeable;
+import java.io.File;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import jakarta.ws.rs.NotFoundException;
+
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -38,13 +46,6 @@ import org.keycloak.models.credential.PasswordCredentialModel;
 import org.keycloak.services.managers.RealmManager;
 import org.keycloak.storage.UserStorageUtil;
 import org.keycloak.testsuite.AbstractAuthTest;
-
-import java.io.Closeable;
-import jakarta.ws.rs.NotFoundException;
-import java.io.File;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.stream.Collectors;
 
 import static org.junit.Assert.assertEquals;
 

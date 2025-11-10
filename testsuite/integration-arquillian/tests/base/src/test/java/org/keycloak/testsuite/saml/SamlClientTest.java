@@ -1,5 +1,9 @@
 package org.keycloak.testsuite.saml;
 
+import java.io.IOException;
+import java.net.URI;
+import java.nio.charset.StandardCharsets;
+
 import org.apache.commons.io.IOUtils;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpUriRequest;
@@ -20,10 +24,6 @@ import org.keycloak.saml.processing.api.saml.v2.request.SAML2Request;
 import org.keycloak.testsuite.util.ClientBuilder;
 import org.keycloak.testsuite.util.SamlClient;
 import org.w3c.dom.Document;
-
-import java.io.IOException;
-import java.net.URI;
-import java.nio.charset.StandardCharsets;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 

@@ -16,12 +16,13 @@
  */
 package org.keycloak.testsuite.model;
 
-import org.keycloak.provider.ProviderFactory;
-import org.keycloak.provider.Spi;
 import java.util.Set;
 import java.util.stream.Stream;
+
 import org.junit.runner.Description;
 import org.junit.runners.model.Statement;
+import org.keycloak.provider.ProviderFactory;
+import org.keycloak.provider.Spi;
 
 /**
  *

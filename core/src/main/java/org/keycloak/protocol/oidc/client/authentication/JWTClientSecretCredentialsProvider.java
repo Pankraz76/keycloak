@@ -18,7 +18,6 @@ package org.keycloak.protocol.oidc.client.authentication;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Map;
-
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 

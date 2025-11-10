@@ -17,6 +17,11 @@
 
 package org.keycloak.testsuite.cluster;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import jakarta.ws.rs.core.UriBuilder;
+
 import org.hamcrest.Matchers;
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.After;
@@ -32,10 +37,6 @@ import org.keycloak.testsuite.pages.LoginPage;
 import org.keycloak.testsuite.pages.LoginPasswordUpdatePage;
 import org.keycloak.testsuite.pages.LoginUpdateProfilePage;
 import org.keycloak.testsuite.util.oauth.OAuthClient;
-
-import jakarta.ws.rs.core.UriBuilder;
-import java.util.HashSet;
-import java.util.Set;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertEquals;

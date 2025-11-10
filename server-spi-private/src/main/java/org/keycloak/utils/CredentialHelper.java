@@ -17,6 +17,10 @@
 
 package org.keycloak.utils;
 
+import java.io.IOException;
+import java.util.List;
+import java.util.Objects;
+
 import org.jboss.logging.Logger;
 import org.keycloak.authentication.Authenticator;
 import org.keycloak.authentication.AuthenticatorFactory;
@@ -36,10 +40,6 @@ import org.keycloak.models.credential.OTPCredentialModel;
 import org.keycloak.models.credential.RecoveryAuthnCodesCredentialModel;
 import org.keycloak.representations.idm.CredentialRepresentation;
 import org.keycloak.util.JsonSerialization;
-
-import java.io.IOException;
-import java.util.List;
-import java.util.Objects;
 
 /**
  * used to set an execution a state based on type.

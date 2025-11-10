@@ -17,9 +17,9 @@
 
 package org.keycloak.protocol.oidc.endpoints.request;
 
-import jakarta.ws.rs.core.MultivaluedMap;
-
 import java.util.Set;
+
+import jakarta.ws.rs.core.MultivaluedMap;
 
 import org.jboss.logging.Logger;
 import org.keycloak.models.KeycloakSession;

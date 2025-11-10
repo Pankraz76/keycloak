@@ -18,7 +18,6 @@
 package org.keycloak.authorization.policy.provider.js;
 
 import java.util.function.BiFunction;
-
 import javax.script.ScriptContext;
 import javax.script.SimpleScriptContext;
 

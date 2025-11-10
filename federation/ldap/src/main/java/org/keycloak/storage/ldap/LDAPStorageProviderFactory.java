@@ -17,6 +17,13 @@
 
 package org.keycloak.storage.ldap;
 
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
 import org.jboss.logging.Logger;
 import org.keycloak.Config;
 import org.keycloak.common.constants.KerberosConstants;
@@ -65,13 +72,6 @@ import org.keycloak.storage.ldap.mappers.msad.MSADUserAccountControlStorageMappe
 import org.keycloak.storage.user.ImportSynchronization;
 import org.keycloak.storage.user.SynchronizationResult;
 import org.keycloak.utils.CredentialHelper;
-
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 /**
  * @author <a href="mailto:mposolda@redhat.com">Marek Posolda</a>

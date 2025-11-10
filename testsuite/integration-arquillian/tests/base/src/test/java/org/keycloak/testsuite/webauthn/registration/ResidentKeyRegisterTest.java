@@ -17,6 +17,10 @@
 
 package org.keycloak.testsuite.webauthn.registration;
 
+import java.io.Closeable;
+import java.io.IOException;
+import java.util.List;
+
 import org.hamcrest.Matchers;
 import org.junit.Test;
 import org.keycloak.testsuite.admin.ApiUtil;
@@ -26,10 +30,6 @@ import org.keycloak.testsuite.webauthn.utils.PropertyRequirement;
 import org.keycloak.testsuite.webauthn.utils.WebAuthnRealmData;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.virtualauthenticator.Credential;
-
-import java.io.Closeable;
-import java.io.IOException;
-import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;

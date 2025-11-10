@@ -16,13 +16,6 @@
  */
 package org.keycloak.testsuite.script;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.keycloak.common.Profile.Feature.SCRIPTS;
-import static org.keycloak.testsuite.admin.ApiUtil.findClientResourceByClientId;
-import static org.keycloak.testsuite.arquillian.DeploymentTargetModifier.AUTH_SERVER_CURRENT;
-import static org.keycloak.testsuite.util.ProtocolMapperUtil.createScriptMapper;
-
 import java.io.IOException;
 
 import org.jboss.arquillian.container.test.api.Deployment;
@@ -46,6 +39,13 @@ import org.keycloak.testsuite.util.ContainerAssume;
 import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
 import org.keycloak.testsuite.util.oauth.AuthorizationEndpointResponse;
 import org.keycloak.util.JsonSerialization;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.keycloak.common.Profile.Feature.SCRIPTS;
+import static org.keycloak.testsuite.admin.ApiUtil.findClientResourceByClientId;
+import static org.keycloak.testsuite.arquillian.DeploymentTargetModifier.AUTH_SERVER_CURRENT;
+import static org.keycloak.testsuite.util.ProtocolMapperUtil.createScriptMapper;
 
 /**
  * @author <a href="mailto:psilva@redhat.com">Pedro Igor</a>

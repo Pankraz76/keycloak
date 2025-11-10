@@ -1,5 +1,8 @@
 package org.keycloak.tests.admin.userprofile;
 
+import java.util.List;
+import java.util.Map;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.keycloak.admin.client.resource.UserProfileResource;
@@ -15,9 +18,6 @@ import org.keycloak.testframework.injection.LifeCycle;
 import org.keycloak.testframework.realm.ManagedRealm;
 import org.keycloak.tests.utils.JsonTestUtils;
 import org.keycloak.userprofile.config.UPConfigUtils;
-
-import java.util.List;
-import java.util.Map;
 
 @KeycloakIntegrationTest
 public class UserProfileAdminTest {

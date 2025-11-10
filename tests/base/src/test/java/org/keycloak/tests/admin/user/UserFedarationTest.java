@@ -1,5 +1,9 @@
 package org.keycloak.tests.admin.user;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.keycloak.admin.client.resource.IdentityProviderResource;
@@ -24,10 +28,6 @@ import org.keycloak.tests.utils.Assert;
 import org.keycloak.tests.utils.admin.AdminEventPaths;
 import org.keycloak.tests.utils.admin.ApiUtil;
 import org.keycloak.testsuite.federation.UserMapStorageFactory;
-
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.keycloak.storage.UserStorageProviderModel.IMPORT_ENABLED;

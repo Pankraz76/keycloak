@@ -17,6 +17,9 @@
 
 package org.keycloak.testsuite.federation.ldap;
 
+import java.util.List;
+import java.util.Objects;
+
 import org.junit.Assert;
 import org.junit.ClassRule;
 import org.junit.FixMethodOrder;
@@ -37,11 +40,8 @@ import org.keycloak.testsuite.util.LDAPRule;
 import org.keycloak.testsuite.util.LDAPTestConfiguration;
 import org.keycloak.testsuite.util.LDAPTestUtils;
 
-import java.util.List;
-import java.util.Objects;
-
-import static org.hamcrest.Matchers.equalToIgnoringCase;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalToIgnoringCase;
 
 /**
  * Test for special scenarios, which don't work on MSAD (eg. renaming user RDN to "sn=john2" )

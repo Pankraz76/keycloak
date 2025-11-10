@@ -17,8 +17,10 @@
 package org.keycloak.testsuite.policy;
 
 import java.util.function.Consumer;
+
 import jakarta.ws.rs.BadRequestException;
 import jakarta.ws.rs.core.Response;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;

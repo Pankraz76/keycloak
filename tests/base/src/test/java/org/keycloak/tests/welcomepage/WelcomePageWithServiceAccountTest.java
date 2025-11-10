@@ -1,10 +1,5 @@
 package org.keycloak.tests.welcomepage;
 
-import static org.junit.Assert.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.keycloak.tests.welcomepage.WelcomePageTest.assertOnAdminConsole;
-import static org.keycloak.tests.welcomepage.WelcomePageTest.getPublicServerUrl;
-
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -24,6 +19,11 @@ import org.keycloak.testframework.ui.annotations.InjectPage;
 import org.keycloak.testframework.ui.annotations.InjectWebDriver;
 import org.keycloak.testframework.ui.page.WelcomePage;
 import org.openqa.selenium.WebDriver;
+
+import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.keycloak.tests.welcomepage.WelcomePageTest.assertOnAdminConsole;
+import static org.keycloak.tests.welcomepage.WelcomePageTest.getPublicServerUrl;
 
 @KeycloakIntegrationTest(config = WelcomePageWithServiceAccountTest.WelcomePageWithServiceAccountTestConfig.class)
 @TestMethodOrder(OrderAnnotation.class)

@@ -17,6 +17,14 @@
 
 package org.keycloak.testsuite.oid4vc.issuance.mappers;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.Set;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Test;
 import org.keycloak.models.ProtocolMapperModel;
@@ -30,14 +38,6 @@ import org.keycloak.representations.idm.UserRepresentation;
 import org.keycloak.services.managers.AppAuthManager;
 import org.keycloak.testsuite.oid4vc.issuance.signing.OID4VCTest;
 import org.keycloak.testsuite.runonserver.RunOnServerException;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;

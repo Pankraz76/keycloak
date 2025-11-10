@@ -17,15 +17,12 @@
 
 package org.keycloak.connections.httpclient;
 
-import static org.junit.Assert.assertEquals;
-
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
-
 import javax.net.ssl.SSLPeerUnverifiedException;
 
 import org.apache.http.HttpStatus;
@@ -38,6 +35,8 @@ import org.keycloak.models.KeycloakSession;
 import org.keycloak.services.resteasy.ResteasyKeycloakSession;
 import org.keycloak.services.resteasy.ResteasyKeycloakSessionFactory;
 import org.keycloak.utils.ScopeUtil;
+
+import static org.junit.Assert.assertEquals;
 
 public class DefaultHttpClientFactoryTest {
 	private static final String DISABLE_TRUST_MANAGER_PROPERTY = "disable-trust-manager";

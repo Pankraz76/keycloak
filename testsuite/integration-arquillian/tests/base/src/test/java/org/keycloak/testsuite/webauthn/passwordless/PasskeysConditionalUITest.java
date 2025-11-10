@@ -20,6 +20,7 @@ package org.keycloak.testsuite.webauthn.passwordless;
 import java.io.Closeable;
 import java.io.IOException;
 import java.util.List;
+
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.Test;

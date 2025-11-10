@@ -18,9 +18,10 @@
 
 package org.keycloak.services.x509;
 
+import java.security.cert.X509Certificate;
+
 import org.jboss.logging.Logger;
 import org.keycloak.http.HttpRequest;
-import java.security.cert.X509Certificate;
 
 /**
  * The provider retrieves a client certificate and the certificate chain

@@ -1,10 +1,5 @@
 package org.keycloak.testsuite.oauth;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
-import static org.keycloak.testsuite.AbstractAdminTest.loadJson;
-
 import java.net.URL;
 import java.util.Arrays;
 import java.util.Collection;
@@ -26,6 +21,11 @@ import org.keycloak.representations.idm.RealmRepresentation;
 import org.keycloak.testsuite.AbstractKeycloakTest;
 import org.keycloak.testsuite.admin.ApiUtil;
 import org.keycloak.testsuite.util.oauth.AccessTokenResponse;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+import static org.keycloak.testsuite.AbstractAdminTest.loadJson;
 
 //OIDC Financial API Read Only Profile : scope MUST be returned in the response from Token Endpoint
 public class OAuthScopeInTokenResponseTest extends AbstractKeycloakTest {

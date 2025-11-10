@@ -18,8 +18,12 @@
 
 package org.keycloak.testsuite.federation.ldap;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+
+import jakarta.ws.rs.ClientErrorException;
+
 import org.hamcrest.MatcherAssert;
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.Assert;
@@ -52,13 +56,8 @@ import org.keycloak.testsuite.pages.AppPage;
 import org.keycloak.testsuite.pages.LoginConfigTotpPage;
 import org.keycloak.testsuite.util.LDAPRule;
 import org.keycloak.testsuite.util.LDAPTestUtils;
-import org.openqa.selenium.By;
-
 import org.keycloak.testsuite.util.WaitUtils;
-
-import jakarta.ws.rs.ClientErrorException;
-
-import java.util.Collections;
+import org.openqa.selenium.By;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertEquals;

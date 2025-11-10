@@ -1,5 +1,9 @@
 package org.keycloak.protocol.docker;
 
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.core.MultivaluedMap;
+import jakarta.ws.rs.core.Response;
+
 import org.jboss.logging.Logger;
 import org.keycloak.common.Profile;
 import org.keycloak.events.EventBuilder;
@@ -18,10 +22,6 @@ import org.keycloak.services.util.CacheControlUtil;
 import org.keycloak.sessions.AuthenticationSessionModel;
 import org.keycloak.sessions.CommonClientSessionModel;
 import org.keycloak.utils.ProfileHelper;
-
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.core.MultivaluedMap;
-import jakarta.ws.rs.core.Response;
 
 /**
  * Implements a docker-client understandable format.

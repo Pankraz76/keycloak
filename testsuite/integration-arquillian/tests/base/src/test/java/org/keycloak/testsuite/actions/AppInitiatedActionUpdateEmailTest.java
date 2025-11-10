@@ -20,12 +20,6 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-import static org.keycloak.userprofile.UserProfileConstants.ROLE_USER;
-
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
@@ -47,6 +41,12 @@ import org.keycloak.validate.validators.LengthValidator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.FindBy;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.keycloak.userprofile.UserProfileConstants.ROLE_USER;
 
 public class AppInitiatedActionUpdateEmailTest extends AbstractAppInitiatedActionUpdateEmailTest {
 

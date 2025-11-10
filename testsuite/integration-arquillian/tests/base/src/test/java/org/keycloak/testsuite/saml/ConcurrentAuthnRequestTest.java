@@ -16,19 +16,6 @@
  */
 package org.keycloak.testsuite.saml;
 
-import org.keycloak.dom.saml.v2.protocol.AuthnRequestType;
-import org.keycloak.dom.saml.v2.protocol.ResponseType;
-import org.keycloak.representations.idm.RealmRepresentation;
-import org.keycloak.representations.idm.UserRepresentation;
-import org.keycloak.saml.SAMLRequestParser;
-import org.keycloak.saml.common.constants.JBossSAMLURIConstants;
-import org.keycloak.saml.processing.api.saml.v2.request.SAML2Request;
-import org.keycloak.saml.processing.core.saml.v2.common.SAMLDocumentHolder;
-import org.keycloak.testsuite.util.Matchers;
-import org.keycloak.testsuite.util.SamlClient;
-import org.keycloak.testsuite.util.saml.LoginBuilder;
-import org.keycloak.testsuite.utils.io.IOUtil;
-
 import java.io.IOException;
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
@@ -47,6 +34,18 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.keycloak.dom.saml.v2.protocol.AuthnRequestType;
+import org.keycloak.dom.saml.v2.protocol.ResponseType;
+import org.keycloak.representations.idm.RealmRepresentation;
+import org.keycloak.representations.idm.UserRepresentation;
+import org.keycloak.saml.SAMLRequestParser;
+import org.keycloak.saml.common.constants.JBossSAMLURIConstants;
+import org.keycloak.saml.processing.api.saml.v2.request.SAML2Request;
+import org.keycloak.saml.processing.core.saml.v2.common.SAMLDocumentHolder;
+import org.keycloak.testsuite.util.Matchers;
+import org.keycloak.testsuite.util.SamlClient;
+import org.keycloak.testsuite.util.saml.LoginBuilder;
+import org.keycloak.testsuite.utils.io.IOUtil;
 import org.w3c.dom.Document;
 
 import static org.hamcrest.MatcherAssert.assertThat;

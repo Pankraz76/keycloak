@@ -19,13 +19,11 @@
 
 package org.keycloak.testsuite.organization.admin;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.keycloak.testsuite.broker.BrokerTestTools.waitForPage;
-
 import java.util.List;
 import java.util.Map.Entry;
 
 import jakarta.ws.rs.core.Response;
+
 import org.hamcrest.Matchers;
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.Assert;
@@ -44,6 +42,9 @@ import org.keycloak.testsuite.pages.AppPage;
 import org.keycloak.testsuite.pages.LoginPage;
 import org.keycloak.testsuite.pages.LoginUpdateProfilePage;
 import org.keycloak.testsuite.util.UserBuilder;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.keycloak.testsuite.broker.BrokerTestTools.waitForPage;
 
 public class OrganizationThemeTest extends AbstractOrganizationTest {
 

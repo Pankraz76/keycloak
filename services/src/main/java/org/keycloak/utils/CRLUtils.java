@@ -27,7 +27,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
-
 import javax.security.auth.x500.X500Principal;
 
 import org.jboss.logging.Logger;

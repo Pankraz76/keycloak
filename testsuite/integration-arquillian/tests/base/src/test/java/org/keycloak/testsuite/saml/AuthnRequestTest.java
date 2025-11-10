@@ -16,13 +16,13 @@
  */
 package org.keycloak.testsuite.saml;
 
-import org.keycloak.testsuite.util.SamlClientBuilder;
 import org.apache.http.util.EntityUtils;
 import org.junit.Test;
+import org.keycloak.testsuite.util.SamlClientBuilder;
 
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 import static org.keycloak.testsuite.util.SamlClient.*;
-import static org.hamcrest.MatcherAssert.assertThat;
 
 /**
  *

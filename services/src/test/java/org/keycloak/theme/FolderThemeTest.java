@@ -17,14 +17,14 @@
 
 package org.keycloak.theme;
 
-import static org.junit.Assert.*;
-import static org.keycloak.theme.Theme.Type.LOGIN;
-
-import org.junit.Test;
-
 import java.io.File;
 import java.util.Locale;
 import java.util.Set;
+
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+import static org.keycloak.theme.Theme.Type.LOGIN;
 
 public class FolderThemeTest {
 

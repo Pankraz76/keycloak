@@ -17,9 +17,9 @@
 package org.keycloak.testsuite.broker;
 
 import org.junit.Test;
-import static org.keycloak.testsuite.broker.BrokerTestTools.waitForPage;
-
 import org.keycloak.testsuite.Assert;
+
+import static org.keycloak.testsuite.broker.BrokerTestTools.waitForPage;
 
 /**
  * Migrated from old testsuite.  Previous version by Pedro Igor.

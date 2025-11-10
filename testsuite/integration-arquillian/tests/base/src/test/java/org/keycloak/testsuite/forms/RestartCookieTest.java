@@ -17,12 +17,13 @@
 
 package org.keycloak.testsuite.forms;
 
-import jakarta.ws.rs.core.Response;
-
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.HashSet;
 import java.util.Set;
+import javax.crypto.SecretKey;
+
+import jakarta.ws.rs.core.Response;
 
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.Rule;
@@ -55,8 +56,6 @@ import org.keycloak.testsuite.util.ClientBuilder;
 import org.keycloak.testsuite.util.oauth.ParResponse;
 import org.keycloak.util.TokenUtil;
 import org.openqa.selenium.Cookie;
-
-import javax.crypto.SecretKey;
 
 import static org.junit.Assert.assertEquals;
 

@@ -18,13 +18,12 @@
 package org.keycloak.jgroups.certificates;
 
 import java.util.Objects;
+import javax.net.ssl.KeyManager;
+import javax.net.ssl.TrustManager;
 
 import org.jgroups.util.FileWatcher;
 import org.jgroups.util.SslContextFactory;
 import org.keycloak.spi.infinispan.JGroupsCertificateProvider;
-
-import javax.net.ssl.KeyManager;
-import javax.net.ssl.TrustManager;
 
 /**
  * A {@link JGroupsCertificateProvider} implementation that reads the key and trust stores from a file.

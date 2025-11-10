@@ -23,6 +23,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 import javax.xml.crypto.dsig.keyinfo.KeyInfo;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.keycloak.saml.common.exceptions.ProcessingException;

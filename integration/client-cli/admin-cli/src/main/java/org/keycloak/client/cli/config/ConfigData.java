@@ -16,12 +16,12 @@
  */
 package org.keycloak.client.cli.config;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.keycloak.util.JsonSerialization;
-
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.keycloak.util.JsonSerialization;
 
 /**
  * @author <a href="mailto:mstrukel@redhat.com">Marko Strukelj</a>

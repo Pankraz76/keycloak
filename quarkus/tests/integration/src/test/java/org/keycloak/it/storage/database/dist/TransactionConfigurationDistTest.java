@@ -1,7 +1,6 @@
 package org.keycloak.it.storage.database.dist;
 
 import io.quarkus.test.junit.main.Launch;
-
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.keycloak.it.junit5.extension.CLIResult;

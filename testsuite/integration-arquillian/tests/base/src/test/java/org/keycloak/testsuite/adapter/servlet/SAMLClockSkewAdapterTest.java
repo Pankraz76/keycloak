@@ -18,10 +18,12 @@
 package org.keycloak.testsuite.adapter.servlet;
 
 import java.util.List;
+
 import org.apache.http.util.EntityUtils;
 import org.hamcrest.Matcher;
 import org.jboss.arquillian.container.test.api.Deployer;
 import org.jboss.arquillian.container.test.api.Deployment;
+import org.jboss.arquillian.graphene.page.Page;
 import org.jboss.arquillian.test.api.ArquillianResource;
 import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Test;
@@ -33,12 +35,10 @@ import org.keycloak.testsuite.util.SamlClientBuilder;
 import org.keycloak.testsuite.utils.arquillian.ContainerConstants;
 import org.keycloak.testsuite.utils.io.IOUtil;
 
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.not;
-import org.jboss.arquillian.graphene.page.Page;
-
-import static org.hamcrest.MatcherAssert.assertThat;
 import static org.keycloak.testsuite.util.SamlClient.Binding.POST;
 
 

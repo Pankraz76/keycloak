@@ -17,11 +17,11 @@
 
 package org.keycloak.protocol.oid4vc.model;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.keycloak.jose.jwk.JSONWebKeySet;
-
-import java.util.List;
 
 /**
  * Represents the credential_request_encryption metadata for an OID4VCI Credential Issuer.

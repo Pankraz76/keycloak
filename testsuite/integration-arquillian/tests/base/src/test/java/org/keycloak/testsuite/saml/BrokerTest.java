@@ -16,7 +16,24 @@
  */
 package org.keycloak.testsuite.saml;
 
+import java.io.IOException;
+import java.net.URI;
+import java.security.KeyPair;
+import java.util.List;
 import java.util.Map;
+import java.util.Objects;
+import java.util.UUID;
+import java.util.concurrent.atomic.AtomicReference;
+import javax.xml.datatype.XMLGregorianCalendar;
+import javax.xml.namespace.QName;
+
+import jakarta.ws.rs.core.Response.Status;
+
+import org.apache.http.Header;
+import org.apache.http.HttpHeaders;
+import org.hamcrest.Matchers;
+import org.junit.Assert;
+import org.junit.Test;
 import org.keycloak.admin.client.resource.ClientsResource;
 import org.keycloak.admin.client.resource.RealmResource;
 import org.keycloak.admin.client.resource.UserResource;
@@ -52,22 +69,6 @@ import org.keycloak.saml.processing.core.saml.v2.util.XMLTimeUtil;
 import org.keycloak.testsuite.updaters.IdentityProviderCreator;
 import org.keycloak.testsuite.util.IdentityProviderBuilder;
 import org.keycloak.testsuite.util.SamlClientBuilder;
-
-import java.io.IOException;
-import java.net.URI;
-import java.security.KeyPair;
-import java.util.List;
-import java.util.Objects;
-import java.util.UUID;
-import java.util.concurrent.atomic.AtomicReference;
-import jakarta.ws.rs.core.Response.Status;
-import javax.xml.datatype.XMLGregorianCalendar;
-import javax.xml.namespace.QName;
-import org.apache.http.Header;
-import org.apache.http.HttpHeaders;
-import org.hamcrest.Matchers;
-import org.junit.Assert;
-import org.junit.Test;
 import org.keycloak.testsuite.util.saml.SamlBackchannelArtifactResolveReceiver;
 import org.w3c.dom.DOMException;
 import org.w3c.dom.Document;

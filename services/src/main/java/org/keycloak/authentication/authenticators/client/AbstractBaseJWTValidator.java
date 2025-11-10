@@ -19,6 +19,7 @@
 package org.keycloak.authentication.authenticators.client;
 
 import java.util.List;
+
 import org.jboss.logging.Logger;
 import org.keycloak.common.util.Time;
 import org.keycloak.jose.jws.JWSInput;

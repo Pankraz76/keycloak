@@ -18,6 +18,7 @@ package org.keycloak.testsuite;
 
 import java.util.List;
 import java.util.Map;
+
 import org.junit.Before;
 import org.keycloak.admin.client.resource.UserResource;
 import org.keycloak.models.credential.PasswordCredentialModel;

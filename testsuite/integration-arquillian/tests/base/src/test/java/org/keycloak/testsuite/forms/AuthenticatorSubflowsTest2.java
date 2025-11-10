@@ -17,6 +17,9 @@
 
 package org.keycloak.testsuite.forms;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.Assert;
 import org.junit.Before;
@@ -37,9 +40,6 @@ import org.keycloak.testsuite.pages.AppPage;
 import org.keycloak.testsuite.pages.ErrorPage;
 import org.keycloak.testsuite.pages.LoginPage;
 import org.openqa.selenium.By;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @author <a href="mailto:n1330@me.com">Tomohiro Nagai</a>

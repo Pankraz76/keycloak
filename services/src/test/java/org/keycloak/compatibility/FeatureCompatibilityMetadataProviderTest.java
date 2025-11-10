@@ -1,7 +1,5 @@
 package org.keycloak.compatibility;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -17,6 +15,8 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.keycloak.common.Profile;
 import org.keycloak.common.profile.ProfileConfigResolver;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FeatureCompatibilityMetadataProviderTest extends AbstractCompatibilityMetadataProviderTest {
 

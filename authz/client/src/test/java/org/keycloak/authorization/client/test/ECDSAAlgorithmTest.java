@@ -71,4 +71,3 @@ public class ECDSAAlgorithmTest {
         test(ECDSAAlgorithm.ES512);
     }
 }
-

@@ -17,6 +17,16 @@
 
 package org.keycloak.testsuite.keys;
 
+import java.math.BigInteger;
+import java.security.KeyPair;
+import java.security.cert.Certificate;
+import java.time.Instant;
+import java.time.temporal.ChronoUnit;
+import java.util.Date;
+import java.util.List;
+
+import jakarta.ws.rs.core.Response;
+
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.Rule;
 import org.junit.Test;
@@ -42,15 +52,6 @@ import org.keycloak.testsuite.admin.ApiUtil;
 import org.keycloak.testsuite.pages.AppPage;
 import org.keycloak.testsuite.pages.LoginPage;
 import org.keycloak.testsuite.saml.AbstractSamlTest;
-
-import jakarta.ws.rs.core.Response;
-import java.math.BigInteger;
-import java.security.KeyPair;
-import java.security.cert.Certificate;
-import java.util.List;
-import java.time.Instant;
-import java.time.temporal.ChronoUnit;
-import java.util.Date;
 
 import static org.junit.Assert.*;
 import static org.keycloak.testsuite.AbstractAdminTest.loadJson;
@@ -342,4 +343,3 @@ public class ImportedRsaKeyProviderTest extends AbstractKeycloakTest {
         return rep;
     }
 }
-

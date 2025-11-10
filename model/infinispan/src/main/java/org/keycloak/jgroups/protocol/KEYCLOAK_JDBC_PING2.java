@@ -17,6 +17,13 @@
 
 package org.keycloak.jgroups.protocol;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.Collections;
+import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
+
 import org.jgroups.Address;
 import org.jgroups.Event;
 import org.jgroups.PhysicalAddress;
@@ -29,13 +36,6 @@ import org.jgroups.util.NameCache;
 import org.jgroups.util.Responses;
 import org.jgroups.util.UUID;
 import org.keycloak.connections.jpa.JpaConnectionProviderFactory;
-
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
-import java.util.stream.Collectors;
 
 /**
  * Enhanced JDBC_PING2 to handle entries transactionally.

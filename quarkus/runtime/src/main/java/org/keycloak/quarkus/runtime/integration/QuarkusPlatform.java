@@ -22,11 +22,10 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import io.quarkus.runtime.Quarkus;
 import org.jboss.logging.Logger;
 import org.keycloak.platform.PlatformProvider;
 import org.keycloak.quarkus.runtime.Environment;
-
-import io.quarkus.runtime.Quarkus;
 
 public class QuarkusPlatform implements PlatformProvider {
 

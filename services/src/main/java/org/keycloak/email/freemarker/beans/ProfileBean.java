@@ -16,6 +16,11 @@
  */
 package org.keycloak.email.freemarker.beans;
 
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.jboss.logging.Logger;
 import org.keycloak.forms.login.freemarker.model.OrganizationBean;
 import org.keycloak.models.KeycloakSession;
@@ -24,11 +29,6 @@ import org.keycloak.organization.OrganizationProvider;
 import org.keycloak.representations.userprofile.config.UPAttribute;
 import org.keycloak.representations.userprofile.config.UPConfig;
 import org.keycloak.userprofile.UserProfileProvider;
-
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * @author <a href="mailto:sthorger@redhat.com">Stian Thorgersen</a>

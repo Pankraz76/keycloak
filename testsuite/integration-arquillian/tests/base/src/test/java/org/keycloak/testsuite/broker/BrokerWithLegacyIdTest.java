@@ -17,6 +17,8 @@
 
 package org.keycloak.testsuite.broker;
 
+import java.util.List;
+
 import org.junit.Test;
 import org.keycloak.admin.client.resource.RealmResource;
 import org.keycloak.admin.client.resource.UserResource;
@@ -28,8 +30,6 @@ import org.keycloak.testsuite.broker.oidc.LegacyIdIdentityProviderFactory;
 import org.keycloak.testsuite.util.AccountHelper;
 import org.keycloak.testsuite.util.FederatedIdentityBuilder;
 import org.keycloak.testsuite.util.UserBuilder;
-
-import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.keycloak.testsuite.admin.ApiUtil.createUserWithAdminClient;

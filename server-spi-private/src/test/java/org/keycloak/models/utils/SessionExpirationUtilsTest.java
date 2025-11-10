@@ -20,6 +20,7 @@ package org.keycloak.models.utils;
 import java.lang.reflect.Proxy;
 import java.util.HashMap;
 import java.util.Map;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.keycloak.common.util.Time;

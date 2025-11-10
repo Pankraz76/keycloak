@@ -17,6 +17,8 @@
 
 package org.keycloak.testsuite.drone;
 
+import java.io.File;
+import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
 import org.jboss.arquillian.core.api.InstanceProducer;
@@ -37,9 +39,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
-
-import java.io.File;
-import java.net.MalformedURLException;
 
 /**
  * @author <a href="mailto:mposolda@redhat.com">Marek Posolda</a>

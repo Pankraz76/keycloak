@@ -17,6 +17,9 @@
 
 package org.keycloak.saml.processing.core.saml.v2.util;
 
+import java.io.InputStream;
+import java.util.Optional;
+
 import junit.framework.TestCase;
 import org.junit.Assert;
 import org.keycloak.saml.common.util.DocumentUtil;
@@ -25,9 +28,6 @@ import org.keycloak.saml.processing.core.saml.v2.common.SAMLDocumentHolder;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
-
-import java.io.InputStream;
-import java.util.Optional;
 
 /**
  * @author Thibault Morin (https://tmorin.github.io)

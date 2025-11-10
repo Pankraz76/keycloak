@@ -16,6 +16,10 @@
  */
 package org.keycloak.testsuite.federation;
 
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Stream;
+
 import org.jboss.logging.Logger;
 import org.keycloak.models.ClientModel;
 import org.keycloak.models.GroupModel;
@@ -25,10 +29,6 @@ import org.keycloak.storage.ReadOnlyException;
 import org.keycloak.storage.StorageId;
 import org.keycloak.storage.group.GroupStorageProvider;
 import org.keycloak.storage.group.GroupStorageProviderModel;
-
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Stream;
 
 public class HardcodedGroupStorageProvider implements GroupStorageProvider {
     private final GroupStorageProviderModel component;

@@ -17,13 +17,13 @@
 
 package org.keycloak.storage.jpa;
 
-import org.junit.Test;
-import org.keycloak.models.jpa.entities.UserAttributeEntity;
-import org.keycloak.models.jpa.entities.UserEntity;
-
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+
+import org.junit.Test;
+import org.keycloak.models.jpa.entities.UserAttributeEntity;
+import org.keycloak.models.jpa.entities.UserEntity;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;

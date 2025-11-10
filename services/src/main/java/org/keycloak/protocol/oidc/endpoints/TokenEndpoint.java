@@ -17,6 +17,10 @@
 
 package org.keycloak.protocol.oidc.endpoints;
 
+import java.io.IOException;
+import java.util.Map;
+import javax.xml.namespace.QName;
+
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.OPTIONS;
 import jakarta.ws.rs.POST;
@@ -27,6 +31,7 @@ import jakarta.ws.rs.core.MultivaluedHashMap;
 import jakarta.ws.rs.core.MultivaluedMap;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.Response.Status;
+
 import org.jboss.logging.Logger;
 import org.keycloak.OAuth2Constants;
 import org.keycloak.OAuthErrorException;
@@ -58,10 +63,6 @@ import org.keycloak.services.cors.Cors;
 import org.keycloak.services.util.DPoPUtil;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-
-import javax.xml.namespace.QName;
-import java.io.IOException;
-import java.util.Map;
 
 /**
  * @author <a href="mailto:sthorger@redhat.com">Stian Thorgersen</a>

@@ -17,6 +17,9 @@
 
 package org.keycloak.it.cli.dist;
 
+import java.io.File;
+import java.nio.file.Paths;
+
 import io.quarkus.test.junit.main.Launch;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Tag;
@@ -28,9 +31,6 @@ import org.keycloak.it.junit5.extension.DryRun;
 import org.keycloak.it.junit5.extension.RawDistOnly;
 import org.keycloak.it.utils.KeycloakDistribution;
 import org.keycloak.it.utils.RawKeycloakDistribution;
-
-import java.io.File;
-import java.nio.file.Paths;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;

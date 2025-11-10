@@ -16,7 +16,12 @@
  */
 package org.keycloak.services.resources;
 
+import java.util.Objects;
+import java.util.function.Consumer;
+
 import jakarta.ws.rs.core.Response;
+
+import org.jboss.logging.Logger;
 import org.keycloak.TokenVerifier.Predicate;
 import org.keycloak.authentication.AuthenticationProcessor;
 import org.keycloak.authentication.ExplainedVerificationException;
@@ -26,10 +31,10 @@ import org.keycloak.common.VerificationException;
 import org.keycloak.events.Details;
 import org.keycloak.events.Errors;
 import org.keycloak.events.EventBuilder;
-import org.keycloak.models.SingleUseObjectKeyModel;
 import org.keycloak.models.ClientModel;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.RealmModel;
+import org.keycloak.models.SingleUseObjectKeyModel;
 import org.keycloak.models.SingleUseObjectProvider;
 import org.keycloak.models.UserModel;
 import org.keycloak.models.UserSessionModel;
@@ -42,9 +47,6 @@ import org.keycloak.services.messages.Messages;
 import org.keycloak.sessions.AuthenticationSessionCompoundId;
 import org.keycloak.sessions.AuthenticationSessionModel;
 import org.keycloak.sessions.CommonClientSessionModel.Action;
-import java.util.Objects;
-import java.util.function.Consumer;
-import org.jboss.logging.Logger;
 
 /**
  *

@@ -16,6 +16,10 @@
  */
 package org.keycloak.test.broker.oidc;
 
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import org.junit.Assert;
 import org.junit.Test;
@@ -25,10 +29,6 @@ import org.keycloak.broker.provider.BrokeredIdentityContext;
 import org.keycloak.broker.provider.IdentityBrokerException;
 import org.keycloak.models.IdentityProviderModel;
 import org.keycloak.util.JsonSerialization;
-
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Unit test for {@link org.keycloak.broker.oidc.AbstractOAuth2IdentityProvider}

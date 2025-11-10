@@ -17,13 +17,13 @@
 
 package org.keycloak.social.github;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import jakarta.ws.rs.core.Response;
-
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Map;
 
+import jakarta.ws.rs.core.Response;
+
+import com.fasterxml.jackson.databind.JsonNode;
 import org.keycloak.OAuth2Constants;
 import org.keycloak.OAuthErrorException;
 import org.keycloak.broker.oidc.AbstractOAuth2IdentityProvider;

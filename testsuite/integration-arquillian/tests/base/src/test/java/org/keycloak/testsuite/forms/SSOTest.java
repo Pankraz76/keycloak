@@ -16,6 +16,10 @@
  */
 package org.keycloak.testsuite.forms;
 
+import java.io.IOException;
+
+import jakarta.ws.rs.core.Response;
+
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.jboss.arquillian.drone.api.annotation.Drone;
 import org.jboss.arquillian.graphene.page.Page;
@@ -44,9 +48,6 @@ import org.openqa.selenium.WebDriver;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
-
-import java.io.IOException;
-import jakarta.ws.rs.core.Response;
 
 /**
  * @author <a href="mailto:sthorger@redhat.com">Stian Thorgersen</a>

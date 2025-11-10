@@ -16,6 +16,8 @@
  */
 package org.keycloak.testsuite.forms;
 
+import java.net.MalformedURLException;
+
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.Assert;
 import org.junit.Before;
@@ -36,8 +38,6 @@ import org.keycloak.testsuite.pages.LoginTotpPage;
 import org.keycloak.testsuite.util.GreenMailRule;
 import org.keycloak.testsuite.util.RealmRepUtil;
 import org.keycloak.testsuite.util.UserBuilder;
-
-import java.net.MalformedURLException;
 
 /**
  * @author <a href="mailto:sthorger@redhat.com">Stian Thorgersen</a>

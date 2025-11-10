@@ -20,6 +20,7 @@ package org.keycloak.services.securityprofile;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
+
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;

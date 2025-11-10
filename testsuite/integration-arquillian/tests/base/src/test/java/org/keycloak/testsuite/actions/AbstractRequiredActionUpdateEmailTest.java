@@ -16,10 +16,8 @@
  */
 package org.keycloak.testsuite.actions;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-
 import java.util.Arrays;
+
 import org.jboss.arquillian.drone.api.annotation.Drone;
 import org.jboss.arquillian.graphene.page.Page;
 import org.junit.Assert;
@@ -45,6 +43,9 @@ import org.keycloak.testsuite.pages.LoginUpdateProfilePage;
 import org.keycloak.testsuite.util.SecondBrowser;
 import org.keycloak.testsuite.util.UserBuilder;
 import org.openqa.selenium.WebDriver;
+
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 
 @EnableFeature(Profile.Feature.UPDATE_EMAIL)
 public abstract class AbstractRequiredActionUpdateEmailTest extends AbstractTestRealmKeycloakTest {

@@ -17,13 +17,12 @@
 
 package org.keycloak.utils;
 
-import org.junit.Assert;
-
 import java.io.IOException;
 import java.util.Map;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.Assert;
 import org.keycloak.utils.JsonConfigProvider.JsonScope;
 
 public class ScopeUtil {

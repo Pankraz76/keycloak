@@ -16,11 +16,6 @@
  */
 package org.keycloak.testsuite.keys;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.keycloak.testsuite.AbstractAdminTest.loadJson;
-
 import java.security.KeyFactory;
 import java.security.interfaces.ECPublicKey;
 import java.security.spec.X509EncodedKeySpec;
@@ -49,6 +44,11 @@ import org.keycloak.testsuite.AssertEvents;
 import org.keycloak.testsuite.admin.ApiUtil;
 import org.keycloak.testsuite.pages.AppPage;
 import org.keycloak.testsuite.pages.LoginPage;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.keycloak.testsuite.AbstractAdminTest.loadJson;
 
 public class GeneratedEcdhKeyProviderTest extends AbstractKeycloakTest {
     private static final String DEFAULT_EC = GeneratedEcdhKeyProviderFactory.DEFAULT_ECDH_ELLIPTIC_CURVE;

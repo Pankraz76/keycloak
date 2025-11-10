@@ -1,9 +1,9 @@
 package org.keycloak.testsuite.i18n;
 
+import java.util.Map;
+
 import org.junit.Test;
 import org.keycloak.admin.client.resource.RealmLocalizationResource;
-
-import java.util.Map;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasEntry;

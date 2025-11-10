@@ -17,6 +17,11 @@
 
 package org.keycloak.testsuite.broker;
 
+import java.security.PublicKey;
+import java.util.concurrent.atomic.AtomicReference;
+
+import jakarta.ws.rs.core.Response;
+
 import org.apache.xml.security.encryption.XMLCipher;
 import org.apache.xml.security.utils.EncryptionConstants;
 import org.hamcrest.Matchers;
@@ -39,10 +44,6 @@ import org.keycloak.testsuite.util.SamlClient;
 import org.keycloak.testsuite.util.SamlClientBuilder;
 import org.keycloak.testsuite.util.saml.SamlDocumentStepBuilder;
 import org.w3c.dom.Document;
-
-import jakarta.ws.rs.core.Response;
-import java.security.PublicKey;
-import java.util.concurrent.atomic.AtomicReference;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
@@ -151,5 +152,3 @@ public abstract class AbstractKcSamlEncryptedElementsTest extends AbstractBroker
 
         }
     }
-
-

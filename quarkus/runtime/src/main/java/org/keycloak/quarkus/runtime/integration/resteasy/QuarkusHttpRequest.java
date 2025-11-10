@@ -21,15 +21,16 @@ import java.io.IOException;
 import java.security.cert.X509Certificate;
 import java.util.Deque;
 import java.util.Iterator;
+import javax.net.ssl.SSLPeerUnverifiedException;
+import javax.net.ssl.SSLSession;
 
 import jakarta.enterprise.inject.Instance;
 import jakarta.enterprise.inject.spi.CDI;
-import javax.net.ssl.SSLPeerUnverifiedException;
-import javax.net.ssl.SSLSession;
 import jakarta.ws.rs.core.HttpHeaders;
 import jakarta.ws.rs.core.MultivaluedMap;
 import jakarta.ws.rs.core.UriInfo;
 
+import io.vertx.ext.web.RoutingContext;
 import org.jboss.resteasy.reactive.common.util.QuarkusMultivaluedHashMap;
 import org.jboss.resteasy.reactive.server.core.ResteasyReactiveRequestContext;
 import org.jboss.resteasy.reactive.server.core.multipart.FormData;
@@ -40,8 +41,6 @@ import org.keycloak.http.HttpRequest;
 import org.keycloak.quarkus.runtime.configuration.Configuration;
 import org.keycloak.quarkus.runtime.integration.jaxrs.EmptyMultivaluedMap;
 import org.keycloak.services.FormPartValueImpl;
-
-import io.vertx.ext.web.RoutingContext;
 
 public final class QuarkusHttpRequest implements HttpRequest {
 

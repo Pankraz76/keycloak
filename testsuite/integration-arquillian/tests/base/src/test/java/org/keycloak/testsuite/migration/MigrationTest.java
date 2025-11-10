@@ -16,14 +16,15 @@
  */
 package org.keycloak.testsuite.migration;
 
+import java.util.List;
+
+import jakarta.ws.rs.NotFoundException;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.keycloak.admin.client.resource.RealmResource;
 import org.keycloak.representations.idm.RealmRepresentation;
 import org.keycloak.testsuite.arquillian.migration.Migration;
-
-import jakarta.ws.rs.NotFoundException;
-import java.util.List;
 
 import static org.keycloak.testsuite.auth.page.AuthRealm.MASTER;
 

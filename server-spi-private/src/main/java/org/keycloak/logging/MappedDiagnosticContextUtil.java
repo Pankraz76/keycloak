@@ -1,12 +1,12 @@
 package org.keycloak.logging;
 
+import java.util.Collection;
+import java.util.Collections;
+
 import org.jboss.logging.Logger;
 import org.jboss.logging.MDC;
 import org.keycloak.common.Profile;
 import org.keycloak.models.KeycloakSession;
-
-import java.util.Collection;
-import java.util.Collections;
 
 public final class MappedDiagnosticContextUtil {
 

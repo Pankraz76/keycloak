@@ -17,7 +17,12 @@
 
 package org.keycloak.subsystem.adapter.saml.extension;
 
-import static org.keycloak.subsystem.adapter.saml.extension.Elytron.isElytronEnabled;
+import java.io.ByteArrayOutputStream;
+import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.stream.XMLOutputFactory;
+import javax.xml.stream.XMLStreamException;
 
 import org.jboss.as.server.deployment.DeploymentPhaseContext;
 import org.jboss.as.server.deployment.DeploymentUnit;
@@ -35,12 +40,7 @@ import org.keycloak.adapters.saml.AdapterConstants;
 import org.keycloak.adapters.saml.elytron.KeycloakConfigurationServletListener;
 import org.keycloak.subsystem.adapter.saml.extension.logging.KeycloakLogger;
 
-import javax.xml.stream.XMLOutputFactory;
-import javax.xml.stream.XMLStreamException;
-import java.io.ByteArrayOutputStream;
-import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.List;
+import static org.keycloak.subsystem.adapter.saml.extension.Elytron.isElytronEnabled;
 
 /**
  * Pass authentication data (keycloak.json) as a servlet context param so it can be read by the KeycloakServletExtension.

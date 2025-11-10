@@ -1,10 +1,11 @@
 package org.keycloak.saml.processing.core.parsers.saml;
 
-import javax.xml.stream.events.XMLEvent;
-import javax.xml.stream.XMLEventReader;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
+import javax.xml.stream.XMLEventReader;
+import javax.xml.stream.events.XMLEvent;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.keycloak.saml.common.parsers.AbstractParser;

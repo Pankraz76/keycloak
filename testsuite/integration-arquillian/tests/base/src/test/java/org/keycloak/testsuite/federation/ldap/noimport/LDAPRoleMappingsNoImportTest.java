@@ -17,6 +17,9 @@
 
 package org.keycloak.testsuite.federation.ldap.noimport;
 
+import java.util.Set;
+import java.util.stream.Collectors;
+
 import org.junit.Assert;
 import org.junit.ClassRule;
 import org.junit.FixMethodOrder;
@@ -41,9 +44,6 @@ import org.keycloak.testsuite.federation.ldap.AbstractLDAPTest;
 import org.keycloak.testsuite.federation.ldap.LDAPTestContext;
 import org.keycloak.testsuite.util.LDAPRule;
 import org.keycloak.testsuite.util.LDAPTestUtils;
-
-import java.util.Set;
-import java.util.stream.Collectors;
 
 /**
  * @author <a href="mailto:mposolda@redhat.com">Marek Posolda</a>

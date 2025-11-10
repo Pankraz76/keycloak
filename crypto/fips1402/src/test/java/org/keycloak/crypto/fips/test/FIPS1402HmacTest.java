@@ -2,7 +2,6 @@ package org.keycloak.crypto.fips.test;
 
 
 import java.util.UUID;
-
 import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.SecretKeySpec;

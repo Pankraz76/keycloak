@@ -1,8 +1,11 @@
 package org.keycloak.tests.client.authentication.external;
 
-import com.fasterxml.jackson.databind.JsonNode;
+import java.io.IOException;
+import java.util.Map;
+
 import jakarta.ws.rs.core.Response;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Assertions;
@@ -30,9 +33,6 @@ import org.keycloak.testframework.ui.page.LoginPage;
 import org.keycloak.tests.common.BasicUserConfig;
 import org.keycloak.testsuite.util.IdentityProviderBuilder;
 import org.openqa.selenium.NoSuchElementException;
-
-import java.io.IOException;
-import java.util.Map;
 
 @KeycloakIntegrationTest(config = SpiffeClientAuthTest.SpiffeServerConfig.class)
 @TestMethodOrder(MethodOrderer.MethodName.class)

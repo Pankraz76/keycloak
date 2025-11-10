@@ -17,15 +17,16 @@
 
 package org.keycloak.testsuite.webauthn.utils;
 
+import java.time.LocalDateTime;
+import java.util.List;
+
 import org.keycloak.admin.client.resource.RealmResource;
 import org.keycloak.admin.client.resource.UserResource;
 import org.keycloak.representations.idm.CredentialRepresentation;
 import org.keycloak.representations.idm.RequiredActionProviderRepresentation;
+import org.keycloak.testsuite.pages.DeleteCredentialPage;
 import org.keycloak.testsuite.webauthn.pages.AbstractLoggedInPage;
 import org.keycloak.testsuite.webauthn.pages.SigningInPage;
-import org.keycloak.testsuite.pages.DeleteCredentialPage;
-import java.time.LocalDateTime;
-import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;

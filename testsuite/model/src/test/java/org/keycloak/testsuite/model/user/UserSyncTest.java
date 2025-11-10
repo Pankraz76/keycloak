@@ -17,6 +17,11 @@
 
 package org.keycloak.testsuite.model.user;
 
+import java.util.Collections;
+import java.util.concurrent.atomic.AtomicReference;
+import java.util.stream.IntStream;
+import javax.naming.directory.BasicAttribute;
+
 import org.hamcrest.Matchers;
 import org.junit.Test;
 import org.keycloak.cluster.ClusterProvider;
@@ -47,11 +52,6 @@ import org.keycloak.storage.user.SynchronizationResult;
 import org.keycloak.testsuite.model.KeycloakModelTest;
 import org.keycloak.testsuite.model.RequireProvider;
 import org.keycloak.testsuite.util.LDAPTestUtils;
-
-import javax.naming.directory.BasicAttribute;
-import java.util.Collections;
-import java.util.concurrent.atomic.AtomicReference;
-import java.util.stream.IntStream;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
@@ -398,4 +398,3 @@ public class UserSyncTest extends KeycloakModelTest {
         });
     }
 }
-

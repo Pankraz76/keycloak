@@ -19,8 +19,10 @@
 
 package org.keycloak.authentication.authenticators.client;
 
-import jakarta.ws.rs.core.Response;
 import java.util.List;
+
+import jakarta.ws.rs.core.Response;
+
 import org.jboss.logging.Logger;
 import org.keycloak.OAuth2Constants;
 import org.keycloak.authentication.AuthenticationFlowError;

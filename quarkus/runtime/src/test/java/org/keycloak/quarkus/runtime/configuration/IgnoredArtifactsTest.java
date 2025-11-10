@@ -17,14 +17,6 @@
 
 package org.keycloak.quarkus.runtime.configuration;
 
-import org.junit.Test;
-import org.keycloak.common.Profile;
-import org.keycloak.common.profile.PropertiesProfileConfigResolver;
-import org.keycloak.config.DatabaseOptions;
-import org.keycloak.config.HealthOptions;
-import org.keycloak.config.MetricsOptions;
-import org.keycloak.config.Option;
-
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashSet;
@@ -32,6 +24,14 @@ import java.util.Properties;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import org.junit.Test;
+import org.keycloak.common.Profile;
+import org.keycloak.common.profile.PropertiesProfileConfigResolver;
+import org.keycloak.config.DatabaseOptions;
+import org.keycloak.config.HealthOptions;
+import org.keycloak.config.MetricsOptions;
+import org.keycloak.config.Option;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;

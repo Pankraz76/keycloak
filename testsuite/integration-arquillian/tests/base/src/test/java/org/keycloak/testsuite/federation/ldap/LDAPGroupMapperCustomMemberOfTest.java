@@ -17,6 +17,9 @@
 
 package org.keycloak.testsuite.federation.ldap;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.junit.ClassRule;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -35,9 +38,6 @@ import org.keycloak.storage.ldap.mappers.membership.group.GroupMapperConfig;
 import org.keycloak.storage.user.SynchronizationResult;
 import org.keycloak.testsuite.util.LDAPRule;
 import org.keycloak.testsuite.util.LDAPTestUtils;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
@@ -107,4 +107,3 @@ public class LDAPGroupMapperCustomMemberOfTest extends AbstractLDAPTest {
         });
     }
 }
-

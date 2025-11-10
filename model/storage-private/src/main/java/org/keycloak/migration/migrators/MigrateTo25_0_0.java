@@ -70,4 +70,3 @@ public class MigrateTo25_0_0 extends RealmMigration {
 
     }
 }
-

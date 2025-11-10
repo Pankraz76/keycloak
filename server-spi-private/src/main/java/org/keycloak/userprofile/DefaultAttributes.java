@@ -19,8 +19,6 @@
 
 package org.keycloak.userprofile;
 
-import static java.util.Collections.emptyList;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -50,6 +48,8 @@ import org.keycloak.validate.ValidationContext;
 import org.keycloak.validate.ValidationError;
 import org.keycloak.validate.ValidatorConfig;
 import org.keycloak.validate.validators.LengthValidator;
+
+import static java.util.Collections.emptyList;
 
 /**
  * <p>The default implementation for {@link Attributes}. Should be reused as much as possible by the different implementations

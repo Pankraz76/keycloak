@@ -16,14 +16,6 @@
  */
 package test.org.keycloak.quarkus.services.health;
 
-import static io.restassured.RestAssured.given;
-
-import org.eclipse.microprofile.health.HealthCheckResponse;
-import org.hamcrest.Matchers;
-import org.junit.jupiter.api.Test;
-import org.keycloak.quarkus.runtime.services.health.KeycloakReadyHealthCheck;
-import org.mockito.Mockito;
-
 import io.agroal.api.AgroalDataSource;
 import io.agroal.api.AgroalDataSourceMetrics;
 import io.quarkus.agroal.runtime.health.DataSourceHealthCheck;
@@ -31,6 +23,13 @@ import io.quarkus.test.InjectMock;
 import io.quarkus.test.junit.QuarkusTest;
 import io.quarkus.test.junit.TestProfile;
 import io.restassured.RestAssured;
+import org.eclipse.microprofile.health.HealthCheckResponse;
+import org.hamcrest.Matchers;
+import org.junit.jupiter.api.Test;
+import org.keycloak.quarkus.runtime.services.health.KeycloakReadyHealthCheck;
+import org.mockito.Mockito;
+
+import static io.restassured.RestAssured.given;
 
 @QuarkusTest
 @TestProfile(MetricsEnabledProfile.class)

@@ -17,6 +17,11 @@
 
 package org.keycloak.exportimport.singlefile;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Map;
+
 import org.jboss.logging.Logger;
 import org.keycloak.Config;
 import org.keycloak.exportimport.AbstractFileBasedImportProvider;
@@ -27,11 +32,6 @@ import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.KeycloakSessionFactory;
 import org.keycloak.representations.idm.RealmRepresentation;
 import org.keycloak.util.JsonSerialization;
-
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Map;
 
 /**
  * @author <a href="mailto:mposolda@redhat.com">Marek Posolda</a>
