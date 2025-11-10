@@ -29,6 +29,10 @@ import java.io.IOException;
 import java.io.StringWriter;
 import java.nio.charset.StandardCharsets;
 
+import static java.nio.charset.StandardCharsets.UTF_8;
+import static org.keycloak.protocol.saml.profile.util.Soap.extractSoapMessage;
+import static org.keycloak.saml.processing.api.saml.v2.request.SAML2Request.getSAML2ObjectFromDocument;
+
 /**
  * This class simulates a service provider's (clients's) Artifact Resolution Service. It is a webservice provider
  * that can accept an artifact resolve message, and return an artifact response (all via SOAP).
@@ -98,18 +102,14 @@ public class ArtifactResolutionService implements Provider<Source>, Runnable {
         byte[] response;
 
         try (StringWriter w = new StringWriter()){
-            Transformer trans = TransformerFactory.newInstance().newTransformer();
-            trans.transform(msg, new StreamResult(w));
-            String s = w.toString();
-            Document doc = Soap.extractSoapMessage(new ByteArrayInputStream(s.getBytes(StandardCharsets.UTF_8)));
-            SAMLDocumentHolder samlDoc = SAML2Request.getSAML2ObjectFromDocument(doc);
+            TransformerFactory.newInstance().newTransformer().transform(msg, new StreamResult(w));
+            SAMLDocumentHolder samlDoc = getSAML2ObjectFromDocument(extractSoapMessage(new ByteArrayInputStream(w.toString().getBytes(UTF_8))));
             if (samlDoc.getSamlObject() instanceof ArtifactResolveType) {
                 lastArtifactResolve = (ArtifactResolveType) samlDoc.getSamlObject();
             } else {
                 lastArtifactResolve = null;
             }
-            Document artifactResponse = SamlProtocolUtils.convert(artifactResponseType);
-            response = Soap.createMessage().addToBody(artifactResponse).getBytes();
+            response = Soap.createMessage().addToBody(SamlProtocolUtils.convert(artifactResponseType)).getBytes();
         } catch (ProcessingException | ConfigurationException | TransformerException | ParsingException | IOException e) {
             throw new RuntimeException(e);
         }
