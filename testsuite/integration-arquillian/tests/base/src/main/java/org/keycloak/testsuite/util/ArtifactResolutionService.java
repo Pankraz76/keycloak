@@ -27,7 +27,8 @@ import jakarta.xml.ws.http.HTTPBinding;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.StringWriter;
-import java.nio.charset.StandardCharsets;
+
+import static java.nio.charset.StandardCharsets.UTF_8;
 
 /**
  * This class simulates a service provider's (clients's) Artifact Resolution Service. It is a webservice provider
@@ -101,7 +102,7 @@ public class ArtifactResolutionService implements Provider<Source>, Runnable {
             Transformer trans = TransformerFactory.newInstance().newTransformer();
             trans.transform(msg, new StreamResult(w));
             String s = w.toString();
-            Document doc = Soap.extractSoapMessage(new ByteArrayInputStream(s.getBytes(StandardCharsets.UTF_8)));
+            Document doc = Soap.extractSoapMessage(new ByteArrayInputStream(s.getBytes(UTF_8)));
             SAMLDocumentHolder samlDoc = SAML2Request.getSAML2ObjectFromDocument(doc);
             if (samlDoc.getSamlObject() instanceof ArtifactResolveType) {
                 lastArtifactResolve = (ArtifactResolveType) samlDoc.getSamlObject();
