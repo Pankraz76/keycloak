@@ -1608,8 +1608,8 @@
         </pluginManagement>
         <plugins>
             <plugin>
-                <groupId>io.snyk</groupId>
-                <artifactId>snyk-maven-plugin</artifactId>
+                <groupId>tech.orla</groupId>
+                <artifactId>trivy-maven-plugin</artifactId>
             </plugin>
             <plugin>
                 <groupId>org.openrewrite.maven</groupId>
