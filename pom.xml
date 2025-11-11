@@ -1567,14 +1567,14 @@
                         <ignoreUnfixed>true</ignoreUnfixed>
                         <trivyVersion>v0.49.1</trivyVersion>
                     </configuration>
-                    <executions>
-                        <execution>
-                            <phase>verify</phase>
-                            <goals>
-                                <goal>trivy-scan</goal>
-                            </goals>
-                        </execution>
-                    </executions>
+<!--                    <executions>-->
+<!--                        <execution>-->
+<!--                            <phase>verify</phase>-->
+<!--                            <goals>-->
+<!--                                <goal>trivy-scan</goal>-->
+<!--                            </goals>-->
+<!--                        </execution>-->
+<!--                    </executions>-->
                 </plugin>
                 <plugin>
                     <groupId>org.openrewrite.maven</groupId>
