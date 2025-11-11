@@ -94,8 +94,14 @@ jobs:
       - name: Spotless
         run: ./mvnw spotless:check
 
+      - name: Rewrite
+        run: ./mvnw rewrite:dryRun
+
       - name: Build Keycloak
         uses: ./.github/actions/build-keycloak
+
+      - name: Trivy
+        run: ./mvnw trivy:trivy-scan
 
       - name: Check for unstaged proto.lock files
         if: github.event_name == 'pull_request' && startsWith(github.event.pull_request.base.ref, 'release/')
