@@ -4,7 +4,7 @@ name: org.keycloak.openrewrite.SanityCheck
 displayName: Apply Java & Maven best practices
 description: Comprehensive code quality recipe combining modernization, security, and best practices.
 recipeList:
-  - org.openrewrite.java.RemoveUnusedImports
+  - org.openrewrite.java.security.JavaSecurityBestPractices
   # - org.openrewrite.staticanalysis.RemoveUnusedPrivateMethods
   # - org.openrewrite.maven.BestPractices
   # - org.openrewrite.java.format.NormalizeLineBreaks
