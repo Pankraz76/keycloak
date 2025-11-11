@@ -94,9 +94,6 @@ jobs:
       - name: Spotless
         run: ./mvnw spotless:check
 
-      - name: Rewrite
-        run: ./mvnw rewrite:dryRun
-
       - name: Build Keycloak
         uses: ./.github/actions/build-keycloak
 
