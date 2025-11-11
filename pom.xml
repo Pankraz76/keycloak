@@ -1569,6 +1569,7 @@
                     </configuration>
                     <executions>
                         <execution>
+                            <phase>verify</phase>
                             <goals>
                                 <goal>trivy-scan</goal>
                             </goals>
