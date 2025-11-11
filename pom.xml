@@ -1565,7 +1565,7 @@
                         <vulnType>os,library</vulnType>
                         <severity>CRITICAL</severity>
                         <ignoreUnfixed>true</ignoreUnfixed>
-                        <trivyVersion>v0.51</trivyVersion>
+                        <trivyVersion>v0.49.1</trivyVersion>
                     </configuration>
                     <executions>
                         <execution>
