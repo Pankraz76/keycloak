@@ -16,8 +16,8 @@
 ~ limitations under the License.
 
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.1.0</modelVersion>
 
     <parent>
         <groupId>org.jboss</groupId>
@@ -287,30 +287,30 @@
 
     <contributors></contributors>
 
-    <modules>
-        <module>boms</module>
-        <module>common</module>
-        <module>core</module>
-        <module>crypto</module>
-        <module>dependencies</module>
-        <module>server-spi</module>
-        <module>server-spi-private</module>
-        <module>saml-core-api</module>
-        <module>saml-core</module>
-        <module>federation</module>
-        <module>services</module>
-        <module>themes</module>
-        <module>misc/theme-verifier</module>
-        <module>model</module>
-        <module>util</module>
-        <module>rest</module>
-        <module>integration</module>
-        <module>authz</module>
-        <module>js</module>
-        <module>test-framework</module>
-        <module>tests</module>
-        <module>quarkus</module>
-    </modules>
+    <subprojects>
+        <subproject>boms</subproject>
+        <subproject>common</subproject>
+        <subproject>core</subproject>
+        <subproject>crypto</subproject>
+        <subproject>dependencies</subproject>
+        <subproject>server-spi</subproject>
+        <subproject>server-spi-private</subproject>
+        <subproject>saml-core-api</subproject>
+        <subproject>saml-core</subproject>
+        <subproject>federation</subproject>
+        <subproject>services</subproject>
+        <subproject>themes</subproject>
+        <subproject>misc/theme-verifier</subproject>
+        <subproject>model</subproject>
+        <subproject>util</subproject>
+        <subproject>rest</subproject>
+        <subproject>integration</subproject>
+        <subproject>authz</subproject>
+        <subproject>js</subproject>
+        <subproject>test-framework</subproject>
+        <subproject>tests</subproject>
+        <subproject>quarkus</subproject>
+    </subprojects>
 
     <dependencyManagement>
 

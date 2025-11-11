@@ -15,8 +15,8 @@
   ~ limitations under the License.
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
         <artifactId>keycloak-parent</artifactId>
         <groupId>org.keycloak</groupId>
@@ -25,7 +25,7 @@
     </parent>
     <name>Keycloak Quarkus Parent</name>
     <description>Keycloak Quarkus Parent</description>
-    <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.1.0</modelVersion>
 
     <artifactId>keycloak-quarkus-parent</artifactId>
     <packaging>pom</packaging>
@@ -34,14 +34,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     
-    <modules>
-        <module>config-api</module>
-        <module>runtime</module>
-        <module>deployment</module>
-        <module>server</module>
-        <module>dist</module>
-        <module>tests</module>
-    </modules>
+    <subprojects>
+        <subproject>config-api</subproject>
+        <subproject>runtime</subproject>
+        <subproject>deployment</subproject>
+        <subproject>server</subproject>
+        <subproject>dist</subproject>
+        <subproject>tests</subproject>
+    </subprojects>
 
     <repositories>
         <repository>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
+<project xmlns="http://maven.apache.org/POM/4.1.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 http://maven.apache.org/xsd/maven-4.1.0.xsd">
+    <modelVersion>4.1.0</modelVersion>
     <parent>
         <groupId>org.keycloak</groupId>
         <artifactId>keycloak-rest-parent</artifactId>
@@ -13,10 +13,10 @@
     <name>Keycloak Admin REST API v2 Parent</name>
     <packaging>pom</packaging>
 
-    <modules>
-        <module>rest</module>
-        <module>api</module>
-        <module>providers</module>
-        <module>tests</module>
-    </modules>
+    <subprojects>
+        <subproject>rest</subproject>
+        <subproject>api</subproject>
+        <subproject>providers</subproject>
+        <subproject>tests</subproject>
+    </subprojects>
 </project>

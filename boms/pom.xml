@@ -15,8 +15,8 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 http://maven.apache.org/xsd/maven-4.1.0.xsd">
+    <modelVersion>4.1.0</modelVersion>
 
     <parent>
         <groupId>org.jboss</groupId>
@@ -61,9 +61,9 @@
         </snapshotRepository>
     </distributionManagement>
 
-    <modules>
-        <module>spi</module>
-    </modules>
+    <subprojects>
+        <subproject>spi</subproject>
+    </subprojects>
     
     <build>
         <pluginManagement>
@@ -83,6 +83,35 @@
                     <artifactId>spotless-maven-plugin</artifactId>
                     <version>${spotless-plugin.version}</version>
                 </plugin>
+<!--                <plugin>-->
+<!--                    <groupId>org.openrewrite.maven</groupId>-->
+<!--                    <artifactId>rewrite-maven-plugin</artifactId>-->
+<!--                    <version>6.23.0</version>-->
+<!--                    <configuration>-->
+<!--                        <activeRecipes>-->
+<!--                            <recipe>org.keycloak.openrewrite.SanityCheck</recipe>-->
+<!--                        </activeRecipes>-->
+<!--                        <exportDatatables>true</exportDatatables>-->
+<!--                        <failOnDryRunResults>true</failOnDryRunResults>-->
+<!--                    </configuration>-->
+<!--                    <dependencies>-->
+<!--                        <dependency>-->
+<!--                            <groupId>org.openrewrite.recipe</groupId>-->
+<!--                            <artifactId>rewrite-migrate-java</artifactId>-->
+<!--                            <version>3.21.1</version>-->
+<!--                        </dependency>-->
+<!--                        <dependency>-->
+<!--                            <groupId>org.openrewrite.recipe</groupId>-->
+<!--                            <artifactId>rewrite-static-analysis</artifactId>-->
+<!--                            <version>2.21.0</version>-->
+<!--                        </dependency>-->
+<!--                        <dependency>-->
+<!--                            <groupId>org.openrewrite.recipe</groupId>-->
+<!--                            <artifactId>rewrite-rewrite</artifactId>-->
+<!--                            <version>0.15.0</version>-->
+<!--                        </dependency>-->
+<!--                    </dependencies>-->
+<!--                </plugin>-->
             </plugins>
         </pluginManagement>
     </build>

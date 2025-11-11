@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.1.0</modelVersion>
 
     <parent>
         <artifactId>keycloak-parent</artifactId>
@@ -15,13 +15,13 @@
     <name>Keycloak JavaScript Parent</name>
     <description>Parent of all JavaScript related code.</description>
 
-    <modules>
-        <module>apps/account-ui</module>
-        <module>apps/admin-ui</module>
-        <module>libs/keycloak-admin-client</module>
-        <module>libs/ui-shared</module>
-        <module>themes-vendor</module>
-    </modules>
+    <subprojects>
+        <subproject>apps/account-ui</subproject>
+        <subproject>apps/admin-ui</subproject>
+        <subproject>libs/keycloak-admin-client</subproject>
+        <subproject>libs/ui-shared</subproject>
+        <subproject>themes-vendor</subproject>
+    </subprojects>
 
     <properties>
         <node.version>v24.9.0</node.version>

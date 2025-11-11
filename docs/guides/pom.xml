@@ -14,9 +14,9 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
+<project xmlns="http://maven.apache.org/POM/4.1.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
         <artifactId>keycloak-docs-parent</artifactId>
         <groupId>org.keycloak</groupId>
@@ -24,7 +24,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.1.0</modelVersion>
 
     <name>Keycloak Guides</name>
     <artifactId>keycloak-guides</artifactId>
@@ -60,10 +60,10 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${basedir}/target/generated-docs/images</outputDirectory>
+                            <outputDirectory>${project.basedir}/target/generated-docs/images</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>${basedir}/images</directory>
+                                    <directory>${project.basedir}/images</directory>
                                 </resource>
                             </resources>
                         </configuration>
@@ -75,10 +75,10 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${basedir}/target/generated-guides/</outputDirectory>
+                            <outputDirectory>${project.basedir}/target/generated-guides/</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>${basedir}/</directory>
+                                    <directory>${project.basedir}/</directory>
                                     <includes>
                                         <include>attributes.adoc</include>
                                     </includes>
@@ -93,10 +93,10 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${basedir}/target/generated-guides/</outputDirectory>
+                            <outputDirectory>${project.basedir}/target/generated-guides/</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>${basedir}/</directory>
+                                    <directory>${project.basedir}/</directory>
                                     <excludes>
                                         <exclude>**/templates/**</exclude>
                                     </excludes>
@@ -154,7 +154,7 @@
                             <goal>process-asciidoc</goal>
                         </goals>
                         <configuration>
-                            <sourceDirectory>${basedir}/target/generated-guides/server</sourceDirectory>
+                            <sourceDirectory>${project.basedir}/target/generated-guides/server</sourceDirectory>
                             <outputDirectory>${project.build.directory}/generated-docs/server</outputDirectory>
                         </configuration>
                     </execution>
@@ -165,7 +165,7 @@
                             <goal>process-asciidoc</goal>
                         </goals>
                         <configuration>
-                            <sourceDirectory>${basedir}/target/generated-guides/operator</sourceDirectory>
+                            <sourceDirectory>${project.basedir}/target/generated-guides/operator</sourceDirectory>
                             <outputDirectory>${project.build.directory}/generated-docs/operator</outputDirectory>
                         </configuration>
                     </execution>
@@ -176,7 +176,7 @@
                             <goal>process-asciidoc</goal>
                         </goals>
                         <configuration>
-                            <sourceDirectory>${basedir}/target/generated-guides/observability</sourceDirectory>
+                            <sourceDirectory>${project.basedir}/target/generated-guides/observability</sourceDirectory>
                             <outputDirectory>${project.build.directory}/generated-docs/observability</outputDirectory>
                         </configuration>
                     </execution>
@@ -187,7 +187,7 @@
                             <goal>process-asciidoc</goal>
                         </goals>
                         <configuration>
-                            <sourceDirectory>${basedir}/target/generated-guides/migration</sourceDirectory>
+                            <sourceDirectory>${project.basedir}/target/generated-guides/migration</sourceDirectory>
                             <outputDirectory>${project.build.directory}/generated-docs/migration</outputDirectory>
                         </configuration>
                     </execution>
@@ -198,7 +198,7 @@
                             <goal>process-asciidoc</goal>
                         </goals>
                         <configuration>
-                            <sourceDirectory>${basedir}/target/generated-guides/getting-started</sourceDirectory>
+                            <sourceDirectory>${project.basedir}/target/generated-guides/getting-started</sourceDirectory>
                             <outputDirectory>
                                 ${project.build.directory}/generated-docs/getting-started</outputDirectory>
                         </configuration>
@@ -210,7 +210,7 @@
                             <goal>process-asciidoc</goal>
                         </goals>
                         <configuration>
-                            <sourceDirectory>${basedir}/target/generated-guides/high-availability</sourceDirectory>
+                            <sourceDirectory>${project.basedir}/target/generated-guides/high-availability</sourceDirectory>
                             <outputDirectory>${project.build.directory}/generated-docs/high-availability</outputDirectory>
                         </configuration>
                     </execution>
@@ -221,7 +221,7 @@
                             <goal>process-asciidoc</goal>
                         </goals>
                         <configuration>
-                            <sourceDirectory>${basedir}/target/generated-guides/securing-apps</sourceDirectory>
+                            <sourceDirectory>${project.basedir}/target/generated-guides/securing-apps</sourceDirectory>
                             <outputDirectory>${project.build.directory}/generated-docs/securing-apps</outputDirectory>
                             <preserveDirectories>true</preserveDirectories>
                         </configuration>
@@ -233,7 +233,7 @@
                             <goal>process-asciidoc</goal>
                         </goals>
                         <configuration>
-                            <sourceDirectory>${basedir}/target/generated-guides/ui-customization</sourceDirectory>
+                            <sourceDirectory>${project.basedir}/target/generated-guides/ui-customization</sourceDirectory>
                             <outputDirectory>
                                 ${project.build.directory}/generated-docs/ui-customization</outputDirectory>
                             <preserveDirectories>true</preserveDirectories>

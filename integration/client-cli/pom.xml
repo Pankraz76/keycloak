@@ -15,8 +15,8 @@
   ~ limitations under the License.
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
         <artifactId>keycloak-integration-parent</artifactId>
         <groupId>org.keycloak</groupId>
@@ -25,13 +25,13 @@
 
     <name>Keycloak Client CLI</name>
     <description>Keycloak Client CLI</description>
-    <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.1.0</modelVersion>
 
     <artifactId>keycloak-client-cli-parent</artifactId>
     <packaging>pom</packaging>
 
-    <modules>
-        <module>admin-cli</module>
-        <module>client-cli-dist</module>
-    </modules>
+    <subprojects>
+        <subproject>admin-cli</subproject>
+        <subproject>client-cli-dist</subproject>
+    </subprojects>
 </project>

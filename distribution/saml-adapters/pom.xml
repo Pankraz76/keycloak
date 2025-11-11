@@ -15,8 +15,8 @@
   ~ limitations under the License.
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
         <artifactId>keycloak-distribution-parent</artifactId>
         <groupId>org.keycloak</groupId>
@@ -25,13 +25,13 @@
 
     <name>SAML Adapters Distribution Parent</name>
     <description>SAML Adapters Distribution Parent</description>
-    <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.1.0</modelVersion>
 
     <artifactId>keycloak-saml-adapters-distribution-parent</artifactId>
     <packaging>pom</packaging>
 
-    <modules>
-        <module>wildfly-adapter</module>
-    </modules>
+    <subprojects>
+        <subproject>wildfly-adapter</subproject>
+    </subprojects>
 
 </project>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 http://maven.apache.org/xsd/maven-4.1.0.xsd">
+    <modelVersion>4.1.0</modelVersion>
 
     <parent>
         <artifactId>keycloak-docs-parent</artifactId>
@@ -32,17 +32,17 @@
         <version.plexus.utils>4.0.0</version.plexus.utils>
     </properties>
 
-    <modules>
-        <module>header-maven-plugin</module>
-        <module>api_documentation</module>
-        <module>authorization_services</module>
-        <module>server_admin</module>
-        <module>server_development</module>
-        <module>release_notes</module>
-        <module>upgrading</module>
-        <module>aggregation</module>
-        <module>dist</module>
-  </modules>
+    <subprojects>
+        <subproject>header-maven-plugin</subproject>
+        <subproject>api_documentation</subproject>
+        <subproject>authorization_services</subproject>
+        <subproject>server_admin</subproject>
+        <subproject>server_development</subproject>
+        <subproject>release_notes</subproject>
+        <subproject>upgrading</subproject>
+        <subproject>aggregation</subproject>
+        <subproject>dist</subproject>
+  </subprojects>
 
     <profiles>
         <profile>

@@ -15,8 +15,8 @@
   ~ limitations under the License.
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
         <artifactId>keycloak-parent</artifactId>
         <groupId>org.keycloak</groupId>
@@ -25,16 +25,16 @@
     </parent>
     <name>Keycloak Model Parent</name>
     <description>Keycloak Model Parent</description>
-    <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.1.0</modelVersion>
 
     <artifactId>keycloak-model-pom</artifactId>
     <packaging>pom</packaging>
 
-    <modules>
-        <module>storage</module>
-        <module>storage-private</module>
-        <module>storage-services</module>
-        <module>jpa</module>
-        <module>infinispan</module>
-    </modules>
+    <subprojects>
+        <subproject>storage</subproject>
+        <subproject>storage-private</subproject>
+        <subproject>storage-services</subproject>
+        <subproject>jpa</subproject>
+        <subproject>infinispan</subproject>
+    </subprojects>
 </project>

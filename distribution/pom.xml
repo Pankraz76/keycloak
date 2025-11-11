@@ -15,8 +15,8 @@
   ~ limitations under the License.
   -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.1.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
         <artifactId>keycloak-parent</artifactId>
         <groupId>org.keycloak</groupId>
@@ -26,7 +26,7 @@
 
     <name>Distribution Parent</name>
     <description>Distribution Parent</description>
-    <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.1.0</modelVersion>
 
     <artifactId>keycloak-distribution-parent</artifactId>
     <packaging>pom</packaging>
@@ -40,12 +40,12 @@
 
     </properties>
 
-    <modules>
-        <module>saml-adapters</module>
-        <module>galleon-feature-packs</module>
-        <module>licenses-common</module>
-        <module>maven-plugins</module>
-    </modules>
+    <subprojects>
+        <subproject>saml-adapters</subproject>
+        <subproject>galleon-feature-packs</subproject>
+        <subproject>licenses-common</subproject>
+        <subproject>maven-plugins</subproject>
+    </subprojects>
 
     <repositories>
         <repository>
