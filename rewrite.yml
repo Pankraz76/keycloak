@@ -6,4 +6,5 @@ description: Comprehensive code quality recipe combining modernization, security
 recipeList:
   - org.openrewrite.java.security.JavaSecurityBestPractices
   - org.openrewrite.maven.MigrateToMaven4
+  - org.openrewrite.maven.UpdateMavenWrapper
 ---
