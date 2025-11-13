@@ -29,13 +29,13 @@ jobs:
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@b6643a29fecd7f34b3597bc6acb0a98b03d33ff8 # 0.33.1
         with:
-          image-ref: quay.io/keycloak/${{ matrix.container }}:nightly
           format: sarif
+          ignore-unfixed: true
+          image-ref: quay.io/keycloak/${{ matrix.container }}:nightly
           output: trivy-results.sarif
           severity: MEDIUM,CRITICAL,HIGH
-          vuln-type: os,library
-          ignore-unfixed: true
           timeout: 15m
+          vuln-type: os,library
         env:
           TRIVY_DB_REPOSITORY: public.ecr.aws/aquasecurity/trivy-db
           TRIVY_JAVA_DB_REPOSITORY: public.ecr.aws/aquasecurity/trivy-java-db
