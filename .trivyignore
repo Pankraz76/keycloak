@@ -1,0 +1,5 @@
+.CVE-2015-7501  # commons-collections:commons-collections
+CVE-2019-17571 # log4j:log4j
+CVE-2022-23305 # log4j:log4j
+CVE-2022-23307 # log4j:log4j
+CVE-2024-52046 # org.apache.mina:mina-core
