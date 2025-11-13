@@ -33,8 +33,8 @@ jobs:
           format: sarif
           output: trivy-results.sarif
           severity: MEDIUM,CRITICAL,HIGH
+          vuln-type: os,library
           ignore-unfixed: true
-          version: v0.57.1
           timeout: 15m
         env:
           TRIVY_DB_REPOSITORY: public.ecr.aws/aquasecurity/trivy-db
@@ -45,3 +45,6 @@ jobs:
         with:
           sarif_file: trivy-results.sarif
           category: ${{ matrix.container }}
+
+      - name: trivy-scan
+        run: ./mvnw trivy:trivy-scan
