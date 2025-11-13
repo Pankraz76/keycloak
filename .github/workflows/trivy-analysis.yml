@@ -29,11 +29,12 @@ jobs:
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@b6643a29fecd7f34b3597bc6acb0a98b03d33ff8 # 0.33.1
         with:
-          format: sarif
-          ignore-unfixed: true
           image-ref: quay.io/keycloak/${{ matrix.container }}:nightly
+          format: sarif
           output: trivy-results.sarif
           severity: MEDIUM,CRITICAL,HIGH
+          ignore-unfixed: true
+          version: v0.57.1
           timeout: 15m
           vuln-type: os,library
         env:
@@ -45,6 +46,3 @@ jobs:
         with:
           sarif_file: trivy-results.sarif
           category: ${{ matrix.container }}
-
-      - name: trivy-scan
-        run: ./mvnw trivy:trivy-scan
