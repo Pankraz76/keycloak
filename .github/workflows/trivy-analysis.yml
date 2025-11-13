@@ -45,3 +45,6 @@ jobs:
         with:
           sarif_file: trivy-results.sarif
           category: ${{ matrix.container }}
+
+      - name: trivy-scan
+        run: ./mvnw trivy:trivy-scan
