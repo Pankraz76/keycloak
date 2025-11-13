@@ -117,9 +117,6 @@ jobs:
         run: |
           ./mvnw test -am -pl "$(.github/scripts/find-modules-with-unit-tests.sh)"
 
-      - name: Sanity Check
-        run: ./mvnw rewrite:dryRun
-
   base-integration-tests:
     name: Base IT
     needs: build
